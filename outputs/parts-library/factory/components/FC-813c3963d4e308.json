@@ -1,0 +1,46 @@
+{
+  "id": "FC-813c3963d4e308",
+  "name": "roller door hood",
+  "family": "BOUNDARY",
+  "purpose": "標示空間邊界、提供通行或隔離位置。",
+  "assemblyTeaching": "立柱→框→網片／門扇→鉸鏈與鎖扣→地面接口。",
+  "verification": "孔洞是真空間；門扇需能旋轉且不穿鄰件；通行淨空用實際包絡檢查。",
+  "unresolved": "現有隔離門鉸鏈與實際開啟路徑未完成；不是安全設施驗收。",
+  "units": "mm",
+  "geometry": "geometry/G-b04371926d1e3688fd87.json",
+  "geometrySHA256": "b04371926d1e3688fd87d052cd8a40942b500458e4fe473f055e629ed9087a1b",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -150,
+      -2225,
+      -230
+    ],
+    [
+      150,
+      2225,
+      230
+    ]
+  ],
+  "dimensionsMM": [
+    300,
+    4450,
+    460
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-813c3963d4e308.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 2
+}

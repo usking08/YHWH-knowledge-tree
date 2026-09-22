@@ -1,0 +1,32 @@
+{
+  "schema": "gt01.reference-study/v1",
+  "subject": "D05-P15c",
+  "truth": "AUTHOR_DESIGN",
+  "sourceReference": "references/D05-P15c-r1.png",
+  "generatedReference": "references/D05-P15c-r2.png",
+  "prompt": "Edit the attached GT01 D05-P15c drawing into revision R2. Keep the same single black EPDM rubber liner shape: 56 mm width, 30 mm height, R2 corners, 1.2 mm base sheet, EXACTLY TEN parallel horizontal ribs at 3 mm spacing, two small rectangular locating nibs on the otherwise flat back, nib protrusion 0.8 mm. Maintain clean white technical six-panel sheet, precise readable fine lines and detailed matte rubber. Do not add hardware or a second component. Panels 1 FRONT, 2 BACK, 3 SIDE, 4 ISOMETRIC show the FREE STATE, ten ribs of height 0.35 mm. Panel 5 is an enlarged two-state comparison through THREE ribs only: left FREE (semicircular elliptical crowns 0.35 mm high, 1.00 mm wide at base), right SEATED (same rib material laterally spreads, crowns flatten into finite horizontal contact strips, installed height 0.25 mm, base sheet remains 1.2 mm). Clearly distinguish the dimension arrows base thickness 1.2 vs rib height .35/.25. Panel 6 is a section showing blue glass perfectly flat resting against these FLATTENED BLACK contact strips, black base rubber resting on silver metal, no intersecting solids and no pointed or curved line-contact rib apex. Label 'FINITE CONTACT STRIP'. Do not change 56 by 30 outline or add more ribs. Title 'GT01 D05-P15c / RUBBER LINER / R2'. Footer 'AUTHOR DESIGN / FREE AND SEATED SHAPE STUDY / NOT A LOAD SIMULATION'. No torque, pressure or manufacturing certification labels. Use visual realism and technical clarity comparable to original.",
+  "research": [
+    {
+      "url": "https://patents.google.com/patent/US6425207B1/en",
+      "use": "Resilient liner separating pane and clamp; not this design's measurements"
+    },
+    {
+      "url": "https://patents.google.com/patent/EP1300269A1/en",
+      "use": "Distinct fixed and moving clamping members; not GT01 geometry"
+    }
+  ],
+  "review": {
+    "adoptedPanels": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "rejectedPanels": [
+      3
+    ],
+    "reason": "Side view does not show the required ten ribs."
+  },
+  "mechanicalScope": "Authored free/seated geometric states. Central rib cross-section area conserved; rounded end volumes and material force/strain unsolved."
+}

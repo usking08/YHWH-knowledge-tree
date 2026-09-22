@@ -1,0 +1,50 @@
+{
+  "id": "FC-3db8178676ad95",
+  "name": "低於盆口的根土層",
+  "family": "POT",
+  "purpose": "承土、收納內盆與控制水的去向。",
+  "assemblyTeaching": "以半徑–高度剖面旋轉成壁；托盤→陶盆→內盆→根土→枝葉。長盆以底及四壁成殼。",
+  "verification": "剖面檢查內外壁、口緣與 Ø24 排水孔；抽出方向必須離開上一件的包絡。",
+  "unresolved": "排水、根系及陶器成形收縮未驗證。",
+  "units": "mm",
+  "geometry": "geometry/G-8ba9a92623d707b4b3e2.json",
+  "geometrySHA256": "8ba9a92623d707b4b3e2a5f046b07fe3d0522d5c12973c4b1186bd0c5ff2c599",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -850,
+      -195,
+      -20
+    ],
+    [
+      850,
+      195,
+      20
+    ]
+  ],
+  "dimensionsMM": [
+    1700,
+    390,
+    40
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../materials/generated/GT01-Ficus-Assembly-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE",
+  "drawing": "drawings/FC-3db8178676ad95.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PLANTBED-1",
+    "F-PLANTBED-2",
+    "F-PLANTBED-3",
+    "F-PLANTBED-4",
+    "F-PLANTBED-5"
+  ],
+  "occurrenceCount": 5
+}

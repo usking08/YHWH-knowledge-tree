@@ -1,0 +1,46 @@
+{
+  "id": "FC-45c85d9e9886c4",
+  "name": "polished wearing surface",
+  "family": "FLOOR",
+  "purpose": "提供定位基準、承托設備與分隔物流。",
+  "assemblyTeaching": "基层與面層分開定義；依基準放線，再配置接縫、設備基座和動線標記。",
+  "verification": "水平面方程 n·(p−p0)=0；確認物件支承底面與地坪無浮空或埋入；伸縮縫不以顏色代替凹槽驗證。",
+  "unresolved": "鋼筋、基底、排水坡與地耐力未建；此場景不是土建施工圖。",
+  "units": "mm",
+  "geometry": "geometry/G-de67d1f7cbbc565a357d.json",
+  "geometrySHA256": "de67d1f7cbbc565a357d6cb638e9dd047375069544049ca1e2f52c6746cf5865",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -21000,
+      -12000,
+      -8
+    ],
+    [
+      21000,
+      12000,
+      8
+    ]
+  ],
+  "dimensionsMM": [
+    42000,
+    24000,
+    16
+  ],
+  "materials": [
+    "Factory | polished-concrete"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-45c85d9e9886c4.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-001"
+  ],
+  "occurrenceCount": 1
+}

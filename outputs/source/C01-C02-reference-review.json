@@ -1,0 +1,31 @@
+{
+  "schema": "GT01-source-review/v1",
+  "image": "references/C01-C02-hood-r1.png",
+  "prompt": "Create a precise, clear independent HOOD ASSEMBLY reference for the SAME dark British racing green GT01 grandtourer in the supplied references. This must match the wide gently crowned low hood and long side creases visible in source, not a generic flat rectangular lid. Scope only hood outer skin C01 and inner reinforcement C02, with hem and adhesive details, not the wholecar. Landscape technical editorial sheet, neutral white ground, photoreal metal. Panel1 large TOP exterior view: darkgreen elegant broad crown, faint twin longitudinal highlight ridges approaching rear shoulders, small roundedcorners. Panel2 large UNDERSIDE view: one continuous lightmetal STAMPED INNER PANEL, perimeter flange, central longitudinal web plus2transverse webssubdividing FOUR large rounded trapezoidal LIGHTENING OPENINGS, pressing depth24mm, smoothly radiused innerhole returns. One front latch doubler at frontmiddle and two rear hinge doublers aligned symmetrically, each2bolt holes. Inner panel is ONE stamped sheet, not separate tubes or a pile of cubes. Panel3 EXPLODED: C01 skin upper, C02 four-windowinner underneath, adhesivebondbeads/anti-flutter pads between, latchdoubler front and2hingedoublers rear. Panel4 SECTION shows1.0mmouter skin rolledatperimeterover1.2mminnerflange with0.2mmauthoradhesivegap, innerweb recessed24mm, raised antfluttercontact islandsunderouterskin with3mm gap filledwithmastic. Large curved flange cross-section, no mysterious detached metal. NOMINAL AUTHOR dimensions length1390mm x rearwidth1357 x frontwidth1300, fitexistingcar x−2040..−650, centrelineY0, frontisleftin sideview. Concise labels C01 outer1.0;C02 inner1.2;C01-P03 hemadhesive;C01-P04 mastic;C02-P02hingedoublerLH/RH;C02-P03latchdoubler. Curvature controlled by source, dimension valuesauthornotOEM. Include front/side silhouette inset describing shallowcamber sourceconsistent. Two inner views must have SAME FOUR openings and same ribs. No unrelated wheels or engine. Note AUTHOR SHAPE REFERENCE / NOT STRENGTH OR MANUFACTURING CERTIFICATION. Do not imitate CAD badly: exact legible highquality physical forms, open realholes, no text-heavyqualityclaims.",
+  "truth": "GENERATED_AUTHOR_REFERENCE",
+  "measurementAuthority": false,
+  "adopted": [
+    "四個圓角透空區域與連續沖壓內板",
+    "薄外板、周緣包邊、沉降內板、抗振膠的功能層級",
+    "兩個後方鉸鏈補強區與前方中央鎖扣補強區"
+  ],
+  "rejected": [
+    {
+      "panel": 1,
+      "issue": "後緣彎弧不直接採用；必須符合既有車身與擋風玻璃邊界"
+    },
+    {
+      "panel": 3,
+      "issue": "前後安裝箭頭與鉸鏈補強孔數沒有完整一致；由相同座標與兩孔定義控制"
+    },
+    {
+      "panel": 5,
+      "issue": "24 mm 頂部拱高不能取代既有車身曲面；24 mm 只作作者內板沉降深度"
+    },
+    {
+      "panel": 6,
+      "issue": "日期與C00 R2標籤不是本次版本身分"
+    }
+  ],
+  "sourceBoundary": "外表面沿用 GT01-design/body 的現有共同曲面；生成圖補內側拓撲，未作製程或承載資格證明"
+}

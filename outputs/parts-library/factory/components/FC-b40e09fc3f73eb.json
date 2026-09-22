@@ -1,0 +1,53 @@
+{
+  "id": "FC-b40e09fc3f73eb",
+  "name": "knee connection bolt",
+  "family": "FRAME",
+  "purpose": "把上部作用經樑、柱、連接件傳到基座。",
+  "assemblyTeaching": "I 形截面由翼板與腹板構成；先立柱、接斜樑、加腋與斜撐，再設次構件。",
+  "verification": "核對截面、對接面、螺栓孔軸及荷重路徑；ΣF=0、ΣM=0 只是平衡前提，仍須材料與邊界條件。",
+  "unresolved": "現有部分固定件僅外形；尚無結構設計驗算或建築放行。",
+  "units": "mm",
+  "geometry": "geometry/G-5b34bce599af276c7bb1.json",
+  "geometrySHA256": "5b34bce599af276c7bb18f1354adff2eedfd51c2df0df4ad33c2d542a25c326c",
+  "scale": [
+    19,
+    28,
+    19
+  ],
+  "localBounds": [
+    [
+      -19,
+      -14,
+      -19
+    ],
+    [
+      19,
+      14,
+      19
+    ]
+  ],
+  "dimensionsMM": [
+    38,
+    28,
+    38
+  ],
+  "materials": [
+    "Factory | brushed-stainless"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-b40e09fc3f73eb.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PF-01",
+    "F-PF-02",
+    "F-PF-03",
+    "F-PF-04",
+    "F-PF-05",
+    "F-PF-06",
+    "F-PF-07",
+    "F-PF-08"
+  ],
+  "occurrenceCount": 160
+}

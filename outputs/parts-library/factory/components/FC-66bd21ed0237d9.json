@@ -1,0 +1,55 @@
+{
+  "id": "FC-66bd21ed0237d9",
+  "name": "調整腳螺桿 · 螺紋待建",
+  "family": "FASTENER",
+  "purpose": "把界面夾緊、限制分離或提供可調位置。",
+  "assemblyTeaching": "先核對孔徑、螺距、螺紋種類與工具空間；墊圈接觸支承面，再旋入及受控預緊。",
+  "verification": "間隙 c=(D孔−D軸)/2；長孔方向與活動軸一致。檢查頭下接觸、牙合長度與邊距。",
+  "unresolved": "廠房五金多仍是外觀候選，未具備牙形、扭矩或承載資格；不能套用已完成的 M5 零件結論。",
+  "units": "mm",
+  "geometry": "geometry/G-5b34bce599af276c7bb1.json",
+  "geometrySHA256": "5b34bce599af276c7bb18f1354adff2eedfd51c2df0df4ad33c2d542a25c326c",
+  "scale": [
+    10,
+    26,
+    10
+  ],
+  "localBounds": [
+    [
+      -10,
+      -13,
+      -10
+    ],
+    [
+      10,
+      13,
+      10
+    ]
+  ],
+  "dimensionsMM": [
+    20,
+    26,
+    20
+  ],
+  "materials": [
+    "Factory | brushed-stainless"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-66bd21ed0237d9.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-01",
+    "F-BENCH-02",
+    "F-BENCH-03",
+    "F-BENCH-04",
+    "F-BENCH-05",
+    "F-BENCH-06",
+    "F-BENCH-07",
+    "F-BENCH-08",
+    "F-BENCH-09",
+    "F-BENCH-10"
+  ],
+  "occurrenceCount": 40
+}

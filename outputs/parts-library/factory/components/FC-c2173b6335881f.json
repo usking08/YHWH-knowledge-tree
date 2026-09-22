@@ -1,0 +1,48 @@
+{
+  "id": "FC-c2173b6335881f",
+  "name": "lounge chair armrest",
+  "family": "FURNITURE",
+  "purpose": "讓訪客停留、閱讀與比較成果；人體接觸面需有合理曲面。",
+  "assemblyTeaching": "承重骨架→彈性層→泡棉→裁片縫線→包覆固定；座椅支腳需接到骨架。",
+  "verification": "曲率與輪廓多角度一致；織物方向隨裁片、紋理比例不能因拉伸改變。",
+  "unresolved": "目前只有外部包覆殼與腳件；內架、泡棉分層、縫線與固定件尚未完成。",
+  "units": "mm",
+  "geometry": "geometry/G-afd5cb935e5caf4af166.json",
+  "geometrySHA256": "afd5cb935e5caf4af1663a4256a8a9cb394a83a88ce183cde962f873083bc529",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -80.25,
+      -345.25,
+      -100
+    ],
+    [
+      80.25,
+      345.25,
+      100
+    ]
+  ],
+  "dimensionsMM": [
+    160.5,
+    690.5,
+    200
+  ],
+  "materials": [
+    "Factory | warm-tan-upholstery"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-c2173b6335881f.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-CHAIR-02",
+    "F-CHAIR-04",
+    "F-CHAIR-06"
+  ],
+  "occurrenceCount": 6
+}

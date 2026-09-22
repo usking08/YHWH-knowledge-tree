@@ -1,0 +1,46 @@
+{
+  "id": "FC-5bc7bebecb8e53",
+  "name": "gable infill below roof",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-54c753d847314a1ec738.json",
+  "geometrySHA256": "54c753d847314a1ec7389822005eef92fa4c578376722960d216b378378de70b",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -12000,
+      7300,
+      0
+    ],
+    [
+      12000,
+      8450,
+      140
+    ]
+  ],
+  "dimensionsMM": [
+    24000,
+    1150,
+    140
+  ],
+  "materials": [
+    "Factory | mineral-wall-panel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-5bc7bebecb8e53.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 2
+}

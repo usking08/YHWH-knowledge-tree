@@ -1,0 +1,46 @@
+{
+  "id": "FC-377c30746d41bd",
+  "name": "reinforced slab",
+  "family": "FLOOR",
+  "purpose": "提供定位基準、承托設備與分隔物流。",
+  "assemblyTeaching": "基层與面層分開定義；依基準放線，再配置接縫、設備基座和動線標記。",
+  "verification": "水平面方程 n·(p−p0)=0；確認物件支承底面與地坪無浮空或埋入；伸縮縫不以顏色代替凹槽驗證。",
+  "unresolved": "鋼筋、基底、排水坡與地耐力未建；此場景不是土建施工圖。",
+  "units": "mm",
+  "geometry": "geometry/G-d131363ff5b7891e4414.json",
+  "geometrySHA256": "d131363ff5b7891e441456019c8029805011309f9d5aeada491fca2924749a3d",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -21000,
+      -12000,
+      -130
+    ],
+    [
+      21000,
+      12000,
+      130
+    ]
+  ],
+  "dimensionsMM": [
+    42000,
+    24000,
+    260
+  ],
+  "materials": [
+    "Factory | concrete-cut-edge"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-377c30746d41bd.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-001"
+  ],
+  "occurrenceCount": 1
+}

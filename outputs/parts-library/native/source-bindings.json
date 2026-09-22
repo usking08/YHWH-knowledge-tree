@@ -1,0 +1,16 @@
+{
+  "algorithm": "SHA-256",
+  "sources": {
+    "three.mjs": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495",
+    "THREE-LICENSE.txt": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+    "door-handle.mjs": "716add62a7256ee01c83f6062580990d33884c3e6b874de349cba4d7ac437288",
+    "door-handle-lever.mjs": "049f26fb973785583dae25b9ab473508a328663839394e19f9ca9f3b07f6b2cd",
+    "door-handle-carrier.mjs": "6658f38d0e87a8193e00c0af0c3bcaba872b10ef150f5517af03305245305498",
+    "door-handle-hardware.mjs": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0",
+    "door-handle-return.mjs": "7779e160db32e30166f585662ee0504495ec9399821493241e1ec5194600c9d5",
+    "door-handle-actuator.mjs": "7bf5cd1c52341f73c0cbd28af4be18261c675a6748563954c956f0cea0907077",
+    "door-handle-assembly-paths.mjs": "6f97c86c641a8c8d8ce8dd0e021480f2d1a7c603d820fe93298236767450fd1a",
+    "window-regulator.mjs": "d98d0d7bd0d8a7925f5e21d6311b79087470c9368c10a4aa56133055278005fe"
+  },
+  "scope": "Exact copied source; Three.js MIT license is included. Other source is project-authored design, no material/standard certification implied."
+}

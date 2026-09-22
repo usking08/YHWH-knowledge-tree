@@ -1,0 +1,52 @@
+{
+  "id": "FC-ebdba422ae3ec9",
+  "name": "根土團 · 表土低於盆口 40 mm",
+  "family": "POT",
+  "purpose": "承土、收納內盆與控制水的去向。",
+  "assemblyTeaching": "以半徑–高度剖面旋轉成壁；托盤→陶盆→內盆→根土→枝葉。長盆以底及四壁成殼。",
+  "verification": "剖面檢查內外壁、口緣與 Ø24 排水孔；抽出方向必須離開上一件的包絡。",
+  "unresolved": "排水、根系及陶器成形收縮未驗證。",
+  "units": "mm",
+  "geometry": "geometry/G-95f741b7130f450d130a.json",
+  "geometrySHA256": "95f741b7130f450d130a5126327e04b4a3139d0bf837279485ee3ad2d103a5e0",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -238,
+      -238,
+      -216
+    ],
+    [
+      238,
+      238,
+      216
+    ]
+  ],
+  "dimensionsMM": [
+    476,
+    476,
+    432
+  ],
+  "materials": [
+    "182c27b0-7de4-429b-b1b6-5f2797d2964c"
+  ],
+  "reference": "../../materials/generated/GT01-Ficus-Assembly-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE",
+  "drawing": "drawings/FC-ebdba422ae3ec9.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PLANT-1",
+    "F-PLANT-2",
+    "F-PLANT-3",
+    "F-PLANT-4",
+    "F-PLANT-5",
+    "F-PLANT-6",
+    "F-PLANT-7"
+  ],
+  "occurrenceCount": 7
+}

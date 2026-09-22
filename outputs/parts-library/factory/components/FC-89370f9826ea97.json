@@ -1,0 +1,46 @@
+{
+  "id": "FC-89370f9826ea97",
+  "name": "inspection wheel platform",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-fd52a9b83238cd44f724.json",
+  "geometrySHA256": "fd52a9b83238cd44f72491b1f06bba75eee54ec5ab206b22ef04ea237809d14d",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2450,
+      -285,
+      -45
+    ],
+    [
+      2450,
+      285,
+      45
+    ]
+  ],
+  "dimensionsMM": [
+    4900,
+    570,
+    90
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-89370f9826ea97.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S6"
+  ],
+  "occurrenceCount": 2
+}

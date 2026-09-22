@@ -1,0 +1,48 @@
+{
+  "id": "FC-8fea921e860062",
+  "name": "lounge chair seat",
+  "family": "FURNITURE",
+  "purpose": "讓訪客停留、閱讀與比較成果；人體接觸面需有合理曲面。",
+  "assemblyTeaching": "承重骨架→彈性層→泡棉→裁片縫線→包覆固定；座椅支腳需接到骨架。",
+  "verification": "曲率與輪廓多角度一致；織物方向隨裁片、紋理比例不能因拉伸改變。",
+  "unresolved": "目前只有外部包覆殼與腳件；內架、泡棉分層、縫線與固定件尚未完成。",
+  "units": "mm",
+  "geometry": "geometry/G-f80d861561419c6a2fa5.json",
+  "geometrySHA256": "f80d861561419c6a2fa5af40e8a94f084216fdd88879f915baa30eda1d88acad",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -372.75,
+      -367.75,
+      -95
+    ],
+    [
+      372.75,
+      367.75,
+      95
+    ]
+  ],
+  "dimensionsMM": [
+    745.5,
+    735.5,
+    190
+  ],
+  "materials": [
+    "Factory | warm-tan-upholstery"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-8fea921e860062.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-CHAIR-02",
+    "F-CHAIR-04",
+    "F-CHAIR-06"
+  ],
+  "occurrenceCount": 3
+}

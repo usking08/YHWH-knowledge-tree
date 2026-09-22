@@ -1,0 +1,16 @@
+import fs from 'node:fs/promises';const root=new URL('../outputs/source/',import.meta.url);
+let v=await fs.readFile(new URL('clamp-assembly-viewer.mjs',root),'utf8');function swap(a,b){if(!v.includes(a))throw Error('Missing '+a.slice(0,60));v=v.replace(a,b);}
+swap("freeRubber=false,index=0", "freeRubber=false,padSide='ci',index=0");
+swap("D05-P15c-r1.png", "D05-P15c-r2.png");
+swap("part.updateMatrixWorld(true);part.traverse", "if(focusKey==='c')part.visible=key===padSide;part.updateMatrixWorld(true);part.traverse");
+swap("$('#rubber-state').hidden=focusKey!=='c';", "$('#rubber-state').hidden=focusKey!=='c';$('#pad-controls').hidden=focusKey!=='c';");
+swap("if(focusKey==='c'){$('#instruction')", "if(focusKey==='c'){padSide='ci';direction.copy(normal).add(V(.28,0,.12)).normalize();$('#step-title').textContent='內側橡膠墊 · 接觸面';$('#instruction')");
+swap("$('#rubber-state').hidden=true;", "$('#rubber-state').hidden=true;$('#pad-controls').hidden=true;");
+swap("function startRail(){stop();", "function startRail(){stop();freeRubber=false;");
+swap("window.CLAMP_ASSEMBLY={startRail", "for(const key of ['ci','co'])$('#pad-'+key).onclick=()=>{padSide=key;direction.copy(normal).multiplyScalar(key==='ci'?1:-1).add(V(.28,0,.12)).normalize();$('#step-title').textContent=(key==='ci'?'內':'外')+'側橡膠墊 · 接觸面';update();fit();};\nwindow.CLAMP_ASSEMBLY={startRail");
+swap("mode,upperStack,freeRubber,index", "mode,upperStack,freeRubber,padSide,index");await fs.writeFile(new URL('clamp-assembly-viewer.mjs',root),v);
+let p=await fs.readFile(new URL('clamp-assembly-page.html',root),'utf8');p=p.replace('<button id="rubber-state" hidden>查看橡膠自由形狀</button>','').replace('<div id="contact"></div>','<div id="contact"></div><div id="pad-controls" class="row" hidden><button id="pad-ci">內側墊</button><button id="pad-co">外側墊</button></div><button id="rubber-state" hidden>查看橡膠自由形狀</button>');await fs.writeFile(new URL('clamp-assembly-page.html',root),p);
+const regulator=new URL('window-regulator.mjs',root);let model=await fs.readFile(regulator,'utf8');model=model.replace("component.ref==='D05-P15b'?'-r2.png'", "['D05-P15b','D05-P15c'].includes(component.ref)?'-r2.png'");await fs.writeFile(regulator,model);
+const index=new URL('expand-component-tree.mjs',import.meta.url);let t=await fs.readFile(index,'utf8');t=t.replace("clamp.parts.find(p=>p.id==='D05-P15b').plannedReference='references/D05-P15b-r2.png';", "clamp.parts.find(p=>p.id==='D05-P15b').plannedReference='references/D05-P15b-r2.png';\nclamp.parts.find(p=>p.id==='D05-P15c').plannedReference='references/D05-P15c-r2.png';\nclamp.assemblyPreconditions.push('固定座、M8 與滑座從裸導軌上端先入軌；上滑輪、軸銷、止推墊圈及鋼索尚未裝上');");await fs.writeFile(index,t);
+const review=new URL('refresh-reference-reviews.mjs',import.meta.url);t=await fs.readFile(review,'utf8');t=t.replace("'D05-P15c':{reviewNote:'兩個同形橡膠墊分開組裝；採十條 0.25 mm 凸紋、1.2 mm 基體及兩個背面定位凸點。模型實際凸紋與玻璃面接觸，凸點有對應盲槽。',adoptedPanels:[1,2,3,4,5,6]}","'D05-P15c':{reviewNote:'R2 區分自由凸紋 0.35 mm 與夾持高 0.25 mm。實際模型保留自由形狀，夾持面展寬成有限接觸帶；中央截面面積保留，未解材料力學。第 3 區側視凸紋數量不足，退修；其餘採形狀關係，非量測證明。',adoptedPanels:[1,2,4,5,6],rejectedPanels:[3]}");await fs.writeFile(review,t);
+console.log('Individual pad inspection and reviewed R2 reference bound.');

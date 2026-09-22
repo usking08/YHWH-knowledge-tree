@@ -1,0 +1,46 @@
+{
+  "id": "FC-4d58a340071623",
+  "name": "Sign | 恆溫量測  METROLOGY",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-c0aaf46edc752335a378.json",
+  "geometrySHA256": "c0aaf46edc752335a3788591626c920d44679a852300d19bbc9b17ebee2a3e6a",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2200,
+      -285,
+      0
+    ],
+    [
+      2200,
+      285,
+      0
+    ]
+  ],
+  "dimensionsMM": [
+    4400,
+    570,
+    0
+  ],
+  "materials": [
+    "7a22dd36-b362-4847-b967-9a4dee830069"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-4d58a340071623.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B06"
+  ],
+  "occurrenceCount": 1
+}

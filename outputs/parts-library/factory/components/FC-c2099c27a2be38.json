@@ -1,0 +1,55 @@
+{
+  "id": "FC-c2099c27a2be38",
+  "name": "桌板螺釘墊圈 · 開孔薄面候選",
+  "family": "FASTENER",
+  "purpose": "把界面夾緊、限制分離或提供可調位置。",
+  "assemblyTeaching": "先核對孔徑、螺距、螺紋種類與工具空間；墊圈接觸支承面，再旋入及受控預緊。",
+  "verification": "間隙 c=(D孔−D軸)/2；長孔方向與活動軸一致。檢查頭下接觸、牙合長度與邊距。",
+  "unresolved": "廠房五金多仍是外觀候選，未具備牙形、扭矩或承載資格；不能套用已完成的 M5 零件結論。",
+  "units": "mm",
+  "geometry": "geometry/G-b5167b5080e21ec7df1d.json",
+  "geometrySHA256": "b5167b5080e21ec7df1d948c4255740dc759a5fd856ec117ad3caacdf8ab6fa4",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -8,
+      -8,
+      0
+    ],
+    [
+      8,
+      8,
+      0
+    ]
+  ],
+  "dimensionsMM": [
+    16,
+    16,
+    0
+  ],
+  "materials": [
+    "Factory | brushed-stainless"
+  ],
+  "reference": "../../materials/generated/GT01-Workbench-Assembly-R2.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-c2099c27a2be38.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-01",
+    "F-BENCH-02",
+    "F-BENCH-03",
+    "F-BENCH-04",
+    "F-BENCH-05",
+    "F-BENCH-06",
+    "F-BENCH-07",
+    "F-BENCH-08",
+    "F-BENCH-09",
+    "F-BENCH-10"
+  ],
+  "occurrenceCount": 40
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "GT01 authored glass clamp references; generated geometry is not independent dimensional proof",
+  "jobs": [
+    {
+      "id": "D05-P15d-r1",
+      "spec": "GT01 D05-P15d / M5 CLAMP SCREW. One authored silver steel socket-head screw, M5 x 0.8 actual right-handed helical thread, under-head to tip length22, cylindrical head diameter8.5 height4 with0.4 edge chamfer, recessed HEXAGON socket across flats4, socket blind depth2.3. Short1 mm unthreaded shoulder under head. Tip has0.35 chamfer. Exactly six corners in socket. Longitudinal section shows solid shaft core, alternating thread contour, blind socket with solid floor; do not draw a through bore. Dimensions are authored design, no ISO/DIN certification."
+    },
+    {
+      "id": "D05-P15e-r1",
+      "spec": "GT01 D05-P15e / M5 CLAMP NUT. One silver steel hexagon nut: across flats8, height4, both rim edges chamfer0.35, M5 x0.8 actual continuous FEMALE right-handed helical thread in genuinely open central through-bore. Both front and rear show same 6-sided hexagon exterior and threaded opening. True axial section shows two separated material walls with threads facing central empty gap; never cap bore. Detail of internal thread groove. No bolt, washer, or extra part."
+    },
+    {
+      "id": "D05-P15f-r1",
+      "spec": "GT01 D05-P15f / M8 CARRIAGE SCREW. One authored silver steel low socket-head screw M8 x1.25 continuous right-handed helical thread. Under-head to tip length10. Head diameter13.2 height5 with0.4 top edge chamfer. Recessed HEXAGON socket across flats5 blind depth2.3. Short1 mm unthreaded shoulder below head. Thread minor radius3.233,major radius4. Tip chamfer0.35. Consistent unusually short threaded shaft. Longitudinal section shows solid shaft core and blind hexagonal socket with solid floor, not a through bore. No ISO/DIN certification."
+    },
+    {
+      "id": "D05-P15g-r1",
+      "spec": "GT01 D05-P15g / CARRIAGE ATTACHMENT WASHER. One thin flat circular steel washer outer diameter22, true through bore diameter8.5, axial thickness1.0. Outer edges tiny0.1 chamfers, flat parallel faces. Front and rear identical circular annulus, side a thin straight strip. Axial section is TWO disconnected slender material strips on either side of completely empty bore; no solid bridge across bore, no torus profile. Enlarged chamfer detail and exploded section are not needed; sixth panel closeup of outer chamfer only."
+    },
+    {
+      "id": "D05-P15h-r1",
+      "spec": "GT01 D05-P15h / GLASS LOWER EDGE SUPPORT PAD. One small matte black EPDM rubber strip for protecting bottom edge of glass. Dimensions length56,width7.4,thickness1.5. Solid rectangular slender strip with subtle0.35 edge roundover, flat upper and lower surfaces. No holes, no ribs, no adhesive layer, no other parts. True section is solid rectangle with rounded edge corners. Front/back/top of SAME simple thin object and closeup of edge."
+    },
+    {
+      "id": "D05-P15a-r2",
+      "images": [
+        ".\\outputs\\references\\D05-P15a-r1.png",
+        ".\\outputs\\quality\\glass-clamps-r1\\D05-P15a-iso.png",
+        ".\\outputs\\quality\\glass-clamps-r1\\D05-P15a-side.png",
+        ".\\outputs\\quality\\glass-clamps-r1\\D05-P15a-rear.png"
+      ],
+      "prompt": "Generate a revised six-view precise industrial part shape sheet, white background, crisp silver grayscale, titled GT01 D05-P15a / FIXED GLASS CLAMP CARRIER / R2. First attachment is old R1 visual language only; next three are actual revised mesh shape from different angles, authoritative for current outline and depth step. Use smooth metal shading instead of crude flat mesh shading, but preserve the actual revised shape. One single integral cast-metal component, not assembled pieces. Overall height115 (R1 90 is obsolete). Top jaw 68wide x47high, bottom rectangular pad68wide x24high, large44-high open central window between two narrow side arms. Side view S offset24.3 mm between upper and lower parallel5mm-thick pads, mostly straight lower arms then a smooth compact bent elbow, then straight upper arm. Full upper jaw two5.5throughbores spaced48mm centres (24eachsidecentre), 7mm above lower jaw edge. Full upper inner face two tiny locating blind slots2.6x2.4mm positioned x±24mm,17mm above lower edge,1.05deep. Bottom pad central rear-facing OD16.4 spigot projects6mm, rear opening M8x1.25 blind bore; cabin-facing front is closed flat cap, never a spherical bump. Thin bottom ledge width56 projects7.4 from upper jaw glass-facing surface, supports separate rubber. Six panels: front closed-cap side, rear spigot/hole side, exact side view with24.3offset, isometric fromspigot-side, truthful axial section through spigot showing blind boreand solid floor, jaw contact face enlarged. Preserve true front/back correspondences. Dimension labels sparse and coherent; do not repeat old90 dimension or show extra components. Footer AUTHOR DESIGN / REVISED FOR STATIC CLEARANCE / NOT DIMENSIONALLY CERTIFIED."
+    },
+    {
+      "id": "D05-P15b-r2",
+      "images": [
+        ".\\outputs\\references\\D05-P15b-r1.png",
+        ".\\outputs\\quality\\glass-clamps-r1\\D05-P15b-iso.png"
+      ],
+      "prompt": "Revise the first attached six-view precision industrial engineering sheet into GT01 D05-P15b / MOVABLE GLASS CLAMP PRESSURE PLATE / R2. Preserve its sophisticated silver metal surface, exact same single pressure-plate identity, width64 height47 thickness4 R4corners. The second mesh image is authoritative for two ADDED tiny locating blind recesses on flat rear/glass side; do not lose the raised ribs from original first image. Correct M5 holes to48mm centre spacing:24mm left and24mm right ofcentre, holeD5.5,7mm abovebottom edge. Two rear locating blind recesses2.6x2.4 R.35,1.05deep atx±24,17mm abovebottomedge; show them only onrear,notfront. Front has exactly two narrow vertical domed reinforcement ribs3wide31long1high atx±20; ribs end aboveholes and do not cover holes. Rear has upper56x30 flat rubber contact patch except two tiny rear recesses near its bottom corners. 6panels FRONT withribs, REAR flatwithtworecesses, RIGHT SIDE showingtrue4thickness+1rib, isometric FROM FRONT, section through lower bore, enlarged locating REAR BLIND RECESS. All bores open, recesses blind. White background fine black dimensions. Footer AUTHOR DESIGN / INDIVIDUAL PART SHAPE REFERENCE / NOT DIMENSIONALLY CERTIFIED."
+    }
+  ]
+}

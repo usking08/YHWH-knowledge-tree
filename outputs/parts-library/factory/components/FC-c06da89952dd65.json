@@ -1,0 +1,46 @@
+{
+  "id": "FC-c06da89952dd65",
+  "name": "下層托板端折邊",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-3625727da0a32c4b8d6d.json",
+  "geometrySHA256": "3625727da0a32c4b8d6d30f5b0d3bfc8af197b8fae91274118a7ce3f7357b3df",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1,
+      -445,
+      -12
+    ],
+    [
+      1,
+      445,
+      12
+    ]
+  ],
+  "dimensionsMM": [
+    2,
+    890,
+    24
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Frame-Reference-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-c06da89952dd65.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-08"
+  ],
+  "occurrenceCount": 2
+}

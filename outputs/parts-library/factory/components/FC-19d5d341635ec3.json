@@ -1,0 +1,46 @@
+{
+  "id": "FC-19d5d341635ec3",
+  "name": "trim support shelf",
+  "family": "DRAWER",
+  "purpose": "把物件有序承托，並提供可取用的開口。",
+  "assemblyTeaching": "櫃背／側／底→固定軌→抽屜底側後前板→活動軌→前板與把手；抽屜沿單一導向軸滑入。",
+  "verification": "空腔可見；行程向量與軌道平行。檢查插入全路徑、止擋、承載接觸與鄰抽干涉。",
+  "unresolved": "新工作臺已有分離薄板與滑軌；倉儲料盒等仍有實心簡化，滾珠與止擋未建。",
+  "units": "mm",
+  "geometry": "geometry/G-5b194698cd536a4b2fb3.json",
+  "geometrySHA256": "5b194698cd536a4b2fb3c7186453a48190fa6891c36b0a290150746b13f09463",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -250,
+      -450,
+      -22.5
+    ],
+    [
+      250,
+      450,
+      22.5
+    ]
+  ],
+  "dimensionsMM": [
+    500,
+    900,
+    45
+  ],
+  "materials": [
+    "Factory | oiled-oak"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-19d5d341635ec3.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S4"
+  ],
+  "occurrenceCount": 6
+}

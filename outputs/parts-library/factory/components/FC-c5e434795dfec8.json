@@ -1,0 +1,46 @@
+{
+  "id": "FC-c5e434795dfec8",
+  "name": "rear filter grille",
+  "family": "DRAIN",
+  "purpose": "提供排水、排氣或捕集的連續通路。",
+  "assemblyTeaching": "入口→通道→轉接→過濾／收集→出口；維修件須留拆出方向。",
+  "verification": "通路必須真的中空；截面 A 與流量 Q 以 v=Q/A 相連，但必須有流量、阻力與邊界資料。",
+  "unresolved": "現有部分管件仍為實心掃掠；風量、壓損與防火性能未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-2386c3687118bc706fdb.json",
+  "geometrySHA256": "2386c3687118bc706fdb566a82dcf7105646f90cd299e8215a34fb99d225fa88",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2700,
+      -17.5,
+      -22.5
+    ],
+    [
+      2700,
+      17.5,
+      22.5
+    ]
+  ],
+  "dimensionsMM": [
+    5400,
+    35,
+    45
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-c5e434795dfec8.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B02"
+  ],
+  "occurrenceCount": 8
+}

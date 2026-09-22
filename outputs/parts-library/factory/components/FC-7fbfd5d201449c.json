@@ -1,0 +1,46 @@
+{
+  "id": "FC-7fbfd5d201449c",
+  "name": "tunnel floor anchor",
+  "family": "FASTENER",
+  "purpose": "把界面夾緊、限制分離或提供可調位置。",
+  "assemblyTeaching": "先核對孔徑、螺距、螺紋種類與工具空間；墊圈接觸支承面，再旋入及受控預緊。",
+  "verification": "間隙 c=(D孔−D軸)/2；長孔方向與活動軸一致。檢查頭下接觸、牙合長度與邊距。",
+  "unresolved": "廠房五金多仍是外觀候選，未具備牙形、扭矩或承載資格；不能套用已完成的 M5 零件結論。",
+  "units": "mm",
+  "geometry": "geometry/G-359c524fc223d15988ea.json",
+  "geometrySHA256": "359c524fc223d15988ea6164fc397bfcc9878e4bc716b651bce1ad9dda35620d",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -150,
+      -170,
+      -30
+    ],
+    [
+      150,
+      170,
+      30
+    ]
+  ],
+  "dimensionsMM": [
+    300,
+    340,
+    60
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-7fbfd5d201449c.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S6"
+  ],
+  "occurrenceCount": 12
+}

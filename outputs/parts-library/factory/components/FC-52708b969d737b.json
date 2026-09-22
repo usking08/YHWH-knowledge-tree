@@ -1,0 +1,46 @@
+{
+  "id": "FC-52708b969d737b",
+  "name": "Factory | safety-ochre",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-99bd0aad504ac0932ee7.json",
+  "geometrySHA256": "99bd0aad504ac0932ee7170fb5f284e82c11b048175c8595c21d3197f3e287ab",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1200,
+      -27.5,
+      -2.5
+    ],
+    [
+      1200,
+      27.5,
+      2.5
+    ]
+  ],
+  "dimensionsMM": [
+    2400,
+    55,
+    5
+  ],
+  "materials": [
+    "Factory | safety-ochre"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-52708b969d737b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B01"
+  ],
+  "occurrenceCount": 2
+}

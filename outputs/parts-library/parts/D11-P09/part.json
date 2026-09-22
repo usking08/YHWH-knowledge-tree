@@ -1,0 +1,353 @@
+{
+  "schemaVersion": "GT01-part/v1",
+  "id": "D11-P09",
+  "name": "E 形軸向扣環",
+  "revision": "D11-FIRST-ARTICLE-R3",
+  "authority": "AUTHOR_DESIGN",
+  "units": "mm",
+  "classification": {
+    "assembly": [
+      "GT01 車輛",
+      "D11 車門外把手",
+      "把手首件機構",
+      "D11-P09"
+    ],
+    "functionFamily": [
+      "緊固",
+      "扣環與擋圈"
+    ]
+  },
+  "physicalBoundary": {
+    "description": "一件獨立物理零件的全部原生表面；不把左右安置重複計為種類。",
+    "surfaceLabels": [
+      "E 型止退扣環"
+    ],
+    "nativeSurfaceCount": 1,
+    "prototypeCount": 1,
+    "solidCountObserved": 1
+  },
+  "coordinateFrame": {
+    "name": "D11 assembly local",
+    "units": "mm",
+    "handedness": "right",
+    "X": "沿把手長度",
+    "Y": "向車外",
+    "Z": "向上",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivotAxis": {
+      "origin": [
+        -46,
+        -10,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ]
+    },
+    "transformApplied": "none; original native geometry coordinates"
+  },
+  "dimensions": [
+    {
+      "name": "厚度",
+      "value": 0.65,
+      "unit": "mm",
+      "source": "source ExtrudeGeometry"
+    },
+    {
+      "name": "名義扣槽直徑",
+      "value": 3.2,
+      "unit": "mm",
+      "source": "interfaces.nominalGrooveDiameter"
+    },
+    {
+      "name": "實際原生外包絡",
+      "value": {
+        "min": [
+          -49.998260498046875,
+          -13.121521949768066,
+          -19.18000030517578
+        ],
+        "max": [
+          -42.001739501953125,
+          -6,
+          -18.530000686645508
+        ],
+        "size": [
+          7.99652099609375,
+          7.121521949768066,
+          0.6499996185302734
+        ]
+      },
+      "unit": "mm",
+      "source": "cold native + OBJ readback"
+    }
+  ],
+  "holeAxes": [],
+  "features": [
+    "真正開口的 E 形薄片",
+    "三處內側定位形面"
+  ],
+  "purpose": "在肩銷下扣槽處提供軸向保持的形狀候選。",
+  "usableScenarios": [
+    "扣槽與擋圈配合的幾何教學"
+  ],
+  "limitations": [
+    "目前只有槽內放置位置，彈性張開與卡入並未完成。"
+  ],
+  "material": {
+    "displayColorLinearRGB": [
+      0.46207699964472876,
+      0.508881320845802,
+      0.5271151256969157
+    ],
+    "displayShader": "MeshStandardMaterial",
+    "grade": "未指定",
+    "authority": "AUTHOR_DESIGN appearance only",
+    "nextAction": "依實際載荷、環境及製程選定材料與公差後再驗證。"
+  },
+  "interfaces": {
+    "source": {
+      "referenceFrontAxis": [
+        0,
+        1,
+        0
+      ],
+      "referenceUpAxis": [
+        0,
+        0,
+        1
+      ],
+      "complete": false,
+      "nominalGrooveDiameter": 3.2,
+      "interferenceAndInstallationUnverified": true
+    },
+    "sourceFile": "../../native/source/door-handle-hardware.mjs",
+    "sourceFrameWarning": null
+  },
+  "mates": [
+    {
+      "part": "D11-P03",
+      "contact": "Ø3.2 扣槽內定位",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P10",
+      "contact": "限制墊圈向下脫離",
+      "inLibrary": true
+    }
+  ],
+  "installation": {
+    "scope": "R3 ten-step unique source implementation; sampled rigid paths",
+    "order": 9,
+    "id": "D11-P09",
+    "name": "09 查看扣環定位",
+    "note": "顯示槽內定位；扣環彈性張開與卡入路徑尚未驗證。",
+    "path": "placement-only",
+    "implementation": "../../native/source/door-handle-assembly-paths.mjs",
+    "assemblyComplete": false
+  },
+  "status": {
+    "geometry": "NATIVE_AUTHORED_SHAPE",
+    "exportPreserved": true,
+    "singleClosedSolid": true,
+    "assemblyComplete": false,
+    "manufacturingCertified": false
+  },
+  "inspection": [
+    {
+      "method": "重新讀取 OBJ 和 geometry.json 的全部三角面及法線，與原生輸出逐位雜湊比較",
+      "criterion": "面數、各 surface、位置及法線全部相符",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    },
+    {
+      "method": "以 0.00001 mm 座標併點統計連通與有向邊、計算有向體積",
+      "criterion": "一連通、每邊兩面反向、無零面積或非有限座標、正體積",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "evidence/native-readback.json",
+      "scope": "本次原生及冷讀輸出"
+    },
+    {
+      "file": "../../evidence/door-handle-parent-readback-r3.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-coupling-readback-r2.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-assembly-paths-r1.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-quality-cases.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    }
+  ],
+  "references": [
+    {
+      "file": "references/D11-P09-model-r1.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "同一份模型的正面 +Y、背面 -Y、頂面 +Z、底面 -Z、端面 +X 與斜視；以原生尺寸和孔軸為準。",
+      "revisionReason": "此圖是局部形體證據，不是承載、密封或完整總成通過。",
+      "sha256": "183db4343b48f3254e1e228a47e6daa58c5419034e1b8236e10acf83acb24e91"
+    }
+  ],
+  "qualityCases": [],
+  "outstandingWork": [
+    {
+      "id": "D11-P09-W1",
+      "status": "NOT_DONE",
+      "action": "選定彈簧材料與熱處理，再建立張開、越過軸身、回彈入槽的連續路徑及應變判定。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。"
+    }
+  ],
+  "files": {
+    "metadata": "part.json",
+    "humanGuide": "PART.md",
+    "obj": "part.obj",
+    "mtl": "part.mtl",
+    "threeGeometry": "geometry.json",
+    "nativeEntry": "../../native/geometry-core.mjs",
+    "nativeSource": "../../native/source/door-handle-hardware.mjs"
+  },
+  "nativeMetrics": {
+    "triangles": 320,
+    "verticesAfterPositionWeld": 162,
+    "weldToleranceMm": 0.00001,
+    "surfaceCount": 1,
+    "connectedComponents": 1,
+    "openEdges": 0,
+    "nonManifoldEdges": 0,
+    "inconsistentOrientationEdges": 0,
+    "zeroAreaTriangles": 0,
+    "nonFiniteCoordinates": 0,
+    "signedVolumeMm3": 19.14719880605755,
+    "boundsMm": {
+      "min": [
+        -49.998260498046875,
+        -13.121521949768066,
+        -19.18000030517578
+      ],
+      "max": [
+        -42.001739501953125,
+        -6,
+        -18.530000686645508
+      ],
+      "size": [
+        7.99652099609375,
+        7.121521949768066,
+        0.6499996185302734
+      ]
+    },
+    "positionTriangleSHA256": "c11a07a7aa56e8e0d25cc98d8be4a58547cb564edf83b8ea92da6a1c4657f5f0",
+    "normalTriangleSHA256": "eaddfcbbecd42b0527712f95cb0b112f9d12a98bd5f26435ac20f8e64c5a4ecd"
+  },
+  "hashes": {
+    "sourceSHA256": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0",
+    "positionTriangleSHA256": "c11a07a7aa56e8e0d25cc98d8be4a58547cb564edf83b8ea92da6a1c4657f5f0",
+    "normalTriangleSHA256": "eaddfcbbecd42b0527712f95cb0b112f9d12a98bd5f26435ac20f8e64c5a4ecd",
+    "objSHA256": "082325829dbe083ebc471e0ad0b8002c1fbebdbb3f28f2c6b5cf1ac52be15416",
+    "geometryJSONSHA256": "e6b960ebaf797f1f9f94d43aff74563a6d4658666cd2fac8f23d7a84e56712d9"
+  },
+  "mathematicalQuality": {
+    "revision": "GT01-MATH-QA-R1",
+    "lawIds": [
+      "boundary",
+      "volume",
+      "rigid",
+      "units",
+      "retention",
+      "load"
+    ],
+    "calculation": "../../math-quality.json",
+    "nativeReadback": "../../evidence/math-native-readback.json",
+    "teaching": "../../math-quality.html#D11-P09",
+    "runner": "../../native/math-quality.mjs",
+    "admission": "../../math-admission.json",
+    "checks": [
+      {
+        "id": "closed-boundary",
+        "status": "PASS"
+      },
+      {
+        "id": "volume-origin",
+        "status": "PASS"
+      },
+      {
+        "id": "identity-units",
+        "status": "PASS"
+      },
+      {
+        "id": "rigid-frame",
+        "status": "PASS"
+      },
+      {
+        "id": "clip-groove",
+        "status": "PASS"
+      },
+      {
+        "id": "load-release",
+        "status": "NEEDS_INPUT"
+      },
+      {
+        "id": "tolerance-release",
+        "status": "NEEDS_INPUT"
+      }
+    ],
+    "openInputs": [
+      {
+        "name": "卡入張開量 (mm)",
+        "quantities": [
+          {
+            "quantity": "length",
+            "unit": "mm"
+          }
+        ],
+        "unit": "mm",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "材料彈塑性曲線 (MPa)",
+        "quantities": [
+          {
+            "quantity": "stress",
+            "unit": "MPa"
+          },
+          {
+            "quantity": "strain",
+            "unit": "1"
+          }
+        ],
+        "unit": "MPa；1",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "保持載荷 (N)",
+        "quantities": [
+          {
+            "quantity": "force",
+            "unit": "N"
+          }
+        ],
+        "unit": "N",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      }
+    ],
+    "manufacturingReleased": false
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GT01 portable physical part",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "revision",
+    "authority",
+    "units",
+    "classification",
+    "physicalBoundary",
+    "coordinateFrame",
+    "dimensions",
+    "holeAxes",
+    "features",
+    "purpose",
+    "usableScenarios",
+    "limitations",
+    "material",
+    "interfaces",
+    "mates",
+    "installation",
+    "status",
+    "inspection",
+    "evidence",
+    "references",
+    "outstandingWork",
+    "files",
+    "nativeMetrics",
+    "hashes",
+    "mathematicalQuality"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "GT01-part/v1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^D[0-9]{2}-P[0-9]{2}[a-z]?$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string"
+    },
+    "authority": {
+      "const": "AUTHOR_DESIGN"
+    },
+    "units": {
+      "const": "mm"
+    },
+    "classification": {
+      "type": "object",
+      "required": [
+        "assembly",
+        "functionFamily"
+      ],
+      "properties": {
+        "assembly": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "string"
+          }
+        },
+        "functionFamily": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "physicalBoundary": {
+      "type": "object",
+      "required": [
+        "surfaceLabels",
+        "nativeSurfaceCount",
+        "prototypeCount"
+      ]
+    },
+    "coordinateFrame": {
+      "type": "object",
+      "required": [
+        "name",
+        "units",
+        "X",
+        "Y",
+        "Z"
+      ]
+    },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "unit",
+          "source"
+        ]
+      }
+    },
+    "holeAxes": {
+      "type": "array"
+    },
+    "features": {
+      "type": "array",
+      "minItems": 1
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "usableScenarios": {
+      "type": "array",
+      "minItems": 1
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1
+    },
+    "material": {
+      "type": "object",
+      "required": [
+        "grade",
+        "authority",
+        "nextAction"
+      ]
+    },
+    "interfaces": {
+      "type": "object",
+      "required": [
+        "source",
+        "sourceFile"
+      ]
+    },
+    "mates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "part",
+          "contact",
+          "inLibrary"
+        ]
+      }
+    },
+    "installation": {
+      "type": "object",
+      "required": [
+        "order",
+        "scope",
+        "assemblyComplete"
+      ]
+    },
+    "status": {
+      "type": "object",
+      "required": [
+        "geometry",
+        "exportPreserved",
+        "assemblyComplete",
+        "manufacturingCertified"
+      ],
+      "properties": {
+        "assemblyComplete": {
+          "const": false
+        },
+        "manufacturingCertified": {
+          "const": false
+        }
+      }
+    },
+    "inspection": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "method",
+          "criterion",
+          "verdict",
+          "evidence"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1
+    },
+    "outstandingWork": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "action",
+          "completionEvidence"
+        ]
+      }
+    },
+    "files": {
+      "type": "object",
+      "required": [
+        "metadata",
+        "humanGuide",
+        "obj",
+        "mtl",
+        "threeGeometry",
+        "nativeEntry",
+        "nativeSource"
+      ]
+    },
+    "nativeMetrics": {
+      "type": "object",
+      "required": [
+        "triangles",
+        "signedVolumeMm3",
+        "boundsMm",
+        "positionTriangleSHA256"
+      ]
+    },
+    "hashes": {
+      "type": "object",
+      "required": [
+        "sourceSHA256",
+        "positionTriangleSHA256",
+        "objSHA256",
+        "geometryJSONSHA256"
+      ]
+    },
+    "mathematicalQuality": {
+      "type": "object",
+      "required": [
+        "revision",
+        "lawIds",
+        "calculation",
+        "nativeReadback",
+        "teaching",
+        "runner",
+        "admission",
+        "checks",
+        "openInputs",
+        "manufacturingReleased"
+      ],
+      "properties": {
+        "lawIds": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "manufacturingReleased": {
+          "const": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-9fa84ca6af4d2e",
+  "name": "cable tray rung",
+  "family": "LIGHT",
+  "purpose": "照明讓形狀、表面缺陷與作業區可辨識。",
+  "assemblyTeaching": "固定座→懸吊→殼體→光源板→擴散罩；線材沿橋架回到供電接口。",
+  "verification": "反射環境擷取範圍要含燈；本場景 mm 尺度使用 far=50000。檢查直射、反射和遮擋分別有效。",
+  "unresolved": "發光材質不等於真實照度；驅動電源、配線及照度計算未建。",
+  "units": "mm",
+  "geometry": "geometry/G-25ef770f9f8085d53838.json",
+  "geometrySHA256": "25ef770f9f8085d538383e7dd0486e9596026321c903f962255fe33263e9b5e2",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -17.5,
+      -165,
+      -12.5
+    ],
+    [
+      17.5,
+      165,
+      12.5
+    ]
+  ],
+  "dimensionsMM": [
+    35,
+    330,
+    25
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-9fa84ca6af4d2e.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-007"
+  ],
+  "occurrenceCount": 186
+}

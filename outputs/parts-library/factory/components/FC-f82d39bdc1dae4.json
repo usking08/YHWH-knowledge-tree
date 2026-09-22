@@ -1,0 +1,46 @@
+{
+  "id": "FC-f82d39bdc1dae4",
+  "name": "下層托板 · 薄板底",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-c630fcc0c5e81b4d362e.json",
+  "geometrySHA256": "c630fcc0c5e81b4d362e07af5dcde2d64672be9f01525fddbee0f5ae4a5e905c",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1102.5,
+      -270,
+      -1
+    ],
+    [
+      1102.5,
+      270,
+      1
+    ]
+  ],
+  "dimensionsMM": [
+    2205,
+    540,
+    2
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Frame-Reference-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-f82d39bdc1dae4.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-10"
+  ],
+  "occurrenceCount": 1
+}

@@ -1,0 +1,54 @@
+{
+  "id": "FC-a054039c399df9",
+  "name": "起子握柄止滑肋",
+  "family": "TOOL",
+  "purpose": "轉動固定件、定位工件或施加受控夾持。",
+  "assemblyTeaching": "工具頭→傳力桿→握持面；虎鉗固定座→導向滑塊→活動鉗口→絲桿與旋柄。",
+  "verification": "扳手環孔要貫穿、起子末端要有實際刃型；虎鉗夾口對向且保留行程。",
+  "unresolved": "虎鉗牙形、工具掛板孔列、材料強度與工具配合尺寸待驗。",
+  "units": "mm",
+  "geometry": "geometry/G-0e9039300fabff6ada2e.json",
+  "geometrySHA256": "0e9039300fabff6ada2ed033ea148d8f92514a3a660eece8050173cfefe23f34",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1.5,
+      -1.5,
+      -39
+    ],
+    [
+      1.5,
+      1.5,
+      39
+    ]
+  ],
+  "dimensionsMM": [
+    3,
+    3,
+    78
+  ],
+  "materials": [
+    "Factory | safety-ochre"
+  ],
+  "reference": "../../materials/generated/GT01-Workbench-Assembly-R2.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-a054039c399df9.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-01",
+    "F-BENCH-02",
+    "F-BENCH-03",
+    "F-BENCH-04",
+    "F-BENCH-05",
+    "F-BENCH-06",
+    "F-BENCH-07",
+    "F-BENCH-08",
+    "F-BENCH-09"
+  ],
+  "occurrenceCount": 216
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-1ca47bff084b3f",
+  "name": "roll stand foot",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-969f8852dd7b6972d3b8.json",
+  "geometrySHA256": "969f8852dd7b6972d3b883bf13e2903c65ed7fa367fbc94f176969e8f5a85b01",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -175,
+      -300,
+      -80
+    ],
+    [
+      175,
+      300,
+      80
+    ]
+  ],
+  "dimensionsMM": [
+    350,
+    600,
+    160
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-1ca47bff084b3f.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B05"
+  ],
+  "occurrenceCount": 6
+}

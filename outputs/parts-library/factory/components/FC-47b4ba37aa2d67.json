@@ -1,0 +1,51 @@
+{
+  "id": "FC-47b4ba37aa2d67",
+  "name": "utility service post",
+  "family": "TOOL",
+  "purpose": "轉動固定件、定位工件或施加受控夾持。",
+  "assemblyTeaching": "工具頭→傳力桿→握持面；虎鉗固定座→導向滑塊→活動鉗口→絲桿與旋柄。",
+  "verification": "扳手環孔要貫穿、起子末端要有實際刃型；虎鉗夾口對向且保留行程。",
+  "unresolved": "虎鉗牙形、工具掛板孔列、材料強度與工具配合尺寸待驗。",
+  "units": "mm",
+  "geometry": "geometry/G-092f82bd91cb19c62297.json",
+  "geometrySHA256": "092f82bd91cb19c6229702a48e2c3e2cb9bf56d7fe128737ddab93a144a404f0",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -55,
+      -55,
+      -600
+    ],
+    [
+      55,
+      55,
+      600
+    ]
+  ],
+  "dimensionsMM": [
+    110,
+    110,
+    1200
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-47b4ba37aa2d67.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S1",
+    "F-S2",
+    "F-S3",
+    "F-S4",
+    "F-S5",
+    "F-S6"
+  ],
+  "occurrenceCount": 12
+}

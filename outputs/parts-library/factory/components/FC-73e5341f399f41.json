@@ -1,0 +1,46 @@
+{
+  "id": "FC-73e5341f399f41",
+  "name": "reception stone desk",
+  "family": "FURNITURE",
+  "purpose": "讓訪客停留、閱讀與比較成果；人體接觸面需有合理曲面。",
+  "assemblyTeaching": "承重骨架→彈性層→泡棉→裁片縫線→包覆固定；座椅支腳需接到骨架。",
+  "verification": "曲率與輪廓多角度一致；織物方向隨裁片、紋理比例不能因拉伸改變。",
+  "unresolved": "目前只有外部包覆殼與腳件；內架、泡棉分層、縫線與固定件尚未完成。",
+  "units": "mm",
+  "geometry": "geometry/G-2c1b421d15f403edf3a1.json",
+  "geometrySHA256": "2c1b421d15f403edf3a16f1fc94a8da9ba717427442fe119f00e11ac7e6f1158",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1510,
+      -420,
+      -560
+    ],
+    [
+      1510,
+      420,
+      560
+    ]
+  ],
+  "dimensionsMM": [
+    3020,
+    840,
+    1120
+  ],
+  "materials": [
+    "Factory | warm-white-powdercoat"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-73e5341f399f41.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-RECEPTION-DESK"
+  ],
+  "occurrenceCount": 1
+}

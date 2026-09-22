@@ -1,0 +1,83 @@
+{
+  "uuid": "G-f5c69e5919045f117d67",
+  "type": "BufferGeometry",
+  "userData": {
+    "sourceGeometryType": "PlaneGeometry"
+  },
+  "data": {
+    "attributes": {
+      "position": {
+        "itemSize": 3,
+        "type": "Float32Array",
+        "array": [
+          -1900,
+          325,
+          0,
+          1900,
+          325,
+          0,
+          -1900,
+          -325,
+          0,
+          1900,
+          -325,
+          0
+        ],
+        "normalized": false
+      },
+      "normal": {
+        "itemSize": 3,
+        "type": "Float32Array",
+        "array": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "normalized": false
+      },
+      "uv": {
+        "itemSize": 2,
+        "type": "Float32Array",
+        "array": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "normalized": false
+      }
+    },
+    "index": {
+      "type": "Uint16Array",
+      "array": [
+        0,
+        2,
+        1,
+        2,
+        3,
+        1
+      ]
+    },
+    "boundingSphere": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "radius": 1927.5956526201235
+    }
+  }
+}

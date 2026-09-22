@@ -1,0 +1,54 @@
+{
+  "id": "FC-cf57f986c7a2c2",
+  "name": "caster yoke",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-ef8d9136f97c54db7b52.json",
+  "geometrySHA256": "ef8d9136f97c54db7b52cee9e1818ed633738726cfe9c47b8d3023cb9971f504",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -19,
+      -35,
+      -27.5
+    ],
+    [
+      19,
+      35,
+      27.5
+    ]
+  ],
+  "dimensionsMM": [
+    38,
+    70,
+    55
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-cf57f986c7a2c2.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-TROLLEY-01",
+    "F-TROLLEY-02",
+    "F-TROLLEY-03",
+    "F-TROLLEY-04",
+    "F-S4",
+    "F-TROLLEY-05",
+    "F-S5",
+    "F-TROLLEY-06",
+    "F-TROLLEY-07"
+  ],
+  "occurrenceCount": 36
+}

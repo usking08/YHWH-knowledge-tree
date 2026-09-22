@@ -1,0 +1,58 @@
+import fs from 'node:fs/promises';
+const out=new URL('../outputs/',import.meta.url);
+const reviews={
+ S00:{reviewNote:'R2 正面、背面與側面用於外形約束；總高 860 mm 為本案配置尺寸。右下滑軌細節仍有上下軌分離及錯誤零件標籤，尚未採用，須以獨立 S03 圖取代。',adoptedPanels:[1,2,3,4,6],rejectedPanels:[5]},
+ D00:{reviewNote:'R2 已移除 R1 重複的內殼與承載板，D01–D12 可逐一對上。採用外形與拆件角色；玻璃腰線剖面的固定件／移動件分界仍待獨立細圖澄清。',adoptedPanels:[1,2,3,5,6],rejectedPanels:[4]},
+ W00:{reviewNote:'圖檔已備不等於模型合格；輪端原有外形、接口與材質缺陷仍須結案。'},
+ A00:{reviewNote:'廠房圖為作者設計；目前僅總成視覺參考，柱腳、設備、治具等獨立圖尚未齊備。'}
+};
+Object.assign(reviews,{
+ 'D05-P14':{referenceEvidenceType:'model_readback',reviewNote:'已建形杯殼、兩弧片、鋼軸、56 疊片及後軸套。新增十二片銅片、一個絕緣芯及十二張槽襯；圖為這 86 個實體的組合與拆解，並非完整驅動器；繞組、電刷、減速機、固定與止推件尚未施工。組回車門曾發現法蘭穿外板 0.103 mm，軸線內移 2 mm 後重新抽樣。'},
+ 'D05-P14a':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 把內伸軸套座畫向外，R2 側視雖修正，剖面仍向外且與側視矛盾。R3 為實際形體六視圖，後壁只留 Ø12 孔、內伸座長 6；它不是獨立來源。',rejectedPriorReferences:['D05-P14a-r1.png','D05-P14a-r2.png']},
+ 'D05-P14b':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1／R2 的內外半徑引線顛倒，R2 側視高度也誤標 3.8。R3 是單片實體六視圖，採外半徑 15.6、內半徑 11.8、長 34 及 120 度。固定膠層未建立。',rejectedPriorReferences:['D05-P14b-r1.png','D05-P14b-r2.png']},
+ 'D05-P14c':{reviewNote:'R2 已將環紋改成軸向直紋。第五區文字寫距軸線 2.7，但尺寸引線未指到軸線，該尺寸畫法退修；實際形體另附六視圖，D 平面由三角面讀回。',adoptedPanels:[1,2,3,4,6],rejectedPanels:[5]},
+ 'D05-P14d':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 雖寫 12 齒，但主視圖的齒數不足且齒冠寬度不符；不用該圖施工。R2 為目前十二齒單片的實際六視圖，每片 0.49、組裝節距 0.5，56 片獨立選取。',rejectedPriorReferences:['D05-P14d-r1.png']},
+ 'D05-P14q':{reviewNote:'單一短軸套，真正貫通孔與兩端外倒角。外徑 12、孔徑 6.06、長 6 為作者配置；材料、配合公差與壽命未驗證。',adoptedPanels:[1,2,3,4,5,6]},
+ C00:{reviewNote:'R2 修正為既定雙座身份、開放車頂骨架及可辨讀的門檻剖面；外形為作者參考，不是量測車身。',adoptedPanels:[1,2,3,4,5,6]},
+ S07:{reviewNote:'R1 頭枕背部開口與 S00 的完整棕色頭枕不一致。以 S00 為既定身份，另用 S07-HEAD-BACK 獨立後裁片補齊，不能自行填成一塊實心體。'},
+ 'D05-P01':{reviewNote:'單一前導軌。前後視圖共用兩端軸孔、兩個長孔與兩個固定耳；剖面返邊必須在模型可見。尺寸仍為本案配置。'},
+ 'D05-P05':{reviewNote:'單一導向滑輪。採用圖上六肋、貫通軸孔、雙輪緣及 U 槽；肋不是六個鏤空洞。'},
+ D05:{reviewNote:'模型已建立雙導軌、滑輪、滑座、鋼索、捲筒殼蓋，以及逐件玻璃夾座。夾座與玻璃已做靜態接口抽樣；驅動、張力、其他固定件、完整升降行程仍未完成。完整總成 R1 因背面重複正面、滑輪編號及分離鉚釘錯誤退修，不供施工。'},
+ 'D05-P15':{referenceEvidenceType:'model_readback',reviewNote:'每個夾座含 11 個實體件，前後共 22 件／門。生成的 R1 總成圖多出第二副框架，已退回；R3 由目前同一組實體生成，包含修正後的縱肋、彎頸及孔周承壓面，屬模型讀回。原先垂直夾持配置使玻璃碰到前上滑輪，已改成延續可見玻璃方向的傾斜夾持。靜態模型抽樣與實際剖面另附；完整插入路徑及升降運動尚未驗證。'},
+ 'D05-P15a':{referenceEvidenceType:'model_readback',reviewNote:'R1 彎臂穿入滑座。R2 的側面、盲孔剖面及承托唇細節仍錯。R3 是目前模型直接生成的六視圖，可核對每個角度與接合；它不是獨立來源，也不構成外形或精品材質的驗收。固定座已沿玻璃方向重作成連續彎臂。',adoptedPanels:[1,2,3,4,5,6]},
+ D04:{referenceEvidenceType:'model_readback',reviewNote:'R2 是同一片完整模型玻璃的六視圖。原有可見輪廓保留，下半片為作者補建並沿既有曲面方向延伸；厚度及夾持接口已從模型讀回，完整升降路徑仍未驗證。它不是原廠量測或獨立形狀證明。',adoptedPanels:[1,2,3,4,5,6]},
+ 'D05-P15b':{reviewNote:'R2 明確分開正面兩條補強筋、背面兩個定位盲槽及兩個通孔。孔中心距採本案 48 mm；模型已補上連續彎頸、孔周 0.65 mm 承壓翻邊與兩條 1 mm 縱肋；M5 螺栓跟隨新承壓面。材質、孔口圓角和零件外觀仍需繼續精修。',adoptedPanels:[1,2,3,4,5,6]},
+ 'D05-P15c':{reviewNote:'R3 區分自由凸紋 0.35 mm 與夾持高 0.25 mm。實際模型保留自由形狀，夾持面展寬成有限接觸帶；中央截面面積保留，未解材料力學。R3 側視已補齊十條凸紋並把背面凸點放回反側，但第 3 區 0.35／0.8 尺寸引線方向仍錯，不採其尺寸標註；其餘採形狀關係，非量測證明。',adoptedPanels:[1,2,4,5,6],rejectedPanels:[3]},
+ 'D05-P15d':{reviewNote:'形態採實際螺旋牙面、圓柱頭與盲六角工具槽。圖面 22 mm 尺寸線未把 1 mm 肩部清楚納入；模型以頭下至端部 22 mm 定義，不照尺寸線直接量圖。',adoptedPanels:[2,4,6],panelsStillUnderReview:[1,3,5]},
+ 'D05-P15e':{reviewNote:'六角外形與真正貫通內螺紋已建形。第五區剖面比例與 4 mm 標線方向有疑義，不能作尺寸依據；模型內外牙以實際三角面抽樣核對。',adoptedPanels:[1,2,3,4,6],rejectedPanels:[5]},
+ 'D05-P15f':{reviewNote:'低圓柱頭、盲工具槽及短螺紋軸已建形。圖的第六區大徑引線落在牙根附近，且第 2、3、5 區未清楚區分肩長與頭下總長，保留退修。',adoptedPanels:[1,4],rejectedPanels:[6],panelsStillUnderReview:[2,3,5]},
+ 'D05-P15g':{reviewNote:'單一薄墊圈，內孔真正貫通；剖面兩片材料由環形本體連續相接。',adoptedPanels:[1,2,3,4,5,6]},
+ 'D05-P15h':{reviewNote:'獨立底緣橡膠承墊，保留 56 × 7.4 × 1.5 mm 形體。第五區實際畫的是橫斷面，原標題 LONGITUDINAL 不採用。',adoptedPanels:[1,2,3,4,6],panelsStillUnderReview:[5]},
+ 'D05-P06':{reviewNote:'R4 已區分插入前與鉚合後的同一支軸，並修正擴口位於導軌背面的順序。R3 因黑底影響文字辨讀退回。採用單件外形與堆疊次序；圖內數字尚未與模型逐一對齊，尺寸仍須核對。',adoptedPanels:[1,2,3,4,5,6],rejectedPanels:[]},
+ 'D05-P02':{reviewNote:'後導軌與前軌共用同一個通道截面，兩固定耳改在相反邊。兩軌在模型共用平行運動方向。孔位、成形細節及整門包絡仍須驗收。'},
+ 'D05-P03':{reviewNote:'R4 以模型實際截面約束第 5 區，修正 R3 的兩支假導軌為一支連續 U 軌。參考圖與模型截面互相比對；截面是作者設計讀回，不是獨立量測證明。模型仍有曲面、局部凹格和材質差距。',adoptedPanels:[1,2,3,4,5],rejectedPanels:[],panelsStillUnderReview:[6]},
+ 'D05-P04':{reviewNote:'本案前後滑座採同一模製件，沿相同方向装配，與 P03 共用零件定義及圖紙；兩個實例可各自選取。共用件不另造不同形狀。'},
+ 'D05-P10':{reviewNote:'R2 剖面已改為多道螺旋槽相交的斷面；花鍵孔、鋼索端座和收放纏繞仍須以模型及接合近看驗收。',adoptedPanels:[1,2,3,4,5,6]},
+ 'D05-P11':{reviewNote:'依側面、斜視與剖面建立薄壁杯殼、兩個徑向出索孔、中心軸孔及三耳法蘭。正面投影的出索孔及內肋數仍須澄清，不能把畫面陰影當作孔位。',adoptedPanels:[2,3,4,5,6],panelsStillUnderReview:[1]},
+ 'D05-P12':{reviewNote:'前蓋為封閉薄壁件，三固定耳與下殼同軸，後側另有定位唇。第 5 區將淺拱高度誇張，數字與圖像比例不一致；模型採本案 2 mm 名義淺拱，該區未採用。',adoptedPanels:[1,2,3,4,6],rejectedPanels:[5]},
+ S03:{reviewNote:'獨立 R1 拆圖區分上下軌、滾動件、保持架、鎖止梳齒與彈簧。採用構造分件；球列數及鎖止齒與下軌窗孔的接合仍待逐件圖。現有模型尚未依這張新圖完成重作。'},
+ 'S07-HEAD-BACK':{reviewNote:'獨立薄皮革後裁片。保留翻折縫份、周界曲邊及與側襠的接縫；與 S07 組回後才驗收整個頭枕。'}
+});
+Object.assign(reviews,{
+ 'D05-P14f':{referenceEvidenceType:'model_readback',reviewNote:'十二片銅片和一個絕緣芯共十三個實體。模型讀回含組合、拆解和實際切面；導線焊接、刷架與製造固定仍未完成。'},
+ 'D05-P14f-a':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 縱剖把軸向肋誤畫成橫齒，R2 修正方向但仍把一體肋畫出分離邊界；現採同一連續模型的六視圖。',rejectedPriorReferences:['D05-P14f-a-r1.png','D05-P14f-a-r2.png']},
+ 'D05-P14f-b':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 在導線槽兩耳加入未定義孔洞，正視／側視命名及半徑引線也不可靠。模型採指定截面連續掃成單片，不照錯誤細節施工。',rejectedPriorReferences:['D05-P14f-b-r1.png']},
+ 'D05-P14r':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 把 R10.12 畫成口寬、安裝圖也將導線放在襯片外側；未採其接口。模型依十二槽截面建立一張連續薄壁，各槽分開安置。',rejectedPriorReferences:['D05-P14r-r1.png']}
+});
+Object.assign(reviews,{
+ 'D05-P14':{referenceEvidenceType:'model_readback',reviewNote:'每門已有 93 個馬達實體：前次 86 件加兩顆碳刷、兩支彈簧、一體刷架與兩個滑軌扣蓋。線圈端部及引線路徑尚未全部通過，未掛入整車；接線、防退出卡扣、箱殼固定及減速機仍未完成。'},
+ 'D05-P14g':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 將 Y=9.2 位置誤當零件高度，已退修。R2 改標中央 4.00／最高 4.252，但各投影比例仍須以原生形體核對。實體具有 R5.2 凹面、Ø0.8 深 0.7 盲孔和 0.15 倒角。',rejectedPriorReferences:['D05-P14g-r1.png']},
+ 'D05-P14h':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 圈數、比例及側視軸標尚不可靠。實體為五圈連續鋼線，兩端低節距；接觸已從實際形體抽樣，彈力與壽命未驗證。',rejectedPriorReferences:['D05-P14h-r1.png']},
+ 'D05-P14i':{referenceEvidenceType:'model_readback',reviewNote:'此項仍是子總成，展開為一體刷架、軸向扣蓋與箱殼定位件。滑軌扣蓋已逐件建形；防退出卡扣與箱殼固定仍未完成。'},
+ 'D05-P14i-a':{referenceEvidenceType:'model_readback',reviewNote:'R1 太暗且引線孔位置錯誤；R2 前後視已調整孔位，但斜視多出孔、U 槽方向及剖面仍矛盾。兩版均退修。實際連續基板與雙 U 導槽另附同形體六視圖。',rejectedPriorReferences:['D05-P14i-a-r1.png','D05-P14i-a-r2.png']}
+});
+Object.assign(reviews,{'D05-P14i-b':{referenceEvidenceType:'model_readback',reviewNote:'生成 R1 的側視把截面內勾畫成長度方向端鉤，剖面也把軸向 0.10 厚度畫成橫向引線；這兩處退修。實體保持中空、兩個內勾唇及全寬外端止擋；實際滑軌配合和放入路徑另附。',adoptedPanels:[1,2,4],rejectedPanels:[3,5],panelsStillUnderReview:[6]}});
+const index=JSON.parse(await fs.readFile(new URL('source/vehicle-reference-index.json',out),'utf8'));
+function visit(rows){for(const p of rows){Object.assign(p,reviews[p.id]||{});visit(p.parts||[]);}}visit(index.assemblies);
+await fs.writeFile(new URL('source/vehicle-reference-index.json',out),JSON.stringify(index,null,2));
+await fs.writeFile(new URL('source/reference-review.json',out),JSON.stringify({reviewer:'parent visual inspection',standard:'individual shape / multiview consistency / assembly relationship',reviews},null,2));

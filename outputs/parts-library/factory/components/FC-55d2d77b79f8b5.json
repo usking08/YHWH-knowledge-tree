@@ -1,0 +1,46 @@
+{
+  "id": "FC-55d2d77b79f8b5",
+  "name": "長向上框方管",
+  "family": "TUBE",
+  "purpose": "用封閉截面的連續管壁形成支承路徑。",
+  "assemblyTeaching": "外截面減內截面後沿軸擠出；在接口裝入端板或焊接，先定位再固定。",
+  "verification": "A = A外 − A內；內孔不可填實。讀實際壁厚、端口、垂直度與支承接觸。",
+  "unresolved": "承載、焊縫與公差未完成；外觀不代表結構合格。",
+  "units": "mm",
+  "geometry": "geometry/G-57e06d05717120fd453d.json",
+  "geometrySHA256": "57e06d05717120fd453df8987cafefe7d3ae07b08416676bd45628f23814b445",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -22.5,
+      -22.5,
+      0
+    ],
+    [
+      22.5,
+      22.5,
+      2104
+    ]
+  ],
+  "dimensionsMM": [
+    45,
+    45,
+    2104
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Frame-Reference-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-55d2d77b79f8b5.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-10"
+  ],
+  "occurrenceCount": 2
+}

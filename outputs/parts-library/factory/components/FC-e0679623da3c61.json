@@ -1,0 +1,46 @@
+{
+  "id": "FC-e0679623da3c61",
+  "name": "Factory | instrument-screen",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    565,
+    12,
+    350
+  ],
+  "localBounds": [
+    [
+      -282.5,
+      -6,
+      -175
+    ],
+    [
+      282.5,
+      6,
+      175
+    ]
+  ],
+  "dimensionsMM": [
+    565,
+    12,
+    350
+  ],
+  "materials": [
+    "Factory | instrument-screen"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-e0679623da3c61.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B06"
+  ],
+  "occurrenceCount": 1
+}

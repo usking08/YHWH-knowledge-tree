@@ -1,0 +1,442 @@
+[
+  {
+    "id": "W01",
+    "name": "五組雙輻輪圈",
+    "file": "references/parts/W01.png",
+    "status": "LOCKED_SHAPE",
+    "note": "沿用原輪圈；圖中尺寸為既有設計設定，不是實物量測。",
+    "kind": "part"
+  },
+  {
+    "id": "B01",
+    "name": "通風煞車碟",
+    "file": "references/parts/B01.png",
+    "status": "SHAPE_REFERENCE",
+    "note": "五孔與通風雙摩擦面；未經量測的設計參考。舊模型鑽孔版本待依此修正。",
+    "kind": "part"
+  },
+  {
+    "id": "H09",
+    "name": "輪轂固定螺柱",
+    "file": "references/parts/H09.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "採用形狀及接合構成；圖像自加尺寸不列為接口契約。"
+  },
+  {
+    "id": "W03",
+    "name": "輪圈錐座螺帽",
+    "file": "references/parts/W03.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "採用形狀及接合構成；圖像自加尺寸不列為接口契約。"
+  },
+  {
+    "id": "W02-r3",
+    "name": "低扁平外胎",
+    "file": "references/parts/W02-r3.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "四條主溝、開口胎腔、分離胎唇與胎唇放大；原胎面樣式維持。"
+  },
+  {
+    "id": "B02-r2",
+    "name": "卡鉗外半殼",
+    "file": "references/parts/B02-r2.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "兩個盲活塞孔；已移除誤接螺栓孔的油道。"
+  },
+  {
+    "id": "B06-r2",
+    "name": "卡鉗杯形活塞",
+    "file": "references/parts/B06-r2.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "杯口、封閉底面及外側防塵套槽；錯誤裝入示意已替換。"
+  },
+  {
+    "id": "W04",
+    "name": "輪圈中心蓋",
+    "file": "references/parts/W04.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "封閉正面、開口背面、裙部與固定環槽。"
+  },
+  {
+    "id": "A01-r2",
+    "name": "輪胎與輪圈裝妥／接合",
+    "file": "references/parts/A01-r2.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "裝妥四視圖與前後胎唇半剖面；半剖面依據實際網格接觸圖重畫。"
+  },
+  {
+    "id": "B04",
+    "name": "來令片摩擦塊",
+    "file": "references/parts/B04.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "摩擦面中心淺槽、平整背面、端部倒角；對應 B05。"
+  },
+  {
+    "id": "B05",
+    "name": "來令片鋼背板",
+    "file": "references/parts/B05.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "薄鋼板與兩個保持銷耳；摩擦塊黏合面與活塞接觸面分開。"
+  },
+  {
+    "id": "B10",
+    "name": "活塞壓力密封圈",
+    "file": "references/parts/B10.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "方形截面的環狀壓力密封圈；四顆活塞各一件，舊模型尚未具備。"
+  },
+  {
+    "id": "B11",
+    "name": "活塞防塵套",
+    "file": "references/parts/B11.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "連接卡鉗口與活塞槽的薄壁環狀防塵套；舊模型漏件。"
+  },
+  {
+    "id": "B12",
+    "name": "來令片保持銷",
+    "file": "references/parts/B12.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "實心保持銷、端部環槽與止擋頭；對應背板雙耳。"
+  },
+  {
+    "id": "B13",
+    "name": "來令片防振彈片",
+    "file": "references/parts/B13.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "單片沖壓彈簧，兩端缺口定位在保持銷下方。"
+  },
+  {
+    "id": "B07",
+    "name": "卡鉗貫穿螺栓",
+    "file": "references/parts/B07.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "六角頭、光桿、外螺紋與頭下承壓面。"
+  },
+  {
+    "id": "H03",
+    "name": "軸承內半環",
+    "file": "references/parts/H03.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "一件內半環配一列鋼珠；兩個半環對裝。"
+  },
+  {
+    "id": "H04",
+    "name": "軸承鋼珠",
+    "file": "references/parts/H04.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "完整實心球形；原設計直徑 8 mm，兩列共 28 件。"
+  },
+  {
+    "id": "B08",
+    "name": "放氣螺嘴",
+    "file": "references/parts/B08.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "中空通道接側孔，錐形底端保持實心；對應 B09。"
+  },
+  {
+    "id": "B09",
+    "name": "放氣螺嘴防塵帽",
+    "file": "references/parts/B09.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "盲孔杯帽，內緣扣住放氣螺嘴。"
+  },
+  {
+    "id": "H08",
+    "name": "輪轂後端防塵蓋",
+    "file": "references/parts/H08.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "薄壁壓製杯形後蓋與壓入唇口。"
+  },
+  {
+    "id": "H11",
+    "name": "軸承內環定位套",
+    "file": "references/parts/H11.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "中空定位套與兩端承壓平面。"
+  },
+  {
+    "id": "H10",
+    "name": "軸承外環內卡簧",
+    "file": "references/parts/H10.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "兩耳朝中心伸入的孔用卡簧。"
+  },
+  {
+    "id": "H12",
+    "name": "輪轂軸外卡簧",
+    "file": "references/parts/H12.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "兩耳向外突出的軸用卡簧。"
+  },
+  {
+    "id": "W05",
+    "name": "中心蓋固定彈環",
+    "file": "references/parts/W05.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "無鉗孔的薄 C 形固定環，對應中心蓋裙部環槽。"
+  },
+  {
+    "id": "H02-section",
+    "name": "軸承外環雙滾道剖面",
+    "file": "references/parts/H02-section.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "獨立雙列滾道剖面；僅作滾道拓樸參考，端部密封座仍依設計輪廓；整張多視圖待重建。"
+  },
+  {
+    "id": "H05-r3",
+    "name": "十四位保持架",
+    "file": "references/parts/H05-r3.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "十四個開口袋位與薄壁保持指；白底版已恢復可讀性。"
+  },
+  {
+    "id": "H07",
+    "name": "輪端軸承座與安裝耳",
+    "file": "references/parts/H07.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "中央軸承孔、三個外側安裝耳及兩個卡鉗座；孔軸與整車懸吊配合另待核對。"
+  },
+  {
+    "id": "W06",
+    "name": "輪圈平衡塊",
+    "file": "references/parts/W06.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "單塊平衡塊的倒角與黏合面曲率。"
+  },
+  {
+    "id": "W07",
+    "name": "平衡塊黏合層",
+    "file": "references/parts/W07.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "薄片黏合層；與平衡塊足跡配合，四個位置共用形狀。"
+  },
+  {
+    "id": "V02",
+    "name": "氣嘴密封膠套",
+    "file": "references/parts/V02.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "生成形狀參考；尺寸與裝配配合另以組裝視圖核對。"
+  },
+  {
+    "id": "V03",
+    "name": "氣嘴墊圈",
+    "file": "references/parts/V03.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "生成形狀參考；尺寸與裝配配合另以組裝視圖核對。"
+  },
+  {
+    "id": "V04",
+    "name": "氣嘴鎖緊螺帽",
+    "file": "references/parts/V04.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "生成形狀參考；尺寸與裝配配合另以組裝視圖核對。"
+  },
+  {
+    "id": "V05",
+    "name": "氣嘴防塵帽",
+    "file": "references/parts/V05.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "生成形狀參考；尺寸與裝配配合另以組裝視圖核對。"
+  },
+  {
+    "id": "V10",
+    "name": "胎壓感測器鈕扣電池",
+    "file": "references/parts/V10.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "生成外觀參考；非實物量測。"
+  },
+  {
+    "id": "SOURCE-core",
+    "name": "氣門芯・原廠剖面",
+    "file": "references/sources/schrader-cores-3-source.svg",
+    "note": "Schrader Pacific 原廠資料第 3 頁；用於核對結構與方向，不移植產品規格。",
+    "kind": "assembly",
+    "status": "SOURCE_REFERENCE"
+  },
+  {
+    "id": "SOURCE-tpms",
+    "name": "氣嘴與感測器・原廠安裝",
+    "file": "references/sources/schrader-clamp-in-1-source.svg",
+    "note": "Schrader 原廠裝配圖；用於核對固定、穿孔及留空位置，不移植扭力與相容性。",
+    "kind": "assembly",
+    "status": "SOURCE_REFERENCE"
+  },
+  {
+    "id": "V01-r3",
+    "name": "氣嘴桿・感測器固定端",
+    "file": "references/parts/V01-r3.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "已增加定位平面、感測器固定端螺孔及側向氣孔；固定螺絲不得伸入側向氣孔範圍。"
+  },
+  {
+    "id": "V07-r2",
+    "name": "胎壓感測器下殼・接口修正",
+    "file": "references/parts/V07-r2.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "四支柱、側向定位座及長邊卡扣已與電路板／上蓋參考圖對應；實際接合仍待模型核對。"
+  },
+  {
+    "id": "V11",
+    "name": "感測器固定螺絲",
+    "file": "references/parts/V11.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "生成形狀參考，尺寸未量測。"
+  },
+  {
+    "id": "A02-bearing-r2",
+    "name": "雙列軸承・完整鋼珠拆圖",
+    "file": "references/parts/A02-bearing-r2.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "雙列各十四顆鋼珠、兩內圈、兩保持架及兩端密封的位置參考；外圈內滾道以右上剖面為準。"
+  },
+  {
+    "id": "V09-r3",
+    "name": "胎壓感測器電路板・清晰版",
+    "file": "references/parts/V09-r3.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "已統一四角孔位，區分電池中心與周緣接點並清除圖面破損；僅定義電子組件外觀。"
+  },
+  {
+    "id": "V08-r2",
+    "name": "胎壓感測器上蓋・卡扣對位",
+    "file": "references/parts/V08-r2.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "卡扣改到兩側長邊，配合下殼方向；實際扣合斷面待模型接合檢查。"
+  },
+  {
+    "id": "H01-r3",
+    "name": "輪轂・五孔一致版",
+    "file": "references/parts/H01-r3.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "正面、背面及斜視統一五孔，刪除錯誤剖面通道；標示數值仍屬作者設定，圖形不作量測。"
+  },
+  {
+    "id": "H06-r2",
+    "name": "軸承密封件・雙唇剖面",
+    "file": "references/parts/H06-r2.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "已明列兩道密封唇；密封唇與內圈的實際接觸面仍須以模型核對。"
+  },
+  {
+    "id": "A06-wheel-end-r2",
+    "name": "完整輪端・五孔回裝一致版",
+    "file": "references/parts/A06-wheel-end-r2.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "已統一五支輪柱、五孔與五顆螺帽；右上為隱藏輻條面後的正向展示，不是後視。相對位置參考，不代表現有模型已完成配合。"
+  },
+  {
+    "id": "A03-caliper-r3",
+    "name": "卡鉗・並列活塞組裝",
+    "file": "references/parts/A03-caliper-r3.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "四組活塞分別對應四個缸孔，剖面只穿過一對；密封環、活塞、防塵套順序已修正。固定銷止退件與跨殼油道密封仍待補圖。"
+  },
+  {
+    "id": "B03-r3",
+    "name": "卡鉗內半殼・孔位對齊",
+    "file": "references/parts/B03-r3.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "已統一正背面兩個安裝耳孔與兩側穿體螺孔；外觀形狀參考。"
+  },
+  {
+    "id": "A05-contact",
+    "name": "氣嘴・接觸面約束",
+    "file": "references/guides/A05-contact.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "直接定義夾持接觸關係；紅線為貼合面。這是接合拓樸示意，不規定尺寸、扭力或密封壓縮量。"
+  },
+  {
+    "id": "A05-valve-r3",
+    "name": "氣嘴・依接觸面回裝",
+    "file": "references/parts/A05-valve-r3.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "依接觸剖面修正膠套與金屬腳的貼合；紅線表示接觸面。輪圈孔位與實際密封壓縮仍待模型施工核對。"
+  },
+  {
+    "id": "A07-tpms-r3",
+    "name": "胎壓感測器・固定螺絲一致版",
+    "file": "references/parts/A07-tpms-r3.png",
+    "kind": "assembly",
+    "status": "ASSEMBLY_REFERENCE",
+    "note": "已統一四柱四孔、兩段氣嘴螺紋及內側固定螺絲方向；內件位置參考，實際扣合與電子功能尚未驗證。"
+  },
+  {
+    "id": "V06-source",
+    "name": "氣門芯・原廠放大剖面",
+    "kind": "part",
+    "status": "SOURCE_REFERENCE",
+    "file": "references/sources/schrader-core-section-detail-source.svg",
+    "note": "Schrader Pacific 原廠剖面局部，直接由 PDF 顯示；供核對彈簧、頂桿、螺紋塞及密封件，不把錯誤生成剖面當依據。"
+  },
+  {
+    "id": "V06-exterior",
+    "name": "氣門芯・獨立外觀多視圖",
+    "file": "references/parts/V06-exterior.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "獨立外觀多視圖；內部結構另看 V06-source 原廠剖面，不沿用錯誤生成剖面。"
+  },
+  {
+    "id": "H02-projection",
+    "name": "雙列軸承外圈・共用剖面投影",
+    "file": "references/guides/H02-projection.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "同一剖面直接產生正、背、側、剖切及細節。滾道位置的內孔半徑較大，凹入金屬壁；這是原創比例導引，不是量測尺寸。"
+  },
+  {
+    "id": "H02-r4",
+    "name": "雙列軸承外圈・一致六視圖",
+    "file": "references/parts/H02-r4.png",
+    "kind": "part",
+    "status": "SHAPE_REFERENCE",
+    "note": "以共用剖面投影約束，兩道滾道凹入金屬、中央保留台階；對應 H02-projection 的形狀關係。此圖不提供製造尺寸。"
+  }
+]

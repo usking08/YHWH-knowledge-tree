@@ -1,0 +1,46 @@
+{
+  "id": "FC-ba168d97143a11",
+  "name": "material roll support",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-510c06ad59a81e5ac953.json",
+  "geometrySHA256": "510c06ad59a81e5ac95331496df2049e546a353262fa9ea1119d9930d35036af",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -27.5,
+      -27.5,
+      -475
+    ],
+    [
+      27.5,
+      27.5,
+      475
+    ]
+  ],
+  "dimensionsMM": [
+    55,
+    55,
+    950
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-ba168d97143a11.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B05"
+  ],
+  "occurrenceCount": 6
+}

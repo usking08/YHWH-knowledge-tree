@@ -1,0 +1,46 @@
+{
+  "id": "FC-68832954fad321",
+  "name": "lift support runner",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-49f95e4594fa9afeec8b.json",
+  "geometrySHA256": "49f95e4594fa9afeec8bc450439708565e7267b201e3d8759d54818937abd7ab",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2250,
+      -225,
+      -35
+    ],
+    [
+      2250,
+      225,
+      35
+    ]
+  ],
+  "dimensionsMM": [
+    4500,
+    450,
+    70
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-68832954fad321.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S2"
+  ],
+  "occurrenceCount": 2
+}

@@ -1,0 +1,359 @@
+{
+  "schemaVersion": "GT01-part/v1",
+  "id": "D11-P06",
+  "name": "周界密封墊",
+  "revision": "D11-FIRST-ARTICLE-R3",
+  "authority": "AUTHOR_DESIGN",
+  "units": "mm",
+  "classification": {
+    "assembly": [
+      "GT01 車輛",
+      "D11 車門外把手",
+      "把手首件機構",
+      "D11-P06"
+    ],
+    "functionFamily": [
+      "密封",
+      "法蘭密封墊"
+    ]
+  },
+  "physicalBoundary": {
+    "description": "一件獨立物理零件的全部原生表面；不把左右安置重複計為種類。",
+    "surfaceLabels": [
+      "周界密封墊"
+    ],
+    "nativeSurfaceCount": 1,
+    "prototypeCount": 1,
+    "solidCountObserved": 1
+  },
+  "coordinateFrame": {
+    "name": "D11 assembly local",
+    "units": "mm",
+    "handedness": "right",
+    "X": "沿把手長度",
+    "Y": "向車外",
+    "Z": "向上",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivotAxis": {
+      "origin": [
+        -46,
+        -10,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ]
+    },
+    "transformApplied": "none; original native geometry coordinates"
+  },
+  "dimensions": [
+    {
+      "name": "厚度",
+      "value": 1,
+      "unit": "mm",
+      "source": "source ExtrudeGeometry + native bounds Y"
+    },
+    {
+      "name": "厚度方向 Y",
+      "value": [
+        -1,
+        0
+      ],
+      "unit": "mm",
+      "source": "native bounds"
+    },
+    {
+      "name": "實際原生外包絡",
+      "value": {
+        "min": [
+          -93,
+          -1,
+          -19
+        ],
+        "max": [
+          93,
+          1.16341447025124e-15,
+          19
+        ],
+        "size": [
+          186,
+          1.000000000000001,
+          38
+        ]
+      },
+      "unit": "mm",
+      "source": "cold native + OBJ readback"
+    }
+  ],
+  "holeAxes": [
+    {
+      "kind": "perimeter_opening_and_ear_holes",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "source": "carrier.flangeContour / carrier.flangeHoles"
+    }
+  ],
+  "features": [
+    "連續周界薄片",
+    "與盒體共用的中央開口及兩耳孔"
+  ],
+  "purpose": "位於盒體法蘭和未完成的門皮接面之間，預留密封接合。",
+  "usableScenarios": [
+    "相同法蘭輪廓的密封界面參考"
+  ],
+  "limitations": [
+    "橡膠僅為顯示材料；壓縮量、硬度與防水性能未定。"
+  ],
+  "material": {
+    "displayColorLinearRGB": [
+      0.014443843592229466,
+      0.018500220124016652,
+      0.01764195448412081
+    ],
+    "displayShader": "MeshStandardMaterial",
+    "grade": "未指定",
+    "authority": "AUTHOR_DESIGN appearance only",
+    "nextAction": "依實際載荷、環境及製程選定材料與公差後再驗證。"
+  },
+  "interfaces": {
+    "source": {
+      "referenceFrontAxis": [
+        0,
+        1,
+        0
+      ],
+      "referenceUpAxis": [
+        0,
+        0,
+        1
+      ]
+    },
+    "sourceFile": "../../native/source/door-handle-hardware.mjs",
+    "sourceFrameWarning": null
+  },
+  "mates": [
+    {
+      "part": "D11-P02",
+      "contact": "共用法蘭輪廓與孔",
+      "inLibrary": true
+    },
+    {
+      "part": "EXTERNAL:door-skin",
+      "contact": "尚未生產的門皮密封座",
+      "inLibrary": false
+    }
+  ],
+  "installation": {
+    "scope": "R3 ten-step unique source implementation; sampled rigid paths",
+    "order": 10,
+    "id": "D11-P06",
+    "name": "10 貼合周界密封墊",
+    "note": "從前方套過面板，中央開口與固定孔對齊盒體。",
+    "path": "front",
+    "distance": 16,
+    "implementation": "../../native/source/door-handle-assembly-paths.mjs",
+    "assemblyComplete": false
+  },
+  "status": {
+    "geometry": "NATIVE_AUTHORED_SHAPE",
+    "exportPreserved": true,
+    "singleClosedSolid": true,
+    "assemblyComplete": false,
+    "manufacturingCertified": false
+  },
+  "inspection": [
+    {
+      "method": "重新讀取 OBJ 和 geometry.json 的全部三角面及法線，與原生輸出逐位雜湊比較",
+      "criterion": "面數、各 surface、位置及法線全部相符",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    },
+    {
+      "method": "以 0.00001 mm 座標併點統計連通與有向邊、計算有向體積",
+      "criterion": "一連通、每邊兩面反向、無零面積或非有限座標、正體積",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "evidence/native-readback.json",
+      "scope": "本次原生及冷讀輸出"
+    },
+    {
+      "file": "../../evidence/door-handle-parent-readback-r3.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-coupling-readback-r2.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-assembly-paths-r1.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-quality-cases.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    }
+  ],
+  "references": [
+    {
+      "file": "references/D11-P06-model-r1.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "同一份模型的正面 +Y、背面 -Y、頂面 +Z、底面 -Z、端面 +X 與斜視；以原生尺寸和孔軸為準。",
+      "revisionReason": "此圖是局部形體證據，不是承載、密封或完整總成通過。",
+      "sha256": "58462e4c81504b9490eb5a1641a1b3fea54ae0f3c422c1eb376e22db48c1e3e3"
+    }
+  ],
+  "qualityCases": [],
+  "outstandingWork": [
+    {
+      "id": "D11-P06-W1",
+      "status": "NOT_DONE",
+      "action": "建立門皮接面與壓緊緊固件；選定密封材料，量測壓縮分布並驗漏。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。"
+    }
+  ],
+  "files": {
+    "metadata": "part.json",
+    "humanGuide": "PART.md",
+    "obj": "part.obj",
+    "mtl": "part.mtl",
+    "threeGeometry": "geometry.json",
+    "nativeEntry": "../../native/geometry-core.mjs",
+    "nativeSource": "../../native/source/door-handle-hardware.mjs"
+  },
+  "nativeMetrics": {
+    "triangles": 1848,
+    "verticesAfterPositionWeld": 920,
+    "weldToleranceMm": 0.00001,
+    "surfaceCount": 1,
+    "connectedComponents": 1,
+    "openEdges": 0,
+    "nonManifoldEdges": 0,
+    "inconsistentOrientationEdges": 0,
+    "zeroAreaTriangles": 0,
+    "nonFiniteCoordinates": 0,
+    "signedVolumeMm3": 2021.8615061630535,
+    "boundsMm": {
+      "min": [
+        -93,
+        -1,
+        -19
+      ],
+      "max": [
+        93,
+        1.16341447025124e-15,
+        19
+      ],
+      "size": [
+        186,
+        1.000000000000001,
+        38
+      ]
+    },
+    "positionTriangleSHA256": "e3e00619d99adbe71410822b103c806c71b5b6bdb02c758827ad47030e34d0aa",
+    "normalTriangleSHA256": "6ba97d2ce41dfd61d430179f05093706fa117c758ef9f2c92cab01fbb0761705"
+  },
+  "hashes": {
+    "sourceSHA256": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0",
+    "positionTriangleSHA256": "e3e00619d99adbe71410822b103c806c71b5b6bdb02c758827ad47030e34d0aa",
+    "normalTriangleSHA256": "6ba97d2ce41dfd61d430179f05093706fa117c758ef9f2c92cab01fbb0761705",
+    "objSHA256": "221a91224f9e5d115ad1fb0a07305118c2e181bc19869dce968274b80f54d809",
+    "geometryJSONSHA256": "199929cd0d4f2635cc5baef579a577799f33d97cefbf429d12ef5c022ff0b2c1"
+  },
+  "mathematicalQuality": {
+    "revision": "GT01-MATH-QA-R1",
+    "lawIds": [
+      "boundary",
+      "volume",
+      "rigid",
+      "units",
+      "seal",
+      "load"
+    ],
+    "calculation": "../../math-quality.json",
+    "nativeReadback": "../../evidence/math-native-readback.json",
+    "teaching": "../../math-quality.html#D11-P06",
+    "runner": "../../native/math-quality.mjs",
+    "admission": "../../math-admission.json",
+    "checks": [
+      {
+        "id": "closed-boundary",
+        "status": "PASS"
+      },
+      {
+        "id": "volume-origin",
+        "status": "PASS"
+      },
+      {
+        "id": "identity-units",
+        "status": "PASS"
+      },
+      {
+        "id": "rigid-frame",
+        "status": "PASS"
+      },
+      {
+        "id": "gasket-thickness",
+        "status": "PASS"
+      },
+      {
+        "id": "load-release",
+        "status": "NEEDS_INPUT"
+      },
+      {
+        "id": "tolerance-release",
+        "status": "NEEDS_INPUT"
+      }
+    ],
+    "openInputs": [
+      {
+        "name": "壓縮後槽隙 (mm)",
+        "quantities": [
+          {
+            "quantity": "length",
+            "unit": "mm"
+          }
+        ],
+        "unit": "mm",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "材料壓縮曲線 (MPa)",
+        "quantities": [
+          {
+            "quantity": "stress",
+            "unit": "MPa"
+          },
+          {
+            "quantity": "strain",
+            "unit": "1"
+          }
+        ],
+        "unit": "MPa；1",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "溫度/老化條件",
+        "quantities": [],
+        "unit": "依具體資料欄位與來源指定",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      }
+    ],
+    "manufacturingReleased": false
+  }
+}

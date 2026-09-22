@@ -1,0 +1,46 @@
+{
+  "id": "FC-e35908dfedceb1",
+  "name": "open roller door drum",
+  "family": "BOUNDARY",
+  "purpose": "標示空間邊界、提供通行或隔離位置。",
+  "assemblyTeaching": "立柱→框→網片／門扇→鉸鏈與鎖扣→地面接口。",
+  "verification": "孔洞是真空間；門扇需能旋轉且不穿鄰件；通行淨空用實際包絡檢查。",
+  "unresolved": "現有隔離門鉸鏈與實際開啟路徑未完成；不是安全設施驗收。",
+  "units": "mm",
+  "geometry": "geometry/G-5b34bce599af276c7bb1.json",
+  "geometrySHA256": "5b34bce599af276c7bb18f1354adff2eedfd51c2df0df4ad33c2d542a25c326c",
+  "scale": [
+    240,
+    4200,
+    240
+  ],
+  "localBounds": [
+    [
+      -240,
+      -2100,
+      -240
+    ],
+    [
+      240,
+      2100,
+      240
+    ]
+  ],
+  "dimensionsMM": [
+    480,
+    4200,
+    480
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-e35908dfedceb1.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 2
+}

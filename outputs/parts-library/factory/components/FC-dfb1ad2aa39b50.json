@@ -1,0 +1,51 @@
+{
+  "id": "FC-dfb1ad2aa39b50",
+  "name": "Factory | floor-white-marking",
+  "family": "FLOOR",
+  "purpose": "提供定位基準、承托設備與分隔物流。",
+  "assemblyTeaching": "基层與面層分開定義；依基準放線，再配置接縫、設備基座和動線標記。",
+  "verification": "水平面方程 n·(p−p0)=0；確認物件支承底面與地坪無浮空或埋入；伸縮縫不以顏色代替凹槽驗證。",
+  "unresolved": "鋼筋、基底、排水坡與地耐力未建；此場景不是土建施工圖。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    5560,
+    55,
+    5
+  ],
+  "localBounds": [
+    [
+      -2780,
+      -27.5,
+      -2.5
+    ],
+    [
+      2780,
+      27.5,
+      2.5
+    ]
+  ],
+  "dimensionsMM": [
+    5560,
+    55,
+    5
+  ],
+  "materials": [
+    "Factory | floor-white-marking"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-dfb1ad2aa39b50.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S1",
+    "F-S2",
+    "F-S3",
+    "F-S4",
+    "F-S5",
+    "F-S6"
+  ],
+  "occurrenceCount": 12
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-90b71771fbe398",
+  "name": "paint booth side panel",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-bcf0de1c3f5dbb72a6bd.json",
+  "geometrySHA256": "bcf0de1c3f5dbb72a6bdd3eec976a64675fa2206e4af9b34860bcb14c7cc63df",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -50,
+      -2850,
+      -2100
+    ],
+    [
+      50,
+      2850,
+      2100
+    ]
+  ],
+  "dimensionsMM": [
+    100,
+    5700,
+    4200
+  ],
+  "materials": [
+    "Factory | warm-white-powdercoat"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-90b71771fbe398.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B02"
+  ],
+  "occurrenceCount": 2
+}

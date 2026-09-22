@@ -1,0 +1,446 @@
+{
+  "schema": "GT01-brush-retainer-native-readback/v1",
+  "reader": "Node + local outputs/source/three.mjs BufferGeometry",
+  "node": "v24.17.0",
+  "threeRevision": "160",
+  "units": "mm",
+  "sourceSHA256": "f0153ae67cedafe7c93f7b9591e2f4840e1346975ef997094396ddf4c9130a08",
+  "construction": "Exact coordinate-plane union; full-width outer stop Z +/-2.9 joins wall end faces",
+  "coordinatePlanes": [
+    [
+      45.15,
+      45.25,
+      45.9,
+      46.4,
+      46.8
+    ],
+    [
+      5.35,
+      13.95,
+      14.25
+    ],
+    [
+      -2.9,
+      -2.65,
+      -2.2,
+      2.2,
+      2.65,
+      2.9
+    ]
+  ],
+  "occupiedCells": 23,
+  "interfaces": {
+    "units": "mm",
+    "coordinateSpace": "motor-shaft-local",
+    "authority": "AUTHOR_DESIGN",
+    "componentCount": 2,
+    "shaftAxis": [
+      1,
+      0,
+      0
+    ],
+    "positiveSideRegions": [
+      {
+        "name": "roof",
+        "min": [
+          46.4,
+          5.35,
+          -2.9
+        ],
+        "max": [
+          46.8,
+          14.25,
+          2.9
+        ]
+      },
+      {
+        "name": "positiveSideWall",
+        "min": [
+          45.15,
+          5.35,
+          2.65
+        ],
+        "max": [
+          46.4,
+          13.95,
+          2.9
+        ]
+      },
+      {
+        "name": "negativeSideWall",
+        "min": [
+          45.15,
+          5.35,
+          -2.9
+        ],
+        "max": [
+          46.4,
+          13.95,
+          -2.65
+        ]
+      },
+      {
+        "name": "positiveHookLip",
+        "min": [
+          45.15,
+          5.35,
+          2.2
+        ],
+        "max": [
+          45.25,
+          13.95,
+          2.65
+        ]
+      },
+      {
+        "name": "negativeHookLip",
+        "min": [
+          45.15,
+          5.35,
+          -2.65
+        ],
+        "max": [
+          45.25,
+          13.95,
+          -2.2
+        ]
+      },
+      {
+        "name": "outerStop",
+        "min": [
+          45.9,
+          13.95,
+          -2.9
+        ],
+        "max": [
+          46.4,
+          14.25,
+          2.9
+        ]
+      }
+    ],
+    "nominalVolumePerCap": 27.666999999999938,
+    "coordinatePlanes": [
+      [
+        45.15,
+        45.25,
+        45.9,
+        46.4,
+        46.8
+      ],
+      [
+        5.35,
+        13.95,
+        14.25
+      ],
+      [
+        -2.9,
+        -2.65,
+        -2.2,
+        2.2,
+        2.65,
+        2.9
+      ]
+    ],
+    "occupiedCells": 23,
+    "boundaryQuadsPerCap": 74,
+    "status": "SLIDE_GEOMETRY_ONLY",
+    "antiWithdrawalLatch": false,
+    "housingAttachment": false,
+    "missing": [
+      "anti-withdrawal latch",
+      "housing attachment"
+    ]
+  },
+  "edgeWeldTolerance_mm": 0.00001,
+  "faceSideProbeOffset_mm": 0.0001,
+  "components": [
+    {
+      "ref": "D05-P14i-b",
+      "instance": 1,
+      "triangles": 148,
+      "nativeBounds_mm": {
+        "min": [
+          45.150001525878906,
+          5.349999904632568,
+          -2.9000000953674316
+        ],
+        "max": [
+          46.79999923706055,
+          14.25,
+          2.9000000953674316
+        ]
+      },
+      "interfaces": {
+        "coordinateSpace": "motor-shaft-local",
+        "rotationAboutX": 0,
+        "shaftAxis": [
+          1,
+          0,
+          0
+        ],
+        "radialAxis": [
+          0,
+          1,
+          0
+        ],
+        "insertionDirection": [
+          0,
+          -1,
+          0
+        ],
+        "insertionEntry": "+Y outer end",
+        "innerEndY": 5.35,
+        "stopInnerFaceY": 13.95,
+        "outerEndY": 14.25,
+        "outerStop": {
+          "axialX": [
+            45.9,
+            46.4
+          ],
+          "radialY": [
+            13.95,
+            14.25
+          ],
+          "z": [
+            -2.9,
+            2.9
+          ],
+          "joinsSideWallsOverFiniteFaces": true
+        },
+        "hostRail": {
+          "axialX": [
+            45.3,
+            45.8
+          ],
+          "absZ": [
+            2.15,
+            2.55
+          ],
+          "radialY": [
+            5,
+            13.9
+          ]
+        },
+        "lipFacingX": 45.25,
+        "sideWallInnerAbsZ": 2.65,
+        "nominalSlideClearance": {
+          "lipToRailX": 0.05,
+          "sideWallToRailZ": 0.1,
+          "outerStopToHostY": 0.05
+        },
+        "hostOuterDatumY": 13.9,
+        "envelope": {
+          "min": [
+            45.150001525878906,
+            5.349999904632568,
+            -2.9000000953674316
+          ],
+          "max": [
+            46.79999923706055,
+            14.25,
+            2.9000000953674316
+          ]
+        },
+        "status": "SLIDE_GEOMETRY_ONLY",
+        "antiWithdrawalLatch": false,
+        "housingAttachment": false,
+        "missing": [
+          "anti-withdrawal latch",
+          "housing attachment"
+        ]
+      },
+      "nominalUnionVolume_mm3": 27.666999999999938,
+      "nativeSignedVolume_mm3": 27.66687153672546,
+      "nonFiniteValues": 0,
+      "degenerateTriangles": 0,
+      "connectedBoundaryComponents": 1,
+      "openEdges": 0,
+      "unbalancedDirectedEdges": 0,
+      "minimumOutwardNormalDot": 0.9999999999999999,
+      "internalFaces": 0,
+      "boundarySideViolations": 0,
+      "edgeContactSingularities": [],
+      "twoManifold": true,
+      "gaps": {
+        "lipToRailX": {
+          "distance_mm": 0.04999999999999716,
+          "point_mm": [
+            45.25,
+            8,
+            2.3
+          ]
+        },
+        "sideWallToRailZ": {
+          "distance_mm": 0.10000009536743182,
+          "point_mm": [
+            45.5,
+            8,
+            2.6500000953674316
+          ]
+        },
+        "stopToHostDatumY": {
+          "distance_mm": 0.049999809265136363,
+          "point_mm": [
+            46.1,
+            13.949999809265137,
+            0
+          ]
+        }
+      },
+      "slideClearancesPassed": true,
+      "exactSpecifiedUnionBoundaryPassed": true,
+      "manifoldBodyPassed": true,
+      "nonManifoldVertexLinks": 0
+    },
+    {
+      "ref": "D05-P14i-b",
+      "instance": 2,
+      "triangles": 148,
+      "nativeBounds_mm": {
+        "min": [
+          45.150001525878906,
+          -14.25,
+          -2.9000000953674316
+        ],
+        "max": [
+          46.79999923706055,
+          -5.349999904632568,
+          2.9000000953674316
+        ]
+      },
+      "interfaces": {
+        "coordinateSpace": "motor-shaft-local",
+        "rotationAboutX": 3.141592653589793,
+        "shaftAxis": [
+          1,
+          0,
+          0
+        ],
+        "radialAxis": [
+          0,
+          -1,
+          0
+        ],
+        "insertionDirection": [
+          0,
+          1,
+          0
+        ],
+        "insertionEntry": "-Y outer end",
+        "innerEndY": -5.35,
+        "stopInnerFaceY": -13.95,
+        "outerEndY": -14.25,
+        "outerStop": {
+          "axialX": [
+            45.9,
+            46.4
+          ],
+          "radialY": [
+            -13.95,
+            -14.25
+          ],
+          "z": [
+            -2.9,
+            2.9
+          ],
+          "joinsSideWallsOverFiniteFaces": true
+        },
+        "hostRail": {
+          "axialX": [
+            45.3,
+            45.8
+          ],
+          "absZ": [
+            2.15,
+            2.55
+          ],
+          "radialY": [
+            -5,
+            -13.9
+          ]
+        },
+        "lipFacingX": 45.25,
+        "sideWallInnerAbsZ": 2.65,
+        "nominalSlideClearance": {
+          "lipToRailX": 0.05,
+          "sideWallToRailZ": 0.1,
+          "outerStopToHostY": 0.05
+        },
+        "hostOuterDatumY": -13.9,
+        "envelope": {
+          "min": [
+            45.150001525878906,
+            -14.25,
+            -2.9000000953674316
+          ],
+          "max": [
+            46.79999923706055,
+            -5.349999904632568,
+            2.9000000953674316
+          ]
+        },
+        "status": "SLIDE_GEOMETRY_ONLY",
+        "antiWithdrawalLatch": false,
+        "housingAttachment": false,
+        "missing": [
+          "anti-withdrawal latch",
+          "housing attachment"
+        ]
+      },
+      "nominalUnionVolume_mm3": 27.666999999999938,
+      "nativeSignedVolume_mm3": 27.66687153672546,
+      "nonFiniteValues": 0,
+      "degenerateTriangles": 0,
+      "connectedBoundaryComponents": 1,
+      "openEdges": 0,
+      "unbalancedDirectedEdges": 0,
+      "minimumOutwardNormalDot": 0.9999999999999999,
+      "internalFaces": 0,
+      "boundarySideViolations": 0,
+      "edgeContactSingularities": [],
+      "twoManifold": true,
+      "gaps": {
+        "lipToRailX": {
+          "distance_mm": 0.04999999999999716,
+          "point_mm": [
+            45.25,
+            -8,
+            -2.3
+          ]
+        },
+        "sideWallToRailZ": {
+          "distance_mm": 0.10000009536743182,
+          "point_mm": [
+            45.5,
+            -8,
+            -2.6500000953674316
+          ]
+        },
+        "stopToHostDatumY": {
+          "distance_mm": 0.049999809265136363,
+          "point_mm": [
+            46.1,
+            -13.949999809265137,
+            0
+          ]
+        }
+      },
+      "slideClearancesPassed": true,
+      "exactSpecifiedUnionBoundaryPassed": true,
+      "manifoldBodyPassed": true,
+      "nonManifoldVertexLinks": 0
+    }
+  ],
+  "exactSpecifiedUnionBoundaryPassed": true,
+  "manifoldBodyPassed": true,
+  "pendingDecision": null,
+  "unimplemented": [
+    "anti-withdrawal latch",
+    "housing attachment"
+  ],
+  "limitations": [
+    "Readback proves only cap/rail geometry, not retention force or manufacture.",
+    "Float32 output retains design planes within the recorded native bounds."
+  ]
+}

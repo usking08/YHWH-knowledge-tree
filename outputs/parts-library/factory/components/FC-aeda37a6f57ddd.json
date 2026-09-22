@@ -1,0 +1,46 @@
+{
+  "id": "FC-aeda37a6f57ddd",
+  "name": "橡木桌板 · 長向順紋",
+  "family": "TIMBER",
+  "purpose": "提供接觸表面與家具支承；表面紋理必須跟隨構件方向。",
+  "assemblyTeaching": "沿局部長軸配置木紋；先骨架，再用容許木材橫紋變化的接口固定桌面。",
+  "verification": "局部 uv = 長度座標/貼圖週期；橡木800 mm週期為作者選值。檢查端面、封邊和轉角。",
+  "unresolved": "端木年輪、含水率、濕脹及接榫未完成；色圖不是材料證明。",
+  "units": "mm",
+  "geometry": "geometry/G-c5336d7f608609d4db0b.json",
+  "geometrySHA256": "c5336d7f608609d4db0b6ddfbaeed8b4e8e9d0a732f69776e004e0468c69a3ce",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1156.5999755859375,
+      -331.6000061035156,
+      -35
+    ],
+    [
+      1156.5999755859375,
+      331.6000061035156,
+      35
+    ]
+  ],
+  "dimensionsMM": [
+    2313.199951171875,
+    663.2000122070312,
+    70
+  ],
+  "materials": [
+    "Factory | oak-worktop"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Assembly-Reference-R3.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-aeda37a6f57ddd.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-10"
+  ],
+  "occurrenceCount": 1
+}

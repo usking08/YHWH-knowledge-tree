@@ -1,0 +1,46 @@
+{
+  "id": "FC-7406124bfd523b",
+  "name": "Sign | S4  座艙裝配\nCABIN",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-f766fdb36b0b15e446b3.json",
+  "geometrySHA256": "f766fdb36b0b15e446b31fa94c30c7fbbbb425ddb3a2b4deab5df5d9da4ec6c0",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1700,
+      -450,
+      0
+    ],
+    [
+      1700,
+      450,
+      0
+    ]
+  ],
+  "dimensionsMM": [
+    3400,
+    900,
+    0
+  ],
+  "materials": [
+    "82cefd23-005c-4cd3-8887-796e2fb4c19b"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-7406124bfd523b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S4"
+  ],
+  "occurrenceCount": 1
+}

@@ -1,0 +1,50 @@
+{
+  "id": "FC-6ee7e73e014e35",
+  "name": "木質主莖 1",
+  "family": "STEM",
+  "purpose": "以連續曲線連接根土與葉節。",
+  "assemblyTeaching": "以 Catmull–Rom 曲線掃掠截面；葉節共用同一曲線參數，不能另用直線插值猜位置。",
+  "verification": "C(t) 與葉柄端點誤差應在浮點容差內；看根部入土深度及枝幹連續性。",
+  "unresolved": "樹皮、變徑與分枝層級仍未完整還原。",
+  "units": "mm",
+  "geometry": "geometry/G-8d155fd2fa28611c886b.json",
+  "geometrySHA256": "8d155fd2fa28611c886b2b55ee397cae4341932cb5527a666e357dd58505bcc6",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -13.504231452941895,
+      -4,
+      -8.00024127960205
+    ],
+    [
+      153.2763671875,
+      4,
+      422.2946472167969
+    ]
+  ],
+  "dimensionsMM": [
+    166.7805986404419,
+    8,
+    430.2948884963989
+  ],
+  "materials": [
+    "018db2b3-a2b4-4ed3-a7b8-529f2784fefa"
+  ],
+  "reference": "../../materials/generated/GT01-Ficus-Assembly-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE",
+  "drawing": "drawings/FC-6ee7e73e014e35.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PLANTBED-1",
+    "F-PLANTBED-2",
+    "F-PLANTBED-3",
+    "F-PLANTBED-4",
+    "F-PLANTBED-5"
+  ],
+  "occurrenceCount": 25
+}

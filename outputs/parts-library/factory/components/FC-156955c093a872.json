@@ -1,0 +1,46 @@
+{
+  "id": "FC-156955c093a872",
+  "name": "continuous rooflight",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-60e0d7c3499ad9b768f5.json",
+  "geometrySHA256": "60e0d7c3499ad9b768f51fd31a3f036680f51a793ded95f2e8a5289141bba4df",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -990,
+      -6020.79736328125,
+      -17.5
+    ],
+    [
+      990,
+      6020.79736328125,
+      17.5
+    ]
+  ],
+  "dimensionsMM": [
+    1980,
+    12041.5947265625,
+    35
+  ],
+  "materials": [
+    "Factory | clear-architectural-glass | 35 mm"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-156955c093a872.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-ROOF-01"
+  ],
+  "occurrenceCount": 12
+}

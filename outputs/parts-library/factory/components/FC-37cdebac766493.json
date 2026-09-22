@@ -1,0 +1,52 @@
+{
+  "id": "FC-37cdebac766493",
+  "name": "Factory | brushed-stainless",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-e5ca83345ad278934a65.json",
+  "geometrySHA256": "e5ca83345ad278934a6576105a825a9e766c2896e034df69f05fc200ba158642",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -12.5,
+      -12.5,
+      -40
+    ],
+    [
+      12.5,
+      12.5,
+      40
+    ]
+  ],
+  "dimensionsMM": [
+    25,
+    25,
+    80
+  ],
+  "materials": [
+    "Factory | brushed-stainless"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-37cdebac766493.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-TROLLEY-01",
+    "F-TROLLEY-02",
+    "F-TROLLEY-03",
+    "F-TROLLEY-04",
+    "F-TROLLEY-05",
+    "F-TROLLEY-06",
+    "F-TROLLEY-07"
+  ],
+  "occurrenceCount": 14
+}

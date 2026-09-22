@@ -1,0 +1,46 @@
+{
+  "id": "FC-eb378477d6602b",
+  "name": "Factory | galvanized-steel",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-e98d5046b05b10e4810e.json",
+  "geometrySHA256": "e98d5046b05b10e4810e7ddc4738ea66eae7207065b5260d017fe71b57ef5253",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -15,
+      -15,
+      -100
+    ],
+    [
+      15,
+      15,
+      100
+    ]
+  ],
+  "dimensionsMM": [
+    30,
+    30,
+    200
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-eb378477d6602b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-ROOF-02"
+  ],
+  "occurrenceCount": 2
+}

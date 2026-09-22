@@ -1,0 +1,46 @@
+{
+  "id": "FC-95e9db8e23ab07",
+  "name": "rear cladding rib",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    25,
+    18,
+    6000
+  ],
+  "localBounds": [
+    [
+      -12.5,
+      -9,
+      -3000
+    ],
+    [
+      12.5,
+      9,
+      3000
+    ]
+  ],
+  "dimensionsMM": [
+    25,
+    18,
+    6000
+  ],
+  "materials": [
+    "Factory | standing-seam-roof"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-95e9db8e23ab07.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 139
+}

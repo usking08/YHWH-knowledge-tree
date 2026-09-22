@@ -1,0 +1,46 @@
+{
+  "id": "FC-d67761dc505ea8",
+  "name": "delivery door jamb",
+  "family": "BOUNDARY",
+  "purpose": "標示空間邊界、提供通行或隔離位置。",
+  "assemblyTeaching": "立柱→框→網片／門扇→鉸鏈與鎖扣→地面接口。",
+  "verification": "孔洞是真空間；門扇需能旋轉且不穿鄰件；通行淨空用實際包絡檢查。",
+  "unresolved": "現有隔離門鉸鏈與實際開啟路徑未完成；不是安全設施驗收。",
+  "units": "mm",
+  "geometry": "geometry/G-09df0ee40513bbffe4da.json",
+  "geometrySHA256": "09df0ee40513bbffe4da7d62cc9dc30da961041711e620fb292c1e5ddbbdf94b",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -87.5,
+      -60,
+      -2130
+    ],
+    [
+      87.5,
+      60,
+      2130
+    ]
+  ],
+  "dimensionsMM": [
+    175,
+    120,
+    4260
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-d67761dc505ea8.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 4
+}

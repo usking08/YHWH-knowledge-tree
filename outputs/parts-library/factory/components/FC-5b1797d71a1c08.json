@@ -1,0 +1,46 @@
+{
+  "id": "FC-5b1797d71a1c08",
+  "name": "insulated standing seam roof",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    5400,
+    12041.59458,
+    94.99999744
+  ],
+  "localBounds": [
+    [
+      -2700,
+      -6020.79736328125,
+      -47.5
+    ],
+    [
+      2700,
+      6020.79736328125,
+      47.5
+    ]
+  ],
+  "dimensionsMM": [
+    5400,
+    12041.5947265625,
+    95
+  ],
+  "materials": [
+    "Factory | standing-seam-roof"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-5b1797d71a1c08.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-ROOF-01"
+  ],
+  "occurrenceCount": 2
+}

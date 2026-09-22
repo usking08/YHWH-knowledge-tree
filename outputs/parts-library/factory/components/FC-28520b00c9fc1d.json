@@ -1,0 +1,46 @@
+{
+  "id": "FC-28520b00c9fc1d",
+  "name": "Sign | 紅牌隔離\nRED TAG QUARANTINE",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-f46efcf76fdcac12db01.json",
+  "geometrySHA256": "f46efcf76fdcac12db01f085cc23275d2bd8970d0719d1f7b6c6ff26ddd4a79b",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2250,
+      -375,
+      0
+    ],
+    [
+      2250,
+      375,
+      0
+    ]
+  ],
+  "dimensionsMM": [
+    4500,
+    750,
+    0
+  ],
+  "materials": [
+    "24b8e515-1112-43f4-94a1-c0f4946b4e17"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-28520b00c9fc1d.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B07"
+  ],
+  "occurrenceCount": 1
+}

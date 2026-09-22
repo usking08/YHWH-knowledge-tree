@@ -1,0 +1,922 @@
+{
+  "schema": "gt01.factory-layout/v1",
+  "revision": "FACTORY-R1",
+  "truth": "AUTHOR_DESIGN",
+  "status": "WORK_IN_PROGRESS",
+  "source": "../references/GT01-factory-r1.png",
+  "units": "mm",
+  "upAxis": "+Z",
+  "hall": {
+    "length": 42000,
+    "width": 24000,
+    "eaves": 7500,
+    "ridge": 8500
+  },
+  "transferAisle": {
+    "yMin": 2500,
+    "yMax": 5500,
+    "clearWidth": 3000
+  },
+  "gallery": {
+    "yMin": -12000,
+    "yMax": -8500
+  },
+  "support": {
+    "yMin": 5500,
+    "yMax": 12000
+  },
+  "stations": [
+    {
+      "id": "S1",
+      "name": "車體結構",
+      "position": [
+        -15000,
+        -2000,
+        0
+      ],
+      "description": "車體基準平台與可調定位座；待整合 GT01 現行結構總成。"
+    },
+    {
+      "id": "S2",
+      "name": "底盤裝配",
+      "position": [
+        -9000,
+        -2000,
+        0
+      ],
+      "description": "底盤升降支承、扭力工具及零件供應；待整合底盤總成。"
+    },
+    {
+      "id": "S3",
+      "name": "車身合裝",
+      "position": [
+        -3000,
+        -2000,
+        0
+      ],
+      "description": "車身定位、上方軌道與密封工作檯；待整合車身總成。"
+    },
+    {
+      "id": "S4",
+      "name": "座艙裝配",
+      "position": [
+        3000,
+        -2000,
+        0
+      ],
+      "description": "座艙零件與內裝裝配工作檯；待整合座艙總成。"
+    },
+    {
+      "id": "S5",
+      "name": "表面精整",
+      "position": [
+        9000,
+        -2000,
+        0
+      ],
+      "description": "表面檢查、精整工具與抽氣設備；待整合整車。"
+    },
+    {
+      "id": "S6",
+      "name": "終線檢驗",
+      "position": [
+        15000,
+        -2000,
+        0
+      ],
+      "description": "六道輪廓檢查燈架、輪下檢查平台與檢驗工作站；待整合整車。"
+    }
+  ],
+  "placementNotes": {
+    "stationCentres": [
+      [
+        -15000,
+        -2000,
+        0
+      ],
+      [
+        -9000,
+        -2000,
+        0
+      ],
+      [
+        -3000,
+        -2000,
+        0
+      ],
+      [
+        3000,
+        -2000,
+        0
+      ],
+      [
+        9000,
+        -2000,
+        0
+      ],
+      [
+        15000,
+        -2000,
+        0
+      ]
+    ],
+    "vehicleSupportZ": {
+      "S1": 593,
+      "S2": 500,
+      "S3": 598,
+      "S4": 0,
+      "S5": 0,
+      "S6": 90
+    },
+    "supportNote": "Vehicle assemblies must be placed by their actual support contacts; these elevations are fixture surfaces only.",
+    "roofControl": "Set returnValue.roof.visible = false to remove roof panels, skylights and roof exhaust.",
+    "cutawayWallPart": "F-004 can be hidden for the reference image front cutaway; glazing and portal frames remain independently selectable."
+  },
+  "modelBounds": {
+    "min": [
+      -21200,
+      -12215,
+      -260
+    ],
+    "max": [
+      21200,
+      12215,
+      8655
+    ]
+  },
+  "materialDefinitions": [
+    {
+      "id": "polished-concrete",
+      "color": "#aaa9a2",
+      "roughness": 0.53,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "concrete-cut-edge",
+      "color": "#888b85",
+      "roughness": 0.91,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "bay-epoxy",
+      "color": "#b9bcb6",
+      "roughness": 0.47,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "gallery-limestone",
+      "color": "#d5ccba",
+      "roughness": 0.6,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "charcoal-painted-steel",
+      "color": "#303b3d",
+      "roughness": 0.42,
+      "metalness": 0.62,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "galvanized-steel",
+      "color": "#929b9a",
+      "roughness": 0.43,
+      "metalness": 0.77,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "brushed-stainless",
+      "color": "#c2c8c5",
+      "roughness": 0.3,
+      "metalness": 0.86,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "warm-white-powdercoat",
+      "color": "#e1e0d6",
+      "roughness": 0.56,
+      "metalness": 0.16,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "mineral-wall-panel",
+      "color": "#c8c9c1",
+      "roughness": 0.8,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "standing-seam-roof",
+      "color": "#586566",
+      "roughness": 0.65,
+      "metalness": 0.45,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "rubber-and-gaskets",
+      "color": "#1e2828",
+      "roughness": 0.83,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "oiled-oak",
+      "color": "#99734b",
+      "roughness": 0.65,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "oak-endgrain",
+      "color": "#b89262",
+      "roughness": 0.72,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "warm-tan-upholstery",
+      "color": "#9c784f",
+      "roughness": 0.77,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "sage-lounge-fabric",
+      "color": "#64736a",
+      "roughness": 0.92,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "safety-ochre",
+      "color": "#dab34f",
+      "roughness": 0.58,
+      "metalness": 0.12,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "floor-white-marking",
+      "color": "#f2efe1",
+      "roughness": 0.77,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "equipment-bluegreen",
+      "color": "#315760",
+      "roughness": 0.53,
+      "metalness": 0.23,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "quarantine-red",
+      "color": "#9f463d",
+      "roughness": 0.63,
+      "metalness": 0.08,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "parts-bin-blue",
+      "color": "#355971",
+      "roughness": 0.78,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "parts-carton",
+      "color": "#aa916b",
+      "roughness": 0.96,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "gallery-foliage",
+      "color": "#3f6146",
+      "roughness": 0.94,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "gallery-foliage-new",
+      "color": "#64805a",
+      "roughness": 0.91,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "ceramic-planter",
+      "color": "#8d877b",
+      "roughness": 0.86,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "clear-architectural-glass",
+      "color": "#bcd7d2",
+      "roughness": 0.12,
+      "metalness": 0.15,
+      "opacity": 0.19,
+      "transparent": true
+    },
+    {
+      "id": "booth-laminated-glass",
+      "color": "#84a7a4",
+      "roughness": 0.18,
+      "metalness": 0.18,
+      "opacity": 0.36,
+      "transparent": true
+    },
+    {
+      "id": "linear-led-diffuser",
+      "color": "#f7f4dd",
+      "roughness": 0.28,
+      "metalness": 0,
+      "opacity": 1,
+      "transparent": false
+    },
+    {
+      "id": "instrument-screen",
+      "color": "#233e40",
+      "roughness": 0.25,
+      "metalness": 0.1,
+      "opacity": 1,
+      "transparent": false
+    }
+  ],
+  "nativeReadback": {
+    "reader": "Project local three.mjs, Node geometry construction (no browser)",
+    "drawObjects": 395,
+    "instances": 3904,
+    "triangles": 87892,
+    "invalidGeometry": [],
+    "aisleTest": {
+      "min": [
+        -20400,
+        2501,
+        20
+      ],
+      "max": [
+        20400,
+        5499,
+        2500
+      ],
+      "intrusions": []
+    },
+    "browserVisualReadback": "PENDING_PARENT_INTEGRATION",
+    "canvasLabels": "Created only in browser; omitted in this geometry readback"
+  },
+  "parts": [
+    {
+      "id": "F-001",
+      "name": "混凝土地坪與伸縮縫",
+      "system": "structure",
+      "min": [
+        -21000,
+        -12000,
+        -260
+      ],
+      "max": [
+        21000,
+        12000,
+        0.9000000059604645
+      ]
+    },
+    {
+      "id": "F-002",
+      "name": "公共展示廊石材地坪",
+      "system": "gallery",
+      "min": [
+        -21002,
+        -12000,
+        0
+      ],
+      "max": [
+        21000,
+        -8500,
+        18
+      ]
+    },
+    {
+      "id": "F-PF-01",
+      "name": "門型鋼架 1",
+      "system": "structure",
+      "min": [
+        -20940,
+        -11990,
+        0
+      ],
+      "max": [
+        -20460,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-02",
+      "name": "門型鋼架 2",
+      "system": "structure",
+      "min": [
+        -15240,
+        -11990,
+        0
+      ],
+      "max": [
+        -14760,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-03",
+      "name": "門型鋼架 3",
+      "system": "structure",
+      "min": [
+        -9240,
+        -11990,
+        0
+      ],
+      "max": [
+        -8760,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-04",
+      "name": "門型鋼架 4",
+      "system": "structure",
+      "min": [
+        -3240,
+        -11990,
+        0
+      ],
+      "max": [
+        -2760,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-05",
+      "name": "門型鋼架 5",
+      "system": "structure",
+      "min": [
+        2760,
+        -11990,
+        0
+      ],
+      "max": [
+        3240,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-06",
+      "name": "門型鋼架 6",
+      "system": "structure",
+      "min": [
+        8760,
+        -11990,
+        0
+      ],
+      "max": [
+        9240,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-07",
+      "name": "門型鋼架 7",
+      "system": "structure",
+      "min": [
+        14760,
+        -11990,
+        0
+      ],
+      "max": [
+        15240,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-PF-08",
+      "name": "門型鋼架 8",
+      "system": "structure",
+      "min": [
+        20460,
+        -11990,
+        0
+      ],
+      "max": [
+        20940,
+        11990,
+        8214.257377794627
+      ]
+    },
+    {
+      "id": "F-003",
+      "name": "屋簷繫梁與縱向斜撐",
+      "system": "structure",
+      "min": [
+        -20899.999999999996,
+        -11830,
+        487.1311197280884
+      ],
+      "max": [
+        20899.999999999996,
+        11830,
+        7380.000000000005
+      ]
+    },
+    {
+      "id": "F-004",
+      "name": "夾芯牆板與立面金屬收邊",
+      "system": "envelope",
+      "min": [
+        -21115,
+        -12017,
+        0
+      ],
+      "max": [
+        21115,
+        12017,
+        8450
+      ]
+    },
+    {
+      "id": "F-005",
+      "name": "前立面公共玻璃幕牆",
+      "system": "gallery",
+      "min": [
+        -21027.5,
+        -12120,
+        -5
+      ],
+      "max": [
+        21027.5,
+        -11957.5,
+        3602.5
+      ]
+    },
+    {
+      "id": "F-006",
+      "name": "展示廊與製造區透明隔屏",
+      "system": "gallery",
+      "min": [
+        -21027.5,
+        -8565,
+        -17.5
+      ],
+      "max": [
+        21027.5,
+        -8435,
+        3205
+      ]
+    },
+    {
+      "id": "F-ROOF-01",
+      "name": "折板屋面與天窗",
+      "system": "envelope",
+      "min": [
+        -21200,
+        -12215,
+        0
+      ],
+      "max": [
+        21200,
+        12215,
+        8525
+      ]
+    },
+    {
+      "id": "F-007",
+      "name": "懸吊工作照明與走線橋架",
+      "system": "services",
+      "min": [
+        -20717.5,
+        -7767.5,
+        5630
+      ],
+      "max": [
+        20717.5,
+        7160,
+        7766.666809082031
+      ]
+    },
+    {
+      "id": "F-008",
+      "name": "三公尺轉運走道",
+      "system": "circulation",
+      "min": [
+        -20885,
+        2462.5,
+        2
+      ],
+      "max": [
+        21135,
+        5537.5,
+        10
+      ]
+    },
+    {
+      "id": "F-S1",
+      "name": "S1 車體結構",
+      "system": "assembly",
+      "min": [
+        -17807.5,
+        -7827.5,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        -12192.5,
+        2127.5,
+        1535
+      ]
+    },
+    {
+      "id": "F-S2",
+      "name": "S2 底盤裝配",
+      "system": "assembly",
+      "min": [
+        -11807.5,
+        -7827.5,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        -6192.5,
+        2127.5,
+        1535
+      ]
+    },
+    {
+      "id": "F-S3",
+      "name": "S3 車身合裝",
+      "system": "assembly",
+      "min": [
+        -5807.5,
+        -7827.5,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        -192.5,
+        2127.5,
+        3670.000000000001
+      ]
+    },
+    {
+      "id": "F-S4",
+      "name": "S4 座艙裝配",
+      "system": "assembly",
+      "min": [
+        192.5,
+        -7827.5,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        5807.5,
+        2127.5,
+        1535
+      ]
+    },
+    {
+      "id": "F-S5",
+      "name": "S5 表面精整",
+      "system": "assembly",
+      "min": [
+        6192.5,
+        -7827.5,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        11807.5,
+        2127.5,
+        2180
+      ]
+    },
+    {
+      "id": "F-S6",
+      "name": "S6 終線檢驗",
+      "system": "assembly",
+      "min": [
+        12192.5,
+        -7827.5,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        17807.5,
+        2127.5,
+        3320.0000000000005
+      ]
+    },
+    {
+      "id": "F-B01",
+      "name": "收料與棧板暫存",
+      "system": "logistics",
+      "min": [
+        -20977.5,
+        5872.5,
+        0
+      ],
+      "max": [
+        -18522.5,
+        10727.5,
+        1170
+      ]
+    },
+    {
+      "id": "F-B02",
+      "name": "塗裝室與過濾抽氣系統",
+      "system": "paint",
+      "min": [
+        -18550,
+        5647.5,
+        0
+      ],
+      "max": [
+        -12250,
+        11500,
+        4280
+      ]
+    },
+    {
+      "id": "F-B02-X",
+      "name": "塗裝排氣管與濾箱",
+      "system": "services",
+      "min": [
+        -15800,
+        8842.5,
+        4100
+      ],
+      "max": [
+        -13600,
+        10935.392578125,
+        7350.94677734375
+      ]
+    },
+    {
+      "id": "F-ROOF-02",
+      "name": "排氣出口與防雨帽",
+      "system": "services",
+      "min": [
+        -15200,
+        10300,
+        7010
+      ],
+      "max": [
+        -14200,
+        11300,
+        8655
+      ]
+    },
+    {
+      "id": "F-B03",
+      "name": "後場零件倉儲",
+      "system": "logistics",
+      "min": [
+        -11422.5,
+        10440,
+        0
+      ],
+      "max": [
+        9222.5,
+        11560,
+        2900
+      ]
+    },
+    {
+      "id": "F-B04",
+      "name": "玻璃黏合與密封工作區",
+      "system": "support",
+      "min": [
+        -10306.599975585938,
+        6593.399993896484,
+        0
+      ],
+      "max": [
+        -6793.4000244140625,
+        9700,
+        2256.432219028473
+      ]
+    },
+    {
+      "id": "F-B05",
+      "name": "內裝工坊與零件備料",
+      "system": "support",
+      "min": [
+        -3706.5999755859375,
+        6593.399993896484,
+        0
+      ],
+      "max": [
+        5206.5999755859375,
+        9050,
+        1535
+      ]
+    },
+    {
+      "id": "F-B06",
+      "name": "恆溫量測室與三次元量測橋",
+      "system": "metrology",
+      "min": [
+        8595,
+        5745,
+        -27.5
+      ],
+      "max": [
+        14005,
+        11855,
+        3215
+      ]
+    },
+    {
+      "id": "F-B07",
+      "name": "紅牌隔離區與網籠",
+      "system": "quarantine",
+      "min": [
+        14770,
+        5825,
+        -1.4210854715202004e-14
+      ],
+      "max": [
+        20430,
+        11775,
+        2677.5
+      ]
+    },
+    {
+      "id": "F-G01",
+      "name": "接待桌與橡木品牌牆",
+      "system": "gallery",
+      "min": [
+        -16900,
+        -11260,
+        0
+      ],
+      "max": [
+        -12300,
+        -8532.5,
+        3000
+      ]
+    },
+    {
+      "id": "F-G02",
+      "name": "訪客交誼與展示廊家具",
+      "system": "gallery",
+      "min": [
+        -8176.892399415374,
+        -11680,
+        -6.750155989720952e-14
+      ],
+      "max": [
+        13476.892399415374,
+        -9973.416183903813,
+        1225
+      ]
+    },
+    {
+      "id": "F-G03",
+      "name": "展示廊植栽與外緣花台",
+      "system": "gallery",
+      "min": [
+        -18107.31849529407,
+        -11765,
+        -5.684341886080802e-14
+      ],
+      "max": [
+        20286.405757868648,
+        -8534.288444566875,
+        1646.6358483797387
+      ]
+    }
+  ]
+}

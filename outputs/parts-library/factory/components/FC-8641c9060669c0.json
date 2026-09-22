@@ -1,0 +1,46 @@
+{
+  "id": "FC-8641c9060669c0",
+  "name": "metrology isolated floor",
+  "family": "FLOOR",
+  "purpose": "提供定位基準、承托設備與分隔物流。",
+  "assemblyTeaching": "基层與面層分開定義；依基準放線，再配置接縫、設備基座和動線標記。",
+  "verification": "水平面方程 n·(p−p0)=0；確認物件支承底面與地坪無浮空或埋入；伸縮縫不以顏色代替凹槽驗證。",
+  "unresolved": "鋼筋、基底、排水坡與地耐力未建；此場景不是土建施工圖。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    5300,
+    6000,
+    24
+  ],
+  "localBounds": [
+    [
+      -2650,
+      -3000,
+      -12
+    ],
+    [
+      2650,
+      3000,
+      12
+    ]
+  ],
+  "dimensionsMM": [
+    5300,
+    6000,
+    24
+  ],
+  "materials": [
+    "Factory | gallery-limestone"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-8641c9060669c0.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B06"
+  ],
+  "occurrenceCount": 1
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-6f25ab71b9fb4f",
+  "name": "fence base plate",
+  "family": "FASTENER",
+  "purpose": "把界面夾緊、限制分離或提供可調位置。",
+  "assemblyTeaching": "先核對孔徑、螺距、螺紋種類與工具空間；墊圈接觸支承面，再旋入及受控預緊。",
+  "verification": "間隙 c=(D孔−D軸)/2；長孔方向與活動軸一致。檢查頭下接觸、牙合長度與邊距。",
+  "unresolved": "廠房五金多仍是外觀候選，未具備牙形、扭矩或承載資格；不能套用已完成的 M5 零件結論。",
+  "units": "mm",
+  "geometry": "geometry/G-592123e639fbe89d2ec4.json",
+  "geometrySHA256": "592123e639fbe89d2ec4ab41ea0100678eac3e0756fa2431853c5665dc844719",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -80,
+      -75,
+      -10
+    ],
+    [
+      80,
+      75,
+      10
+    ]
+  ],
+  "dimensionsMM": [
+    160,
+    150,
+    20
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-6f25ab71b9fb4f.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B07"
+  ],
+  "occurrenceCount": 17
+}

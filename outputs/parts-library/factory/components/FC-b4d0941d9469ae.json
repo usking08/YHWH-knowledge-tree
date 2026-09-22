@@ -1,0 +1,46 @@
+{
+  "id": "FC-b4d0941d9469ae",
+  "name": "抽屜櫃背板",
+  "family": "DRAWER",
+  "purpose": "把物件有序承托，並提供可取用的開口。",
+  "assemblyTeaching": "櫃背／側／底→固定軌→抽屜底側後前板→活動軌→前板與把手；抽屜沿單一導向軸滑入。",
+  "verification": "空腔可見；行程向量與軌道平行。檢查插入全路徑、止擋、承載接觸與鄰抽干涉。",
+  "unresolved": "新工作臺已有分離薄板與滑軌；倉儲料盒等仍有實心簡化，滾珠與止擋未建。",
+  "units": "mm",
+  "geometry": "geometry/G-9b026a5da93571a26c57.json",
+  "geometrySHA256": "9b026a5da93571a26c57b1a4b67bd522cedcfe08c59669ee66aa8425a9cd0c1a",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -540,
+      -1,
+      -236
+    ],
+    [
+      540,
+      1,
+      236
+    ]
+  ],
+  "dimensionsMM": [
+    1080,
+    2,
+    472
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Drawer-Reference-R2.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-b4d0941d9469ae.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-08"
+  ],
+  "occurrenceCount": 3
+}

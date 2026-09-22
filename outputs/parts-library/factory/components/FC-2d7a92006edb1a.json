@@ -1,0 +1,46 @@
+{
+  "id": "FC-2d7a92006edb1a",
+  "name": "rack diagonal brace",
+  "family": "DRAWER",
+  "purpose": "把物件有序承托，並提供可取用的開口。",
+  "assemblyTeaching": "櫃背／側／底→固定軌→抽屜底側後前板→活動軌→前板與把手；抽屜沿單一導向軸滑入。",
+  "verification": "空腔可見；行程向量與軌道平行。檢查插入全路徑、止擋、承載接觸與鄰抽干涉。",
+  "unresolved": "新工作臺已有分離薄板與滑軌；倉儲料盒等仍有實心簡化，滾珠與止擋未建。",
+  "units": "mm",
+  "geometry": "geometry/G-4912f08557516448bec1.json",
+  "geometrySHA256": "4912f08557516448bec11b4e06e7e4550512f6366875206763a26a7049ed76cc",
+  "scale": [
+    1,
+    0.9999999882,
+    0.9999999882
+  ],
+  "localBounds": [
+    [
+      -12.5,
+      -12.5,
+      -1092.0279541015625
+    ],
+    [
+      12.5,
+      12.5,
+      1092.0279541015625
+    ]
+  ],
+  "dimensionsMM": [
+    25,
+    25,
+    2184.055908203125
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-2d7a92006edb1a.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B07"
+  ],
+  "occurrenceCount": 2
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-97c3a6262841b3",
+  "name": "door leaf rail",
+  "family": "BOUNDARY",
+  "purpose": "標示空間邊界、提供通行或隔離位置。",
+  "assemblyTeaching": "立柱→框→網片／門扇→鉸鏈與鎖扣→地面接口。",
+  "verification": "孔洞是真空間；門扇需能旋轉且不穿鄰件；通行淨空用實際包絡檢查。",
+  "unresolved": "現有隔離門鉸鏈與實際開啟路徑未完成；不是安全設施驗收。",
+  "units": "mm",
+  "geometry": "geometry/G-d04df8e495785f4ac468.json",
+  "geometrySHA256": "d04df8e495785f4ac468611166075747cab17ecffe31cea0a76d95049f875d50",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -470,
+      -27.5,
+      -19
+    ],
+    [
+      470,
+      27.5,
+      19
+    ]
+  ],
+  "dimensionsMM": [
+    940,
+    55,
+    38
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-97c3a6262841b3.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-005"
+  ],
+  "occurrenceCount": 12
+}

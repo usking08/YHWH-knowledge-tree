@@ -1,0 +1,46 @@
+{
+  "id": "FC-7a9076770704a4",
+  "name": "granite metrology table",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-d511072e91dd78a11434.json",
+  "geometrySHA256": "d511072e91dd78a11434c88d499d95ae38fd8fd82779c767c9e811279d173f50",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1210,
+      -810,
+      -115
+    ],
+    [
+      1210,
+      810,
+      115
+    ]
+  ],
+  "dimensionsMM": [
+    2420,
+    1620,
+    230
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-7a9076770704a4.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B06"
+  ],
+  "occurrenceCount": 1
+}

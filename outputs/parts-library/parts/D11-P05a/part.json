@@ -1,0 +1,611 @@
+{
+  "schemaVersion": "GT01-part/v1",
+  "id": "D11-P05a",
+  "name": "D 形凹座拉索撥臂",
+  "revision": "D11-FIRST-ARTICLE-R3",
+  "authority": "AUTHOR_DESIGN",
+  "units": "mm",
+  "classification": {
+    "assembly": [
+      "GT01 車輛",
+      "D11 車門外把手",
+      "把手首件機構",
+      "D11-P05a"
+    ],
+    "functionFamily": [
+      "傳力",
+      "撥臂與連桿"
+    ]
+  },
+  "physicalBoundary": {
+    "description": "一件獨立物理零件的全部原生表面；不把左右安置重複計為種類。",
+    "surfaceLabels": [
+      "D 形凹座拉索撥臂"
+    ],
+    "nativeSurfaceCount": 1,
+    "prototypeCount": 1,
+    "solidCountObserved": 1
+  },
+  "coordinateFrame": {
+    "name": "D11 assembly local",
+    "units": "mm",
+    "handedness": "right",
+    "X": "沿把手長度",
+    "Y": "向車外",
+    "Z": "向上",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivotAxis": {
+      "origin": [
+        -46,
+        -10,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ]
+    },
+    "transformApplied": "none; original native geometry coordinates"
+  },
+  "dimensions": [
+    {
+      "name": "底板 Z",
+      "value": [
+        -6,
+        -3.1
+      ],
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "樞軸通孔徑",
+      "value": 4.2,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "D 凹座半徑",
+      "value": 5.1,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "單平邊 Y",
+      "value": -14.1,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "D 座深度",
+      "value": 1,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "拉索圓眼孔徑",
+      "value": 4.15,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "拉索圓眼開槽寬",
+      "value": 1.4,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "彈簧接觸面 X",
+      "value": -49.95,
+      "unit": "mm",
+      "source": "interfaces"
+    },
+    {
+      "name": "實際原生外包絡",
+      "value": {
+        "min": [
+          -52,
+          -23,
+          -8.399999618530273
+        ],
+        "max": [
+          -24.600000381469727,
+          -4,
+          -2.0999999046325684
+        ],
+        "size": [
+          27.399999618530273,
+          19,
+          6.299999713897705
+        ]
+      },
+      "unit": "mm",
+      "source": "cold native + OBJ readback"
+    }
+  ],
+  "holeAxes": [
+    {
+      "kind": "through_bore",
+      "origin": [
+        -46,
+        -10,
+        -4.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "diameter": 4.2
+    },
+    {
+      "kind": "slotted_eye",
+      "origin": [
+        -28,
+        -10,
+        -4.55
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "diameter": 4.15,
+      "slotWidth": 1.4,
+      "slotDirection": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ],
+  "features": [
+    "X=-46 樞軸端的單平邊 D 形盲凹座與中央通孔",
+    "收腰連桿與 X=-28 拉索端的開槽圓眼",
+    "一體後腳及向下彈簧接觸塊"
+  ],
+  "purpose": "接收把手的旋轉，預留拉索端頭連接並與回位彈簧接觸。",
+  "usableScenarios": [
+    "同軸 D 形傳力及開槽端眼的幾何參考"
+  ],
+  "limitations": [
+    "完整拉索、端頭、外管座與全行程還未完成。"
+  ],
+  "material": {
+    "displayColorLinearRGB": [
+      0.057805430183792694,
+      0.07036009568874305,
+      0.07618538147321911
+    ],
+    "displayShader": "MeshStandardMaterial",
+    "grade": "未指定",
+    "authority": "AUTHOR_DESIGN appearance only",
+    "nextAction": "依實際載荷、環境及製程選定材料與公差後再驗證。"
+  },
+  "interfaces": {
+    "source": {
+      "referenceFrontAxis": [
+        0,
+        1,
+        0
+      ],
+      "referenceUpAxis": [
+        0,
+        0,
+        1
+      ],
+      "units": "mm",
+      "coordinateFrame": {
+        "X": "handle length",
+        "Y": "outboard",
+        "Z": "up"
+      },
+      "designAuthority": "AUTHOR_DESIGN",
+      "sourceShapeCandidate": "D11-P05-r1.png",
+      "pivot": {
+        "centre": [
+          -46,
+          -10
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "boreDiameter": 4.2,
+        "boreAxialZ": [
+          -6,
+          -3.1
+        ],
+        "throughBase": true,
+        "outerRadius": 6
+      },
+      "plate": {
+        "axialZ": [
+          -6,
+          -3.1
+        ],
+        "thickness": 2.9,
+        "backFaceRecesses": false
+      },
+      "dSeat": {
+        "centre": [
+          -46,
+          -10
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "radius": 5.1,
+        "flatY": -14.1,
+        "flatCount": 1,
+        "keepHalfPlane": "Y >= -14.1",
+        "floorZ": -3.1,
+        "rimZ": -2.1,
+        "recessDepth": 1,
+        "throughLargeOpening": false,
+        "collarOuterRadius": 6
+      },
+      "cableEye": {
+        "centre": [
+          -28,
+          -10
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "outerRadius": 3.4,
+        "holeRadius": 2.075,
+        "slotWidth": 1.4,
+        "slotDirection": [
+          0,
+          -1,
+          0
+        ],
+        "slotX": [
+          -28.7,
+          -27.3
+        ],
+        "axialZ": [
+          -6,
+          -3.1
+        ],
+        "openToExterior": true
+      },
+      "rearLeg": {
+        "relativeToPivot": {
+          "x": [
+            -6,
+            -3.5
+          ],
+          "y": [
+            -13,
+            -4
+          ]
+        },
+        "globalX": [
+          -52,
+          -49.5
+        ],
+        "globalY": [
+          -23,
+          -14
+        ],
+        "axialZ": [
+          -6,
+          -3.1
+        ]
+      },
+      "springContact": {
+        "blockX": [
+          -51.45,
+          -49.95
+        ],
+        "blockY": [
+          -23,
+          -18
+        ],
+        "blockZ": [
+          -8.4,
+          -6
+        ],
+        "planeX": -49.95,
+        "outwardNormal": [
+          1,
+          0,
+          0
+        ],
+        "joinedRootArea": 7.5,
+        "contactFaceBounds": {
+          "min": [
+            -49.95,
+            -23,
+            -8.4
+          ],
+          "max": [
+            -49.95,
+            -18,
+            -6
+          ]
+        }
+      },
+      "envelope": {
+        "min": [
+          -52,
+          -23,
+          -8.399999618530273
+        ],
+        "max": [
+          -24.600000381469727,
+          -4,
+          -2.0999999046325684
+        ]
+      },
+      "materialGrade": "UNSPECIFIED",
+      "loadVerification": "NOT_CLAIMED",
+      "construction": "single shared boundary with collar recess, cable-eye slot and integral spring block"
+    },
+    "sourceFile": "../../native/source/door-handle-actuator.mjs",
+    "sourceFrameWarning": null
+  },
+  "mates": [
+    {
+      "part": "D11-P01",
+      "contact": "D 凹座與單平邊端部",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P03",
+      "contact": "中央肩銷",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P11a",
+      "contact": "底板下方支承",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P04",
+      "contact": "移動彈簧腳接平面 X=-49.95",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P05b",
+      "contact": "開槽圓眼，端頭尚未生產",
+      "inLibrary": false
+    }
+  ],
+  "installation": {
+    "scope": "R3 ten-step unique source implementation; sampled rigid paths",
+    "order": 4,
+    "id": "D11-P05a",
+    "name": "04 裝入拉索撥臂",
+    "note": "從前方進入，再下降到下軸套；接觸塊的 X=-49.95 接面貼住上彈簧腳的負 X 側。",
+    "path": "front-then-down",
+    "distance": 38,
+    "lift": 8,
+    "implementation": "../../native/source/door-handle-assembly-paths.mjs",
+    "assemblyComplete": false
+  },
+  "status": {
+    "geometry": "NATIVE_AUTHORED_SHAPE",
+    "exportPreserved": true,
+    "singleClosedSolid": true,
+    "assemblyComplete": false,
+    "manufacturingCertified": false
+  },
+  "inspection": [
+    {
+      "method": "重新讀取 OBJ 和 geometry.json 的全部三角面及法線，與原生輸出逐位雜湊比較",
+      "criterion": "面數、各 surface、位置及法線全部相符",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    },
+    {
+      "method": "以 0.00001 mm 座標併點統計連通與有向邊、計算有向體積",
+      "criterion": "一連通、每邊兩面反向、無零面積或非有限座標、正體積",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "evidence/native-readback.json",
+      "scope": "本次原生及冷讀輸出"
+    },
+    {
+      "file": "../../evidence/door-handle-parent-readback-r3.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-coupling-readback-r2.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-assembly-paths-r1.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-quality-cases.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    }
+  ],
+  "references": [
+    {
+      "file": "references/D11-P05a-model-r1.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "同一份模型的正面 +Y、背面 -Y、頂面 +Z、底面 -Z、端面 +X 與斜視；以原生尺寸和孔軸為準。",
+      "revisionReason": "此圖是局部形體證據，不是承載、密封或完整總成通過。",
+      "sha256": "f35854d590f7cc346bbe34bf99066ac45e0c3c58b51c486f9307db7481c2bb15"
+    },
+    {
+      "file": "references/D11-P05-r2.png",
+      "authority": "GENERATED_SHAPE_CANDIDATE",
+      "use": "觀看樞軸凹座、拉索開槽眼及下接觸腳；D 座只保留一條平邊，原生參數優先。",
+      "revisionReason": "先前生成圖多扁邊 D 槽與剖面高度矛盾已由明確座標修正；不把生成圖加出的槽面當零件。",
+      "sha256": "9d8c80ff9ccb3818f105bea763d237ef6679b75088391e4f9140adc8612696ce"
+    }
+  ],
+  "qualityCases": [],
+  "outstandingWork": [
+    {
+      "id": "D11-P05a-W1",
+      "status": "NOT_DONE",
+      "action": "建立匹配端頭、鋼索、外管和保持件，檢查端頭裝入、工作轉角、拉程及防脫。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。"
+    }
+  ],
+  "files": {
+    "metadata": "part.json",
+    "humanGuide": "PART.md",
+    "obj": "part.obj",
+    "mtl": "part.mtl",
+    "threeGeometry": "geometry.json",
+    "nativeEntry": "../../native/geometry-core.mjs",
+    "nativeSource": "../../native/source/door-handle-actuator.mjs"
+  },
+  "nativeMetrics": {
+    "triangles": 7780,
+    "verticesAfterPositionWeld": 3890,
+    "weldToleranceMm": 0.00001,
+    "surfaceCount": 1,
+    "connectedComponents": 1,
+    "openEdges": 0,
+    "nonManifoldEdges": 0,
+    "inconsistentOrientationEdges": 0,
+    "zeroAreaTriangles": 0,
+    "nonFiniteCoordinates": 0,
+    "signedVolumeMm3": 600.7101093667424,
+    "boundsMm": {
+      "min": [
+        -52,
+        -23,
+        -8.399999618530273
+      ],
+      "max": [
+        -24.600000381469727,
+        -4,
+        -2.0999999046325684
+      ],
+      "size": [
+        27.399999618530273,
+        19,
+        6.299999713897705
+      ]
+    },
+    "positionTriangleSHA256": "41864cab573cda1935831686136bcf25927b5b63de263a0423d1fa6f06d8632a",
+    "normalTriangleSHA256": "01c38e2e16cb7c2808f36452803e0be9f33d288386c87f0f5bcbd3d8c0c2beb9"
+  },
+  "hashes": {
+    "sourceSHA256": "7bf5cd1c52341f73c0cbd28af4be18261c675a6748563954c956f0cea0907077",
+    "positionTriangleSHA256": "41864cab573cda1935831686136bcf25927b5b63de263a0423d1fa6f06d8632a",
+    "normalTriangleSHA256": "01c38e2e16cb7c2808f36452803e0be9f33d288386c87f0f5bcbd3d8c0c2beb9",
+    "objSHA256": "64d7390d967b137aa6dff88a5283bef391c90e25e3f26810ff0fd40f7bd6a021",
+    "geometryJSONSHA256": "7eee2ec431f7ba61915a2d3fbcb480bebfb5f7e624dd4212ae7d861de6b9ffca"
+  },
+  "mathematicalQuality": {
+    "revision": "GT01-MATH-QA-R1",
+    "lawIds": [
+      "boundary",
+      "volume",
+      "rigid",
+      "units",
+      "fit",
+      "moment",
+      "load"
+    ],
+    "calculation": "../../math-quality.json",
+    "nativeReadback": "../../evidence/math-native-readback.json",
+    "teaching": "../../math-quality.html#D11-P05a",
+    "runner": "../../native/math-quality.mjs",
+    "admission": "../../math-admission.json",
+    "checks": [
+      {
+        "id": "closed-boundary",
+        "status": "PASS"
+      },
+      {
+        "id": "volume-origin",
+        "status": "PASS"
+      },
+      {
+        "id": "identity-units",
+        "status": "PASS"
+      },
+      {
+        "id": "rigid-frame",
+        "status": "PASS"
+      },
+      {
+        "id": "fit-D11-P05a-D11-P03",
+        "status": "PASS"
+      },
+      {
+        "id": "moment-arm",
+        "status": "PASS"
+      },
+      {
+        "id": "load-release",
+        "status": "NEEDS_INPUT"
+      },
+      {
+        "id": "tolerance-release",
+        "status": "NEEDS_INPUT"
+      }
+    ],
+    "openInputs": [
+      {
+        "name": "載荷大小/方向/循環 (N, N·mm)",
+        "quantities": [
+          {
+            "quantity": "force",
+            "unit": "N"
+          },
+          {
+            "quantity": "moment",
+            "unit": "N·mm"
+          },
+          {
+            "quantity": "direction",
+            "unit": "1（單位方向向量）"
+          },
+          {
+            "quantity": "cycles",
+            "unit": "1（次數）"
+          }
+        ],
+        "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "材料牌號、強度與製程",
+        "quantities": [],
+        "unit": "依具體資料欄位與來源指定",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "公差極限及偏心 (mm)",
+        "quantities": [
+          {
+            "quantity": "length",
+            "unit": "mm"
+          }
+        ],
+        "unit": "mm",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      }
+    ],
+    "manufacturingReleased": false
+  }
+}

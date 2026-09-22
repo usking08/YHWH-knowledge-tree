@@ -1,0 +1,46 @@
+{
+  "id": "FC-1dee1d44e13dbc",
+  "name": "wall tension rod",
+  "family": "FRAME",
+  "purpose": "把上部作用經樑、柱、連接件傳到基座。",
+  "assemblyTeaching": "I 形截面由翼板與腹板構成；先立柱、接斜樑、加腋與斜撐，再設次構件。",
+  "verification": "核對截面、對接面、螺栓孔軸及荷重路徑；ΣF=0、ΣM=0 只是平衡前提，仍須材料與邊界條件。",
+  "unresolved": "現有部分固定件僅外形；尚無結構設計驗算或建築放行。",
+  "units": "mm",
+  "geometry": "geometry/G-599c61239751a560c0c2.json",
+  "geometrySHA256": "599c61239751a560c0c2235f1642ca8410d00fe79f5b953944924985fad5cf5d",
+  "scale": [
+    0.9999999856,
+    1,
+    0.9999999856
+  ],
+  "localBounds": [
+    [
+      -19,
+      -19,
+      -4281.64697265625
+    ],
+    [
+      19,
+      19,
+      4281.64697265625
+    ]
+  ],
+  "dimensionsMM": [
+    38,
+    38,
+    8563.2939453125
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-1dee1d44e13dbc.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-003"
+  ],
+  "occurrenceCount": 8
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-c22f6bf28875e4",
+  "name": "identified nonconforming parts container",
+  "family": "STORAGE",
+  "purpose": "保存身份、承托來料並交給下游工位。",
+  "assemblyTeaching": "棧木→鋪板→箱體底側蓋→束帶及標籤；箱內物件與外箱分開記帳。",
+  "verification": "外包絡用於動線；材料壁厚、空腔與插叉方向需另查。",
+  "unresolved": "箱內內容物及綁固工法尚未具體化。",
+  "units": "mm",
+  "geometry": "geometry/G-279ae8f46a21cce69b21.json",
+  "geometrySHA256": "279ae8f46a21cce69b217eaca0c17d90e448dd0cc10206b92c06db87975096b8",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -350,
+      -600,
+      -220
+    ],
+    [
+      350,
+      600,
+      220
+    ]
+  ],
+  "dimensionsMM": [
+    700,
+    1200,
+    440
+  ],
+  "materials": [
+    "Factory | quarantine-red"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-c22f6bf28875e4.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B07"
+  ],
+  "occurrenceCount": 3
+}

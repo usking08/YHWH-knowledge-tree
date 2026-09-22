@@ -1,0 +1,52 @@
+{
+  "id": "FC-8c2b408e63e902",
+  "name": "trolley handle",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-e04678b2470d427c215e.json",
+  "geometrySHA256": "e04678b2470d427c215e49064857479b2f75818ee8a714e32779a338885dbb36",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -15,
+      -15,
+      -180
+    ],
+    [
+      15,
+      15,
+      180
+    ]
+  ],
+  "dimensionsMM": [
+    30,
+    30,
+    360
+  ],
+  "materials": [
+    "Factory | brushed-stainless"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-8c2b408e63e902.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-TROLLEY-01",
+    "F-TROLLEY-02",
+    "F-TROLLEY-03",
+    "F-TROLLEY-04",
+    "F-TROLLEY-05",
+    "F-TROLLEY-06",
+    "F-TROLLEY-07"
+  ],
+  "occurrenceCount": 7
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-8136a2c72ccad6",
+  "name": "eaves box gutter",
+  "family": "FRAME",
+  "purpose": "把上部作用經樑、柱、連接件傳到基座。",
+  "assemblyTeaching": "I 形截面由翼板與腹板構成；先立柱、接斜樑、加腋與斜撐，再設次構件。",
+  "verification": "核對截面、對接面、螺栓孔軸及荷重路徑；ΣF=0、ΣM=0 只是平衡前提，仍須材料與邊界條件。",
+  "unresolved": "現有部分固定件僅外形；尚無結構設計驗算或建築放行。",
+  "units": "mm",
+  "geometry": "geometry/G-529328bc15d76d835a66.json",
+  "geometrySHA256": "529328bc15d76d835a6606c83d920de98fcb90191bad3469c933f3c48d640264",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -21200,
+      -115,
+      -90
+    ],
+    [
+      21200,
+      115,
+      90
+    ]
+  ],
+  "dimensionsMM": [
+    42400,
+    230,
+    180
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-8136a2c72ccad6.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-ROOF-01"
+  ],
+  "occurrenceCount": 2
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-6942132be70b1b",
+  "name": "tote hand opening",
+  "family": "DRAWER",
+  "purpose": "把物件有序承托，並提供可取用的開口。",
+  "assemblyTeaching": "櫃背／側／底→固定軌→抽屜底側後前板→活動軌→前板與把手；抽屜沿單一導向軸滑入。",
+  "verification": "空腔可見；行程向量與軌道平行。檢查插入全路徑、止擋、承載接觸與鄰抽干涉。",
+  "unresolved": "新工作臺已有分離薄板與滑軌；倉儲料盒等仍有實心簡化，滾珠與止擋未建。",
+  "units": "mm",
+  "geometry": "geometry/G-9c061ebcb9b59f93c7b0.json",
+  "geometrySHA256": "9c061ebcb9b59f93c7b058d01bf98891ee5f71f9f4bc5bdded7db7c52ab1aa47",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -93.75,
+      -6,
+      -22.5
+    ],
+    [
+      93.75,
+      6,
+      22.5
+    ]
+  ],
+  "dimensionsMM": [
+    187.5,
+    12,
+    45
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-6942132be70b1b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B03"
+  ],
+  "occurrenceCount": 56
+}

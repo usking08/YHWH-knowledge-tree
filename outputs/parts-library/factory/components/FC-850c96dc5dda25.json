@@ -1,0 +1,46 @@
+{
+  "id": "FC-850c96dc5dda25",
+  "name": "glass pane",
+  "family": "GLASS",
+  "purpose": "以透明圍護分隔空間，讓活動與成果可見。",
+  "assemblyTeaching": "框定位→承托墊塊→玻璃→壓條與密封；玻璃與金屬需有指定接觸層。",
+  "verification": "幾何厚度等於光學 thickness，物件 scale=1；F0=((n1−n2)/(n1+n2))²。看正視、斜視及邊緣。",
+  "unresolved": "框內墊塊、密封細節與夾層結構未全部建立；安全性能未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-30675add191019bbb55d.json",
+  "geometrySHA256": "30675add191019bbb55d6a3233bf3054640961923bd1b66c392f9b3639cec3c0",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -967.5,
+      -9,
+      -1517.5
+    ],
+    [
+      967.5,
+      9,
+      1517.5
+    ]
+  ],
+  "dimensionsMM": [
+    1935,
+    18,
+    3035
+  ],
+  "materials": [
+    "Factory | clear-architectural-glass | 18 mm"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-850c96dc5dda25.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-006"
+  ],
+  "occurrenceCount": 20
+}

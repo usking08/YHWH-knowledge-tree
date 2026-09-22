@@ -1,0 +1,853 @@
+{
+  "schema": "GT01-factory-reference-book/v1",
+  "revision": "R4",
+  "title": "全廠參考與組裝圖冊",
+  "wholeAccepted": false,
+  "updated": "2026-09-22",
+  "nodes": [
+    {
+      "id": "SITE",
+      "parent": null,
+      "title": "GT01 全廠規劃",
+      "group": "規劃",
+      "images": [
+        {
+          "file": "materials/generated/GT01-Factory-Luxury-Reference-R3.png",
+          "caption": "全廠剖開透視：六工位、後勤區、前方展示廊",
+          "role": "生成設計參考",
+          "inspection": [],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定"
+        },
+        {
+          "file": "materials/generated/GT01-Factory-Placement-Reference-R3.png",
+          "caption": "擺放規劃：橫向車位、訪客路徑與三個出入口",
+          "role": "生成設計參考",
+          "inspection": [],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定"
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "把車輛製作、零件教學與成果展示放在同一個可讀空間。",
+      "model": "GT01-atelier.html?mode=factory",
+      "missing": [
+        "每個分支尚需完成獨立部件與介面圖",
+        "全部模型尚未逐件與生成參考對齊"
+      ],
+      "steps": [
+        "定義同一座標與毫米尺度",
+        "依擺放圖建立功能區與空白通路",
+        "依子總成圖建立零件，再從倉庫回裝",
+        "多方向檢查輪廓、支承、孔洞、動作及材料"
+      ]
+    },
+    {
+      "id": "BUILDING",
+      "parent": "SITE",
+      "title": "建築骨架與圍護",
+      "group": "建築",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "承托屋面、圍護空間、提供光與通行。",
+      "missing": [
+        "地基、地坪分層、完整錨固",
+        "結構節點及建築性能驗證"
+      ]
+    },
+    {
+      "id": "PORTAL",
+      "parent": "BUILDING",
+      "title": "門型鋼架與節點",
+      "group": "建築",
+      "images": [
+        {
+          "file": "materials/generated/GT01-Portal-Assembly-Reference-R1.png",
+          "caption": "門型架：主件、柱腳、膝節點、屋脊節點與立架順序",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [
+            {
+              "x": 0.018,
+              "y": 0.483,
+              "w": 0.264,
+              "h": 0.287,
+              "label": "PF01",
+              "note": "底板上下都畫出螺帽，可能混淆同一件的組裝態與爆炸態；需在下一版分開。"
+            },
+            {
+              "x": 0.013,
+              "y": 0.04,
+              "w": 0.47,
+              "h": 0.4,
+              "label": "PF02",
+              "note": "24 m 文字與畫面高寬比例不符；圖中不能量取比例。8.5／7.5 m 目標亦尚未與現有模型統一。"
+            }
+          ],
+          "inspection": []
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "model": "GT01-atelier.html?mode=factory&factoryPart=F-PF-01",
+      "missing": [
+        "柱腳、柱樑接頭與屋脊接頭獨立細圖"
+      ],
+      "steps": [
+        "基座定位",
+        "柱腳固定與暫時支撐",
+        "斜樑與柱接合",
+        "屋脊接合",
+        "縱向繫桿及斜撐"
+      ]
+    },
+    {
+      "id": "ENVELOPE",
+      "parent": "BUILDING",
+      "title": "屋面、牆板與排水",
+      "group": "建築",
+      "images": [
+        {
+          "file": "materials/generated/GT01-Roof-Assembly-Reference-R1.png",
+          "caption": "屋面分層、固定件、屋簷排水與天窗收口",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [
+            {
+              "x": 0.015,
+              "y": 0.616,
+              "w": 0.273,
+              "h": 0.32,
+              "label": "RF01",
+              "note": "圖註寫 C 形檁條，剖面卻接近封閉方管；截面矛盾，必須修正後才採用。"
+            },
+            {
+              "x": 0.317,
+              "y": 0.826,
+              "w": 0.186,
+              "h": 0.124,
+              "label": "RF02",
+              "note": "落水管接頭在組裝剖面仍分離，只有展開含義；實際插接深度與密封尚未定義。"
+            }
+          ],
+          "inspection": []
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "每層板材、密封、緊固與開口詳圖"
+      ]
+    },
+    {
+      "id": "GLAZING",
+      "parent": "BUILDING",
+      "title": "玻璃、窗框與門",
+      "group": "建築",
+      "images": [
+        {
+          "file": "materials/generated/GT01-Glazing-Assembly-Reference-R1.png",
+          "caption": "玻璃框、壓條、膠條、承托墊塊與排水剖面",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [
+            {
+              "x": 0.012,
+              "y": 0.579,
+              "w": 0.34,
+              "h": 0.36,
+              "label": "GL01",
+              "note": "承托墊塊畫在玻璃側旁，未證明由玻璃底緣把重量傳給窗臺；排水路徑亦需對真正開孔檢查。"
+            }
+          ],
+          "inspection": []
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "鉸鏈、鎖件、壓條與墊塊獨立圖"
+      ]
+    },
+    {
+      "id": "SERVICES",
+      "parent": "BUILDING",
+      "title": "燈光、配線與通風",
+      "group": "建築",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "燈具、驅動、線槽、接頭",
+        "空氣處理、濾材、風管與維修開口"
+      ]
+    },
+    {
+      "id": "PRODUCTION",
+      "parent": "SITE",
+      "title": "製作、工具與物流",
+      "group": "製作",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "各工位專用設備的全構造圖"
+      ]
+    },
+    {
+      "id": "WT01",
+      "parent": "PRODUCTION",
+      "title": "工作臺 WT01 · 九抽總成",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Assembly-Reference-R3.png",
+          "caption": "三欄 × 三層九抽：總成、主件爆炸、正側頂與滑軌位置",
+          "role": "生成設計參考",
+          "inspection": [
+            "已可看見三欄三層九抽、獨立櫃殼、框架與桌板。",
+            "此圖主件爆炸不支付滑軌滾珠、保持架、把手螺絲或調整腳內部的完整定義。"
+          ],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定"
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "承托工件，讓手工具與零件能分類取用。",
+      "model": "GT01-atelier.html?mode=factory&factoryPart=F-BENCH-01",
+      "actual": "quality/factory-teaching-r4/F-BENCH-01.png",
+      "missing": [
+        "背板、掛鉤與工具尚未符合本圖級別",
+        "圖中滑軌不可直接作截面真值"
+      ],
+      "steps": [
+        "框架回裝",
+        "三個空心櫃體定位",
+        "固定軌安裝",
+        "九個抽屜組裝",
+        "前板及把手固定",
+        "上桌面與限位件",
+        "抽出與收回逐一檢查"
+      ]
+    },
+    {
+      "id": "WT01-F",
+      "parent": "WT01",
+      "title": "承重骨架、桌面固定與調整腳",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Frame-Reference-R1.png",
+          "caption": "四腳、橫樑、托盤、方管截面與腳座爆炸",
+          "role": "生成設計參考",
+          "inspection": [],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定",
+          "annotations": [
+            {
+              "x": 0.535,
+              "y": 0.68,
+              "w": 0.225,
+              "h": 0.265,
+              "label": "F01",
+              "note": "桌板固定螺絲被畫成帶螺帽的穿透關係；木材內的螺紋承接與金屬扣件固定方法尚未一致。"
+            }
+          ]
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "頂板固定件進入木材的關係需修正",
+        "調整腳螺紋、承壓墊與防鬆件逐件圖"
+      ],
+      "steps": [
+        "辨識中空方管與連接孔",
+        "接長短樑",
+        "安裝折邊托盤",
+        "插入腳座與調整螺桿",
+        "從桌底固定長孔扣件"
+      ]
+    },
+    {
+      "id": "WT01-D",
+      "parent": "WT01",
+      "title": "抽屜、薄板、把手與滑軌",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Drawer-Reference-R2.png",
+          "caption": "R2：單一抽屜、平頂櫃殼、從板背鎖入把手",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [],
+          "inspection": [
+            "上方多餘容器已移除。",
+            "把手剖面的螺絲頭已回到抽屜內側；外觀爆炸圖的方向仍須以剖面為準。",
+            "滑軌拆圖不是完整內部幾何，請往下一層讀。"
+          ]
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Drawer-Reference-R1.png",
+          "caption": "抽屜薄板逐件展開、半抽出與把手詳圖",
+          "role": "退回修正的 R1 · 保留反例",
+          "inspection": [],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定",
+          "annotations": [
+            {
+              "x": 0.02,
+              "y": 0.71,
+              "w": 0.53,
+              "h": 0.23,
+              "label": "D01",
+              "note": "兩組剖面被不明橫桿接在一起；無法從此圖重建連續的巢狀滑軌。"
+            },
+            {
+              "x": 0.8,
+              "y": 0.69,
+              "w": 0.19,
+              "h": 0.26,
+              "label": "D02",
+              "note": "螺絲出現在把手外側；正確路徑應從前板背面穿過板孔，進入把手腳的盲牙孔。"
+            },
+            {
+              "x": 0.61,
+              "y": 0.06,
+              "w": 0.3,
+              "h": 0.17,
+              "label": "D03",
+              "note": "上方多出一個未定義的開口容器，與同頁只有一個抽屜的分件不一致。"
+            }
+          ]
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "滑軌各件的獨立形狀與兩組滾動接觸仍未完成",
+        "前板孔位、把手盲孔深度、螺釘長度與扭矩尚未一併核對"
+      ],
+      "steps": [
+        "底板接四側板",
+        "固定軌鎖在櫃體",
+        "活動軌鎖在抽屜",
+        "從板背鎖入把手腳",
+        "沿 +Y 插入；沿 −Y 抽出",
+        "驗證止擋、行程與相鄰抽屜間隙"
+      ]
+    },
+    {
+      "id": "TOOLS",
+      "parent": "PRODUCTION",
+      "title": "手工具與夾持機構",
+      "group": "製作",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "扳手、起子、虎鉗、掛板、掛鉤逐件圖"
+      ]
+    },
+    {
+      "id": "LOGISTICS",
+      "parent": "PRODUCTION",
+      "title": "貨架、料盒、推車與腳輪",
+      "group": "製作",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "架柱與托盤介面",
+        "可動腳輪軸承、輪軸、止動器分解",
+        "開口料盒薄壁與堆疊接觸"
+      ]
+    },
+    {
+      "id": "STATIONS",
+      "parent": "PRODUCTION",
+      "title": "六個車輛工位與後勤設備",
+      "group": "製作",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "定位臺、升降支承、內裝架、塗裝室、檢驗設備各自總成與全零件圖"
+      ]
+    },
+    {
+      "id": "GALLERY",
+      "parent": "SITE",
+      "title": "展示廊與訪客家具",
+      "group": "展示",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "每個家具獨立圖鏈"
+      ]
+    },
+    {
+      "id": "CHAIR",
+      "parent": "GALLERY",
+      "title": "休憩椅的骨架、泡棉與裁片",
+      "group": "展示",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "model": "GT01-atelier.html?mode=factory&factoryPart=F-CHAIR-01",
+      "missing": [
+        "裁片版型、縫線、固定與支腳節點"
+      ]
+    },
+    {
+      "id": "EXHIBIT",
+      "parent": "GALLERY",
+      "title": "展示桌、零件托盤與圖紙支架",
+      "group": "展示",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "model": "GT01-atelier.html?mode=factory&factoryPart=EX-PARTS",
+      "missing": [
+        "桌架與頂板、可換托盤、壓克力卡架逐件圖"
+      ]
+    },
+    {
+      "id": "RECEPTION",
+      "parent": "GALLERY",
+      "title": "接待櫃與圓桌",
+      "group": "展示",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "櫃體板片、接榫、檯面、腳座與固定件"
+      ]
+    },
+    {
+      "id": "PAPER",
+      "parent": "GALLERY",
+      "title": "紙張、印刷層與夾持",
+      "group": "展示",
+      "images": [],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "missing": [
+        "紙張纖維、正背印刷、圖面版次與支架分層圖"
+      ]
+    },
+    {
+      "id": "BOTANICAL",
+      "parent": "SITE",
+      "title": "植栽、葉片與花槽",
+      "group": "植栽",
+      "images": [
+        {
+          "file": "materials/generated/GT01-Ficus-Assembly-R1.png",
+          "caption": "植株、內盆、外盆、土層及集水盤分解",
+          "role": "生成設計參考",
+          "inspection": [],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定"
+        },
+        {
+          "file": "materials/generated/GT01-Ficus-Leaf-R1.png",
+          "caption": "橡膠樹葉片：輪廓與表面色澤參考",
+          "role": "生成設計參考",
+          "inspection": [],
+          "adoptedScope": "外形與材料研究；介面依圈註與修訂決定"
+        }
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "以真實葉片、分枝、盆器與接觸關係組成植栽。",
+      "model": "GT01-atelier.html?mode=factory&factoryPart=F-PLANT-1",
+      "actual": "quality/factory-teaching-r4/F-PLANT-1.png",
+      "missing": [
+        "葉背、葉柄與節點多視圖",
+        "根系、土層、排水與花槽逐件圖",
+        "模型 1901.6 mm 與圖上 1850 mm 高度尚未統一"
+      ]
+    },
+    {
+      "id": "WT01-SL",
+      "parent": "WT01-D",
+      "title": "滑軌：軌片、保持架、滾珠與止擋",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Slide-Reference-R1.png",
+          "caption": "三節滑軌逐件展開與開閉示意",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [
+            {
+              "x": 0.37,
+              "y": 0.6,
+              "w": 0.3,
+              "h": 0.33,
+              "label": "SL01",
+              "note": "只清楚畫出外軌接觸的一組上下滾珠；中軌與內軌的第二組接觸仍不足，不能據此宣稱完整機構。"
+            }
+          ],
+          "inspection": []
+        }
+      ],
+      "steps": [
+        "固定櫃側軌與抽屜側軌，維持平行與指定側隙",
+        "保持架置於裝入端",
+        "先接中間軌，再將抽屜軌對準裝入",
+        "以止擋與釋放片限制脫離；拆卸前先釋放保持關係"
+      ],
+      "missing": [
+        "兩組滾動介面尚未在同一剖面完整表現",
+        "軌型、球徑、袋孔節距與球數尚未建立一致的原生資料",
+        "保持架不能和滾珠合併當作單一不可拆件"
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "讓抽屜沿同一軸線抽出，透過滾動接觸把荷重交回櫃體。",
+      "sources": [
+        {
+          "title": "Accuride 原廠安裝指南：側隙、對齊與裝入",
+          "url": "https://help.accuride-europe.com/knowledge/installing-drawer-slides"
+        }
+      ]
+    },
+    {
+      "id": "WT01-LF",
+      "parent": "WT01-F",
+      "title": "調整腳：四個獨立件與螺旋配合",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Foot-Relation-Control-R4.svg",
+          "caption": "尺寸控制剖面：四件共用 Z 基準與接觸關係",
+          "role": "由名義尺寸計算的軸向示意圖",
+          "adoptedScope": "僅控制名義尺寸與區間；牙形、變形、公差與承載尚未驗證",
+          "inspection": [
+            "由 source/wt01-foot-relations.json 派生；不是生成圖的像素量測。",
+            "實際檢查報告：quality/wt01-foot-relations.json；舊杯緣會被 C02 拒絕。"
+          ],
+          "annotations": []
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Foot-Reference-R4.png",
+          "caption": "生成總成 R4：露出螺紋與平底已改；紅圈仍退回",
+          "role": "生成外觀參考；未通過全部介面核對",
+          "adoptedScope": "可讀零件外觀與拆裝次序；紅圈內不能當作尺寸或接合依據",
+          "inspection": [
+            "30 mm 露出螺紋、67 mm 金屬高度與平底底視圖已改善。",
+            "生成圖仍沒有完整遵守固定板中央剖切位置及杯墊扣持關係。"
+          ],
+          "annotations": [
+            {
+              "x": 0.011,
+              "y": 0.478,
+              "w": 0.145,
+              "h": 0.072,
+              "label": "LF-R4-A",
+              "note": "0.3 mm 是扣珠向內的徑向突出量，這裡卻寫成 upstanding rim；杯緣高度應是 6 mm，兩個方向不能混為一談。"
+            },
+            {
+              "x": 0.079,
+              "y": 0.622,
+              "w": 0.148,
+              "h": 0.062,
+              "label": "LF-R4-B",
+              "note": "中央直剖仍畫出兩個偏置角孔；四角孔中心在 ±27.5、±27.5，中央平面不會切到它們。"
+            },
+            {
+              "x": 0.719,
+              "y": 0.377,
+              "w": 0.177,
+              "h": 0.104,
+              "label": "LF-R4-C",
+              "note": "承壓盤仍露在杯緣上方，與指定 z8 盤頂、z8.5 扣珠底面不一致；不得從此處推定扣持已成立。"
+            },
+            {
+              "x": 0.503,
+              "y": 0.848,
+              "w": 0.043,
+              "h": 0.079,
+              "label": "LF-R4-D",
+              "note": "6.0 的尺寸線沒有包含 0.5 高扣珠；這段若到扣珠下方應是 5.5。完整 3+5.5+0.5=9 見尺寸控制剖面。"
+            }
+          ]
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Foot-Reference-R3.png",
+          "caption": "總成 R3：平底已修，螺紋長度與杯墊扣持仍有矛盾",
+          "role": "保留作為修正前反例",
+          "adoptedScope": "只確認中央剖面已去除尖頭；其餘依圈註退回",
+          "inspection": [
+            "底面尖頭確實已移除，不代表其餘視角與尺寸同時正確。"
+          ],
+          "annotations": [
+            {
+              "x": 0.86,
+              "y": 0.25,
+              "w": 0.08,
+              "h": 0.103,
+              "label": "LF-R3-A",
+              "note": "若桿頂與板頂齊平，50 mm 螺桿扣除 8 mm 螺帽與 12 mm 板厚，露出長度應為 30 mm；圖中 10 mm 不成立。"
+            },
+            {
+              "x": 0.457,
+              "y": 0.845,
+              "w": 0.07,
+              "h": 0.066,
+              "label": "LF-R3-B",
+              "note": "舊杯墊總高 6 mm，低於承壓盤頂面 z8，不能用杯頂扣珠固定。"
+            },
+            {
+              "x": 0.176,
+              "y": 0.733,
+              "w": 0.083,
+              "h": 0.071,
+              "label": "LF-R3-C",
+              "note": "底視圖仍畫出同心凹凸環；LF01 底面應為無孔、無凸點、無凹穴的連續平面。"
+            }
+          ]
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Foot-Reference-R2.png",
+          "caption": "調整腳 R2：總高修為 67 mm；剖面仍退回修正",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [
+            {
+              "x": 0.43,
+              "y": 0.845,
+              "w": 0.075,
+              "h": 0.066,
+              "label": "LF-D01",
+              "note": "剖面仍有向下凸點；LF01 的指定底面必須完全平坦，與 LF02 的 3 mm 平底接觸。"
+            },
+            {
+              "x": 0.416,
+              "y": 0.202,
+              "w": 0.14,
+              "h": 0.04,
+              "label": "LF-D02",
+              "note": "圖內仍殘留 R1 版次；目前檔案為 R2，不能把版次標籤當成修正完成證據。"
+            }
+          ],
+          "inspection": []
+        }
+      ],
+      "steps": [
+        "LF01 金屬幹盤裝入 LF02 彈性杯墊",
+        "LF03 螺帽由螺桿頂端旋入",
+        "LF01 從 LF04 下方沿螺旋旋入",
+        "調到位置，再將 LF03 向上旋緊接觸板底",
+        "檢查同軸、螺距、牙合長度、底面接觸與調整工具空間"
+      ],
+      "missing": [
+        "同版生成總成圖仍需逐項核對尺寸控制剖面",
+        "固定板至桌腳的四個 M6 連接件仍需獨立定義",
+        "杯墊彈性讓位、扣持力與公差尚未驗證",
+        "目前工廠模型尚未以這四件形體回裝"
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "調整支承高度，透過螺帽夾緊固定板；底墊承接地面。"
+    },
+    {
+      "id": "WT01-LF01",
+      "parent": "WT01-LF",
+      "title": "LF01 · 一體加工螺桿與承壓盤",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Stem-Reference-R1.png",
+          "caption": "一體螺桿、六角調整段與平底承壓盤",
+          "role": "獨立零件生成參考",
+          "inspection": [
+            "獨立剖面已移除總成 R2 的向下凸點；底面是連續平面。",
+            "5 + 12 + 50 = 67 mm；分段數值相加一致。",
+            "牙形與螺距仍需由原生曲面控制，不能量取影像像素當製造尺寸。"
+          ],
+          "annotations": [],
+          "adoptedScope": "外形、連續實體、孔洞與名義尺寸的作者設計；尚未完成原生形體與回裝驗證"
+        }
+      ],
+      "steps": [
+        "對照平底面、直徑 40 的承壓盤、17 對邊六角與 M10 螺桿；一體件不拆成三個相疊零件。",
+        "金屬底面對準杯墊內底；底面接觸需要有限面積，不能留下原 R2 的尖點。",
+        "螺距 p = 1.5 mm；相對旋轉一圈的軸向位移量為 1.5 mm。旋向、牙合範圍與工具可達性須在同一原生模型驗證。"
+      ],
+      "missing": [
+        "同版原生形體與回裝尚待驗證"
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "透過螺旋把高度變化交給固定板，再由承壓盤把力分散到杯墊。",
+      "leafReason": "預定為一個連續製造實體；表面處理另記材料層，不按網格片數拆成零件。"
+    },
+    {
+      "id": "WT01-LF02",
+      "parent": "WT01-LF",
+      "title": "LF02 · 彈性杯墊",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Foot-Relation-Control-R4.svg",
+          "caption": "尺寸控制剖面：四件共用 Z 基準與接觸關係",
+          "role": "由名義尺寸計算的軸向示意圖",
+          "adoptedScope": "僅控制名義尺寸與區間；牙形、變形、公差與承載尚未驗證",
+          "inspection": [
+            "由 source/wt01-foot-relations.json 派生；不是生成圖的像素量測。",
+            "實際檢查報告：quality/wt01-foot-relations.json；舊杯緣會被 C02 拒絕。"
+          ],
+          "annotations": []
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Pad-Reference-R3.png",
+          "caption": "杯墊 R3：加高杯緣，扣珠位置仍須依控制剖面核對",
+          "role": "生成零件參考；部分標線待修",
+          "adoptedScope": "採用加高外形與 9 mm 總高；圈註尺寸線與虛線配合盤不能作為施工依據",
+          "inspection": [
+            "側壁標註已改正為 1.8 mm。",
+            "側面與透視已加高，但局部剖面標線未完整跟上同一尺寸鏈。"
+          ],
+          "annotations": [
+            {
+              "x": 0.604,
+              "y": 0.6,
+              "w": 0.08,
+              "h": 0.145,
+              "label": "PAD03-A",
+              "note": "這段箭頭畫到扣珠下方卻標 6.0；此區應為 5.5，另加扣珠高度 0.5 才是總杯緣 6。請以尺寸控制剖面為準。"
+            },
+            {
+              "x": 0.751,
+              "y": 0.477,
+              "w": 0.146,
+              "h": 0.055,
+              "label": "PAD03-B",
+              "note": "虛線配合盤畫到扣珠底面，未畫出指定 0.5 mm 軸向間隙；文字算式不能證明這個間隙已畫對。"
+            }
+          ]
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Pad-Reference-R2.png",
+          "caption": "舊版 R2：壁厚已修，但杯緣仍太矮",
+          "role": "保留作為反例",
+          "adoptedScope": "杯緣扣持設計已撤回；不得按舊總高 6 mm 回裝",
+          "inspection": [
+            "壁厚更正是成立的；這不代表扣持功能成立。"
+          ],
+          "annotations": [
+            {
+              "x": 0.371,
+              "y": 0.602,
+              "w": 0.295,
+              "h": 0.148,
+              "label": "PAD02-C",
+              "note": "內底 z3 加上 5 mm 厚承壓盤，盤頂 z8；舊杯頂只有 z6，扣珠位於盤側，不能扣住盤頂。"
+            }
+          ]
+        },
+        {
+          "file": "materials/generated/GT01-WT01-Pad-Reference-R1.png",
+          "caption": "一體彈性杯墊：上、下、側與剖面",
+          "role": "獨立零件生成參考",
+          "inspection": [
+            "底面封閉，沒有額外孔洞；底厚 3 mm、上緣高 3 mm。",
+            "外徑 44、內徑 40.4，直壁徑向厚度應為 1.8 mm。"
+          ],
+          "annotations": [
+            {
+              "x": 0.73,
+              "y": 0.213,
+              "w": 0.215,
+              "h": 0.031,
+              "label": "PAD01",
+              "note": "圖中側壁寫 2.0 mm，但 (44 − 40.4) ÷ 2 = 1.8 mm。以這組內外徑施工時須改為 1.8，不可同時採用三個互相衝突的值。"
+            }
+          ],
+          "adoptedScope": "外形、連續實體、孔洞與名義尺寸的作者設計；尚未完成原生形體與回裝驗證"
+        }
+      ],
+      "steps": [
+        "外底為 z0，內底 z3，杯頂 z9；壁厚由 (44−40.4)/2 派生為 1.8 mm。",
+        "承壓盤位於 z3–8；扣珠底面 z8.5，保留 0.5 mm 軸向間隙。",
+        "入口直徑 39.8 小於承壓盤 40；需至少 0.1 mm 徑向彈性讓位，不能用剛體直穿當作組裝完成。",
+        "先用控制剖面理解尺寸，再對讀生成圖的局部圈註；扣持力仍需材料與變形驗證。"
+      ],
+      "missing": [
+        "同版原生形體與回裝尚待驗證"
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "提供接觸地面與包住承壓盤的彈性邊緣。",
+      "leafReason": "預定為一個連續製造實體；表面處理另記材料層，不按網格片數拆成零件。"
+    },
+    {
+      "id": "WT01-LF03",
+      "parent": "WT01-LF",
+      "title": "LF03 · 六角防鬆螺帽",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Locknut-Reference-R1.png",
+          "caption": "單件：六角、貫通內螺紋、正背側面及剖面",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [],
+          "inspection": [
+            "外形、用途與與固定板底面接觸方向已可讀；螺紋仍需由原生形體與相配螺桿一起驗證。"
+          ]
+        }
+      ],
+      "steps": [
+        "孔軸與 LF01 螺桿同軸，從螺桿自由端旋入；不能直接平移穿過螺紋。",
+        "幾何計算使用 Δz = p Δθ / (2π)，角度以弧度計；旋向與相位仍須先對照同一牙形。",
+        "最後讓螺帽頂面接觸 LF04 板底；只證明面接觸不足以聲稱鎖緊力或扭矩已達標。"
+      ],
+      "missing": [
+        "同版原生形體與回裝尚待驗證"
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "頂面接觸固定板底面，鎖住調整位置。",
+      "leafReason": "預定為一個連續製造實體；表面處理另記材料層，不按網格片數拆成零件。"
+    },
+    {
+      "id": "WT01-LF04",
+      "parent": "WT01-LF",
+      "title": "LF04 · 帶牙孔固定板",
+      "group": "製作",
+      "images": [
+        {
+          "file": "materials/generated/GT01-WT01-Footplate-Reference-R1.png",
+          "caption": "單件：75 × 75 × 12 固定板、四角孔及中央牙孔",
+          "role": "生成設計參考",
+          "adoptedScope": "逐項讀圖採用；圈註範圍不得直接施工",
+          "annotations": [
+            {
+              "x": 0.49,
+              "y": 0.58,
+              "w": 0.29,
+              "h": 0.18,
+              "label": "LF04-S01",
+              "note": "此剖面同時穿過中央孔與兩個角孔，必須定義為轉折剖面並補剖切路徑；不能誤讀成中央直剖。"
+            }
+          ],
+          "inspection": []
+        }
+      ],
+      "steps": [
+        "先確認四角孔在 55 × 55 的中心距上；(75 − 55)/2 = 10 mm 為邊到孔心距。",
+        "中央牙孔與 LF01、LF03 共用軸線與螺距；四角孔不得錯當成內螺紋孔。",
+        "板與桌腳的固定介面尚未關閉，不能只讓板貼到方管底面就宣稱已固定。"
+      ],
+      "missing": [
+        "同版原生形體與回裝尚待驗證"
+      ],
+      "childrenComplete": false,
+      "qualification": "REFERENCE_IN_PROGRESS",
+      "purpose": "承接桌腳並以中央牙孔與調整螺桿配合。",
+      "leafReason": "預定為一個連續製造實體；表面處理另記材料層，不按網格片數拆成零件。"
+    }
+  ]
+}

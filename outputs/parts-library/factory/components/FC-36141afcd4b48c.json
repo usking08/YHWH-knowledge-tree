@@ -1,0 +1,46 @@
+{
+  "id": "FC-36141afcd4b48c",
+  "name": "front upper insulated wall",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-9d424ab0eb5dd9cf0e47.json",
+  "geometrySHA256": "9d424ab0eb5dd9cf0e4791bf12dc6eee2233f7a215043a16c86a65a60d40f8c5",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -21000,
+      -70,
+      -1950
+    ],
+    [
+      21000,
+      70,
+      1950
+    ]
+  ],
+  "dimensionsMM": [
+    42000,
+    140,
+    3900
+  ],
+  "materials": [
+    "Factory | mineral-wall-panel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-36141afcd4b48c.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 1
+}

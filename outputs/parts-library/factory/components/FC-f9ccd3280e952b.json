@@ -1,0 +1,46 @@
+{
+  "id": "FC-f9ccd3280e952b",
+  "name": "inspection tunnel arch",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-bcb387a9424d55ccddf8.json",
+  "geometrySHA256": "bcb387a9424d55ccddf8893323872902ca28a818fec39dc7e042e3dc32d82a9d",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -55,
+      -70,
+      -1400
+    ],
+    [
+      55,
+      70,
+      1400
+    ]
+  ],
+  "dimensionsMM": [
+    110,
+    140,
+    2800
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-f9ccd3280e952b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S6"
+  ],
+  "occurrenceCount": 6
+}

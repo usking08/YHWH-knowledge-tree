@@ -1,0 +1,46 @@
+{
+  "id": "FC-810fb3bc8e5098",
+  "name": "crate band",
+  "family": "STORAGE",
+  "purpose": "保存身份、承托來料並交給下游工位。",
+  "assemblyTeaching": "棧木→鋪板→箱體底側蓋→束帶及標籤；箱內物件與外箱分開記帳。",
+  "verification": "外包絡用於動線；材料壁厚、空腔與插叉方向需另查。",
+  "unresolved": "箱內內容物及綁固工法尚未具體化。",
+  "units": "mm",
+  "geometry": "geometry/G-edf4cd1e4c4517b6a959.json",
+  "geometrySHA256": "edf4cd1e4c4517b6a95994eeffbc14dfa27ee29b299c8c24c163a6c0db29d442",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -20,
+      -440,
+      -480
+    ],
+    [
+      20,
+      440,
+      480
+    ]
+  ],
+  "dimensionsMM": [
+    40,
+    880,
+    960
+  ],
+  "materials": [
+    "Factory | oak-worktop"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-810fb3bc8e5098.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B01"
+  ],
+  "occurrenceCount": 8
+}

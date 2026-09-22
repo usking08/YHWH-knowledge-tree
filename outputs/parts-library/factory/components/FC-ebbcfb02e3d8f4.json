@@ -1,0 +1,46 @@
+{
+  "id": "FC-ebbcfb02e3d8f4",
+  "name": "padded glazing rack sheet",
+  "family": "GLASS",
+  "purpose": "以透明圍護分隔空間，讓活動與成果可見。",
+  "assemblyTeaching": "框定位→承托墊塊→玻璃→壓條與密封；玻璃與金屬需有指定接觸層。",
+  "verification": "幾何厚度等於光學 thickness，物件 scale=1；F0=((n1−n2)/(n1+n2))²。看正視、斜視及邊緣。",
+  "unresolved": "框內墊塊、密封細節與夾層結構未全部建立；安全性能未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-ae994a24aa0b3f5eaa75.json",
+  "geometrySHA256": "ae994a24aa0b3f5eaa753875ce0923f5b944d3a2a3fd6104334bd45942aeb197",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1100,
+      -11,
+      -850
+    ],
+    [
+      1100,
+      11,
+      850
+    ]
+  ],
+  "dimensionsMM": [
+    2200,
+    22,
+    1700
+  ],
+  "materials": [
+    "Factory | booth-laminated-glass | 22 mm"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-ebbcfb02e3d8f4.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B04"
+  ],
+  "occurrenceCount": 4
+}

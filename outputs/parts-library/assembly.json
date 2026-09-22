@@ -1,0 +1,468 @@
+{
+  "schemaVersion": "GT01-assembly/v1",
+  "units": "mm",
+  "coordinateFrame": {
+    "X": "沿把手",
+    "Y": "向車外",
+    "Z": "向上",
+    "pivot": [
+      -46,
+      -10,
+      0
+    ],
+    "pivotAxis": [
+      0,
+      0,
+      1
+    ]
+  },
+  "groups": [
+    {
+      "id": "D11",
+      "name": "車門外把手形體首件",
+      "revision": "D11-FIRST-ARTICLE-R3",
+      "complete": false,
+      "parts": [
+        {
+          "id": "D11-P01",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P02",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P03",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P09",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P10",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P06",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P04",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P11a",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P11b",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        },
+        {
+          "id": "D11-P05a",
+          "quantity": 1,
+          "transform": "identity; geometry is already in the common D11 local frame"
+        }
+      ],
+      "steps": [
+        {
+          "id": "D11-P02",
+          "name": "01 放置空心盒體",
+          "note": "以盒體為定位基準。",
+          "path": "fixed"
+        },
+        {
+          "id": "D11-P11a",
+          "name": "02 裝入下軸套",
+          "note": "從前方進入，底端貼合盒體下壁。",
+          "path": "front",
+          "distance": 24
+        },
+        {
+          "id": "D11-P04",
+          "name": "03 套入回位彈簧",
+          "note": "先從前方進入，再下降套住下軸套；下腳貼住盒體支點。",
+          "path": "front-then-down",
+          "distance": 38,
+          "lift": 8
+        },
+        {
+          "id": "D11-P05a",
+          "name": "04 裝入拉索撥臂",
+          "note": "從前方進入，再下降到下軸套；接觸塊的 X=-49.95 接面貼住上彈簧腳的負 X 側。",
+          "path": "front-then-down",
+          "distance": 38,
+          "lift": 8
+        },
+        {
+          "id": "D11-P01",
+          "name": "05 嵌入把手 D 形接面",
+          "note": "把手先抬高 1.2 從前方送入，再下降進入 D 形凹座。",
+          "path": "front-then-down",
+          "distance": 28,
+          "lift": 1.2
+        },
+        {
+          "id": "D11-P11b",
+          "name": "06 裝入上軸套",
+          "note": "由上方穿過盒體上孔，直到下端接觸把手座；頂端與盒體上表面齊平。",
+          "path": "above",
+          "distance": 14
+        },
+        {
+          "id": "D11-P03",
+          "name": "07 穿入肩銷",
+          "note": "沿垂直軸，依序穿過上壁、軸套、把手、撥臂與下壁。",
+          "path": "above",
+          "distance": 46
+        },
+        {
+          "id": "D11-P10",
+          "name": "08 套上下止推墊圈",
+          "note": "從下方沿肩銷套入，到盒體下承壓面。",
+          "path": "below",
+          "distance": 12
+        },
+        {
+          "id": "D11-P09",
+          "name": "09 查看扣環定位",
+          "note": "顯示槽內定位；扣環彈性張開與卡入路徑尚未驗證。",
+          "path": "placement-only"
+        },
+        {
+          "id": "D11-P06",
+          "name": "10 貼合周界密封墊",
+          "note": "從前方套過面板，中央開口與固定孔對齊盒體。",
+          "path": "front",
+          "distance": 16
+        }
+      ],
+      "uniquePathImplementation": "native/source/door-handle-assembly-paths.mjs",
+      "evidence": [
+        "evidence/door-handle-assembly-paths-r1.json",
+        "evidence/door-handle-coupling-readback-r2.json"
+      ],
+      "limitations": [
+        "21 個離散裝入位置及雙向頂點讀回不代表連續三角面無碰撞。",
+        "扣環只有安置；彈性卡入尚未驗。",
+        "拉索、門體固定、止擋、預壓、材料及承載未完成。"
+      ]
+    },
+    {
+      "id": "D05-P15",
+      "name": "玻璃夾具的 M5 形狀原型",
+      "complete": false,
+      "parts": [
+        {
+          "id": "D05-P15d",
+          "quantityInLibrary": 1,
+          "nativeXInstances": [
+            -24,
+            24
+          ]
+        },
+        {
+          "id": "D05-P15e",
+          "quantityInLibrary": 1,
+          "nativeXInstances": [
+            -24,
+            24
+          ]
+        }
+      ],
+      "nativeImplementation": "native/source/window-regulator.mjs",
+      "placementWarning": "左右夾具位置是安置而非新種類；M5 形狀已包含 followGlass 軸向旋轉，component.x 另行安置。完整夾具沒有包成第二個完成總成。",
+      "nextAction": "另施工／收錄固定體、壓板、膠墊與全部裝入通路，檢查旋入、工具空間與玻璃面壓。"
+    }
+  ],
+  "mates": [
+    {
+      "from": "D11-P01",
+      "to": "D11-P03",
+      "contact": "Ø4 肩銷穿過 Ø4.1 孔",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P01",
+      "to": "D11-P05a",
+      "contact": "單平邊 D 端嵌入 R5.1 凹座；平邊間隙約 0.1",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P01",
+      "to": "D11-P11b",
+      "contact": "軸座頂面 Z7 接觸上軸套底端",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P02",
+      "to": "D11-P11b",
+      "contact": "Ø5.5 上套穿入 Ø5.7 上孔；名義徑向間隙 0.1",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P02",
+      "to": "D11-P11a",
+      "contact": "下壁支承下套",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P02",
+      "to": "D11-P04",
+      "contact": "固定腳接觸 X=-42.75 支點平面",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P02",
+      "to": "D11-P06",
+      "contact": "法蘭輪廓、中央開口與耳孔一致",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P03",
+      "to": "D11-P11b",
+      "contact": "Ø4 軸對 Ø4.2 上套孔",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P03",
+      "to": "D11-P11a",
+      "contact": "Ø4 軸對 Ø4.2 下套孔",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P03",
+      "to": "D11-P01",
+      "contact": "穿過 Ø4.1 軸座孔",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P03",
+      "to": "D11-P05a",
+      "contact": "穿過 Ø4.2 撥臂孔",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P03",
+      "to": "D11-P09",
+      "contact": "Ø3.2 扣槽",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P03",
+      "to": "D11-P10",
+      "contact": "下止推墊圈",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P09",
+      "to": "D11-P03",
+      "contact": "Ø3.2 扣槽內定位",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P09",
+      "to": "D11-P10",
+      "contact": "限制墊圈向下脫離",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P10",
+      "to": "D11-P03",
+      "contact": "Ø4 肩銷",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P10",
+      "to": "D11-P02",
+      "contact": "下壁承壓面",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P10",
+      "to": "D11-P09",
+      "contact": "軸向保持",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P06",
+      "to": "D11-P02",
+      "contact": "共用法蘭輪廓與孔",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P06",
+      "to": "EXTERNAL:door-skin",
+      "contact": "尚未生產的門皮密封座",
+      "inLibrary": false
+    },
+    {
+      "from": "D11-P04",
+      "to": "D11-P11a",
+      "contact": "環繞 Ø5.5 下套",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P04",
+      "to": "D11-P02",
+      "contact": "下固定腳接 X=-42.75",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P04",
+      "to": "D11-P05a",
+      "contact": "上移動腳接 X=-49.95",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11a",
+      "to": "D11-P03",
+      "contact": "肩銷 Ø4",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11a",
+      "to": "D11-P02",
+      "contact": "下端接下壁",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11a",
+      "to": "D11-P05a",
+      "contact": "上端 Z=-6 接底板",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11a",
+      "to": "D11-P04",
+      "contact": "導引圈體",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11b",
+      "to": "D11-P02",
+      "contact": "Ø5.7 上孔，徑向名義間隙 0.1",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11b",
+      "to": "D11-P01",
+      "contact": "底端接軸座頂面 Z7",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P11b",
+      "to": "D11-P03",
+      "contact": "Ø4 肩銷與上端肩面",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P05a",
+      "to": "D11-P01",
+      "contact": "D 凹座與單平邊端部",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P05a",
+      "to": "D11-P03",
+      "contact": "中央肩銷",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P05a",
+      "to": "D11-P11a",
+      "contact": "底板下方支承",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P05a",
+      "to": "D11-P04",
+      "contact": "移動彈簧腳接平面 X=-49.95",
+      "inLibrary": true
+    },
+    {
+      "from": "D11-P05a",
+      "to": "D11-P05b",
+      "contact": "開槽圓眼，端頭尚未生產",
+      "inLibrary": false
+    },
+    {
+      "from": "D05-P15d",
+      "to": "D05-P15e",
+      "contact": "M5×0.8 內螺紋",
+      "inLibrary": true
+    },
+    {
+      "from": "D05-P15d",
+      "to": "D05-P15a",
+      "contact": "固定夾體：原生來源存在，本庫未收錄",
+      "inLibrary": false
+    },
+    {
+      "from": "D05-P15d",
+      "to": "D05-P15b",
+      "contact": "壓板：原生來源存在，本庫未收錄",
+      "inLibrary": false
+    },
+    {
+      "from": "D05-P15e",
+      "to": "D05-P15d",
+      "contact": "M5×0.8 外螺紋",
+      "inLibrary": true
+    },
+    {
+      "from": "D05-P15e",
+      "to": "D05-P15a",
+      "contact": "固定夾體背面承壓面：來源存在，本庫未收錄；尚無防轉扣座",
+      "inLibrary": false
+    }
+  ],
+  "pendingCategories": [
+    {
+      "id": "pending-bearing",
+      "functionFamily": [
+        "支承",
+        "滾動軸承"
+      ],
+      "available": 0,
+      "nextAction": "先選定宿主軸徑、外殼孔、軸向定位及載荷，再施工分離內外圈、滾動體、保持架與間隙並讀回。"
+    },
+    {
+      "id": "pending-cable",
+      "functionFamily": [
+        "傳力",
+        "拉索與端頭"
+      ],
+      "available": 0,
+      "nextAction": "依 P05a 開槽眼與 P02 出口建立端頭、鋼索、外管及保持件，檢查裝入、防脫及工作拉程。"
+    },
+    {
+      "id": "pending-door-fixing",
+      "functionFamily": [
+        "緊固",
+        "門體安裝緊固件"
+      ],
+      "available": 0,
+      "nextAction": "建立門皮、螺母座及匹配法蘭孔的固定螺栓；選定材料、扭矩並驗證座面。"
+    },
+    {
+      "id": "pending-stop",
+      "functionFamily": [
+        "支承",
+        "行程止擋"
+      ],
+      "available": 0,
+      "nextAction": "依把手工作轉角建立盒體止擋和接觸面，驗證極限位置及回位接觸。"
+    }
+  ]
+}

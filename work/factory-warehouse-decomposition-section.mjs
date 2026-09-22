@@ -1,0 +1,7 @@
+import fs from 'node:fs/promises';
+export async function physicalDecompositionSection(){
+ const d=JSON.parse(await fs.readFile(new URL('../outputs/parts-library/factory/decomposition.json',import.meta.url),'utf8')),byId=new Map(d.nodes.map(n=>[n.id,n]));
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function depth(n,seen=new Set()){if(seen.has(n.id))throw Error('Cycle in physical decomposition: '+n.id);seen.add(n.id);if(!n.parent)return 0;const parent=byId.get(n.parent);if(!parent)throw Error('Missing physical parent: '+n.parent);return 1+depth(parent,seen);}
+ return '<section style="padding:24px 5vw;border-bottom:1px solid #ccd4c7;background:#efeee5"><b>領用狀態</b><p>本頁現有形體全部在候選區。正式可領用、待驗證與退回修正分開管理；生成圖有紅圈問題時，不能把該圖當成已驗收的製造依據。</p><p><a href="../../GT01-factory-reference-book.html">開啟逐層生成參考圖冊 →</a>　<a href="../../GT01-factory-feedback.html">讀取施工回饋與修正 →</a></p><details><summary>工作臺的實體拆解樹 · 不是模型碎片清單</summary><p>數量是相對上一層。四個腳座各含四種獨立件；三個櫃體各含三個抽屜。球數尚未定義，保留未知並禁止開料。</p>'+d.nodes.map(n=>'<div style="padding:7px 8px 7px '+(depth(n)*22)+'px;border-bottom:1px solid #d9dfd2"><b>'+esc(n.id)+'</b> · '+esc(n.name)+' × '+(n.quantity??'未定')+'<br><small>'+esc(n.terminationReason||'子總成：必須往下展開，不能當作不可拆零件')+'</small></div>').join('')+'<p>本樹仍缺：'+d.missing.map(esc).join('；')+'</p><p><a href="decomposition.json">讀取實體總成關係</a></p></details></section>';
+}

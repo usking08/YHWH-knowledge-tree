@@ -1,0 +1,37 @@
+/** Real source geometry in one millimetre scene. Labels never upgrade qualification. */
+export function buildFactoryExhibits(T,factory,data,wheel){
+ const root=new T.Group();root.name='GT01 成果展示與首件工位';root.userData={id:'F-EXHIBITS',units:'mm',scale:1,manufacturingCertified:false};factory.root.add(root);
+ const exhibits=[],papers=[],partModels=[],loader=new T.BufferGeometryLoader(),M=factory.materials;
+ const mat=new T.MeshPhysicalMaterial({color:0xf0ede5,roughness:.72,metalness:0}),inkMat=new T.MeshStandardMaterial({color:0x253b31,roughness:.78});
+ function box(parent,name,x,y,z,w,d,h,m=mat){const geo=factory.surfaces.roundedBox(w,d,h,Math.min(2,h/4));factory.surfaces.uv(geo,m,[w,d,h]);const o=new T.Mesh(geo,m);o.position.set(x,y,z);o.name=name;o.castShadow=o.receiveShadow=true;parent.add(o);return o;}
+ function group(id,name,x,y){const g=new T.Group();g.name=name;g.position.set(x,y,0);g.userData={id,zoneId:'Z-GALLERY',stationId:id,units:'mm',scale:1};root.add(g);exhibits.push({id,name,object:g});return g;}
+ function table(g,w=2000,d=950){box(g,'橡木展示桌板',0,0,920,w,d,60,M['oak-worktop']);for(const x of [-w/2+80,w/2-80])for(const y of [-d/2+80,d/2-80])box(g,'展示桌支腳',x,y,445,45,45,890,M['charcoal-painted-steel']);}
+ function lines(ctx,text,x,y,width,size=31,line=42){ctx.font='600 '+size+'px "Microsoft JhengHei",sans-serif';let row='';for(const c of text){if(c==='\n'||ctx.measureText(row+c).width>width){ctx.fillText(row,x,y);y+=line;row=c==='\n'?'':c;}else row+=c;}if(row)ctx.fillText(row,x,y);return y+line;}
+ function sheet(g,id,title,paragraphs,position,format='A4',orientation='flat'){
+  const [w,h]=format==='A7'?[105,74]:format==='A0'?[841,1189]:[210,297],cv=document.createElement('canvas');cv.width=format==='A7'?1050:1260;cv.height=Math.round(cv.width*h/w);const c=cv.getContext('2d'),unit=cv.width/w;
+  c.fillStyle='#f6f3eb';c.fillRect(0,0,cv.width,cv.height);c.fillStyle='#14271e';c.fillRect(0,0,cv.width,format==='A7'?9:18);
+  let y=lines(c,id,45,75,cv.width-90,32,45);y=lines(c,title,45,y+23,cv.width-90,format==='A7'?54:62,65);
+  c.strokeStyle='#acb7a9';c.lineWidth=2;c.beginPath();c.moveTo(45,y+10);c.lineTo(cv.width-45,y+10);c.stroke();y+=55;
+  for(const t of paragraphs)y=lines(c,t,45,y,cv.width-90,format==='A7'?33:40,format==='A7'?46:60)+22;
+  c.fillStyle='#263b2d';c.font='24px "Microsoft JhengHei"';c.fillText('GT01 · 原始資料連結由點選取得',45,cv.height-35);
+  const tex=new T.CanvasTexture(cv);tex.colorSpace=T.SRGBColorSpace;tex.anisotropy=8;
+  const paperM=new T.MeshStandardMaterial({map:tex,color:0xffffff,roughness:.94,metalness:0,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
+  const paper=box(g,id+' 紙張基材',...position,w,h,.12,new T.MeshStandardMaterial({color:0xf6f3eb,roughness:.95}));
+  const face=new T.Mesh(new T.PlaneGeometry(w,h),paperM);face.position.z=.065;paper.add(face);if(orientation==='standing'){paper.rotation.x=Math.PI/2;if(format!=='A0'){const base=id==='W00'?164:951;box(g,id+' 資料架底座',position[0],position[1]+28,base,100,95,6,M['charcoal-painted-steel']);box(g,id+' 資料架支柱',position[0],position[1]+28,(position[2]+base)/2,14,14,position[2]-base,M['brushed-stainless']);box(g,id+' 紙張背板',position[0],position[1]+2,position[2],w+6,3,h+6,mat);}}
+  paper.userData={id:'DOC-'+id,format,widthMM:w,heightMM:h,thicknessMM:.12,role:'印刷油墨與紙張基材分層',partId:id,document:'GT01-factory-guide.html#'+id};paper.castShadow=false;paper.receiveShadow=true;paper.userData.title=title;paper.userData.paragraphs=paragraphs;paper.userData.canvasDataURL=cv.toDataURL('image/png');papers.push(paper);return paper;
+ }
+ function part(p){const g=new T.Group();g.name=p.id+' '+p.name;const color=new T.Color().fromArray(p.material.displayColorLinearRGB),poly=['D11-P02','D11-P05a','D11-P11a','D11-P11b'].includes(p.id),rubber=p.id==='D11-P06',paint=p.id==='D11-P01';const material=new T.MeshPhysicalMaterial({color,roughness:rubber?.85:poly?.55:paint?.26:.32,metalness:poly||rubber||paint?0:1,clearcoat:paint?.85:0,clearcoatRoughness:.19});
+  for(const s of p.geometry.surfaces){const m=new T.Mesh(loader.parse(s.geometry),material);m.name=s.label;m.castShadow=m.receiveShadow=true;g.add(m);}g.userData={id:p.id,partId:p.id,scale:1,units:'mm',sourceGeometry:'parts-library/'+p.sourceGeometry,sourceSHA256:p.geometrySHA256,positionTriangleSHA256:p.hashes.positionTriangleSHA256,sourceRevision:p.sourceRevision,sourceStatus:p.status,manufacturingCertified:false};return g;
+ }
+ const wheelStand=group('EX-WHEEL','輪端成果展示',-7000,-9400);box(wheelStand,'輪端石材基座',0,0,80,1300,900,160,mat);const wr=wheel.root.clone(true);wr.name='輪端原生模型 · 等比例';wr.rotation.x=Math.PI/2;wr.updateMatrixWorld(true);const wb=new T.Box3().setFromObject(wr);wr.position.z=160-wb.min.z;wr.userData={...wr.userData,id:'EX-WHEEL-ASSEMBLY',source:'GT01-wheel.html',scale:1,units:'mm'};wheelStand.add(wr);sheet(wheelStand,'W00','輪端總成', ['來源：保留五組雙輻輪圈。','完整構造與拆解：GT01-wheel.html','展示比例 1:1；按原模型毫米置入。','材質與工程認證仍逐項驗收。'],[430,-290,560],'A4','standing');
+ const station=group('EX-D11','D11 首件組裝與品質工位',-4400,-9400);table(station,1700);const assembly=new T.Group();assembly.name='D11 十件首件組合 · 原生座標';for(const p of data.parts.filter(p=>p.id.startsWith('D11'))){const obj=part(p);assembly.add(obj);partModels.push(obj);}assembly.rotation.z=Math.PI;assembly.updateMatrixWorld(true);const ab=new T.Box3().setFromObject(assembly);assembly.position.set(-370,-60,954-ab.min.z);station.add(assembly);box(station,'D11 防刮承托墊',-370,-60,952,260,180,4,M['rubber-and-gaskets']);
+ sheet(station,'D11','首件組裝 · 10 件', ['輸入：已建模的十種把手零件。','任務：依上插軸套與肩銷順序回裝。','CTQ：孔軸一致、0.1 mm 名義徑向間隙；對照實際剖視。','尚缺完整拉索、止擋及門皮安裝；不能當作完成總成。','輸出：首件檢查紀錄 → 品管；不合格 → 紅牌返工。'],[380,170,1230],'A4','standing');
+ sheet(station,'D11-ROUTE','回裝路徑卡',['上軸套由 +Z 裝入。','肩銷肩部以下保持 R2。','品管：GT01-handle-quality.html','逐步回裝：GT01-handle-assembly.html'],[-100,-260,951]);
+ station.userData.operation={id:'OP-D11-REVIEW',input:'D11-FIRST-ARTICLE-R3 / 10 source parts',output:'REVIEWED_FIRST_ARTICLE_RECORD',state:'REVIEW_REQUIRED',tooling:['防刮承托墊','原生剖切與組裝路徑檢查'],CTQ:['軸套插入方向','肩銷孔口包絡','D 形接面','彈簧接觸'],capacity:1,upstream:'EX-PARTS',downstream:'F-B06',rework:'F-B07',release:false};
+ const individual=group('EX-PARTS','逐件樣本 · 真實毫米',3600,-9400);table(individual,2500,1100);
+ data.parts.forEach((p,i)=>{const x=-1000+(i%6)*400,y=Math.floor(i/6)*470-240;box(individual,p.id+' 托盤',x,y,954,340,390,8,M['rubber-and-gaskets']);const obj=part(p);obj.updateMatrixWorld(true);const b=new T.Box3().setFromObject(obj),c=b.getCenter(new T.Vector3());obj.position.set(x-c.x,y+70-c.y,958-b.min.z);individual.add(obj);partModels.push(obj);sheet(individual,p.id,p.name,['原生形體 · 1:1','材料未定級／總成未放行'],[x,y-115,958.2],'A7');});
+ const welcome=group('EX-WELCOME','工廠入口導覽牌',-19800,-9400);for(const x of [-500,500])box(welcome,'導覽立柱',x,0,1050,30,60,2100,inkMat);box(welcome,'入口資訊板',0,0,1400,1300,25,1700,mat);
+ sheet(welcome,'SITE-GT01','你在 GT01 製造工坊',['由左往右：零件供應 → 首件與總成裝配 → 表面精整 → 終線檢查。','前側：等比例成果、生成材質與圖紙。','後側：收料、零件倉儲、玻璃作業、內裝、量測、返工隔離。','點選展示物可查來源與品管。橘色：施工／待查；綠色僅代表指定幾何檢查通過。','這是作者設計的數位工廠；整車與廠務工程持續施工。'],[0,-16,1460],'A0','standing');
+ factory.exhibits=exhibits;factory.papers=papers;factory.exhibitPartModels=partModels;factory.d11Assembly=assembly;root.userData={...root.userData,uniquePartTypes:data.parts.length,displayedSourcePartInstances:partModels.length,sourceAssemblyRevision:'D11-FIRST-ARTICLE-R3',sourceGeometryUnmodified:true};
+ return {root,exhibits,papers,partModels,assembly};
+}

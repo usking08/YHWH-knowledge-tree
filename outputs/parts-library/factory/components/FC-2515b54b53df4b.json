@@ -1,0 +1,50 @@
+{
+  "id": "FC-2515b54b53df4b",
+  "name": "長盆底板",
+  "family": "POT",
+  "purpose": "承土、收納內盆與控制水的去向。",
+  "assemblyTeaching": "以半徑–高度剖面旋轉成壁；托盤→陶盆→內盆→根土→枝葉。長盆以底及四壁成殼。",
+  "verification": "剖面檢查內外壁、口緣與 Ø24 排水孔；抽出方向必須離開上一件的包絡。",
+  "unresolved": "排水、根系及陶器成形收縮未驗證。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    1750,
+    440,
+    36
+  ],
+  "localBounds": [
+    [
+      -875,
+      -220,
+      -18
+    ],
+    [
+      875,
+      220,
+      18
+    ]
+  ],
+  "dimensionsMM": [
+    1750,
+    440,
+    36
+  ],
+  "materials": [
+    "Factory | ceramic-planter"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-2515b54b53df4b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PLANTBED-1",
+    "F-PLANTBED-2",
+    "F-PLANTBED-3",
+    "F-PLANTBED-4",
+    "F-PLANTBED-5"
+  ],
+  "occurrenceCount": 5
+}

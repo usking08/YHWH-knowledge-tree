@@ -1,0 +1,46 @@
+{
+  "id": "FC-3cf93900b86aca",
+  "name": "gallery continuous head beam",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-2cce70997a0b0cd5dbcf.json",
+  "geometrySHA256": "2cce70997a0b0cd5dbcff193a76f4a9c24f7b27dc4e599ae423d7f61270c8744",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -21000,
+      -65,
+      -65
+    ],
+    [
+      21000,
+      65,
+      65
+    ]
+  ],
+  "dimensionsMM": [
+    42000,
+    130,
+    130
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-3cf93900b86aca.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-006"
+  ],
+  "occurrenceCount": 1
+}

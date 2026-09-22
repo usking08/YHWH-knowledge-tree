@@ -1,0 +1,54 @@
+{
+  "id": "FC-7203ff16c95918",
+  "name": "工具板支撐方管",
+  "family": "TUBE",
+  "purpose": "用封閉截面的連續管壁形成支承路徑。",
+  "assemblyTeaching": "外截面減內截面後沿軸擠出；在接口裝入端板或焊接，先定位再固定。",
+  "verification": "A = A外 − A內；內孔不可填實。讀實際壁厚、端口、垂直度與支承接觸。",
+  "unresolved": "承載、焊縫與公差未完成；外觀不代表結構合格。",
+  "units": "mm",
+  "geometry": "geometry/G-58f07ca78f5047d47adb.json",
+  "geometrySHA256": "58f07ca78f5047d47adbf707f084c23a0d057f4652a98f3d43ec82d026d5d554",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -15,
+      -15,
+      0
+    ],
+    [
+      15,
+      15,
+      670
+    ]
+  ],
+  "dimensionsMM": [
+    30,
+    30,
+    670
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Frame-Reference-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-7203ff16c95918.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-01",
+    "F-BENCH-02",
+    "F-BENCH-03",
+    "F-BENCH-04",
+    "F-BENCH-05",
+    "F-BENCH-06",
+    "F-BENCH-07",
+    "F-BENCH-08",
+    "F-BENCH-09"
+  ],
+  "occurrenceCount": 18
+}

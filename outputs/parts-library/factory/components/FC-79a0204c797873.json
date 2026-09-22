@@ -1,0 +1,46 @@
+{
+  "id": "FC-79a0204c797873",
+  "name": "extraction floor grate",
+  "family": "FLOOR",
+  "purpose": "提供定位基準、承托設備與分隔物流。",
+  "assemblyTeaching": "基层與面層分開定義；依基準放線，再配置接縫、設備基座和動線標記。",
+  "verification": "水平面方程 n·(p−p0)=0；確認物件支承底面與地坪無浮空或埋入；伸縮縫不以顏色代替凹槽驗證。",
+  "unresolved": "鋼筋、基底、排水坡與地耐力未建；此場景不是土建施工圖。",
+  "units": "mm",
+  "geometry": "geometry/G-b18b750f540f53d1a233.json",
+  "geometrySHA256": "b18b750f540f53d1a23366907cd0d1a1ecdbb09031daf7fdfdcfcf102bcff777",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -210,
+      -550,
+      -9
+    ],
+    [
+      210,
+      550,
+      9
+    ]
+  ],
+  "dimensionsMM": [
+    420,
+    1100,
+    18
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-79a0204c797873.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B02"
+  ],
+  "occurrenceCount": 22
+}

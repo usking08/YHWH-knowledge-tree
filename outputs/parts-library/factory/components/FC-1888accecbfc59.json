@@ -1,0 +1,47 @@
+{
+  "id": "FC-1888accecbfc59",
+  "name": "抽屜活動側滑軌",
+  "family": "DRAWER",
+  "purpose": "把物件有序承托，並提供可取用的開口。",
+  "assemblyTeaching": "櫃背／側／底→固定軌→抽屜底側後前板→活動軌→前板與把手；抽屜沿單一導向軸滑入。",
+  "verification": "空腔可見；行程向量與軌道平行。檢查插入全路徑、止擋、承載接觸與鄰抽干涉。",
+  "unresolved": "新工作臺已有分離薄板與滑軌；倉儲料盒等仍有實心簡化，滾珠與止擋未建。",
+  "units": "mm",
+  "geometry": "geometry/G-ffb7d47123e8636fcb35.json",
+  "geometrySHA256": "ffb7d47123e8636fcb35049a5601167e842c4d82e1d0b2d784468f0ab6f48c3f",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -3.5,
+      -369,
+      -9
+    ],
+    [
+      3.5,
+      369,
+      9
+    ]
+  ],
+  "dimensionsMM": [
+    7,
+    738,
+    18
+  ],
+  "materials": [
+    "Factory | brushed-stainless"
+  ],
+  "reference": "../../materials/generated/GT01-WT01-Drawer-Reference-R2.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-1888accecbfc59.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-07",
+    "F-BENCH-09"
+  ],
+  "occurrenceCount": 36
+}

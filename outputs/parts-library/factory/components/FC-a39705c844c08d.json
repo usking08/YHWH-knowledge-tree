@@ -1,0 +1,51 @@
+{
+  "id": "FC-a39705c844c08d",
+  "name": "chair leg",
+  "family": "FURNITURE",
+  "purpose": "讓訪客停留、閱讀與比較成果；人體接觸面需有合理曲面。",
+  "assemblyTeaching": "承重骨架→彈性層→泡棉→裁片縫線→包覆固定；座椅支腳需接到骨架。",
+  "verification": "曲率與輪廓多角度一致；織物方向隨裁片、紋理比例不能因拉伸改變。",
+  "unresolved": "目前只有外部包覆殼與腳件；內架、泡棉分層、縫線與固定件尚未完成。",
+  "units": "mm",
+  "geometry": "geometry/G-397b4d7a1de1072177cc.json",
+  "geometrySHA256": "397b4d7a1de1072177cc7f082a06763ce7db36429b786760c3ceb6d6d93dd19a",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -17,
+      -17,
+      -170
+    ],
+    [
+      17,
+      17,
+      170
+    ]
+  ],
+  "dimensionsMM": [
+    34,
+    34,
+    340
+  ],
+  "materials": [
+    "Factory | oiled-oak"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-a39705c844c08d.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-CHAIR-01",
+    "F-CHAIR-02",
+    "F-CHAIR-03",
+    "F-CHAIR-04",
+    "F-CHAIR-05",
+    "F-CHAIR-06"
+  ],
+  "occurrenceCount": 24
+}

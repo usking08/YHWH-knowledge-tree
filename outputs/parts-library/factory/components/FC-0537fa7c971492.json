@@ -1,0 +1,50 @@
+{
+  "id": "FC-0537fa7c971492",
+  "name": "葉柄 0/5",
+  "family": "LEAF",
+  "purpose": "薄殼承接葉脈與表面反射；葉柄把葉片基部接到枝條。",
+  "assemblyTeaching": "先採樣枝幹曲線 C(t)，葉柄起點等於 C(t)；末端作為葉片基點。用旋轉矩陣把葉片局部 +Y 對齊生長方向。",
+  "verification": "核對接點距離、正背法線、0.35 mm 名義視覺厚度、輪廓與葉脈方向；從側面確認不是平貼圖。",
+  "unresolved": "葉背材質與弧度為作者重建；未建立維管束與生長模型。",
+  "units": "mm",
+  "geometry": "geometry/G-b8a676f9059640a4d4c6.json",
+  "geometrySHA256": "b8a676f9059640a4d4c6969e06efb6eb7a26edf6d17a552060b6cfdbb2d3b4bb",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      101.83152770996094,
+      -6.904184341430664,
+      359.02215576171875
+    ],
+    [
+      112.86631774902344,
+      0.7862033843994141,
+      374.1437683105469
+    ]
+  ],
+  "dimensionsMM": [
+    11.0347900390625,
+    7.690387725830078,
+    15.121612548828125
+  ],
+  "materials": [
+    "e53d612f-412f-483f-82d7-981dadecf700"
+  ],
+  "reference": "../../materials/generated/GT01-Ficus-Assembly-R1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE",
+  "drawing": "drawings/FC-0537fa7c971492.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PLANTBED-1",
+    "F-PLANTBED-2",
+    "F-PLANTBED-3",
+    "F-PLANTBED-4",
+    "F-PLANTBED-5"
+  ],
+  "occurrenceCount": 25
+}

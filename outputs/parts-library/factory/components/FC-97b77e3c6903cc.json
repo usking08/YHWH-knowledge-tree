@@ -1,0 +1,46 @@
+{
+  "id": "FC-97b77e3c6903cc",
+  "name": "paint booth exhaust duct",
+  "family": "DRAIN",
+  "purpose": "提供排水、排氣或捕集的連續通路。",
+  "assemblyTeaching": "入口→通道→轉接→過濾／收集→出口；維修件須留拆出方向。",
+  "verification": "通路必須真的中空；截面 A 與流量 Q 以 v=Q/A 相連，但必須有流量、阻力與邊界資料。",
+  "unresolved": "現有部分管件仍為實心掃掠；風量、壓損與防火性能未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-3ee66267bbb3f324c171.json",
+  "geometrySHA256": "3ee66267bbb3f324c17170a0ae85aa4e975c3cd2281026fd9442501dd77cde9a",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -15030,
+      9393.4501953125,
+      5399.970703125
+    ],
+    [
+      -14370,
+      10935.392578125,
+      7350.94677734375
+    ]
+  ],
+  "dimensionsMM": [
+    660,
+    1541.9423828125,
+    1950.97607421875
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-97b77e3c6903cc.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B02-X"
+  ],
+  "occurrenceCount": 1
+}

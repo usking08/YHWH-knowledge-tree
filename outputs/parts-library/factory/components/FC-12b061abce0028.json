@@ -1,0 +1,46 @@
+{
+  "id": "FC-12b061abce0028",
+  "name": "body alignment gantry column",
+  "family": "FRAME",
+  "purpose": "把上部作用經樑、柱、連接件傳到基座。",
+  "assemblyTeaching": "I 形截面由翼板與腹板構成；先立柱、接斜樑、加腋與斜撐，再設次構件。",
+  "verification": "核對截面、對接面、螺栓孔軸及荷重路徑；ΣF=0、ΣM=0 只是平衡前提，仍須材料與邊界條件。",
+  "unresolved": "現有部分固定件僅外形；尚無結構設計驗算或建築放行。",
+  "units": "mm",
+  "geometry": "geometry/G-9e49c7a6049fda64542d.json",
+  "geometrySHA256": "9e49c7a6049fda64542d8a54e59537ed45ac8e3e2b46b7e847d3fb02f9859b9b",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -70,
+      -70,
+      -1775
+    ],
+    [
+      70,
+      70,
+      1775
+    ]
+  ],
+  "dimensionsMM": [
+    140,
+    140,
+    3550
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-12b061abce0028.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S3"
+  ],
+  "occurrenceCount": 4
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-2438eedeb24331",
+  "name": "linear light housing",
+  "family": "LIGHT",
+  "purpose": "照明讓形狀、表面缺陷與作業區可辨識。",
+  "assemblyTeaching": "固定座→懸吊→殼體→光源板→擴散罩；線材沿橋架回到供電接口。",
+  "verification": "反射環境擷取範圍要含燈；本場景 mm 尺度使用 far=50000。檢查直射、反射和遮擋分別有效。",
+  "unresolved": "發光材質不等於真實照度；驅動電源、配線及照度計算未建。",
+  "units": "mm",
+  "geometry": "geometry/G-0b2a55abf2162f1f5e19.json",
+  "geometrySHA256": "0b2a55abf2162f1f5e19aef910e46c2a3b462c207762448162441217f5b2370b",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -800,
+      -60,
+      -37.5
+    ],
+    [
+      800,
+      60,
+      37.5
+    ]
+  ],
+  "dimensionsMM": [
+    1600,
+    120,
+    75
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-2438eedeb24331.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-007"
+  ],
+  "occurrenceCount": 24
+}

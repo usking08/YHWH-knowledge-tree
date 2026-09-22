@@ -1,0 +1,2510 @@
+{
+  "title": "形體定理與跨用途建構",
+  "revision": "SHAPE-ATLAS-R1",
+  "intro": "從「作用在哪裡」找到方法，再把截面、路徑、變換、實體與驗證連成可執行的建構鏈。下方九個可調示範共用同一份形體核心；它們是作者設計的教學母形，不是來源實測產品或完成的車輛零件。",
+  "roles": [
+    {
+      "id": "boundary",
+      "name": "輪廓與開口",
+      "description": "作用在邊界、封閉剖面、孔與槽；決定物件占用和空出的地方。"
+    },
+    {
+      "id": "surface",
+      "name": "曲面與外形",
+      "description": "作用在曲線、截面序列與曲面；決定連續形狀和轉折。"
+    },
+    {
+      "id": "solid",
+      "name": "體積與壁厚",
+      "description": "作用在有材料的區域；決定內腔、實際壁厚和實體邊界。"
+    },
+    {
+      "id": "layout",
+      "name": "排列與定位",
+      "description": "作用在座標、基準、重複圖樣和組裝位置。"
+    },
+    {
+      "id": "interface",
+      "name": "接合與運動",
+      "description": "作用在孔軸、接面、活動範圍與裝入路徑。"
+    },
+    {
+      "id": "physics",
+      "name": "受力與用途",
+      "description": "作用在材料、載荷、支承與功能；幾何只提供其中一部分輸入。"
+    },
+    {
+      "id": "evidence",
+      "name": "測量與品質",
+      "description": "作用在離散誤差、拓撲、來源、推導和反例；決定能主張到哪一層。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mit-geometry",
+      "title": "MIT · 曲線與曲面的表示",
+      "url": "https://web.mit.edu/hyperbook/Patrikalakis-Maekawa-Cho/node3.html"
+    },
+    {
+      "id": "mit-sweep",
+      "title": "MIT 6.837 · 曲線、框架與掃掠",
+      "url": "https://ocw.mit.edu/courses/6-837-computer-graphics-fall-2012/96f343745a4bf6234a3c4f7cf3049f23_MIT6_837F12_assn1.pdf"
+    },
+    {
+      "id": "robotics",
+      "title": "Modern Robotics · 齊次變換",
+      "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/3-3-1-homogeneous-transformation-matrices/"
+    },
+    {
+      "id": "quadric",
+      "title": "OpenStax · 二次曲面",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/2-6-quadric-surfaces"
+    },
+    {
+      "id": "arc-source",
+      "title": "OpenStax · 弧長與曲率",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/3-3-arc-length-and-curvature"
+    },
+    {
+      "id": "gradient",
+      "title": "OpenStax · 梯度與方向導數",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient"
+    },
+    {
+      "id": "volume-source",
+      "title": "OpenStax · 散度定理",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/6-8-the-divergence-theorem"
+    },
+    {
+      "id": "elastic-source",
+      "title": "OpenStax · 應力、應變與彈性",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus"
+    },
+    {
+      "id": "nist",
+      "title": "NIST SP 811 · SI 單位",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes"
+    }
+  ],
+  "theories": [
+    {
+      "id": "units",
+      "title": "單位與量綱",
+      "kind": "量綱分析",
+      "roleIds": [
+        "evidence",
+        "layout"
+      ],
+      "actsOn": "每個尺寸、角度、材料常數及座標變換。",
+      "inputs": [
+        {
+          "name": "長度 L",
+          "unit": "mm 或 m，先統一"
+        },
+        {
+          "name": "角度 θ",
+          "unit": "rad"
+        }
+      ],
+      "formula": "1 m = 1000 mm；[面積]=L²；[體積]=L³；sin 的輸入是無因次角度。",
+      "produces": "可相加、比較與代入的同量綱資料。",
+      "applications": [
+        {
+          "domain": "建築",
+          "object": "屋頂與螺栓",
+          "how": "公尺的屋架和毫米的連接件先換成共同單位再裝配。"
+        },
+        {
+          "domain": "照明",
+          "object": "燈罩",
+          "how": "半徑增大兩倍時，面積四倍，體積八倍。"
+        },
+        {
+          "domain": "製造",
+          "object": "孔與軸",
+          "how": "區分半徑、直徑及直徑間隙，避免數值相同而意義不同。"
+        }
+      ],
+      "composesWith": [
+        "similarity",
+        "rigid",
+        "uncertainty"
+      ],
+      "premises": [
+        "單位與數值一起存；角度轉換只做一次。"
+      ],
+      "pitfalls": [
+        "看見數字接近不能假定單位一致。",
+        "1 mm 的設計尺寸不表示已量到1 mm。"
+      ],
+      "sourceIds": [
+        "nist"
+      ],
+      "recipeIds": []
+    },
+    {
+      "id": "profile",
+      "title": "封閉剖面與內外邊界",
+      "kind": "幾何表示",
+      "roleIds": [
+        "boundary",
+        "solid"
+      ],
+      "actsOn": "外輪廓及孔洞邊界的有序點／曲線。",
+      "inputs": [
+        {
+          "name": "輪廓點 pᵢ",
+          "unit": "mm"
+        },
+        {
+          "name": "孔邊界 Hⱼ",
+          "unit": "mm"
+        }
+      ],
+      "formula": "A = ½|Σ(xᵢyᵢ₊₁−xᵢ₊₁yᵢ)| − Σ A孔",
+      "produces": "有內外之分的平面材料區域。",
+      "applications": [
+        {
+          "domain": "器皿",
+          "object": "杯身",
+          "how": "截面同時描述外壁、內壁和杯底。"
+        },
+        {
+          "domain": "建築",
+          "object": "窗框",
+          "how": "外框扣除內開口後拉伸，保留真正窗洞。"
+        },
+        {
+          "domain": "機械",
+          "object": "密封墊",
+          "how": "螺栓孔與中心流道都是剖面內環。"
+        }
+      ],
+      "composesWith": [
+        "set",
+        "extrude",
+        "revolve",
+        "topology"
+      ],
+      "premises": [
+        "簡單封閉邊界；內孔不能越界或彼此相交。"
+      ],
+      "pitfalls": [
+        "外觀有黑色孔紋理，不代表存在內環。",
+        "自交輪廓的代數面積不能直接當材料面積。"
+      ],
+      "sourceIds": [
+        "mit-geometry"
+      ],
+      "recipeIds": [
+        "vessel",
+        "lampshade"
+      ]
+    },
+    {
+      "id": "circle",
+      "title": "圓、弦與角度",
+      "kind": "解析幾何",
+      "roleIds": [
+        "boundary",
+        "layout"
+      ],
+      "actsOn": "等半徑邊界、圓弧與等角孔心。",
+      "inputs": [
+        {
+          "name": "半徑 r",
+          "unit": "mm"
+        },
+        {
+          "name": "夾角 θ",
+          "unit": "rad"
+        }
+      ],
+      "formula": "p(θ)=c+r(cosθ,sinθ)；弦長=2r sin(θ/2)",
+      "produces": "圓形剖面、圓弧及可驗算的孔群距離。",
+      "applications": [
+        {
+          "domain": "光學",
+          "object": "鏡筒安裝環",
+          "how": "定位孔心以角度和節圓半徑生成。"
+        },
+        {
+          "domain": "建築",
+          "object": "半圓拱",
+          "how": "內外半圓共用圓心，框厚有一致定義。"
+        },
+        {
+          "domain": "家具",
+          "object": "圓桌榫孔",
+          "how": "由弦長推得相鄰孔心距及剩餘材料。"
+        }
+      ],
+      "composesWith": [
+        "arc",
+        "symmetry",
+        "clearance",
+        "discretization"
+      ],
+      "premises": [
+        "半徑為正；θ的單位為rad。"
+      ],
+      "pitfalls": [
+        "節圓直徑與孔徑不同。",
+        "圓弧取樣後是折線，精度須另給界。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "flange",
+        "arch"
+      ]
+    },
+    {
+      "id": "ellipse",
+      "title": "橢圓與各向尺寸",
+      "kind": "解析幾何",
+      "roleIds": [
+        "boundary",
+        "surface"
+      ],
+      "actsOn": "長短軸不同的截面。",
+      "inputs": [
+        {
+          "name": "半軸 a,b",
+          "unit": "mm"
+        },
+        {
+          "name": "參數 θ",
+          "unit": "rad"
+        }
+      ],
+      "formula": "x=a cosθ；y=b sinθ；A=πab",
+      "produces": "各向可控制的封閉截面。",
+      "applications": [
+        {
+          "domain": "工具",
+          "object": "握柄",
+          "how": "改短軸控制扁率而保留寬度。"
+        },
+        {
+          "domain": "流體",
+          "object": "橢圓風管",
+          "how": "在高度受限的空間提供截面積。"
+        },
+        {
+          "domain": "包裝",
+          "object": "扁瓶",
+          "how": "用同相位橢圓序列放樣，形成漸變瓶身。"
+        }
+      ],
+      "composesWith": [
+        "loft",
+        "correspondence",
+        "integration"
+      ],
+      "premises": [
+        "a,b>0；橢圓角參數不是等弧長參數。"
+      ],
+      "pitfalls": [
+        "把圓非等比縮放後，法線也需要正確變換。",
+        "同面積不保證同握感或流阻。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "grip"
+      ]
+    },
+    {
+      "id": "polygon",
+      "title": "正多邊形與內切外接",
+      "kind": "解析幾何",
+      "roleIds": [
+        "boundary",
+        "layout"
+      ],
+      "actsOn": "有角的輪廓、工具抓持面及單元孔。",
+      "inputs": [
+        {
+          "name": "邊數 n",
+          "unit": "整數 ≥3"
+        },
+        {
+          "name": "外接半徑 R",
+          "unit": "mm"
+        }
+      ],
+      "formula": "邊長=2R sin(π/n)；內切半徑=R cos(π/n)；A=nR²sin(2π/n)/2",
+      "produces": "邊長、對邊尺寸與外接界一致的多邊形。",
+      "applications": [
+        {
+          "domain": "緊固",
+          "object": "六角螺帽",
+          "how": "扳手對邊尺寸是2Rcos(π/6)，不是外接直徑。"
+        },
+        {
+          "domain": "建築",
+          "object": "蜂巢孔板",
+          "how": "六角孔以格點排列後核對孔間橋寬。"
+        },
+        {
+          "domain": "包裝",
+          "object": "多邊形盒",
+          "how": "由邊長推周長與折邊位置。"
+        }
+      ],
+      "composesWith": [
+        "lattice",
+        "clearance",
+        "extrude"
+      ],
+      "premises": [
+        "n為整數，區分孔方向及對邊／對角。"
+      ],
+      "pitfalls": [
+        "外接圓的間隙是保守界，不是所有方向的真實間隙。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "lattice"
+      ]
+    },
+    {
+      "id": "arc",
+      "title": "弧長與曲率",
+      "kind": "微積分",
+      "roleIds": [
+        "surface",
+        "interface"
+      ],
+      "actsOn": "路徑的長度、彎曲程度及局部彎曲半徑。",
+      "inputs": [
+        {
+          "name": "路徑 c(t)",
+          "unit": "mm"
+        },
+        {
+          "name": "一、二階導數",
+          "unit": "對參數的導數"
+        }
+      ],
+      "formula": "L=∫‖c′(t)‖dt；κ=‖c′×c″‖/‖c′‖³；圓弧 L=rθ",
+      "produces": "展開長度與局部曲率半徑1/κ。",
+      "applications": [
+        {
+          "domain": "管路",
+          "object": "彎管",
+          "how": "同一中心線可計材料長度與最小彎曲半徑。"
+        },
+        {
+          "domain": "紡織",
+          "object": "縫線路徑",
+          "how": "用弧長分配等距針點。"
+        },
+        {
+          "domain": "機械",
+          "object": "拉索導向",
+          "how": "路徑長度和轉彎半徑影響佈線，實際摩擦另算。"
+        }
+      ],
+      "composesWith": [
+        "frame",
+        "sweep",
+        "curvature"
+      ],
+      "premises": [
+        "c′不能為零；導數存在或分段處理。"
+      ],
+      "pitfalls": [
+        "折線的長度會低估光滑圓弧；要報收斂或誤差界。"
+      ],
+      "sourceIds": [
+        "arc-source"
+      ],
+      "recipeIds": [
+        "pipe",
+        "spring"
+      ]
+    },
+    {
+      "id": "bezier",
+      "title": "Bézier 控制與凸包",
+      "kind": "曲線算法",
+      "roleIds": [
+        "surface",
+        "boundary"
+      ],
+      "actsOn": "以控制點設計可微輪廓。",
+      "inputs": [
+        {
+          "name": "控制點 Pᵢ",
+          "unit": "mm"
+        },
+        {
+          "name": "參數 t",
+          "unit": "0..1"
+        }
+      ],
+      "formula": "B(t)=Σ C(n,i)(1−t)ⁿ⁻ⁱtⁱPᵢ；B′(0)=n(P₁−P₀)",
+      "produces": "端點、切線與控制點責任可追溯的曲線。",
+      "applications": [
+        {
+          "domain": "產品",
+          "object": "殼體輪廓",
+          "how": "端點接到接合介面，控制點調整中段飽滿度。"
+        },
+        {
+          "domain": "字體",
+          "object": "字形輪廓",
+          "how": "共同端點和切線控制筆畫相接。"
+        },
+        {
+          "domain": "家具",
+          "object": "椅背曲線",
+          "how": "先調側面曲線，再放樣成面。"
+        }
+      ],
+      "composesWith": [
+        "continuity",
+        "loft",
+        "projection"
+      ],
+      "premises": [
+        "t∈[0,1] 時位於控制點凸包；多段接合需另驗。"
+      ],
+      "pitfalls": [
+        "曲線不必通過中間控制點。",
+        "凸包包含曲線，不能反推曲線填滿凸包。"
+      ],
+      "sourceIds": [
+        "mit-geometry"
+      ],
+      "recipeIds": []
+    },
+    {
+      "id": "continuity",
+      "title": "位置、切向與曲率連續",
+      "kind": "微分幾何條件",
+      "roleIds": [
+        "surface",
+        "boundary"
+      ],
+      "actsOn": "相鄰曲線或曲面的接縫。",
+      "inputs": [
+        {
+          "name": "兩段曲線及導數",
+          "unit": "一致參數"
+        },
+        {
+          "name": "接合點",
+          "unit": "mm"
+        }
+      ],
+      "formula": "C⁰：c₁(1)=c₂(0)；C¹：c₁′(1)=c₂′(0)；G¹只要求非零切線同向。",
+      "produces": "可區分接得上、方向順和曲率順的接合。",
+      "applications": [
+        {
+          "domain": "產品",
+          "object": "高光殼體",
+          "how": "位置接上仍可有反光折線，要再核對切向。"
+        },
+        {
+          "domain": "道路",
+          "object": "線形銜接",
+          "how": "圓弧與直線可相切，曲率仍會跳變。"
+        },
+        {
+          "domain": "管路",
+          "object": "彎管直段",
+          "how": "相切減少幾何折角，但不能宣稱已達C²。"
+        }
+      ],
+      "composesWith": [
+        "bezier",
+        "curvature",
+        "loft"
+      ],
+      "premises": [
+        "先說明C連續還是G連續；參數尺度影響導數大小。"
+      ],
+      "pitfalls": [
+        "相切與曲率連續不能混稱。",
+        "平滑法線能遮掉折面，不能證明幾何連續。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "pipe",
+        "arch",
+        "grip"
+      ]
+    },
+    {
+      "id": "revolve",
+      "title": "截面旋轉成形",
+      "kind": "幾何建構",
+      "roleIds": [
+        "solid",
+        "surface"
+      ],
+      "actsOn": "剖面到旋轉軸的半徑及高度。",
+      "inputs": [
+        {
+          "name": "截面 (r,z)",
+          "unit": "mm"
+        },
+        {
+          "name": "轉角 θ",
+          "unit": "rad"
+        }
+      ],
+      "formula": "S(z,θ)=(r(z)cosθ, z, r(z)sinθ)",
+      "produces": "共軸外壁、內壁、口緣與底面。",
+      "applications": [
+        {
+          "domain": "器皿",
+          "object": "杯、碗",
+          "how": "同一方法由截面決定深淺與壁厚。"
+        },
+        {
+          "domain": "照明",
+          "object": "燈罩",
+          "how": "取消杯底並保留上下開口成罩體。"
+        },
+        {
+          "domain": "機械",
+          "object": "滑輪、軸套",
+          "how": "截面階差產生擋肩、槽與法蘭。"
+        }
+      ],
+      "composesWith": [
+        "profile",
+        "offset",
+        "integration",
+        "discretization"
+      ],
+      "premises": [
+        "半徑非負；到軸上的端點要合併，避免退化三角面。"
+      ],
+      "pitfalls": [
+        "旋轉方法不等於車床一定做得出內部倒扣。",
+        "不能把上下通口的燈罩錯當封底容器。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "vessel",
+        "lampshade"
+      ]
+    },
+    {
+      "id": "extrude",
+      "title": "剖面沿方向拉伸",
+      "kind": "幾何建構",
+      "roleIds": [
+        "solid",
+        "boundary"
+      ],
+      "actsOn": "同一平面剖面沿固定方向的平移。",
+      "inputs": [
+        {
+          "name": "材料剖面 Ω",
+          "unit": "mm²"
+        },
+        {
+          "name": "深度 h",
+          "unit": "mm"
+        }
+      ],
+      "formula": "V=Ω×[0,h]；體積=A(Ω)h",
+      "produces": "有真實外壁、孔壁和端面的柱狀實體。",
+      "applications": [
+        {
+          "domain": "建築",
+          "object": "型材",
+          "how": "窗框剖面沿長度延伸。"
+        },
+        {
+          "domain": "電子",
+          "object": "散熱片截面",
+          "how": "鰭片剖面沿擠型方向延伸。"
+        },
+        {
+          "domain": "機械",
+          "object": "帶孔法蘭",
+          "how": "一份多孔剖面生成完整孔壁。"
+        }
+      ],
+      "composesWith": [
+        "profile",
+        "set",
+        "topology",
+        "integration"
+      ],
+      "premises": [
+        "剖面有效且h>0；端面三角化和側壁必須共用邊界節點。"
+      ],
+      "pitfalls": [
+        "黑色貼片不是孔；有蓋的視覺也不能證明邊界已接合。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "flange",
+        "arch",
+        "lattice"
+      ]
+    },
+    {
+      "id": "frame",
+      "title": "路徑框架與平行搬運",
+      "kind": "幾何算法",
+      "roleIds": [
+        "surface",
+        "layout"
+      ],
+      "actsOn": "沿路徑移動的截面局部座標。",
+      "inputs": [
+        {
+          "name": "單位切向 T",
+          "unit": "無因次"
+        },
+        {
+          "name": "初始法向 N",
+          "unit": "無因次"
+        }
+      ],
+      "formula": "B=T×N；T·N=0；相鄰T以最小轉角搬運N，再正交化。",
+      "produces": "沿彎曲路徑保持一致方向的截面座標。",
+      "applications": [
+        {
+          "domain": "管路",
+          "object": "軟管",
+          "how": "管截面隨路徑轉向。"
+        },
+        {
+          "domain": "飾品",
+          "object": "編織帶",
+          "how": "初始扭角控制寬帶朝向。"
+        },
+        {
+          "domain": "照明",
+          "object": "曲線燈帶",
+          "how": "避免零曲率直段上Frenet框架失效造成翻轉。"
+        }
+      ],
+      "composesWith": [
+        "arc",
+        "sweep",
+        "continuity"
+      ],
+      "premises": [
+        "路徑沒有重複點；相反切向須指定轉向策略。"
+      ],
+      "pitfalls": [
+        "平行搬運不保證閉合路徑末端無剩餘扭角。",
+        "程式需正交化，不能只憑顯示法線猜方向。"
+      ],
+      "sourceIds": [
+        "mit-sweep"
+      ],
+      "recipeIds": [
+        "pipe",
+        "spring"
+      ]
+    },
+    {
+      "id": "sweep",
+      "title": "截面沿路徑掃掠",
+      "kind": "幾何建構",
+      "roleIds": [
+        "solid",
+        "surface"
+      ],
+      "actsOn": "路徑、截面和沿途局部框架。",
+      "inputs": [
+        {
+          "name": "中心線 c(s)",
+          "unit": "mm"
+        },
+        {
+          "name": "截面座標 (u,v)",
+          "unit": "mm"
+        }
+      ],
+      "formula": "X(s,u,v)=c(s)+uN(s)+vB(s)",
+      "produces": "線材、管路、導軌或帶材。",
+      "applications": [
+        {
+          "domain": "電氣",
+          "object": "線束護套",
+          "how": "環形截面沿路徑形成連續通道。"
+        },
+        {
+          "domain": "家具",
+          "object": "彎曲扶手",
+          "how": "截面形狀決定圓管或橢圓管。"
+        },
+        {
+          "domain": "工藝",
+          "object": "螺旋飾物",
+          "how": "螺旋路徑加不同截面形成線材或帶材。"
+        }
+      ],
+      "composesWith": [
+        "frame",
+        "offset",
+        "arc",
+        "topology"
+      ],
+      "premises": [
+        "局部管半徑需小於曲率半徑；遠距路徑段的互撞須另驗。"
+      ],
+      "pitfalls": [
+        "局部不摺疊不能推出全域不自交。",
+        "只封端口環形材料，不可蓋住中空管流道。"
+      ],
+      "sourceIds": [
+        "mit-sweep"
+      ],
+      "recipeIds": [
+        "pipe",
+        "spring"
+      ]
+    },
+    {
+      "id": "correspondence",
+      "title": "截面點的對應",
+      "kind": "資料與拓撲契約",
+      "roleIds": [
+        "surface",
+        "evidence"
+      ],
+      "actsOn": "多個截面的起點、方向及邊界索引。",
+      "inputs": [
+        {
+          "name": "同拓撲截面序列",
+          "unit": "mm"
+        },
+        {
+          "name": "索引／參數 u",
+          "unit": "無因次"
+        }
+      ],
+      "formula": "Sₖ(uᵢ) ↔ Sₖ₊₁(uᵢ)；所有截面使用同一個u方向。",
+      "produces": "可放樣且沒有任意扭接的點對應。",
+      "applications": [
+        {
+          "domain": "包裝",
+          "object": "瓶肩",
+          "how": "圓截面逐步變為橢圓，先綁定對應點。"
+        },
+        {
+          "domain": "船舶",
+          "object": "船身斷面",
+          "how": "相鄰肋骨截面需要共同參數方向。"
+        },
+        {
+          "domain": "角色造形",
+          "object": "肢體母形",
+          "how": "截面可以漸變，但不能悄悄交換左右。"
+        }
+      ],
+      "composesWith": [
+        "loft",
+        "continuity",
+        "topology"
+      ],
+      "premises": [
+        "輪廓起點和方向一致；孔洞出生／消失需專門處理。"
+      ],
+      "pitfalls": [
+        "相同點數仍可能錯配；差一個索引就可能扭轉表面。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "grip"
+      ]
+    },
+    {
+      "id": "loft",
+      "title": "截面放樣",
+      "kind": "幾何建構",
+      "roleIds": [
+        "surface",
+        "solid"
+      ],
+      "actsOn": "一連串可對應且位置有序的截面。",
+      "inputs": [
+        {
+          "name": "截面 Sₖ(u)",
+          "unit": "mm"
+        },
+        {
+          "name": "沿途參數 v",
+          "unit": "0..1"
+        }
+      ],
+      "formula": "兩截面線性段：S(u,v)=(1−v)S₀(u)+vS₁(u)",
+      "produces": "漸變握柄、外殼、機翼或風道。",
+      "applications": [
+        {
+          "domain": "工具",
+          "object": "握柄",
+          "how": "橢圓半軸和中心逐段變化成連續握柄。"
+        },
+        {
+          "domain": "空調",
+          "object": "方圓轉接管",
+          "how": "輪廓對應後由方管過渡到圓管。"
+        },
+        {
+          "domain": "航空",
+          "object": "機翼母形",
+          "how": "沿翼展改翼型與扭角，氣動性能另驗。"
+        }
+      ],
+      "composesWith": [
+        "ellipse",
+        "correspondence",
+        "continuity",
+        "topology"
+      ],
+      "premises": [
+        "截面對應有效；封口與孔洞需明確。"
+      ],
+      "pitfalls": [
+        "放樣連續不代表沒有折痕、自交或薄弱區。",
+        "外形相像不表示氣動或人因功能相等。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "grip"
+      ]
+    },
+    {
+      "id": "normals",
+      "title": "梯度與表面法向",
+      "kind": "微積分",
+      "roleIds": [
+        "surface",
+        "evidence"
+      ],
+      "actsOn": "曲面的切向、偏移方向與光照方向。",
+      "inputs": [
+        {
+          "name": "隱式曲面 f=0",
+          "unit": "依函數定義"
+        },
+        {
+          "name": "參數曲面 S(u,v)",
+          "unit": "mm"
+        }
+      ],
+      "formula": "n=∇f/‖∇f‖；或 n=(Sᵤ×Sᵥ)/‖Sᵤ×Sᵥ‖",
+      "produces": "方向有定義的表面法向。",
+      "applications": [
+        {
+          "domain": "造形",
+          "object": "曲面薄板",
+          "how": "沿解析法向偏移得到兩側。"
+        },
+        {
+          "domain": "製造",
+          "object": "刀具姿態",
+          "how": "表面法向提供加工方向候選，再檢查刀具碰撞。"
+        },
+        {
+          "domain": "視覺",
+          "object": "材質高光",
+          "how": "正確法線決定光線反射，不能代替實際壁厚。"
+        }
+      ],
+      "composesWith": [
+        "offset",
+        "curvature",
+        "rigid"
+      ],
+      "premises": [
+        "梯度或叉積不為零；法向朝向要一致。"
+      ],
+      "pitfalls": [
+        "縮放頂點卻不修正法向會造成錯誤光照。",
+        "顯示用平滑法線和真實面法線用途不同。"
+      ],
+      "sourceIds": [
+        "gradient"
+      ],
+      "recipeIds": [
+        "grip",
+        "saddle"
+      ]
+    },
+    {
+      "id": "offset",
+      "title": "偏移、等距與壁厚",
+      "kind": "幾何建構條件",
+      "roleIds": [
+        "solid",
+        "interface"
+      ],
+      "actsOn": "曲線或曲面的法向距離。",
+      "inputs": [
+        {
+          "name": "原曲面 S",
+          "unit": "mm"
+        },
+        {
+          "name": "單位法向 n",
+          "unit": "無因次"
+        },
+        {
+          "name": "偏移 d",
+          "unit": "mm"
+        }
+      ],
+      "formula": "S_d=S+d n；局部正則要求各主曲率滿足1−dκᵢ≠0（依朝向符號）。",
+      "produces": "內壁、外壁、刀具補償或間隙包絡。",
+      "applications": [
+        {
+          "domain": "容器",
+          "object": "薄壁杯",
+          "how": "徑向減厚與法向等距必須分開標。"
+        },
+        {
+          "domain": "製造",
+          "object": "輪廓刀補",
+          "how": "沿邊界外偏移刀具半徑。"
+        },
+        {
+          "domain": "鞋服",
+          "object": "留縫／間隙",
+          "how": "邊界偏移形成縫份或人體包絡餘量。"
+        }
+      ],
+      "composesWith": [
+        "normals",
+        "curvature",
+        "distance",
+        "topology"
+      ],
+      "premises": [
+        "d為帶符號距離；局部條件外還要檢查遠處面互相逼近。"
+      ],
+      "pitfalls": [
+        "偏移可能在凹角自交。",
+        "對應點間距等於d，不代表全域最短厚度也等於d。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "vessel",
+        "lampshade",
+        "pipe",
+        "saddle"
+      ]
+    },
+    {
+      "id": "set",
+      "title": "集合、材料加減與交集",
+      "kind": "集合運算",
+      "roleIds": [
+        "boundary",
+        "solid"
+      ],
+      "actsOn": "有材料和無材料的區域。",
+      "inputs": [
+        {
+          "name": "實體 A,B",
+          "unit": "共同座標的點集"
+        }
+      ],
+      "formula": "聯集 A∪B；差集 AB；交集 A∩B；實體布林通常取正則化邊界。",
+      "produces": "材料連通、孔洞和相交區。",
+      "applications": [
+        {
+          "domain": "建築",
+          "object": "門洞",
+          "how": "牆體扣除開口，而非在表面畫矩形。"
+        },
+        {
+          "domain": "機械",
+          "object": "內流道",
+          "how": "流道體從本體扣除，出口必須通到外界。"
+        },
+        {
+          "domain": "日用品",
+          "object": "收納格",
+          "how": "合併分隔壁，檢查是否只以零厚度相碰。"
+        }
+      ],
+      "composesWith": [
+        "profile",
+        "extrude",
+        "topology",
+        "distance"
+      ],
+      "premises": [
+        "同單位同座標；貼面、切觸和零厚度結果需指定語義。"
+      ],
+      "pitfalls": [
+        "兩個重疊網格不等於完成實體聯集。",
+        "幾何內外判斷不可只看像素顏色。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "flange",
+        "arch",
+        "lattice"
+      ]
+    },
+    {
+      "id": "symmetry",
+      "title": "對稱與等角排列",
+      "kind": "變換與群作用",
+      "roleIds": [
+        "layout",
+        "boundary"
+      ],
+      "actsOn": "可重複的孔、肋、花瓣或構件。",
+      "inputs": [
+        {
+          "name": "母形 M",
+          "unit": "mm"
+        },
+        {
+          "name": "旋轉角2π/n",
+          "unit": "rad"
+        }
+      ],
+      "formula": "Mₖ=R(2πk/n)M₀；k=0,…,n−1",
+      "produces": "可控數目和共同基準的重複形體。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "法蘭孔",
+          "how": "每孔共用節圓與角度規則。"
+        },
+        {
+          "domain": "建築",
+          "object": "穹頂肋",
+          "how": "以同一軸旋轉肋骨，再驗接合介面。"
+        },
+        {
+          "domain": "工藝",
+          "object": "花瓣裝飾",
+          "how": "沿中心轉置同母形，接縫仍需查。"
+        }
+      ],
+      "composesWith": [
+        "rigid",
+        "circle",
+        "clearance"
+      ],
+      "premises": [
+        "先選旋轉／鏡射／平移；鏡射會改手性與面方向。"
+      ],
+      "pitfalls": [
+        "手性螺紋鏡射後不能當同一零件。",
+        "對稱圖樣不保證受力與邊界條件對稱。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "flange"
+      ]
+    },
+    {
+      "id": "lattice",
+      "title": "格點、重複與邊界裁切",
+      "kind": "離散幾何",
+      "roleIds": [
+        "layout",
+        "boundary"
+      ],
+      "actsOn": "孔、支點或單元的中心位置。",
+      "inputs": [
+        {
+          "name": "基底向量 a,b",
+          "unit": "mm"
+        },
+        {
+          "name": "整數 i,j",
+          "unit": "無因次"
+        }
+      ],
+      "formula": "pᵢⱼ=i a+j b；三角格點可取a=(p,0), b=(p/2,√3p/2)。",
+      "produces": "可改節距、行距和邊距的重複圖樣。",
+      "applications": [
+        {
+          "domain": "建築",
+          "object": "通風孔板",
+          "how": "格點選出孔心，逐孔保留外框橋寬。"
+        },
+        {
+          "domain": "電子",
+          "object": "散熱針陣列",
+          "how": "單元位置由格點定義，散熱另建物理模型。"
+        },
+        {
+          "domain": "收納",
+          "object": "模組托盤",
+          "how": "格點和容器邊界共同決定有效格數。"
+        }
+      ],
+      "composesWith": [
+        "polygon",
+        "set",
+        "clearance"
+      ],
+      "premises": [
+        "中心在框內不代表整個單元在框內，需完整包絡。"
+      ],
+      "pitfalls": [
+        "無限格點規則到了有限邊界仍需裁切和封邊。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "lattice"
+      ]
+    },
+    {
+      "id": "rigid",
+      "title": "剛體變換與座標組合",
+      "kind": "線性代數",
+      "roleIds": [
+        "layout",
+        "interface"
+      ],
+      "actsOn": "零件到總成的座標關係。",
+      "inputs": [
+        {
+          "name": "旋轉 R、平移 t",
+          "unit": "無因次、mm"
+        },
+        {
+          "name": "點 p",
+          "unit": "mm"
+        }
+      ],
+      "formula": "p′=Rp+t；RᵀR=I，detR=1；T_ac=T_ab T_bc。",
+      "produces": "保持距離和手性的定位與轉向。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "車門鉸鏈",
+          "how": "把軸與孔轉入同一座標後檢查同軸。"
+        },
+        {
+          "domain": "機器人",
+          "object": "工具末端",
+          "how": "沿父子座標鏈求工具相對世界的位置。"
+        },
+        {
+          "domain": "家具",
+          "object": "櫃門",
+          "how": "門片沿真實鉸鏈軸轉動，不能繞模型中心亂轉。"
+        }
+      ],
+      "composesWith": [
+        "constraints",
+        "distance",
+        "symmetry"
+      ],
+      "premises": [
+        "列向量／行向量慣例明確；乘法順序不能交換。"
+      ],
+      "pitfalls": [
+        "模型座標Y向上，GT01零件Z向上：匯入需明示換軸。",
+        "套用非等比縮放已不是剛體運動。"
+      ],
+      "sourceIds": [
+        "robotics"
+      ],
+      "recipeIds": []
+    },
+    {
+      "id": "similarity",
+      "title": "相似尺度與比例律",
+      "kind": "幾何定理",
+      "roleIds": [
+        "layout",
+        "physics"
+      ],
+      "actsOn": "整體縮放的長度、面積和體積。",
+      "inputs": [
+        {
+          "name": "尺度 k",
+          "unit": "正無因次"
+        }
+      ],
+      "formula": "L′=kL；A′=k²A；V′=k³V。",
+      "produces": "量綱一致的縮放關係。",
+      "applications": [
+        {
+          "domain": "模型",
+          "object": "建築縮尺",
+          "how": "幾何縮尺保留角度和比例。"
+        },
+        {
+          "domain": "器皿",
+          "object": "系列容器",
+          "how": "同形容器容量依k³變化。"
+        },
+        {
+          "domain": "機械",
+          "object": "支架放大",
+          "how": "自重依k³，截面積依k²；不能假定承載餘裕不變。"
+        }
+      ],
+      "composesWith": [
+        "units",
+        "load",
+        "integration"
+      ],
+      "premises": [
+        "均勻縮放；材料相同才可用體積比例推質量比例。"
+      ],
+      "pitfalls": [
+        "幾何相似不等於流體、熱、彈性或摩擦相似。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "lampshade"
+      ]
+    },
+    {
+      "id": "quadric",
+      "title": "二次曲面與剖切特徵",
+      "kind": "解析幾何",
+      "roleIds": [
+        "surface",
+        "solid"
+      ],
+      "actsOn": "平面座標的二次方程。",
+      "inputs": [
+        {
+          "name": "係數與尺度",
+          "unit": "依式中量綱"
+        },
+        {
+          "name": "座標 x,y,z",
+          "unit": "mm"
+        }
+      ],
+      "formula": "球：x²+y²+z²=R²；雙曲拋物面：y=k(x²−z²)。",
+      "produces": "可按剖切曲線解讀的曲面母形。",
+      "applications": [
+        {
+          "domain": "建築",
+          "object": "鞍形頂棚",
+          "how": "兩個方向有相反彎曲。"
+        },
+        {
+          "domain": "光學",
+          "object": "拋物反射面",
+          "how": "旋轉拋物線形成候選反射面，光學精度另驗。"
+        },
+        {
+          "domain": "產品",
+          "object": "圓頂外殼",
+          "how": "球或橢球提供有參數的母形。"
+        }
+      ],
+      "composesWith": [
+        "normals",
+        "curvature",
+        "offset",
+        "projection"
+      ],
+      "premises": [
+        "明確坐標軸和係數單位；k在本示範為1/mm。"
+      ],
+      "pitfalls": [
+        "形似拋物面不等於達到光學表面精度。"
+      ],
+      "sourceIds": [
+        "quadric"
+      ],
+      "recipeIds": [
+        "saddle"
+      ]
+    },
+    {
+      "id": "curvature",
+      "title": "主曲率與曲面性質",
+      "kind": "微分幾何",
+      "roleIds": [
+        "surface",
+        "physics"
+      ],
+      "actsOn": "曲面的局部彎曲方向及強度。",
+      "inputs": [
+        {
+          "name": "主曲率 κ₁,κ₂",
+          "unit": "1/mm"
+        }
+      ],
+      "formula": "K=κ₁κ₂；H=(κ₁+κ₂)/2；y=k(x²−z²)中心 K=−4k²。",
+      "produces": "凸、鞍與局部偏移限制等資訊。",
+      "applications": [
+        {
+          "domain": "建築",
+          "object": "薄殼",
+          "how": "曲率影響幾何形態，但承載需支承和材料。"
+        },
+        {
+          "domain": "製造",
+          "object": "刀具可達性",
+          "how": "小曲率半徑可能限制球刀半徑。"
+        },
+        {
+          "domain": "產品",
+          "object": "高光曲面",
+          "how": "曲率變化揭示折痕或不順過渡。"
+        }
+      ],
+      "composesWith": [
+        "offset",
+        "normals",
+        "continuity"
+      ],
+      "premises": [
+        "導數足夠光滑；曲率估計要報取樣尺度。"
+      ],
+      "pitfalls": [
+        "局部曲率不能證明整個表面不自交。",
+        "K=0不表示整面一定是平面，例如圓柱。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "saddle"
+      ]
+    },
+    {
+      "id": "helix",
+      "title": "螺旋與每圈進給",
+      "kind": "解析幾何",
+      "roleIds": [
+        "surface",
+        "interface"
+      ],
+      "actsOn": "繞軸旋轉並軸向前進的路徑。",
+      "inputs": [
+        {
+          "name": "半徑 R、節距 p",
+          "unit": "mm"
+        },
+        {
+          "name": "轉角 θ",
+          "unit": "rad"
+        }
+      ],
+      "formula": "c(θ)=(Rcosθ,pθ/(2π),Rsinθ)；N圈長度=N√((2πR)²+p²)。",
+      "produces": "線圈、螺紋路徑或捲繞導管。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "線圈",
+          "how": "中心線加圓截面掃掠成線材。"
+        },
+        {
+          "domain": "傳動",
+          "object": "螺桿",
+          "how": "一圈軸向進給為導程；多線螺紋須區分節距。"
+        },
+        {
+          "domain": "照明",
+          "object": "螺旋燈帶",
+          "how": "路徑控制圈數與高度，帶面方向另由框架定義。"
+        }
+      ],
+      "composesWith": [
+        "sweep",
+        "frame",
+        "arc",
+        "elastic"
+      ],
+      "premises": [
+        "左右手及軸向正方向要綁定；螺紋牙形並不是中心線本身。"
+      ],
+      "pitfalls": [
+        "線圈幾何不能直接證明彈簧常數。",
+        "節距減線徑不是完整三維最短圈距。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "spring"
+      ]
+    },
+    {
+      "id": "clearance",
+      "title": "材料橋寬與孔軸間隙",
+      "kind": "幾何約束",
+      "roleIds": [
+        "interface",
+        "solid"
+      ],
+      "actsOn": "接合位置的尺寸差與偏心。",
+      "inputs": [
+        {
+          "name": "孔徑 D、軸徑 d、偏心 e",
+          "unit": "mm"
+        }
+      ],
+      "formula": "徑向餘隙 c=(D−d)/2−e；相鄰圓孔橋寬=孔心距−r₁−r₂。",
+      "produces": "可插入、接觸或干涉的名義判斷。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "軸套",
+          "how": "孔徑稍大仍可能被偏心吃掉間隙。"
+        },
+        {
+          "domain": "家具",
+          "object": "木榫",
+          "how": "含水率變動需進入尺寸區間，不能只看名義值。"
+        },
+        {
+          "domain": "電子",
+          "object": "固定孔",
+          "how": "孔與板邊保留橋寬，強度仍要另算。"
+        }
+      ],
+      "composesWith": [
+        "uncertainty",
+        "distance",
+        "constraints"
+      ],
+      "premises": [
+        "本式針對圓形與平行軸；斜插、倒角和實際公差另驗。"
+      ],
+      "pitfalls": [
+        "直徑間隙和單邊間隙差兩倍。",
+        "c=0是接觸界，不是自由裝入的保證。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "flange",
+        "lattice"
+      ]
+    },
+    {
+      "id": "distance",
+      "title": "最近距離與運動包絡",
+      "kind": "幾何優化",
+      "roleIds": [
+        "interface",
+        "evidence"
+      ],
+      "actsOn": "兩個實體邊界以及整段裝入或活動路徑。",
+      "inputs": [
+        {
+          "name": "邊界 A,B",
+          "unit": "mm"
+        },
+        {
+          "name": "位姿 T(t)",
+          "unit": "t∈[0,1]"
+        }
+      ],
+      "formula": "d(A,B)=min‖a−b‖；運動包絡 W=∪ T(t)A。",
+      "produces": "局部最小間隙與整段運動占用區。",
+      "applications": [
+        {
+          "domain": "家具",
+          "object": "抽屜",
+          "how": "關閉時不撞不表示拉出時不撞。"
+        },
+        {
+          "domain": "機械",
+          "object": "上軸套裝入",
+          "how": "沿前方走會撞面板，需檢查從上方的完整路徑。"
+        },
+        {
+          "domain": "建築",
+          "object": "門扇",
+          "how": "門扇掃過空間需要避開家具。"
+        }
+      ],
+      "composesWith": [
+        "rigid",
+        "constraints",
+        "uncertainty"
+      ],
+      "premises": [
+        "表面最短距離為正不能排除一體完全包在另一體內，還要內外判斷。"
+      ],
+      "pitfalls": [
+        "少數角度截圖只是抽樣；連續碰撞需界限或完整算法。",
+        "包圍盒相交只產生候選，不是實體碰撞證據。"
+      ],
+      "sourceIds": [],
+      "recipeIds": []
+    },
+    {
+      "id": "constraints",
+      "title": "自由度、接合介面與依賴圖",
+      "kind": "約束建模",
+      "roleIds": [
+        "interface",
+        "layout"
+      ],
+      "actsOn": "零件位置、動作和施工步驟的關係。",
+      "inputs": [
+        {
+          "name": "狀態 q",
+          "unit": "帶單位向量"
+        },
+        {
+          "name": "約束 f(q)",
+          "unit": "對應量綱"
+        }
+      ],
+      "formula": "f(q)=0；局部獨立約束由Jacobian秩決定；步驟依賴形成有向無環圖。",
+      "produces": "知道誰定位誰、什麼可以動及誰先裝的總成。",
+      "applications": [
+        {
+          "domain": "家具",
+          "object": "鉸鏈門",
+          "how": "保留轉動自由度，同時固定其餘相對運動。"
+        },
+        {
+          "domain": "機械",
+          "object": "銷與擋圈",
+          "how": "軸向止擋和徑向定位的責任分開。"
+        },
+        {
+          "domain": "製造",
+          "object": "裝配工序",
+          "how": "被後續件遮住的螺絲必須先裝或改結構。"
+        }
+      ],
+      "composesWith": [
+        "rigid",
+        "distance",
+        "clearance"
+      ],
+      "premises": [
+        "只有獨立約束才扣除自由度；接觸可能改變有效約束。"
+      ],
+      "pitfalls": [
+        "同軸不等於防止軸向脫落。",
+        "依賴圖可執行不代表物理路徑暢通。"
+      ],
+      "sourceIds": [],
+      "recipeIds": []
+    },
+    {
+      "id": "integration",
+      "title": "面積與有向體積",
+      "kind": "積分定理",
+      "roleIds": [
+        "solid",
+        "evidence"
+      ],
+      "actsOn": "剖面面積及封閉三角網格。",
+      "inputs": [
+        {
+          "name": "三角面頂點 a,b,c",
+          "unit": "mm"
+        },
+        {
+          "name": "原點 o",
+          "unit": "mm"
+        }
+      ],
+      "formula": "V=Σ(a−o)·((b−o)×(c−o))/6；旋轉截面 V=π∫(r外²−r內²)dz。",
+      "produces": "兩種表示之間可交叉核對的體積。",
+      "applications": [
+        {
+          "domain": "器皿",
+          "object": "杯體材料量",
+          "how": "杯體材料和內部容量必須分開積分。"
+        },
+        {
+          "domain": "製造",
+          "object": "多孔板",
+          "how": "剖面淨面積乘厚度核對網格體積。"
+        },
+        {
+          "domain": "物流",
+          "object": "重量估計",
+          "how": "只有材料密度已知才能用m=ρV。"
+        }
+      ],
+      "composesWith": [
+        "profile",
+        "topology",
+        "similarity",
+        "discretization"
+      ],
+      "premises": [
+        "有向封閉邊界；正體積還需排除自交才能解讀為普通材料體積。"
+      ],
+      "pitfalls": [
+        "只取絕對值會遮掉反面錯誤。",
+        "網格體積精度受離散誤差影響。"
+      ],
+      "sourceIds": [
+        "volume-source"
+      ],
+      "recipeIds": [
+        "vessel"
+      ]
+    },
+    {
+      "id": "topology",
+      "title": "實體邊界的流形條件",
+      "kind": "拓撲與離散檢查",
+      "roleIds": [
+        "solid",
+        "evidence"
+      ],
+      "actsOn": "面、邊及頂點鄰域的連接。",
+      "inputs": [
+        {
+          "name": "有向三角網格",
+          "unit": "頂點、邊、面"
+        },
+        {
+          "name": "焊接數值尺度",
+          "unit": "mm"
+        }
+      ],
+      "formula": "每邊兩個反向鄰面；每頂點的link為一個環；χ=V−E+F。",
+      "produces": "排除破口、反面和單點黏接的邊界檢查。",
+      "applications": [
+        {
+          "domain": "列印",
+          "object": "容器",
+          "how": "口部內外壁仍需相連；開口杯的材料本身有封閉邊界。"
+        },
+        {
+          "domain": "製造",
+          "object": "孔板",
+          "how": "端面和側壁必須使用一致邊界細分。"
+        },
+        {
+          "domain": "建築",
+          "object": "中空模型",
+          "how": "兩個殼只碰一點不能算一個可靠實體。"
+        }
+      ],
+      "composesWith": [
+        "discretization",
+        "integration",
+        "set"
+      ],
+      "premises": [
+        "χ不能單獨證明合法；有孔道的實體不必χ=2。"
+      ],
+      "pitfalls": [
+        "邊檢查通過仍可能有不合法頂點或自交。",
+        "拓撲檢查不證明材料、加工或承載。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "vessel"
+      ]
+    },
+    {
+      "id": "discretization",
+      "title": "離散精度與誤差界",
+      "kind": "數值幾何",
+      "roleIds": [
+        "evidence",
+        "surface"
+      ],
+      "actsOn": "把理想曲線曲面轉成有限三角面。",
+      "inputs": [
+        {
+          "name": "圓半徑 R",
+          "unit": "mm"
+        },
+        {
+          "name": "每段夾角 Δθ",
+          "unit": "rad"
+        }
+      ],
+      "formula": "圓弧弦高 s=R[1−cos(Δθ/2)]；反求 Δθ≤2acos(1−ε/R)。",
+      "produces": "由允許幾何誤差決定取樣密度。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "圓孔",
+          "how": "64邊孔與96邊軸要用各自弦高界解釋差值。"
+        },
+        {
+          "domain": "圖形",
+          "object": "曲面",
+          "how": "近距離輪廓品質由螢幕投影和幾何誤差共同決定。"
+        },
+        {
+          "domain": "製造",
+          "object": "曲線輸出",
+          "how": "誤差上限需小於分配給離散近似的預算。"
+        }
+      ],
+      "composesWith": [
+        "arc",
+        "circle",
+        "topology",
+        "uncertainty"
+      ],
+      "premises": [
+        "此弦高式只適用圓弧；自由曲面需要曲率界或收斂測試。"
+      ],
+      "pitfalls": [
+        "三角面多不等於來源正確。",
+        "程式焊接容差不是製造公差。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "saddle"
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "title": "公差、量測與誤差傳遞",
+      "kind": "區間與統計方法",
+      "roleIds": [
+        "evidence",
+        "interface"
+      ],
+      "actsOn": "有區間、分布或量測不確定度的輸入。",
+      "inputs": [
+        {
+          "name": "量 xᵢ與界 Δxᵢ",
+          "unit": "各自單位"
+        }
+      ],
+      "formula": "圓孔軸最壞餘隙=(Dmin−dmax)/2−emax；線性區間上界 Σ|aᵢ|Δxᵢ。",
+      "produces": "保守極值或有條件的統計估計。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "孔軸配合",
+          "how": "以孔最小、軸最大及最大偏心評估最壞情況。"
+        },
+        {
+          "domain": "建築",
+          "object": "累積尺寸",
+          "how": "多個構件長度誤差會疊加到安裝空間。"
+        },
+        {
+          "domain": "光學",
+          "object": "鏡片定位",
+          "how": "角度和偏心的不確定度傳入像差模型。"
+        }
+      ],
+      "composesWith": [
+        "clearance",
+        "units",
+        "projection"
+      ],
+      "premises": [
+        "區間界和標準差不可混用；RSS需獨立或已知協方差等假設。"
+      ],
+      "pitfalls": [
+        "沒有公差來源不能自行發明通過數字。",
+        "更精細小數位不代表更可信量測。"
+      ],
+      "sourceIds": [],
+      "recipeIds": []
+    },
+    {
+      "id": "projection",
+      "title": "投影、標定與多視圖",
+      "kind": "逆問題",
+      "roleIds": [
+        "evidence",
+        "surface"
+      ],
+      "actsOn": "參考影像的輪廓與三維形體。",
+      "inputs": [
+        {
+          "name": "像點 (u,v)",
+          "unit": "pixel"
+        },
+        {
+          "name": "內參K、姿態R,t",
+          "unit": "帶已知尺度"
+        }
+      ],
+      "formula": "透視：s[u,v,1]ᵀ=K[R|t][X,Y,Z,1]ᵀ。",
+      "produces": "可對照的投影輪廓與有假設的三維重建。",
+      "applications": [
+        {
+          "domain": "產品",
+          "object": "輪框",
+          "how": "同時檢查正面負形、斜面厚度和背面接合介面。"
+        },
+        {
+          "domain": "建築",
+          "object": "照片還原",
+          "how": "先找比例和透視，再推被遮住的深度。"
+        },
+        {
+          "domain": "工藝",
+          "object": "參考造形",
+          "how": "生成補圖標為作者推測，與實測尺寸分開。"
+        }
+      ],
+      "composesWith": [
+        "constraints",
+        "bezier",
+        "rigid"
+      ],
+      "premises": [
+        "未知內參和單張圖通常不能唯一決定三維。"
+      ],
+      "pitfalls": [
+        "漂亮生成圖不是實測證據。",
+        "多張互相矛盾的圖必須先解決來源衝突。"
+      ],
+      "sourceIds": [],
+      "recipeIds": []
+    },
+    {
+      "id": "elastic",
+      "title": "彈性與形變",
+      "kind": "有條件的物理模型",
+      "roleIds": [
+        "physics",
+        "interface"
+      ],
+      "actsOn": "材料、形狀、載荷及支承引起的形變。",
+      "inputs": [
+        {
+          "name": "力 F",
+          "unit": "N"
+        },
+        {
+          "name": "E、A、L",
+          "unit": "N/mm²、mm²、mm"
+        }
+      ],
+      "formula": "均勻直桿軸向小變形：δ=FL/(EA)；σ=F/A；ε=δ/L。",
+      "produces": "在明確模型內估算形變及應力。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "拉桿",
+          "how": "軸向載荷與截面積決定名義拉伸。"
+        },
+        {
+          "domain": "家具",
+          "object": "構件",
+          "how": "彎曲件需改用梁或殼模型，不能套直桿式。"
+        },
+        {
+          "domain": "彈性元件",
+          "object": "線圈",
+          "how": "需線徑、圈徑、有效圈數和剪切模數的適當模型。"
+        }
+      ],
+      "composesWith": [
+        "load",
+        "helix",
+        "uncertainty"
+      ],
+      "premises": [
+        "線性彈性、小變形、軸向均勻桿；材料需真實來源。"
+      ],
+      "pitfalls": [
+        "形狀能動不代表材料能承受反覆變形。",
+        "屈服、疲勞、挫屈與接觸另有模型。"
+      ],
+      "sourceIds": [
+        "elastic-source"
+      ],
+      "recipeIds": [
+        "spring"
+      ]
+    },
+    {
+      "id": "load",
+      "title": "平衡、力矩與負載路徑",
+      "kind": "力學模型",
+      "roleIds": [
+        "physics",
+        "interface"
+      ],
+      "actsOn": "力由接觸面、連接件傳到支承的路徑。",
+      "inputs": [
+        {
+          "name": "力 F",
+          "unit": "N"
+        },
+        {
+          "name": "力臂 r",
+          "unit": "mm"
+        }
+      ],
+      "formula": "靜力必要條件：ΣF=0，Σ(r×F)=0；τ=r×F。",
+      "produces": "接點反力及力矩需求。",
+      "applications": [
+        {
+          "domain": "機械",
+          "object": "門把",
+          "how": "手力沿把手、搖臂、拉索傳至鎖體，轉軸承受反力。"
+        },
+        {
+          "domain": "建築",
+          "object": "拱架",
+          "how": "支座須承受水平推力，外形像拱不等於穩定。"
+        },
+        {
+          "domain": "家具",
+          "object": "層板支架",
+          "how": "物品重量及力臂決定支架固定處需求。"
+        }
+      ],
+      "composesWith": [
+        "elastic",
+        "constraints",
+        "uncertainty"
+      ],
+      "premises": [
+        "靜力前提、力方向、支承與載荷已知。"
+      ],
+      "pitfalls": [
+        "滿足平衡只是必要條件，不能單獨證明強度穩定。",
+        "相接但無固定方式的部件可能無法傳遞所需力矩。"
+      ],
+      "sourceIds": [],
+      "recipeIds": [
+        "arch"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "vessel",
+      "name": "薄壁容器",
+      "domain": "器皿／包裝",
+      "description": "連續內外截面繞Y軸旋轉；有實際底厚、開口與壁面。",
+      "theoryIds": [
+        "profile",
+        "revolve",
+        "offset",
+        "integration",
+        "topology"
+      ],
+      "parameters": [
+        {
+          "key": "radius",
+          "label": "口部外半徑",
+          "min": 20,
+          "max": 42,
+          "step": 1,
+          "default": 30,
+          "unit": "mm"
+        },
+        {
+          "key": "height",
+          "label": "總高",
+          "min": 35,
+          "max": 100,
+          "step": 1,
+          "default": 70,
+          "unit": "mm"
+        },
+        {
+          "key": "wall",
+          "label": "徑向壁厚／底厚",
+          "min": 1,
+          "max": 4,
+          "step": 0.2,
+          "default": 2,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "lampshade",
+      "name": "上下通口燈罩",
+      "domain": "照明／家飾",
+      "description": "沿用旋轉截面方法，改變截面開口與漸縮，即形成另一種用途。",
+      "theoryIds": [
+        "profile",
+        "revolve",
+        "offset",
+        "similarity"
+      ],
+      "parameters": [
+        {
+          "key": "radius",
+          "label": "下口外半徑",
+          "min": 25,
+          "max": 55,
+          "step": 1,
+          "default": 42,
+          "unit": "mm"
+        },
+        {
+          "key": "height",
+          "label": "罩高",
+          "min": 30,
+          "max": 80,
+          "step": 1,
+          "default": 52,
+          "unit": "mm"
+        },
+        {
+          "key": "neck",
+          "label": "上口比例",
+          "min": 0.3,
+          "max": 0.75,
+          "step": 0.05,
+          "default": 0.42,
+          "unit": "比"
+        },
+        {
+          "key": "wall",
+          "label": "徑向厚度",
+          "min": 1,
+          "max": 3,
+          "step": 0.2,
+          "default": 1.6,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "pipe",
+      "name": "中空彎管與導流件",
+      "domain": "管路／扶手",
+      "description": "同一環形截面沿相切的直線—圓弧—直線掃掠；保留整段內孔。",
+      "theoryIds": [
+        "arc",
+        "frame",
+        "sweep",
+        "offset",
+        "continuity"
+      ],
+      "parameters": [
+        {
+          "key": "bend",
+          "label": "中心線彎曲半徑",
+          "min": 18,
+          "max": 48,
+          "step": 1,
+          "default": 28,
+          "unit": "mm"
+        },
+        {
+          "key": "radius",
+          "label": "管外半徑",
+          "min": 3,
+          "max": 8,
+          "step": 0.5,
+          "default": 5,
+          "unit": "mm"
+        },
+        {
+          "key": "wall",
+          "label": "管壁厚",
+          "min": 0.6,
+          "max": 2,
+          "step": 0.1,
+          "default": 1,
+          "unit": "mm"
+        },
+        {
+          "key": "angle",
+          "label": "轉彎角度",
+          "min": 30,
+          "max": 150,
+          "step": 5,
+          "default": 100,
+          "unit": "°"
+        }
+      ]
+    },
+    {
+      "id": "flange",
+      "name": "多孔法蘭／安裝座",
+      "domain": "機械／光學／家具",
+      "description": "主孔、等角孔群和外邊界先形成一份剖面，再拉伸成同一封閉實體。",
+      "theoryIds": [
+        "circle",
+        "symmetry",
+        "set",
+        "extrude",
+        "clearance"
+      ],
+      "parameters": [
+        {
+          "key": "radius",
+          "label": "外半徑",
+          "min": 28,
+          "max": 50,
+          "step": 1,
+          "default": 38,
+          "unit": "mm"
+        },
+        {
+          "key": "bore",
+          "label": "中心孔半徑",
+          "min": 8,
+          "max": 20,
+          "step": 1,
+          "default": 15,
+          "unit": "mm"
+        },
+        {
+          "key": "pcd",
+          "label": "螺栓孔中心半徑",
+          "min": 20,
+          "max": 36,
+          "step": 1,
+          "default": 27,
+          "unit": "mm"
+        },
+        {
+          "key": "hole",
+          "label": "螺栓孔半徑",
+          "min": 2,
+          "max": 4,
+          "step": 0.25,
+          "default": 3,
+          "unit": "mm"
+        },
+        {
+          "key": "count",
+          "label": "孔數",
+          "min": 3,
+          "max": 10,
+          "step": 1,
+          "default": 6,
+          "unit": "個"
+        },
+        {
+          "key": "depth",
+          "label": "板厚",
+          "min": 3,
+          "max": 10,
+          "step": 1,
+          "default": 6,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "arch",
+      "name": "拱形框／門洞構件",
+      "domain": "建築／家具",
+      "description": "半圓與直線相接，內外輪廓形成倒U形剖面，沿深度拉伸。",
+      "theoryIds": [
+        "circle",
+        "continuity",
+        "set",
+        "extrude",
+        "load"
+      ],
+      "parameters": [
+        {
+          "key": "radius",
+          "label": "外拱半徑",
+          "min": 28,
+          "max": 65,
+          "step": 1,
+          "default": 48,
+          "unit": "mm"
+        },
+        {
+          "key": "wall",
+          "label": "框寬",
+          "min": 5,
+          "max": 14,
+          "step": 1,
+          "default": 9,
+          "unit": "mm"
+        },
+        {
+          "key": "rise",
+          "label": "直腿高度",
+          "min": 20,
+          "max": 70,
+          "step": 1,
+          "default": 42,
+          "unit": "mm"
+        },
+        {
+          "key": "depth",
+          "label": "構件深度",
+          "min": 6,
+          "max": 24,
+          "step": 1,
+          "default": 14,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "grip",
+      "name": "漸變握柄／外殼母形",
+      "domain": "工具／家電／運動用品",
+      "description": "相同拓撲的橢圓截面沿長度連續變化；不用獨立球塊相疊。",
+      "theoryIds": [
+        "ellipse",
+        "loft",
+        "continuity",
+        "correspondence",
+        "normals"
+      ],
+      "parameters": [
+        {
+          "key": "length",
+          "label": "長度",
+          "min": 55,
+          "max": 120,
+          "step": 1,
+          "default": 90,
+          "unit": "mm"
+        },
+        {
+          "key": "radius",
+          "label": "中部半寬",
+          "min": 8,
+          "max": 18,
+          "step": 0.5,
+          "default": 12,
+          "unit": "mm"
+        },
+        {
+          "key": "flatten",
+          "label": "扁率",
+          "min": 0.5,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.72,
+          "unit": "比"
+        },
+        {
+          "key": "bow",
+          "label": "中心線拱起",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "default": 5,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "lattice",
+      "name": "蜂巢孔板／通風格柵",
+      "domain": "聲學／建築／收納",
+      "description": "六角孔在三角格點上排列，逐孔保留最小邊距，與外框一體拉伸。",
+      "theoryIds": [
+        "polygon",
+        "lattice",
+        "set",
+        "extrude",
+        "clearance"
+      ],
+      "parameters": [
+        {
+          "key": "width",
+          "label": "板寬",
+          "min": 80,
+          "max": 140,
+          "step": 5,
+          "default": 110,
+          "unit": "mm"
+        },
+        {
+          "key": "height",
+          "label": "板高",
+          "min": 50,
+          "max": 95,
+          "step": 5,
+          "default": 70,
+          "unit": "mm"
+        },
+        {
+          "key": "pitch",
+          "label": "最近孔中心距",
+          "min": 12,
+          "max": 20,
+          "step": 1,
+          "default": 15,
+          "unit": "mm"
+        },
+        {
+          "key": "radius",
+          "label": "六角孔外接半徑",
+          "min": 3,
+          "max": 7,
+          "step": 0.5,
+          "default": 5,
+          "unit": "mm"
+        },
+        {
+          "key": "depth",
+          "label": "板厚",
+          "min": 2,
+          "max": 8,
+          "step": 0.5,
+          "default": 3,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "saddle",
+      "name": "雙曲拋物面薄板",
+      "domain": "建築／造形家具",
+      "description": "曲面由函數生成，再沿法向建立兩面並封合邊界；不是平板扭斜貼圖。",
+      "theoryIds": [
+        "quadric",
+        "normals",
+        "offset",
+        "curvature",
+        "discretization"
+      ],
+      "parameters": [
+        {
+          "key": "width",
+          "label": "X向寬度",
+          "min": 70,
+          "max": 130,
+          "step": 5,
+          "default": 100,
+          "unit": "mm"
+        },
+        {
+          "key": "length",
+          "label": "Z向長度",
+          "min": 55,
+          "max": 110,
+          "step": 5,
+          "default": 80,
+          "unit": "mm"
+        },
+        {
+          "key": "warp",
+          "label": "雙向翹曲係數",
+          "min": 0.1,
+          "max": 0.6,
+          "step": 0.05,
+          "default": 0.35,
+          "unit": "比"
+        },
+        {
+          "key": "wall",
+          "label": "名義法向厚度",
+          "min": 1,
+          "max": 4,
+          "step": 0.25,
+          "default": 2,
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "id": "spring",
+      "name": "螺旋線材／捲繞形體",
+      "domain": "彈性元件／管線／裝置",
+      "description": "螺旋中心線加圓形截面掃掠；線徑、節距、圈數分開控制。",
+      "theoryIds": [
+        "helix",
+        "sweep",
+        "frame",
+        "arc",
+        "elastic"
+      ],
+      "parameters": [
+        {
+          "key": "radius",
+          "label": "中心線半徑",
+          "min": 7,
+          "max": 18,
+          "step": 0.5,
+          "default": 12,
+          "unit": "mm"
+        },
+        {
+          "key": "wire",
+          "label": "線徑",
+          "min": 1,
+          "max": 3,
+          "step": 0.25,
+          "default": 2,
+          "unit": "mm"
+        },
+        {
+          "key": "pitch",
+          "label": "每圈軸向節距",
+          "min": 4,
+          "max": 10,
+          "step": 0.5,
+          "default": 6,
+          "unit": "mm"
+        },
+        {
+          "key": "turns",
+          "label": "圈數",
+          "min": 2,
+          "max": 7,
+          "step": 0.5,
+          "default": 4.5,
+          "unit": "圈"
+        }
+      ]
+    }
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "title": "用途與來源",
+      "description": "先說明功能、外形參考、量測／作者尺寸與接合對象。輪廓相似和功能可用各有判準。"
+    },
+    {
+      "step": 2,
+      "title": "形體與型別",
+      "description": "輪廓→Profile2D；路徑→Curve3D；截面序列→Sections；曲面→Surface；有材料區域→Solid。單位、座標、內外和方向跟著資料走。"
+    },
+    {
+      "step": 3,
+      "title": "依賴與建構",
+      "description": "孔群先於剖面，剖面先於拉伸；路徑和截面先於掃掠。依照依賴順序求值，非法輸入拒絕生成。"
+    },
+    {
+      "step": 4,
+      "title": "獨立讀回",
+      "description": "重新讀全部頂點和面，核對邊與頂點鄰域、體積、剖面積分、投影與尺度。不要用輸入值冒充實體量測。"
+    },
+    {
+      "step": 5,
+      "title": "反例與修正",
+      "description": "刪面、反面、錯配截面、孔洞越界和非法尺寸都應被發現。留下失敗→原因→修正→重驗的同修訂證據。"
+    },
+    {
+      "step": 6,
+      "title": "裝配與物理",
+      "description": "把作者母形變成產品前，補實際接合介面、裝入路徑、緊固止脫、材料、載荷、公差及多角度來源比對；每項由對應證據負責。"
+    }
+  ],
+  "learningPaths": [
+    {
+      "level": "入門｜看懂與辨認",
+      "question": "作用在哪裡？為什麼用這種形狀？",
+      "task": "先選「截面旋轉」，比較有底容器與上下通口燈罩。指出外壁、內壁、開口與旋轉軸，再改一個參數。",
+      "pass": "能預測修改哪個形體，並在正、背、頂與斜視確認。"
+    },
+    {
+      "level": "進階｜推導與組合",
+      "question": "哪些量由公式決定？哪些是假設？",
+      "task": "從多孔法蘭推導相鄰孔心弦長、三種材料橋寬和淨剖面積。再把同一套方法轉為燈具安裝環。",
+      "pass": "公式、單位、輸入來源與獨立量測吻合；換用途後重新核對接合介面與載荷。"
+    },
+    {
+      "level": "實作者｜建構與反例",
+      "question": "別人能重建嗎？錯誤會被抓到嗎？",
+      "task": "離線重建九個實體；讀回所有面與頂點鄰域。故意刪一面、反一面或讓孔洞越界，確認拒絕。再讀蜂巢端面修正案例。",
+      "pass": "同一來源可重現；合法形體通過對應判準，錯誤反例被拒絕；未驗項不冒稱完成。"
+    }
+  ],
+  "limits": [
+    "目錄是可擴充的方法分類，不宣稱列盡所有數學或用途。",
+    "示範網格沒有完成全域自交、全程碰撞、材料受力及製造認證。",
+    "九個母形不是九件新增車輛零件；整車品質與完成度仍由整車證據判定。"
+  ]
+}

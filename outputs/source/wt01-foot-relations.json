@@ -1,0 +1,70 @@
+{
+  "schema": "GT01-foot-relations/v1",
+  "revision": "R4",
+  "units": "mm",
+  "authority": "AUTHOR_NOMINAL_DESIGN",
+  "assemblyQualified": false,
+  "axis": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "direction": [
+      0,
+      0,
+      1
+    ],
+    "datum": "杯墊外底面為 z=0；向上為 +Z"
+  },
+  "pad": {
+    "outerDiameter": 44,
+    "innerDiameter": 40.4,
+    "floor": 3,
+    "rimAboveFloor": 6,
+    "lipHeight": 0.5,
+    "lipInward": 0.3
+  },
+  "stem": {
+    "discDiameter": 40,
+    "discThickness": 5,
+    "collarAcrossFlats": 17,
+    "collarHeight": 12,
+    "threadDiameter": 10,
+    "threadPitch": 1.5,
+    "threadLength": 50
+  },
+  "nut": {
+    "acrossFlats": 17,
+    "height": 8
+  },
+  "plate": {
+    "width": 75,
+    "depth": 75,
+    "thickness": 12,
+    "cornerRadius": 3,
+    "boltHoleDiameter": 6.6,
+    "boltSpacing": 55
+  },
+  "pose": {
+    "tipProjectionAbovePlate": 0
+  },
+  "requirements": {
+    "minimumLipAxialClearance": 0.5,
+    "minimumRadialRetentionOverlap": 0.1
+  },
+  "unverified": [
+    "同版三維實體、螺紋牙形與裝入路徑",
+    "尺寸公差、變形、扣持力、螺帽預緊與承載",
+    "固定板至桌腳的四個連接件與工具空間"
+  ],
+  "sourceReferences": [
+    "GT01-WT01-Stem-Reference-R1",
+    "GT01-WT01-Locknut-Reference-R1",
+    "GT01-WT01-Footplate-Reference-R1"
+  ],
+  "supersedes": {
+    "padRimAboveFloor": 3,
+    "reason": "舊杯緣高度低於承壓盤頂面，不能以頂緣扣持的方式固定"
+  }
+}

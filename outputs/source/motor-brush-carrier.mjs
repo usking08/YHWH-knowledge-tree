@@ -1,0 +1,19 @@
+// One connected author-designed moulding; shaft-local millimetres.
+export function makeGT01BrushCarrier(T) {
+ const positions=[],V=p=>new T.Vector3(...p),TAU=2*Math.PI;
+ const circle=(r,y=0,z=0,n=192)=>Array.from({length:n},(_,i)=>[y+r*Math.cos(i*TAU/n),z+r*Math.sin(i*TAU/n)]);
+ const outer=circle(14.5),holes=[circle(4.4),circle(.5,8.1,0,64),circle(.5,-8.1,0,64)];
+ const guide=[[5,-2.15],[13.9,-2.15],[13.9,2.15],[5,2.15],[5,1.75],[13.5,1.75],[13.5,-1.75],[5,-1.75]];
+ const guides=[guide,guide.map(([y,z])=>[-y,-z])];
+ function tri(a,b,c,normal){const cross=V(b).sub(V(a)).cross(V(c).sub(V(a)));if(cross.lengthSq()<1e-18)return;if(cross.dot(V(normal))<0)[b,c]=[c,b];positions.push(...a,...b,...c);}
+ function cap(loop,voids,x,sign){const points=[...loop,...voids.flat()],ids=T.ShapeUtils.triangulateShape(loop.map(p=>new T.Vector2(...p)),voids.map(h=>h.map(p=>new T.Vector2(...p))));for(const t of ids)tri(...t.map(i=>[x,...points[i]]),[sign,0,0]);}
+ function wall(loop,x0,x1,inward=false){for(let i=0;i<loop.length;i++){const a=loop[i],b=loop[(i+1)%loop.length],normal=[0,(b[1]-a[1])*(inward?-1:1),(a[0]-b[0])*(inward?-1:1)];tri([x0,...a],[x0,...b],[x1,...b],normal);tri([x0,...a],[x1,...b],[x1,...a],normal);}}
+ cap(outer,holes,39.5,-1);cap(outer,[...holes,...guides],41.7,1);wall(outer,39.5,41.7);for(const h of holes)wall(h,39.5,41.7,true);
+ for(const g of guides){const wide=g.map(([y,z],i)=>[y,i<4?Math.sign(z)*2.55:z]),sections=[[41.7,g],[45.3,g],[45.3,wide],[45.8,wide],[45.8,g],[46.3,g]];for(let j=1;j<sections.length;j++)for(let i=0;i<g.length;i++){const next=(i+1)%g.length,[x0,p0]=sections[j-1],[x1,p1]=sections[j],a=[x0,...p0[i]],b=[x0,...p0[next]],c=[x1,...p1[next]],d=[x1,...p1[i]];const n=V(b).sub(V(a)).cross(V(c).sub(V(a))).toArray();tri(a,b,c,n);const n2=V(c).sub(V(a)).cross(V(d).sub(V(a))).toArray();tri(a,c,d,n2);}cap(g,[],46.3,1);}
+ // Conform the stepped rail shoulders: a long mouth edge must be split at
+ // every adjoining shoulder vertex, rather than leaving geometric T junctions.
+ const vertices=[...new Map(Array.from({length:positions.length/3},(_,i)=>{const p=positions.slice(i*3,i*3+3);return [p.map(x=>x.toFixed(9)).join(','),p];})).values()],conformed=[];
+ for(let i=0;i<positions.length;i+=9){const t=[positions.slice(i,i+3),positions.slice(i+3,i+6),positions.slice(i+6,i+9)],boundary=[];let split=false;for(let j=0;j<3;j++){const a=V(t[j]),b=V(t[(j+1)%3]),d=b.clone().sub(a),length=d.lengthSq(),points=[];boundary.push(t[j]);for(const p of vertices){const q=V(p).sub(a),u=q.dot(d)/length;if(u>1e-7&&u<1-1e-7&&q.addScaledVector(d,-u).lengthSq()<1e-16)points.push({p,u});}points.sort((a,b)=>a.u-b.u);for(const p of points)boundary.push(p.p);split||=points.length>0;}if(!split)conformed.push(...positions.slice(i,i+9));else{const centre=V(t[0]).add(V(t[1])).add(V(t[2])).multiplyScalar(1/3).toArray();for(let j=0;j<boundary.length;j++)conformed.push(...centre,...boundary[j],...boundary[(j+1)%boundary.length]);}}
+ const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(conformed,3));geometry.computeVertexNormals();geometry.computeBoundingBox();geometry.name='D05-P14i-a-continuous-carrier';
+ return {components:[{ref:'D05-P14i-a',instance:1,name:'一體式刷架基板與雙導槽',material:'phenolic',surfaces:[['連續基板、貫通孔、雙 U 槽、滑軌與彈簧止擋',geometry]],explode:[-15,0,0],interfaces:{authority:'AUTHOR_DESIGN',shaftAxis:[1,0,0],baseX:[39.5,41.7],baseOD:29,centralBore:8.8,guideX:[41.7,46.3],guideOuterWidth:4.3,guideInnerWidth:3.5,guideWall:.4,springStopY:[-13.5,13.5],retainerRails:{axialX:[45.3,45.8],innerAbsZ:2.15,outerAbsZ:2.55,radialAbsY:[5,13.9],continuousWithCarrier:true},wireHoles:[{centre:[39.5,8.1,0],diameter:1,depth:2.2},{centre:[39.5,-8.1,0],diameter:1,depth:2.2}],axialRetainersComplete:false,caseRetentionComplete:false}}]};
+}

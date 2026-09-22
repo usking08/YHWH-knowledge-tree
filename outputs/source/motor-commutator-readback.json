@@ -1,0 +1,939 @@
+{
+  "schema": "GT01-commutator-native-geometry-readback/v1",
+  "reader": "Node local outputs/source/three.mjs BufferGeometry",
+  "node": "v24.17.0",
+  "threeRevision": "160",
+  "sourceSHA256": "24619d250ad2d580013a24e4e3f53c0e3aa78fd7aa8c4d18be640c163e175265",
+  "units": "mm",
+  "coordinateFrame": "motor-shaft-local +X; Y=0 Z=0; final -6mm translation incorporated",
+  "interfaces": {
+    "units": "mm",
+    "axis": [
+      1,
+      0,
+      0
+    ],
+    "localOrigin": [
+      0,
+      0,
+      0
+    ],
+    "coordinateSpace": "motor-shaft-local",
+    "authority": "AUTHOR_DESIGN",
+    "segmentCount": 12,
+    "angularIndex": "theta=k*2*pi/12; Y=R*cos(theta); Z=R*sin(theta)",
+    "shaftDiameter": 6,
+    "shaftBore": 6.02,
+    "axialX": [
+      40.5,
+      48.8
+    ],
+    "contactAxialX": [
+      42,
+      47.2
+    ],
+    "outerContactRadius": 5.2,
+    "slotWidthAtContactRadius": 0.19998767281177224,
+    "interSegmentGrooveAngle": 0.038461538461538464,
+    "insulatorRibTopRadius": 4.8,
+    "windingSeatCount": 24,
+    "windingWireOuterDiameter": 0.36,
+    "laminationStartX": 58,
+    "axialClearanceToLamination": 9.200000000000003,
+    "windingCrownStartX": 49.5,
+    "axialClearanceToWindingCrown": 0.7000000000000028,
+    "copperProfileXR": [
+      [
+        42,
+        4.3
+      ],
+      [
+        48.8,
+        4.3
+      ],
+      [
+        48.8,
+        6.3
+      ],
+      [
+        48.4,
+        6.3
+      ],
+      [
+        48.4,
+        5.55
+      ],
+      [
+        47.6,
+        5.55
+      ],
+      [
+        47.6,
+        6.3
+      ],
+      [
+        47.2,
+        6.3
+      ],
+      [
+        47.2,
+        5.2
+      ],
+      [
+        42,
+        5.2
+      ]
+    ]
+  },
+  "componentCount": 13,
+  "copperPieces": 12,
+  "insulatorPieces": 1,
+  "directedEdgeWeldTolerance_mm": 0.00001,
+  "components": [
+    {
+      "ref": "D05-P14f-a",
+      "instance": 1,
+      "material": "insulator",
+      "triangles": 10800,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 251.34441213282835,
+      "outwardNormalsMinDot": 0.99999275529547,
+      "bounds_mm": {
+        "min": [
+          40.5,
+          -4.659476280212402,
+          -4.659476280212402
+        ],
+        "max": [
+          48.79999923706055,
+          4.659476280212402,
+          4.659476280212402
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 1,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287687874145263,
+      "outwardNormalsMinDot": 0.9999927552954702,
+      "bounds_mm": {
+        "min": [
+          42,
+          4.174114227294922,
+          -1.513240098953247
+        ],
+        "max": [
+          48.79999923706055,
+          6.300000190734863,
+          1.513240098953247
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 2,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287686842704723,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          3.09846568107605,
+          1.192585825920105
+        ],
+        "max": [
+          48.79999923706055,
+          6.052852630615234,
+          4.368285655975342
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 3,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.28768684270468,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          1.192585825920105,
+          3.09846568107605
+        ],
+        "max": [
+          48.79999923706055,
+          4.368285655975342,
+          6.052852630615234
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 4,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287687874145323,
+      "outwardNormalsMinDot": 0.9999927552954702,
+      "bounds_mm": {
+        "min": [
+          42,
+          -1.513240098953247,
+          4.174114227294922
+        ],
+        "max": [
+          48.79999923706055,
+          1.513240098953247,
+          6.300000190734863
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 5,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.28768684270471,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          -4.368285655975342,
+          3.09846568107605
+        ],
+        "max": [
+          48.79999923706055,
+          -1.192585825920105,
+          6.052852630615234
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 6,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287686842704623,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          -6.052852630615234,
+          1.192585825920105
+        ],
+        "max": [
+          48.79999923706055,
+          -3.09846568107605,
+          4.368285655975342
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 7,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287687874145252,
+      "outwardNormalsMinDot": 0.9999927552954702,
+      "bounds_mm": {
+        "min": [
+          42,
+          -6.300000190734863,
+          -1.513240098953247
+        ],
+        "max": [
+          48.79999923706055,
+          -4.174114227294922,
+          1.513240098953247
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 8,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287686842704723,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          -6.052852630615234,
+          -4.368285655975342
+        ],
+        "max": [
+          48.79999923706055,
+          -3.09846568107605,
+          -1.192585825920105
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 9,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.28768684270468,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          -4.368285655975342,
+          -6.052852630615234
+        ],
+        "max": [
+          48.79999923706055,
+          -1.192585825920105,
+          -3.09846568107605
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 10,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.2876878741453,
+      "outwardNormalsMinDot": 0.9999927552954702,
+      "bounds_mm": {
+        "min": [
+          42,
+          -1.513240098953247,
+          -6.300000190734863
+        ],
+        "max": [
+          48.79999923706055,
+          1.513240098953247,
+          -4.174114227294922
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 11,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.28768684270471,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          1.192585825920105,
+          -6.052852630615234
+        ],
+        "max": [
+          48.79999923706055,
+          4.368285655975342,
+          -3.09846568107605
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14f-b",
+      "instance": 12,
+      "material": "copper",
+      "triangles": 1296,
+      "finite": true,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedVolumes": 1,
+      "signedVolume_mm3": 17.287686842704623,
+      "outwardNormalsMinDot": 0.9999927613312943,
+      "bounds_mm": {
+        "min": [
+          42,
+          3.09846568107605,
+          -4.368285655975342
+        ],
+        "max": [
+          48.79999923706055,
+          6.052852630615234,
+          -1.192585825920105
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "shaftBore": {
+    "nominalCircularDiameter_mm": 6.02,
+    "meshInscribedDiameter_mm": 6.0199565778741455,
+    "minimumRadialClearanceToD6Shaft_mm": 0.009978288937072755,
+    "innerRingVertexCount": 864,
+    "axialAxisIntersections": [],
+    "wallRayIntersections": [
+      {
+        "distance_mm": 5.5,
+        "position_mm": [
+          40.5,
+          3.5,
+          0.137
+        ]
+      },
+      {
+        "distance_mm": 13.799999237060547,
+        "position_mm": [
+          48.79999923706055,
+          3.5,
+          0.137
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "radialGeometryReadback": {
+    "contactEntryRadius_mm": 5.199999809265137,
+    "wireSlotFloorEntryRadius_mm": 5.550000190734863,
+    "lugLipEntryRadius_mm": 6.300000190734863,
+    "insulatorRibEntryRadius_mm": 4.80000011318734,
+    "passed": true
+  },
+  "terminals": [
+    {
+      "index": 0,
+      "instance": 1,
+      "seatCentreSeparation_mm": 1.033603315777127,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            5.726728214818967,
+            -0.5168016578885635
+          ],
+          "tangent": [
+            0,
+            -0.08987854919801104,
+            -0.9959527330119943
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016739520471394,
+          "nearestAdjacentCopperClearance_mm": 0.9159153134622762,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            5.726728214818967,
+            0.5168016578885635
+          ],
+          "tangent": [
+            0,
+            -0.08987854919801104,
+            0.9959527330119943
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001673952047142,
+          "nearestAdjacentCopperClearance_mm": 0.9159153134622762,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "instance": 2,
+      "seatCentreSeparation_mm": 1.0336033157771274,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            5.217892943546616,
+            2.4158007429600725
+          ],
+          "tangent": [
+            0,
+            0.42013925964523,
+            -0.9074596423559331
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001683665145601,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170412,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            4.701091285658052,
+            3.3109274718588937
+          ],
+          "tangent": [
+            0,
+            -0.5758134733667641,
+            0.817581093157922
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001677593244036,
+          "nearestAdjacentCopperClearance_mm": 0.9159153680466172,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "instance": 3,
+      "seatCentreSeparation_mm": 1.0336033157771278,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            3.3109274718588946,
+            4.701091285658051
+          ],
+          "tangent": [
+            0,
+            0.8175810931579219,
+            -0.5758134733667643
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016775932440112,
+          "nearestAdjacentCopperClearance_mm": 0.9159153680466161,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            2.415800742960073,
+            5.217892943546615
+          ],
+          "tangent": [
+            0,
+            -0.907459642355933,
+            0.4201392596452301
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001683665145501,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170416,
+          "tangentUnitLength": 0.9999999999999999
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "instance": 4,
+      "seatCentreSeparation_mm": 1.033603315777128,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            0.5168016578885644,
+            5.726728214818967
+          ],
+          "tangent": [
+            0,
+            0.9959527330119943,
+            -0.08987854919801119
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016739520472254,
+          "nearestAdjacentCopperClearance_mm": 0.9159153134622755,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            -0.5168016578885637,
+            5.726728214818967
+          ],
+          "tangent": [
+            0,
+            -0.9959527330119943,
+            -0.08987854919801107
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001673952047142,
+          "nearestAdjacentCopperClearance_mm": 0.915915313462276,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "instance": 5,
+      "seatCentreSeparation_mm": 1.0336033157771258,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            -2.4158007429600725,
+            5.217892943546616
+          ],
+          "tangent": [
+            0,
+            0.9074596423559331,
+            0.42013925964522997
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001683665145601,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170412,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            -3.3109274718588924,
+            4.701091285658053
+          ],
+          "tangent": [
+            0,
+            -0.8175810931579223,
+            -0.5758134733667639
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001677593244036,
+          "nearestAdjacentCopperClearance_mm": 0.9159153680466188,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "instance": 6,
+      "seatCentreSeparation_mm": 1.033603315777125,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            -4.701091285658051,
+            3.310927471858895
+          ],
+          "tangent": [
+            0,
+            0.5758134733667644,
+            0.8175810931579218
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001677593244036,
+          "nearestAdjacentCopperClearance_mm": 0.9159153680466157,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            -5.217892943546613,
+            2.4158007429600756
+          ],
+          "tangent": [
+            0,
+            -0.4201392596452306,
+            -0.9074596423559328
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001683665145501,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170445,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "instance": 7,
+      "seatCentreSeparation_mm": 1.0336033157771254,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            -5.726728214818967,
+            0.5168016578885634
+          ],
+          "tangent": [
+            0,
+            0.08987854919801103,
+            0.9959527330119943
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016739520471366,
+          "nearestAdjacentCopperClearance_mm": 0.9159153134622764,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            -5.726728214818967,
+            -0.516801657888562
+          ],
+          "tangent": [
+            0,
+            0.08987854919801079,
+            -0.9959527330119943
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001673952047142,
+          "nearestAdjacentCopperClearance_mm": 0.9159153134622777,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "instance": 8,
+      "seatCentreSeparation_mm": 1.0336033157771258,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            -5.217892943546616,
+            -2.415800742960072
+          ],
+          "tangent": [
+            0,
+            -0.4201392596452299,
+            0.9074596423559331
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016836651455816,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170405,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            -4.701091285658053,
+            -3.310927471858892
+          ],
+          "tangent": [
+            0,
+            0.5758134733667638,
+            -0.8175810931579223
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001677593243939,
+          "nearestAdjacentCopperClearance_mm": 0.915915368046619,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "instance": 9,
+      "seatCentreSeparation_mm": 1.0336033157771254,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            -3.310927471858896,
+            -4.701091285658051
+          ],
+          "tangent": [
+            0,
+            -0.8175810931579218,
+            0.5758134733667645
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016775932440833,
+          "nearestAdjacentCopperClearance_mm": 0.915915368046615,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            -2.415800742960076,
+            -5.217892943546613
+          ],
+          "tangent": [
+            0,
+            0.9074596423559328,
+            -0.42013925964523063
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001683665145501,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170449,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "instance": 10,
+      "seatCentreSeparation_mm": 1.0336033157771256,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            -0.5168016578885638,
+            -5.726728214818967
+          ],
+          "tangent": [
+            0,
+            -0.9959527330119943,
+            0.0898785491980111
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001673952047142,
+          "nearestAdjacentCopperClearance_mm": 0.915915313462276,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            0.5168016578885617,
+            -5.726728214818967
+          ],
+          "tangent": [
+            0,
+            0.9959527330119943,
+            0.08987854919801072
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001673952047142,
+          "nearestAdjacentCopperClearance_mm": 0.915915313462278,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "instance": 11,
+      "seatCentreSeparation_mm": 1.0336033157771256,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            2.4158007429600694,
+            -5.217892943546617
+          ],
+          "tangent": [
+            0,
+            -0.9074596423559333,
+            -0.42013925964522947
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016836651455178,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170378,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            3.31092747185889,
+            -4.701091285658055
+          ],
+          "tangent": [
+            0,
+            0.8175810931579226,
+            0.5758134733667635
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016775932441333,
+          "nearestAdjacentCopperClearance_mm": 0.9159153680466221,
+          "tangentUnitLength": 1
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "instance": 12,
+      "seatCentreSeparation_mm": 1.033603315777125,
+      "passed": true,
+      "wireSeats": [
+        {
+          "position_mm": [
+            48,
+            4.701091285658051,
+            -3.310927471858896
+          ],
+          "tangent": [
+            0,
+            -0.5758134733667645,
+            -0.8175810931579218
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.020016775932440833,
+          "nearestAdjacentCopperClearance_mm": 0.915915368046615,
+          "tangentUnitLength": 1
+        },
+        {
+          "position_mm": [
+            48,
+            5.217892943546613,
+            -2.4158007429600765
+          ],
+          "tangent": [
+            0,
+            0.4201392596452307,
+            0.9074596423559328
+          ],
+          "wireOuterDiameter_mm": 0.36,
+          "ownCopperSurfaceClearance_mm": 0.02001683665145501,
+          "nearestAdjacentCopperClearance_mm": 0.9159153098170454,
+          "tangentUnitLength": 1
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "Author geometry; no manufacturing, dielectric, electrical or motor completion claim.",
+    "Circular surfaces are polygonized; the measured inscribed bore is reported separately from its nominal circle."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-e03ba160e50d6f",
+  "name": "Factory | oiled-oak",
+  "family": "LIGHT",
+  "purpose": "照明讓形狀、表面缺陷與作業區可辨識。",
+  "assemblyTeaching": "固定座→懸吊→殼體→光源板→擴散罩；線材沿橋架回到供電接口。",
+  "verification": "反射環境擷取範圍要含燈；本場景 mm 尺度使用 far=50000。檢查直射、反射和遮擋分別有效。",
+  "unresolved": "發光材質不等於真實照度；驅動電源、配線及照度計算未建。",
+  "units": "mm",
+  "geometry": "geometry/G-a5ab8e9822649525d77e.json",
+  "geometrySHA256": "a5ab8e9822649525d77e15fddd288320464430df13526351ac8415a0e662bf09",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -70,
+      -500,
+      -85
+    ],
+    [
+      70,
+      500,
+      85
+    ]
+  ],
+  "dimensionsMM": [
+    140,
+    1000,
+    170
+  ],
+  "materials": [
+    "Factory | oiled-oak"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-e03ba160e50d6f.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B01"
+  ],
+  "occurrenceCount": 12
+}

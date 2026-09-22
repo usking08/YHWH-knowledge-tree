@@ -1,0 +1,46 @@
+{
+  "id": "FC-6b325478867b0a",
+  "name": "trim carrier upright",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-1381648b3c66e4f3c933.json",
+  "geometrySHA256": "1381648b3c66e4f3c933e1a6e87673c2a93bca90947d143e77325c3889dfa92d",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -45,
+      -410,
+      -500
+    ],
+    [
+      45,
+      410,
+      500
+    ]
+  ],
+  "dimensionsMM": [
+    90,
+    820,
+    1000
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-6b325478867b0a.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S4"
+  ],
+  "occurrenceCount": 2
+}

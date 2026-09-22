@@ -1,0 +1,46 @@
+{
+  "id": "FC-f1e9f41233916a",
+  "name": "light suspension",
+  "family": "LIGHT",
+  "purpose": "照明讓形狀、表面缺陷與作業區可辨識。",
+  "assemblyTeaching": "固定座→懸吊→殼體→光源板→擴散罩；線材沿橋架回到供電接口。",
+  "verification": "反射環境擷取範圍要含燈；本場景 mm 尺度使用 far=50000。檢查直射、反射和遮擋分別有效。",
+  "unresolved": "發光材質不等於真實照度；驅動電源、配線及照度計算未建。",
+  "units": "mm",
+  "geometry": "geometry/G-e4b45d4e09ab78425663.json",
+  "geometrySHA256": "e4b45d4e09ab7842566335222d187b839cb24094de9c677de3a0722a60656fc1",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -4,
+      -4,
+      -404.1666564941406
+    ],
+    [
+      4,
+      4,
+      404.1666564941406
+    ]
+  ],
+  "dimensionsMM": [
+    8,
+    8,
+    808.3333129882812
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-f1e9f41233916a.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-007"
+  ],
+  "occurrenceCount": 16
+}

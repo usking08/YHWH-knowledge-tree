@@ -1,0 +1,46 @@
+{
+  "id": "FC-34e921c38b8231",
+  "name": "CMM bridge beam",
+  "family": "FRAME",
+  "purpose": "把上部作用經樑、柱、連接件傳到基座。",
+  "assemblyTeaching": "I 形截面由翼板與腹板構成；先立柱、接斜樑、加腋與斜撐，再設次構件。",
+  "verification": "核對截面、對接面、螺栓孔軸及荷重路徑；ΣF=0、ΣM=0 只是平衡前提，仍須材料與邊界條件。",
+  "unresolved": "現有部分固定件僅外形；尚無結構設計驗算或建築放行。",
+  "units": "mm",
+  "geometry": "geometry/G-aaae22bf85442f438761.json",
+  "geometrySHA256": "aaae22bf85442f43876125916d7fbbe10a65274144365c610cf967e5d7c08830",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1200,
+      -130,
+      -115
+    ],
+    [
+      1200,
+      130,
+      115
+    ]
+  ],
+  "dimensionsMM": [
+    2400,
+    260,
+    230
+  ],
+  "materials": [
+    "Factory | warm-white-powdercoat"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-34e921c38b8231.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B06"
+  ],
+  "occurrenceCount": 1
+}

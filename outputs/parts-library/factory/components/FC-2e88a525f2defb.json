@@ -1,0 +1,46 @@
+{
+  "id": "FC-2e88a525f2defb",
+  "name": "rooflight side curb",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-44b024819f3d734fd654.json",
+  "geometrySHA256": "44b024819f3d734fd6540d48133065243a4690a8049607684b66ef85e7800b17",
+  "scale": [
+    1,
+    0.9999999741,
+    0.9999999741
+  ],
+  "localBounds": [
+    [
+      -35,
+      -50,
+      -6020.79736328125
+    ],
+    [
+      35,
+      50,
+      6020.79736328125
+    ]
+  ],
+  "dimensionsMM": [
+    70,
+    100,
+    12041.5947265625
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-2e88a525f2defb.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-ROOF-01"
+  ],
+  "occurrenceCount": 24
+}

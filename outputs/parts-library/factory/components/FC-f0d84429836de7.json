@@ -1,0 +1,54 @@
+{
+  "id": "FC-f0d84429836de7",
+  "name": "虎鉗活動滑塊",
+  "family": "TOOL",
+  "purpose": "轉動固定件、定位工件或施加受控夾持。",
+  "assemblyTeaching": "工具頭→傳力桿→握持面；虎鉗固定座→導向滑塊→活動鉗口→絲桿與旋柄。",
+  "verification": "扳手環孔要貫穿、起子末端要有實際刃型；虎鉗夾口對向且保留行程。",
+  "unresolved": "虎鉗牙形、工具掛板孔列、材料強度與工具配合尺寸待驗。",
+  "units": "mm",
+  "geometry": "geometry/G-d152d9002f6b64253ea6.json",
+  "geometrySHA256": "d152d9002f6b64253ea6d644efccabe66ff8aad2580a719ceda70f63b68f3661",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -47.5,
+      -90,
+      -17.5
+    ],
+    [
+      47.5,
+      90,
+      17.5
+    ]
+  ],
+  "dimensionsMM": [
+    95,
+    180,
+    35
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../materials/generated/GT01-Workbench-Assembly-R2.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-f0d84429836de7.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-01",
+    "F-BENCH-02",
+    "F-BENCH-03",
+    "F-BENCH-04",
+    "F-BENCH-05",
+    "F-BENCH-06",
+    "F-BENCH-07",
+    "F-BENCH-08",
+    "F-BENCH-09"
+  ],
+  "occurrenceCount": 9
+}

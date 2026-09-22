@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+const path=new URL('../outputs/source/center-display.mjs',import.meta.url);let s=await fs.readFile(path,'utf8');
+s=s.replace("revision:'I05-B-R2'","revision:'I05-B-R3'");
+s=s.replace("reference:'references/'+subPart+'-reference-r1.png'","reference:'references/'+subPart+'-reference-'+(n===18?'r2':'r1')+'.png'");
+s=s.replace("for(const u of [-144,144])for(const v of [-34,34])for(const s of [bezelLow,bezelBack])s.holes.push(rounded(.8,4.5,.15,true,u,v))","for(const u of [-143.95,143.95])for(const v of [-34,34])for(const s of [bezelLow,bezelBack])s.holes.push(rounded(1.2,4.5,.1,true,u,v))");
+s=s.replace("rear.holes.push(rounded(w,7,1,true,u,-39))","rear.holes.push(rounded(w-2,5,.5,true,u,-39))");
+s=s.replace("for(const u of [-143.45,143.45])for(const v of [-34,34])shellPieces.push", "for(const [u,w]of [[-13,24],[15,16]]){const lip=ring(w+2,8,.8,w-2,5,.5,-5.2,-4.5);lip.translate(u,-39,0);shellPieces.push(lip);}for(const u of [-143.45,143.45])for(const v of [-34,34])shellPieces.push");
+s=s.replace("端口24×7與16×7","端口22×5與14×5；內肩承托24×6與16×6接收器");
+s=s.replace("生成圖的6 mm寬U型比例不直接採用；本體依12 mm薄殼改為有限窄帶，彈性未驗","採用r2單一窄帶折鉤；圖示比例僅形態參考，實際包絡0.75×4×5.45 mm，彈性未驗");
+s=s.replace("for(let k=0;k<18;k++){","add(12,'LED基板托盤黏接帶',plate(260,.5,.1,-.1,0,0,-48.65),M.seal,'0.1 mm薄黏接帶使基板下緣與托盤真正接觸。','P12基板底邊／P13托盤',{physicalBoundary:'BONDED_ADHESIVE',thickness:.1,explode:[-30,0,-14]});\n for(let k=0;k<18;k++){");
+await fs.writeFile(path,s);
+const html=new URL('../outputs/quality/center-display-assembly.html',import.meta.url);let v=await fs.readFile(html,'utf8');v=v.replace("viewName=name;camera.up.set","viewName=name;camera.fov=32;camera.up.set");v=v.replace("camera.near=1;camera.updateProjectionMatrix();","camera.near=1;camera.fov=38;camera.updateProjectionMatrix();").replace("camera.position.set(160,-20,1110);orbitTarget.set(-320,80,720)","camera.position.set(480,-140,1120);orbitTarget.set(-320,60,725)");
+await fs.writeFile(html,v);

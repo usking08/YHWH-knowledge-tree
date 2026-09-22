@@ -1,0 +1,1753 @@
+{
+  "schemaVersion": "GT01-catalog/v1",
+  "title": "GT01 可攜零件庫",
+  "revision": "D11-FIRST-ARTICLE-R3 + native M5 prototypes",
+  "authority": "AUTHOR_DESIGN",
+  "units": "mm",
+  "partTypeCount": 12,
+  "prototypeCount": 12,
+  "offline": true,
+  "completeAssembly": false,
+  "manufacturingCertified": false,
+  "pathsRelativeTo": "library root; part.json paths relative to each part folder",
+  "classificationAxes": [
+    "assembly",
+    "functionFamily"
+  ],
+  "parts": [
+    {
+      "id": "D11-P01",
+      "name": "一體把手面板、背肋與轉軸座",
+      "purpose": "把手輸入經一體轉軸座及 D 形端部帶動撥臂。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P01"
+        ],
+        "functionFamily": [
+          "傳力",
+          "手動輸入件"
+        ]
+      },
+      "metadata": "parts/D11-P01/part.json",
+      "guide": "parts/D11-P01/PART.md",
+      "thumbnail": "parts/D11-P01/references/D11-P01-model-r2.png",
+      "geometry": "parts/D11-P01/geometry.json",
+      "obj": "parts/D11-P01/part.obj",
+      "triangles": 13350,
+      "positionTriangleSHA256": "19e6233a442e59bb7ec6e8c2370218791dff5e736bcca0b887d23fc6a211139d",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "moment",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P01",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P01-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "moment-arm",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P02",
+      "name": "空心把手承載盒",
+      "purpose": "維持肩銷、軸套、彈簧與外把手的安置關係，提供門體固定基座。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P02"
+        ],
+        "functionFamily": [
+          "支承",
+          "盒體與固定座"
+        ]
+      },
+      "metadata": "parts/D11-P02/part.json",
+      "guide": "parts/D11-P02/PART.md",
+      "thumbnail": "parts/D11-P02/references/D11-P02-model-r3.png",
+      "geometry": "parts/D11-P02/geometry.json",
+      "obj": "parts/D11-P02/part.obj",
+      "triangles": 3160,
+      "positionTriangleSHA256": "53e1c1d8b2d10fefbdafc06e70e5f18734b2975da39d455491b285959f4ec07f",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P02",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P02-D11-P11b",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P03",
+      "name": "帶扣槽肩銷",
+      "purpose": "貫穿支承與轉動零件並以肩頭、墊圈、扣環限制軸向位置。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P03"
+        ],
+        "functionFamily": [
+          "緊固",
+          "銷軸與軸向定位"
+        ]
+      },
+      "metadata": "parts/D11-P03/part.json",
+      "guide": "parts/D11-P03/PART.md",
+      "thumbnail": "parts/D11-P03/references/D11-P03-model-r2.png",
+      "geometry": "parts/D11-P03/geometry.json",
+      "obj": "parts/D11-P03/part.obj",
+      "triangles": 1920,
+      "positionTriangleSHA256": "cc105a2f1ff2017c89520285d09c2c1025ffdcb625cab540b78c6e7655de1260",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "annulus",
+          "retention",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P03",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P01-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P11a-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P11b-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P05a-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P10-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "pin-profile",
+            "status": "PASS"
+          },
+          {
+            "id": "clip-groove",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P09",
+      "name": "E 形軸向扣環",
+      "purpose": "在肩銷下扣槽處提供軸向保持的形狀候選。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P09"
+        ],
+        "functionFamily": [
+          "緊固",
+          "扣環與擋圈"
+        ]
+      },
+      "metadata": "parts/D11-P09/part.json",
+      "guide": "parts/D11-P09/PART.md",
+      "thumbnail": "parts/D11-P09/references/D11-P09-model-r1.png",
+      "geometry": "parts/D11-P09/geometry.json",
+      "obj": "parts/D11-P09/part.obj",
+      "triangles": 320,
+      "positionTriangleSHA256": "c11a07a7aa56e8e0d25cc98d8be4a58547cb564edf83b8ea92da6a1c4657f5f0",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "retention",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P09",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "clip-groove",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "卡入張開量 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料彈塑性曲線 (MPa)",
+            "quantities": [
+              {
+                "quantity": "stress",
+                "unit": "MPa"
+              },
+              {
+                "quantity": "strain",
+                "unit": "1"
+              }
+            ],
+            "unit": "MPa；1",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "保持載荷 (N)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              }
+            ],
+            "unit": "N",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P10",
+      "name": "下止推墊圈",
+      "purpose": "在下盒壁與扣環之間提供止推承壓面。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P10"
+        ],
+        "functionFamily": [
+          "支承",
+          "止推墊圈"
+        ]
+      },
+      "metadata": "parts/D11-P10/part.json",
+      "guide": "parts/D11-P10/PART.md",
+      "thumbnail": "parts/D11-P10/references/D11-P10-model-r1.png",
+      "geometry": "parts/D11-P10/geometry.json",
+      "obj": "parts/D11-P10/part.obj",
+      "triangles": 768,
+      "positionTriangleSHA256": "40363d7780e33cc602d6c01b0987b9e6eb64c3bee0122122f5241dcc4feb7b8a",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "annulus",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P10",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P10-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "annulus",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P06",
+      "name": "周界密封墊",
+      "purpose": "位於盒體法蘭和未完成的門皮接面之間，預留密封接合。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P06"
+        ],
+        "functionFamily": [
+          "密封",
+          "法蘭密封墊"
+        ]
+      },
+      "metadata": "parts/D11-P06/part.json",
+      "guide": "parts/D11-P06/PART.md",
+      "thumbnail": "parts/D11-P06/references/D11-P06-model-r1.png",
+      "geometry": "parts/D11-P06/geometry.json",
+      "obj": "parts/D11-P06/part.obj",
+      "triangles": 1848,
+      "positionTriangleSHA256": "e3e00619d99adbe71410822b103c806c71b5b6bdb02c758827ad47030e34d0aa",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "seal",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P06",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "gasket-thickness",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "壓縮後槽隙 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料壓縮曲線 (MPa)",
+            "quantities": [
+              {
+                "quantity": "stress",
+                "unit": "MPa"
+              },
+              {
+                "quantity": "strain",
+                "unit": "1"
+              }
+            ],
+            "unit": "MPa；1",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "溫度/老化條件",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P04",
+      "name": "雙切向腳回位扭簧",
+      "purpose": "以固定腳接盒體、移動腳接撥臂，提供回位結構候選。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P04"
+        ],
+        "functionFamily": [
+          "彈性回位",
+          "扭簧"
+        ]
+      },
+      "metadata": "parts/D11-P04/part.json",
+      "guide": "parts/D11-P04/PART.md",
+      "thumbnail": "parts/D11-P04/references/D11-P04-model-r1.png",
+      "geometry": "parts/D11-P04/geometry.json",
+      "obj": "parts/D11-P04/part.obj",
+      "triangles": 31536,
+      "positionTriangleSHA256": "bc263d32aa17092263c04b0afad0a31d546b51a8ab930073579d0e89de71c190",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "helix",
+          "elastic",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P04",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "spring-length",
+            "status": "PASS"
+          },
+          {
+            "id": "spring-force",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P11a",
+      "name": "下軸套與彈簧導套",
+      "purpose": "在下盒壁與撥臂底板之間提供肩銷支承及彈簧導向。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P11a"
+        ],
+        "functionFamily": [
+          "支承",
+          "滑動軸套"
+        ]
+      },
+      "metadata": "parts/D11-P11a/part.json",
+      "guide": "parts/D11-P11a/PART.md",
+      "thumbnail": "parts/D11-P11a/references/D11-P11a-model-r1.png",
+      "geometry": "parts/D11-P11a/geometry.json",
+      "obj": "parts/D11-P11a/part.obj",
+      "triangles": 768,
+      "positionTriangleSHA256": "1a7b3c7d4f8f2597627fd25543b8d87e146c7cbedfaec7ae30ece56c1b729a5d",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "annulus",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P11a",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P11a-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "annulus",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P11b",
+      "name": "由上方裝入的上軸套",
+      "purpose": "從上方穿過盒孔，隔開把手軸座與上壁並支承肩銷。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P11b"
+        ],
+        "functionFamily": [
+          "支承",
+          "滑動軸套"
+        ]
+      },
+      "metadata": "parts/D11-P11b/part.json",
+      "guide": "parts/D11-P11b/PART.md",
+      "thumbnail": "parts/D11-P11b/references/D11-P11b-model-r2.png",
+      "geometry": "parts/D11-P11b/geometry.json",
+      "obj": "parts/D11-P11b/part.obj",
+      "triangles": 768,
+      "positionTriangleSHA256": "be1fc36ca614ab114304ddaa369e73b0b0f6090e17dbc032a43125d56f8606ee",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "annulus",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P11b",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P11b-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P02-D11-P11b",
+            "status": "PASS"
+          },
+          {
+            "id": "annulus",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D11-P05a",
+      "name": "D 形凹座拉索撥臂",
+      "purpose": "接收把手的旋轉，預留拉索端頭連接並與回位彈簧接觸。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D11 車門外把手",
+          "把手首件機構",
+          "D11-P05a"
+        ],
+        "functionFamily": [
+          "傳力",
+          "撥臂與連桿"
+        ]
+      },
+      "metadata": "parts/D11-P05a/part.json",
+      "guide": "parts/D11-P05a/PART.md",
+      "thumbnail": "parts/D11-P05a/references/D11-P05a-model-r1.png",
+      "geometry": "parts/D11-P05a/geometry.json",
+      "obj": "parts/D11-P05a/part.obj",
+      "triangles": 7780,
+      "positionTriangleSHA256": "41864cab573cda1935831686136bcf25927b5b63de263a0423d1fa6f06d8632a",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "fit",
+          "moment",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D11-P05a",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "fit-D11-P05a-D11-P03",
+            "status": "PASS"
+          },
+          {
+            "id": "moment-arm",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D05-P15d",
+      "name": "M5×0.8 內六角夾緊螺栓",
+      "purpose": "穿過玻璃夾具的固定體與壓板，與 M5 螺帽形成夾緊組合。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D05 車窗升降器",
+          "D05-P15 玻璃夾具",
+          "D05-P15d"
+        ],
+        "functionFamily": [
+          "緊固",
+          "螺紋緊固",
+          "螺栓"
+        ]
+      },
+      "metadata": "parts/D05-P15d/part.json",
+      "guide": "parts/D05-P15d/PART.md",
+      "thumbnail": "parts/D05-P15d/references/D05-P15d-model-r1.png",
+      "geometry": "parts/D05-P15d/geometry.json",
+      "obj": "parts/D05-P15d/part.obj",
+      "triangles": 51456,
+      "positionTriangleSHA256": "e3a2768b93dec820ef8a8352da0dd36b19058245073a1bb029d99f92fd3f0df4",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "screw",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D05-P15d",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "screw-phase",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    },
+    {
+      "id": "D05-P15e",
+      "name": "M5×0.8 六角螺帽",
+      "purpose": "抵住玻璃夾具固定體背面，與 M5 螺栓配合提供夾緊反力；目前需工具扶持六角外形。",
+      "classification": {
+        "assembly": [
+          "GT01 車輛",
+          "D05 車窗升降器",
+          "D05-P15 玻璃夾具",
+          "D05-P15e"
+        ],
+        "functionFamily": [
+          "緊固",
+          "螺紋緊固",
+          "螺帽"
+        ]
+      },
+      "metadata": "parts/D05-P15e/part.json",
+      "guide": "parts/D05-P15e/PART.md",
+      "thumbnail": "parts/D05-P15e/references/D05-P15e-model-r1.png",
+      "geometry": "parts/D05-P15e/geometry.json",
+      "obj": "parts/D05-P15e/part.obj",
+      "triangles": 9934,
+      "positionTriangleSHA256": "dbb3c6803a122125fc42caf62fdb92d9492ad2eca8c3f74df2f28bd33f334c71",
+      "status": {
+        "geometry": "NATIVE_AUTHORED_SHAPE",
+        "exportPreserved": true,
+        "singleClosedSolid": true,
+        "assemblyComplete": false,
+        "manufacturingCertified": false
+      },
+      "mathematicalQuality": {
+        "revision": "GT01-MATH-QA-R1",
+        "lawIds": [
+          "boundary",
+          "volume",
+          "rigid",
+          "units",
+          "screw",
+          "load"
+        ],
+        "calculation": "../../math-quality.json",
+        "nativeReadback": "../../evidence/math-native-readback.json",
+        "teaching": "../../math-quality.html#D05-P15e",
+        "runner": "../../native/math-quality.mjs",
+        "admission": "../../math-admission.json",
+        "checks": [
+          {
+            "id": "closed-boundary",
+            "status": "PASS"
+          },
+          {
+            "id": "volume-origin",
+            "status": "PASS"
+          },
+          {
+            "id": "identity-units",
+            "status": "PASS"
+          },
+          {
+            "id": "rigid-frame",
+            "status": "PASS"
+          },
+          {
+            "id": "screw-phase",
+            "status": "PASS"
+          },
+          {
+            "id": "load-release",
+            "status": "NEEDS_INPUT"
+          },
+          {
+            "id": "tolerance-release",
+            "status": "NEEDS_INPUT"
+          }
+        ],
+        "openInputs": [
+          {
+            "name": "載荷大小/方向/循環 (N, N·mm)",
+            "quantities": [
+              {
+                "quantity": "force",
+                "unit": "N"
+              },
+              {
+                "quantity": "moment",
+                "unit": "N·mm"
+              },
+              {
+                "quantity": "direction",
+                "unit": "1（單位方向向量）"
+              },
+              {
+                "quantity": "cycles",
+                "unit": "1（次數）"
+              }
+            ],
+            "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "材料牌號、強度與製程",
+            "quantities": [],
+            "unit": "依具體資料欄位與來源指定",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          },
+          {
+            "name": "公差極限及偏心 (mm)",
+            "quantities": [
+              {
+                "quantity": "length",
+                "unit": "mm"
+              }
+            ],
+            "unit": "mm",
+            "reason": "現有原生形體和外觀資料不含此實測輸入。",
+            "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+          }
+        ],
+        "manufacturingReleased": false
+      }
+    }
+  ],
+  "pendingCategories": [
+    {
+      "id": "pending-bearing",
+      "functionFamily": [
+        "支承",
+        "滾動軸承"
+      ],
+      "available": 0,
+      "nextAction": "先選定宿主軸徑、外殼孔、軸向定位及載荷，再施工分離內外圈、滾動體、保持架與間隙並讀回。"
+    },
+    {
+      "id": "pending-cable",
+      "functionFamily": [
+        "傳力",
+        "拉索與端頭"
+      ],
+      "available": 0,
+      "nextAction": "依 P05a 開槽眼與 P02 出口建立端頭、鋼索、外管及保持件，檢查裝入、防脫及工作拉程。"
+    },
+    {
+      "id": "pending-door-fixing",
+      "functionFamily": [
+        "緊固",
+        "門體安裝緊固件"
+      ],
+      "available": 0,
+      "nextAction": "建立門皮、螺母座及匹配法蘭孔的固定螺栓；選定材料、扭矩並驗證座面。"
+    },
+    {
+      "id": "pending-stop",
+      "functionFamily": [
+        "支承",
+        "行程止擋"
+      ],
+      "available": 0,
+      "nextAction": "依把手工作轉角建立盒體止擋和接觸面，驗證極限位置及回位接觸。"
+    }
+  ],
+  "commonReferences": [
+    {
+      "file": "references/D11-assembly-model-r3.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "現行 R3 總體安置及分件關係；形體不是完整總成認證。",
+      "sha256": "29035e8c46ee87251a8c692301076b71a4a07a19bae57512989441d1972d200f"
+    },
+    {
+      "file": "references/D11-return-assembly-r2.png",
+      "authority": "NATIVE_SECTION",
+      "use": "Y=-9.97 與 Y=-20 真實剖面；上方圓截面為上腳接撥臂，下方圓截面為下腳接盒體。",
+      "revisionReason": "R1 在觀看 +Y 時左右標示顛倒；R2 改用上下圓截面定位，幾何未變。",
+      "sha256": "b525f4e6111156250a61c2e2c99fa2f01aa974eb5a463363f5b1ebd27b9cc57e"
+    },
+    {
+      "file": "references/D11-Q01-comparison-r1.png",
+      "authority": "RECONSTRUCTED_COUNTEREXAMPLE",
+      "use": "從 +X,+Y,+Z 斜視檢查上套裝入通路，圈註來自實際碰撞座標。",
+      "revisionReason": "舊 7.5 長上套沿 +Y 進入撞面板；現行長 11、從 +Z 穿 Ø5.7 上孔。480 是取樣頂點事件數。",
+      "sha256": "de541639a038c5a31f55a27ce52dfd21cf3f1def341ab4958e09f6799bde62ac"
+    },
+    {
+      "file": "references/D11-Q02-comparison-r1.png",
+      "authority": "RECONSTRUCTED_COUNTEREXAMPLE",
+      "use": "Y=-9.97 局部剖面，近看 X≈-48.1、Z≈17.95 的孔口。",
+      "revisionReason": "舊肩前過渡半徑 2.2 侵入舊半徑 2.1 孔口；現行軸身保持 R2 到肩平面 Z18。64 是頂點事件數。",
+      "sha256": "0db058dbc42aad710e66967d689f1bfe37dad7ae18545f1522ea006a0d8f419f"
+    }
+  ],
+  "evidenceBindingChecks": [
+    {
+      "evidence": "door-handle-parent-readback-r3.json",
+      "source": "door-handle-carrier.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-parent-readback-r3.json",
+      "source": "door-handle-hardware.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-parent-readback-r3.json",
+      "source": "door-handle-return.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-parent-readback-r3.json",
+      "source": "door-handle-actuator.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-parent-readback-r3.json",
+      "source": "door-handle-lever.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-coupling-readback-r2.json",
+      "source": "door-handle.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-coupling-readback-r2.json",
+      "source": "door-handle-return.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-coupling-readback-r2.json",
+      "source": "door-handle-carrier.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-coupling-readback-r2.json",
+      "source": "door-handle-lever.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-coupling-readback-r2.json",
+      "source": "door-handle-actuator.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-coupling-readback-r2.json",
+      "source": "door-handle-hardware.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle-assembly-paths.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle-carrier.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle-return.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle-actuator.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle-lever.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-assembly-paths-r1.json",
+      "source": "door-handle-hardware.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle-lever.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle-carrier.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle-hardware.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle-return.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle-actuator.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle-assembly-paths.mjs",
+      "pass": true
+    },
+    {
+      "evidence": "door-handle-quality-cases.json",
+      "source": "door-handle.mjs",
+      "pass": true
+    }
+  ],
+  "portableEntries": {
+    "start": "START-HERE.md",
+    "offlineUI": "index.html",
+    "schema": "part.schema.json",
+    "assembly": "assembly.json",
+    "rebuild": "native/rebuild.mjs",
+    "verify": "verify-library.mjs",
+    "mathematicalQuality": "math-quality.html",
+    "mathData": "math-quality.json",
+    "mathRunner": "native/math-quality.mjs",
+    "shapeTheory": "shape-theory.html",
+    "shapeTheoryData": "shape-theory.json",
+    "shapeRunner": "native/verify-shapes.mjs",
+    "knowledge": "knowledge-map.html",
+    "knowledgeData": "knowledge-map.json",
+    "knowledgeGuide": "KNOWLEDGE-GUIDE.md"
+  }
+}

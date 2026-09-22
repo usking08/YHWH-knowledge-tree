@@ -1,0 +1,46 @@
+{
+  "id": "FC-6e06e39728e4cf",
+  "name": "Factory | charcoal-painted-steel",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-12ad330b88671a79369d.json",
+  "geometrySHA256": "12ad330b88671a79369d5ee88518f6ab01c31f8573e012c2dbba6e9c39f50e0c",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -32.5,
+      -32.5,
+      -605
+    ],
+    [
+      32.5,
+      32.5,
+      605
+    ]
+  ],
+  "dimensionsMM": [
+    65,
+    65,
+    1210
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-6e06e39728e4cf.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S6"
+  ],
+  "occurrenceCount": 1
+}

@@ -1,0 +1,1047 @@
+{
+  "signature": "יהוה",
+  "revision": "SEATS-R1",
+  "status": "WORK_IN_PROGRESS",
+  "truth": "AUTHOR_DESIGN",
+  "module": "seats.mjs",
+  "api": "buildGT01Seats(T, materials) -> {root, parts}",
+  "contract": {
+    "units": "mm",
+    "up": "+Z",
+    "front": "-X",
+    "left": "+Y",
+    "seatOrigins": [
+      [
+        190,
+        350,
+        304
+      ],
+      [
+        190,
+        -350,
+        304
+      ]
+    ],
+    "nominalEnvelope": {
+      "width": 500,
+      "height": 860,
+      "localXRange": [
+        -280,
+        330
+      ]
+    },
+    "railLength": 520,
+    "railCentres": [
+      -165,
+      165
+    ],
+    "railCentreDistance": 330,
+    "footCoordinates": [
+      [
+        -225,
+        -205,
+        0
+      ],
+      [
+        225,
+        -205,
+        0
+      ],
+      [
+        -225,
+        205,
+        0
+      ]
+    ]
+  },
+  "sourceAdoption": [
+    {
+      "file": "S00-seat-r2.png",
+      "scope": "形狀與組裝參考",
+      "adopted": [
+        "正面身份",
+        "背面棕褐頭枕皮革與黑背殼分界",
+        "側面後傾與坐面分件",
+        "爆炸圖部件身份"
+      ],
+      "excluded": [
+        "panel 5 滑軌安裝細節"
+      ]
+    },
+    {
+      "file": "S01-back-frame-r2.png",
+      "scope": "形狀與組裝參考",
+      "adopted": [
+        "頭枕 1 孔",
+        "上背中央 1 孔",
+        "腰部中央 2 長孔與實體中央腹板",
+        "左右外側長孔",
+        "肩部孔",
+        "沖壓翻邊身份"
+      ],
+      "supersedes": "S01-back-frame-r1.png"
+    },
+    {
+      "file": "S07-back-cover-r1.png",
+      "scope": "形狀與組裝參考",
+      "adopted": [
+        "薄壁中空皮套",
+        "分裁片",
+        "背部開口",
+        "縫份與底部固定舌"
+      ],
+      "conflict": "此圖的頭枕背部開口與 S00 R2 回裝身份不一致。"
+    }
+  ],
+  "sourceConflictResolution": {
+    "authority": "父層明示決定",
+    "decision": "依 S00 R2 保留棕褐色頭枕背面，增設獨立後裁片，保留曲邊與接縫。",
+    "pieceReferencePart": "S07-HEAD-BACK",
+    "pieceIds": [
+      "SEAT-L-S07-HEAD-BACK",
+      "SEAT-R-S07-HEAD-BACK"
+    ],
+    "currentReference": "S00-seat-r2.png",
+    "independentReferenceStatus": "PENDING_PARENT_REFERENCE",
+    "responsibility": "父層補獨立參考及皮套回裝說明。"
+  },
+  "authoredCompletion": {
+    "status": "AUTHOR_DESIGN_NOT_MEASURED",
+    "items": [
+      "所有數值尺寸、曲率、斷面壁厚與間隙均為依母件範圍補成的作者尺寸。",
+      "滑軌上下 C 形嵌合、承腳、座盆外伸支座與中空墊柱按目前接合面補成。",
+      "調角器與安全帶扣採靜態外形及接合面補成，未含完整內部鎖止機構。",
+      "泡棉外形沿皮革宿主內縮，尚未建立骨架接觸的內部讓位腔。",
+      "皮套裁片、縫份、單針短線與頭枕後片為可分別選取的幾何；縫線實例不是各自獨立製造零件。",
+      "部分沖壓翻邊及凸筋採多個網格描述同一實體特徵；網格子件數不代表可拆實物件數。"
+    ]
+  },
+  "materials": {
+    "leather": {
+      "fallbackColor": "#99714b",
+      "providedMaterialPreserved": true,
+      "uv": true,
+      "nominalCoverThickness": 1.65,
+      "innerScrim": "獨立內襯材質"
+    },
+    "foam": "米白色模製泡棉",
+    "frame": "深色金屬沖壓件",
+    "rails": "金屬上下滑軌",
+    "rearShell": {
+      "color": "#262d2d",
+      "nominalWall": 3.6
+    },
+    "sideTrim": "黑色成形側護蓋",
+    "fasteners": "金屬固定件",
+    "buckleButton": "#b53326",
+    "stitch": {
+      "pitch": 2.4,
+      "segmentLength": 1.25,
+      "radius": 0.28,
+      "representation": "分段 InstancedMesh，保留穩定實例 ID 規則"
+    }
+  },
+  "hierarchy": {
+    "subassemblies": 24,
+    "meshChildren": 370,
+    "stitchInstances": 6218,
+    "childIdRule": "SEAT-{L|R}-{S01..S12}/{semantic-name}/{NN}; head rear panel uses SEAT-{L|R}-S07-HEAD-BACK",
+    "relationships": [
+      "id",
+      "parentId",
+      "ownerPartId",
+      "seatId",
+      "referencePart",
+      "reference",
+      "status",
+      "explode"
+    ],
+    "explodeMeaning": "說明性偏移，尚非經驗證的拆卸路徑。",
+    "completeRecursiveDisassembly": false,
+    "parts": [
+      {
+        "id": "SEAT-L-S01",
+        "name": "座椅 駕駛 椅背骨架",
+        "referencePart": "S01",
+        "reference": "S01-back-frame-r2.png",
+        "explode": [
+          170,
+          0,
+          55
+        ],
+        "childIds": [
+          "SEAT-L-S01/有孔沖壓椅背腹板-腰部中央直腹板保留/01",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/01",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/02",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/03",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/04",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/05",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/06",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/07",
+          "SEAT-L-S01/孔緣沖壓加勁凸筋/08",
+          "SEAT-L-S01/沖壓側樑-18-mm-回折翻邊/01",
+          "SEAT-L-S01/U-型側樑收口唇/01",
+          "SEAT-L-S01/下端沖壓樞軸耳與通孔/01",
+          "SEAT-L-S01/調角器穿軸座/01",
+          "SEAT-L-S01/下端沖壓樞軸耳與通孔/02",
+          "SEAT-L-S01/調角器穿軸座/02"
+        ]
+      },
+      {
+        "id": "SEAT-L-S02",
+        "name": "座椅 駕駛 座墊骨架",
+        "referencePart": "S02",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          0,
+          -55
+        ],
+        "childIds": [
+          "SEAT-L-S02/沖壓座墊盆骨架與四個真開孔/01",
+          "SEAT-L-S02/成形座墊側樑與減重孔/01",
+          "SEAT-L-S02/成形座墊側樑與減重孔/02",
+          "SEAT-L-S02/橫向承托翻邊/01",
+          "SEAT-L-S02/橫向承托翻邊/02"
+        ]
+      },
+      {
+        "id": "SEAT-L-S03",
+        "name": "座椅 駕駛 上下嵌合滑軌",
+        "referencePart": "S03",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          0,
+          -170
+        ],
+        "childIds": [
+          "SEAT-L-S03/下固定-C-型軌/01",
+          "SEAT-L-S03/上移動反-C-型軌/01",
+          "SEAT-L-S03/滾動支承-位於軌道內/01",
+          "SEAT-L-S03/滾動支承-位於軌道內/02",
+          "SEAT-L-S03/滾動支承-位於軌道內/03",
+          "SEAT-L-S03/滾動支承-位於軌道內/04",
+          "SEAT-L-S03/滾動支承-位於軌道內/05",
+          "SEAT-L-S03/滾動支承-位於軌道內/06",
+          "SEAT-L-S03/滾動支承-位於軌道內/07",
+          "SEAT-L-S03/滾動支承-位於軌道內/08",
+          "SEAT-L-S03/滾動支承-位於軌道內/09",
+          "SEAT-L-S03/滾動支承-位於軌道內/10",
+          "SEAT-L-S03/滾動支承-位於軌道內/11",
+          "SEAT-L-S03/滾動支承-位於軌道內/12",
+          "SEAT-L-S03/滾動支承-位於軌道內/13",
+          "SEAT-L-S03/滾動支承-位於軌道內/14",
+          "SEAT-L-S03/滾動支承-位於軌道內/15",
+          "SEAT-L-S03/滾動支承-位於軌道內/16",
+          "SEAT-L-S03/四點落地安裝座與穿孔/01",
+          "SEAT-L-S03/固定軌承腳墊座/01",
+          "SEAT-L-S03/四點落地安裝座與穿孔/02",
+          "SEAT-L-S03/固定軌承腳墊座/02",
+          "SEAT-L-S03/上軌外伸螺栓座-不侵入滾道/01",
+          "SEAT-L-S03/上軌接合柱/01",
+          "SEAT-L-S03/座盆承托中空墊柱/01",
+          "SEAT-L-S03/上軌外伸螺栓座-不侵入滾道/02",
+          "SEAT-L-S03/上軌接合柱/02",
+          "SEAT-L-S03/座盆承托中空墊柱/02",
+          "SEAT-L-S03/軌端止擋銷/01",
+          "SEAT-L-S03/軌端止擋銷/02",
+          "SEAT-L-S03/下固定-C-型軌/02",
+          "SEAT-L-S03/上移動反-C-型軌/02",
+          "SEAT-L-S03/滾動支承-位於軌道內/17",
+          "SEAT-L-S03/滾動支承-位於軌道內/18",
+          "SEAT-L-S03/滾動支承-位於軌道內/19",
+          "SEAT-L-S03/滾動支承-位於軌道內/20",
+          "SEAT-L-S03/滾動支承-位於軌道內/21",
+          "SEAT-L-S03/滾動支承-位於軌道內/22",
+          "SEAT-L-S03/滾動支承-位於軌道內/23",
+          "SEAT-L-S03/滾動支承-位於軌道內/24",
+          "SEAT-L-S03/滾動支承-位於軌道內/25",
+          "SEAT-L-S03/滾動支承-位於軌道內/26",
+          "SEAT-L-S03/滾動支承-位於軌道內/27",
+          "SEAT-L-S03/滾動支承-位於軌道內/28",
+          "SEAT-L-S03/滾動支承-位於軌道內/29",
+          "SEAT-L-S03/滾動支承-位於軌道內/30",
+          "SEAT-L-S03/滾動支承-位於軌道內/31",
+          "SEAT-L-S03/滾動支承-位於軌道內/32",
+          "SEAT-L-S03/四點落地安裝座與穿孔/03",
+          "SEAT-L-S03/固定軌承腳墊座/03",
+          "SEAT-L-S03/四點落地安裝座與穿孔/04",
+          "SEAT-L-S03/固定軌承腳墊座/04",
+          "SEAT-L-S03/上軌外伸螺栓座-不侵入滾道/03",
+          "SEAT-L-S03/上軌接合柱/03",
+          "SEAT-L-S03/座盆承托中空墊柱/03",
+          "SEAT-L-S03/上軌外伸螺栓座-不侵入滾道/04",
+          "SEAT-L-S03/上軌接合柱/04",
+          "SEAT-L-S03/座盆承托中空墊柱/04",
+          "SEAT-L-S03/軌端止擋銷/03",
+          "SEAT-L-S03/軌端止擋銷/04",
+          "SEAT-L-S03/雙軌解鎖連桿/01",
+          "SEAT-L-S03/解鎖握把/01"
+        ]
+      },
+      {
+        "id": "SEAT-L-S04",
+        "name": "座椅 駕駛 調角樞軸",
+        "referencePart": "S04",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          120,
+          0
+        ],
+        "childIds": [
+          "SEAT-L-S04/固定調角側板與穿軸孔/01",
+          "SEAT-L-S04/調角器固定殼/01",
+          "SEAT-L-S04/調角器輸出環/01",
+          "SEAT-L-S04/連接骨架與側板的中空樞軸/01",
+          "SEAT-L-S04/外殼固定螺釘/01",
+          "SEAT-L-S04/外殼固定螺釘/02",
+          "SEAT-L-S04/外殼固定螺釘/03",
+          "SEAT-L-S04/外殼固定螺釘/04",
+          "SEAT-L-S04/固定調角側板與穿軸孔/02",
+          "SEAT-L-S04/調角器固定殼/02",
+          "SEAT-L-S04/調角器輸出環/02",
+          "SEAT-L-S04/連接骨架與側板的中空樞軸/02",
+          "SEAT-L-S04/外殼固定螺釘/05",
+          "SEAT-L-S04/外殼固定螺釘/06",
+          "SEAT-L-S04/外殼固定螺釘/07",
+          "SEAT-L-S04/外殼固定螺釘/08",
+          "SEAT-L-S04/同軸橫向聯結管/01"
+        ]
+      },
+      {
+        "id": "SEAT-L-S05",
+        "name": "座椅 駕駛 椅背泡棉",
+        "referencePart": "S05",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          -105,
+          0,
+          65
+        ],
+        "childIds": [
+          "SEAT-L-S05/連續成形椅背泡棉-頭枕與肩腰承托/01"
+        ]
+      },
+      {
+        "id": "SEAT-L-S06",
+        "name": "座椅 駕駛 座墊泡棉",
+        "referencePart": "S06",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          -25,
+          0,
+          110
+        ],
+        "childIds": [
+          "SEAT-L-S06/成形坐墊泡棉-前鼻-盆形坐面與側翼/01"
+        ]
+      },
+      {
+        "id": "SEAT-L-S07",
+        "name": "座椅 駕駛 椅背皮套",
+        "referencePart": "S07",
+        "reference": "S07-back-cover-r1.png",
+        "explode": [
+          -225,
+          0,
+          95
+        ],
+        "childIds": [
+          "SEAT-L-S07/下背皮革承托裁片/01",
+          "SEAT-L-S07/腰部皮革承托裁片/01",
+          "SEAT-L-S07/上背皮革承托裁片/01",
+          "SEAT-L-S07/一體頭枕正面皮革裁片/01",
+          "SEAT-L-S07/左肩翼至腰側連續皮革裁片/01",
+          "SEAT-L-S07/右肩翼至腰側連續皮革裁片/01",
+          "SEAT-L-S07/左頭枕側襠裁片/01",
+          "SEAT-L-S07/右頭枕側襠裁片/01",
+          "SEAT-L-S07-HEAD-BACK",
+          "SEAT-L-S07/後開口折返縫份/01",
+          "SEAT-L-S07/LOWER-LISTING-TAB/01",
+          "SEAT-L-S07/後開口折返縫份/02",
+          "SEAT-L-S07/LOWER-LISTING-TAB/02",
+          "SEAT-L-S07/TOPSTITCH/01",
+          "SEAT-L-S07/TOPSTITCH/02",
+          "SEAT-L-S07/TOPSTITCH/03",
+          "SEAT-L-S07/TOPSTITCH/04",
+          "SEAT-L-S07/TOPSTITCH/05",
+          "SEAT-L-S07/TOPSTITCH/06",
+          "SEAT-L-S07/TOPSTITCH/07",
+          "SEAT-L-S07/TOPSTITCH/08",
+          "SEAT-L-S07/TOPSTITCH/09",
+          "SEAT-L-S07/TOPSTITCH/10",
+          "SEAT-L-S07/TOPSTITCH/11",
+          "SEAT-L-S07/TOPSTITCH/12",
+          "SEAT-L-S07/TOPSTITCH/13",
+          "SEAT-L-S07/TOPSTITCH/14"
+        ]
+      },
+      {
+        "id": "SEAT-L-S08",
+        "name": "座椅 駕駛 座墊皮套",
+        "referencePart": "S08",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          -75,
+          0,
+          225
+        ],
+        "childIds": [
+          "SEAT-L-S08/獨立前鼻皮革裁片/01",
+          "SEAT-L-S08/中央凹曲坐面皮革裁片/01",
+          "SEAT-L-S08/左大腿側翼皮革裁片/01",
+          "SEAT-L-S08/右大腿側翼皮革裁片/01",
+          "SEAT-L-S08/坐墊下緣包覆皮革裁片/01",
+          "SEAT-L-S08/TOPSTITCH/01",
+          "SEAT-L-S08/TOPSTITCH/02",
+          "SEAT-L-S08/TOPSTITCH/03",
+          "SEAT-L-S08/TOPSTITCH/04",
+          "SEAT-L-S08/TOPSTITCH/05",
+          "SEAT-L-S08/TOPSTITCH/06"
+        ]
+      },
+      {
+        "id": "SEAT-L-S09",
+        "name": "座椅 駕駛 薄背殼",
+        "referencePart": "S09",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          300,
+          0,
+          60
+        ],
+        "childIds": [
+          "SEAT-L-S09/薄壁後殼-側凹線與翻回邊/01",
+          "SEAT-L-S09/殼邊緣圓角收口/01",
+          "SEAT-L-S09/殼邊緣圓角收口/02"
+        ]
+      },
+      {
+        "id": "SEAT-L-S10",
+        "name": "座椅 駕駛 側護蓋",
+        "referencePart": "S10",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          230,
+          0
+        ],
+        "childIds": [
+          "SEAT-L-S10/成形側護蓋-調角器實際讓位孔/01",
+          "SEAT-L-S10/樞軸外緣護圈/01",
+          "SEAT-L-S10/嵌入式護蓋螺釘/01",
+          "SEAT-L-S10/嵌入式護蓋螺釘/02",
+          "SEAT-L-S10/嵌入式護蓋螺釘/03",
+          "SEAT-L-S10/成形側護蓋-調角器實際讓位孔/02",
+          "SEAT-L-S10/樞軸外緣護圈/02",
+          "SEAT-L-S10/嵌入式護蓋螺釘/04",
+          "SEAT-L-S10/嵌入式護蓋螺釘/05",
+          "SEAT-L-S10/嵌入式護蓋螺釘/06"
+        ]
+      },
+      {
+        "id": "SEAT-L-S11",
+        "name": "座椅 駕駛 安全帶扣",
+        "referencePart": "S11",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          -150,
+          0
+        ],
+        "childIds": [
+          "SEAT-L-S11/帶扣承載鋼帶與真安裝孔/01",
+          "SEAT-L-S11/安全帶扣殼與插入口/01",
+          "SEAT-L-S11/紅色釋放鍵/01",
+          "SEAT-L-S11/帶扣至座盆的承托軸套/01",
+          "SEAT-L-S11/帶扣安裝肩軸/01"
+        ]
+      },
+      {
+        "id": "SEAT-L-S12",
+        "name": "座椅 駕駛 固定件",
+        "referencePart": "S12",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          0,
+          -265
+        ],
+        "childIds": [
+          "SEAT-L-S12/地板固定墊圈-孔與安裝座對齊/01",
+          "SEAT-L-S12/地板螺栓光桿段/01",
+          "SEAT-L-S12/地板螺栓六角頭/01",
+          "SEAT-L-S12/地板固定墊圈-孔與安裝座對齊/02",
+          "SEAT-L-S12/地板螺栓光桿段/02",
+          "SEAT-L-S12/地板螺栓六角頭/02",
+          "SEAT-L-S12/地板固定墊圈-孔與安裝座對齊/03",
+          "SEAT-L-S12/地板螺栓光桿段/03",
+          "SEAT-L-S12/地板螺栓六角頭/03",
+          "SEAT-L-S12/地板固定墊圈-孔與安裝座對齊/04",
+          "SEAT-L-S12/地板螺栓光桿段/04",
+          "SEAT-L-S12/地板螺栓六角頭/04",
+          "SEAT-L-S12/上軌至座盆墊圈/01",
+          "SEAT-L-S12/座盆固定螺栓-滾道外側/01",
+          "SEAT-L-S12/座盆螺栓六角頭/01",
+          "SEAT-L-S12/上軌外伸座螺帽/01",
+          "SEAT-L-S12/上軌至座盆墊圈/02",
+          "SEAT-L-S12/座盆固定螺栓-滾道外側/02",
+          "SEAT-L-S12/座盆螺栓六角頭/02",
+          "SEAT-L-S12/上軌外伸座螺帽/02",
+          "SEAT-L-S12/上軌至座盆墊圈/03",
+          "SEAT-L-S12/座盆固定螺栓-滾道外側/03",
+          "SEAT-L-S12/座盆螺栓六角頭/03",
+          "SEAT-L-S12/上軌外伸座螺帽/03",
+          "SEAT-L-S12/上軌至座盆墊圈/04",
+          "SEAT-L-S12/座盆固定螺栓-滾道外側/04",
+          "SEAT-L-S12/座盆螺栓六角頭/04",
+          "SEAT-L-S12/上軌外伸座螺帽/04"
+        ]
+      },
+      {
+        "id": "SEAT-R-S01",
+        "name": "座椅 乘客 椅背骨架",
+        "referencePart": "S01",
+        "reference": "S01-back-frame-r2.png",
+        "explode": [
+          170,
+          0,
+          55
+        ],
+        "childIds": [
+          "SEAT-R-S01/有孔沖壓椅背腹板-腰部中央直腹板保留/01",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/01",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/02",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/03",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/04",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/05",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/06",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/07",
+          "SEAT-R-S01/孔緣沖壓加勁凸筋/08",
+          "SEAT-R-S01/沖壓側樑-18-mm-回折翻邊/01",
+          "SEAT-R-S01/U-型側樑收口唇/01",
+          "SEAT-R-S01/下端沖壓樞軸耳與通孔/01",
+          "SEAT-R-S01/調角器穿軸座/01",
+          "SEAT-R-S01/下端沖壓樞軸耳與通孔/02",
+          "SEAT-R-S01/調角器穿軸座/02"
+        ]
+      },
+      {
+        "id": "SEAT-R-S02",
+        "name": "座椅 乘客 座墊骨架",
+        "referencePart": "S02",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          0,
+          -55
+        ],
+        "childIds": [
+          "SEAT-R-S02/沖壓座墊盆骨架與四個真開孔/01",
+          "SEAT-R-S02/成形座墊側樑與減重孔/01",
+          "SEAT-R-S02/成形座墊側樑與減重孔/02",
+          "SEAT-R-S02/橫向承托翻邊/01",
+          "SEAT-R-S02/橫向承托翻邊/02"
+        ]
+      },
+      {
+        "id": "SEAT-R-S03",
+        "name": "座椅 乘客 上下嵌合滑軌",
+        "referencePart": "S03",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          0,
+          -170
+        ],
+        "childIds": [
+          "SEAT-R-S03/下固定-C-型軌/01",
+          "SEAT-R-S03/上移動反-C-型軌/01",
+          "SEAT-R-S03/滾動支承-位於軌道內/01",
+          "SEAT-R-S03/滾動支承-位於軌道內/02",
+          "SEAT-R-S03/滾動支承-位於軌道內/03",
+          "SEAT-R-S03/滾動支承-位於軌道內/04",
+          "SEAT-R-S03/滾動支承-位於軌道內/05",
+          "SEAT-R-S03/滾動支承-位於軌道內/06",
+          "SEAT-R-S03/滾動支承-位於軌道內/07",
+          "SEAT-R-S03/滾動支承-位於軌道內/08",
+          "SEAT-R-S03/滾動支承-位於軌道內/09",
+          "SEAT-R-S03/滾動支承-位於軌道內/10",
+          "SEAT-R-S03/滾動支承-位於軌道內/11",
+          "SEAT-R-S03/滾動支承-位於軌道內/12",
+          "SEAT-R-S03/滾動支承-位於軌道內/13",
+          "SEAT-R-S03/滾動支承-位於軌道內/14",
+          "SEAT-R-S03/滾動支承-位於軌道內/15",
+          "SEAT-R-S03/滾動支承-位於軌道內/16",
+          "SEAT-R-S03/四點落地安裝座與穿孔/01",
+          "SEAT-R-S03/固定軌承腳墊座/01",
+          "SEAT-R-S03/四點落地安裝座與穿孔/02",
+          "SEAT-R-S03/固定軌承腳墊座/02",
+          "SEAT-R-S03/上軌外伸螺栓座-不侵入滾道/01",
+          "SEAT-R-S03/上軌接合柱/01",
+          "SEAT-R-S03/座盆承托中空墊柱/01",
+          "SEAT-R-S03/上軌外伸螺栓座-不侵入滾道/02",
+          "SEAT-R-S03/上軌接合柱/02",
+          "SEAT-R-S03/座盆承托中空墊柱/02",
+          "SEAT-R-S03/軌端止擋銷/01",
+          "SEAT-R-S03/軌端止擋銷/02",
+          "SEAT-R-S03/下固定-C-型軌/02",
+          "SEAT-R-S03/上移動反-C-型軌/02",
+          "SEAT-R-S03/滾動支承-位於軌道內/17",
+          "SEAT-R-S03/滾動支承-位於軌道內/18",
+          "SEAT-R-S03/滾動支承-位於軌道內/19",
+          "SEAT-R-S03/滾動支承-位於軌道內/20",
+          "SEAT-R-S03/滾動支承-位於軌道內/21",
+          "SEAT-R-S03/滾動支承-位於軌道內/22",
+          "SEAT-R-S03/滾動支承-位於軌道內/23",
+          "SEAT-R-S03/滾動支承-位於軌道內/24",
+          "SEAT-R-S03/滾動支承-位於軌道內/25",
+          "SEAT-R-S03/滾動支承-位於軌道內/26",
+          "SEAT-R-S03/滾動支承-位於軌道內/27",
+          "SEAT-R-S03/滾動支承-位於軌道內/28",
+          "SEAT-R-S03/滾動支承-位於軌道內/29",
+          "SEAT-R-S03/滾動支承-位於軌道內/30",
+          "SEAT-R-S03/滾動支承-位於軌道內/31",
+          "SEAT-R-S03/滾動支承-位於軌道內/32",
+          "SEAT-R-S03/四點落地安裝座與穿孔/03",
+          "SEAT-R-S03/固定軌承腳墊座/03",
+          "SEAT-R-S03/四點落地安裝座與穿孔/04",
+          "SEAT-R-S03/固定軌承腳墊座/04",
+          "SEAT-R-S03/上軌外伸螺栓座-不侵入滾道/03",
+          "SEAT-R-S03/上軌接合柱/03",
+          "SEAT-R-S03/座盆承托中空墊柱/03",
+          "SEAT-R-S03/上軌外伸螺栓座-不侵入滾道/04",
+          "SEAT-R-S03/上軌接合柱/04",
+          "SEAT-R-S03/座盆承托中空墊柱/04",
+          "SEAT-R-S03/軌端止擋銷/03",
+          "SEAT-R-S03/軌端止擋銷/04",
+          "SEAT-R-S03/雙軌解鎖連桿/01",
+          "SEAT-R-S03/解鎖握把/01"
+        ]
+      },
+      {
+        "id": "SEAT-R-S04",
+        "name": "座椅 乘客 調角樞軸",
+        "referencePart": "S04",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          -120,
+          0
+        ],
+        "childIds": [
+          "SEAT-R-S04/固定調角側板與穿軸孔/01",
+          "SEAT-R-S04/調角器固定殼/01",
+          "SEAT-R-S04/調角器輸出環/01",
+          "SEAT-R-S04/連接骨架與側板的中空樞軸/01",
+          "SEAT-R-S04/外殼固定螺釘/01",
+          "SEAT-R-S04/外殼固定螺釘/02",
+          "SEAT-R-S04/外殼固定螺釘/03",
+          "SEAT-R-S04/外殼固定螺釘/04",
+          "SEAT-R-S04/固定調角側板與穿軸孔/02",
+          "SEAT-R-S04/調角器固定殼/02",
+          "SEAT-R-S04/調角器輸出環/02",
+          "SEAT-R-S04/連接骨架與側板的中空樞軸/02",
+          "SEAT-R-S04/外殼固定螺釘/05",
+          "SEAT-R-S04/外殼固定螺釘/06",
+          "SEAT-R-S04/外殼固定螺釘/07",
+          "SEAT-R-S04/外殼固定螺釘/08",
+          "SEAT-R-S04/同軸橫向聯結管/01"
+        ]
+      },
+      {
+        "id": "SEAT-R-S05",
+        "name": "座椅 乘客 椅背泡棉",
+        "referencePart": "S05",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          -105,
+          0,
+          65
+        ],
+        "childIds": [
+          "SEAT-R-S05/連續成形椅背泡棉-頭枕與肩腰承托/01"
+        ]
+      },
+      {
+        "id": "SEAT-R-S06",
+        "name": "座椅 乘客 座墊泡棉",
+        "referencePart": "S06",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          -25,
+          0,
+          110
+        ],
+        "childIds": [
+          "SEAT-R-S06/成形坐墊泡棉-前鼻-盆形坐面與側翼/01"
+        ]
+      },
+      {
+        "id": "SEAT-R-S07",
+        "name": "座椅 乘客 椅背皮套",
+        "referencePart": "S07",
+        "reference": "S07-back-cover-r1.png",
+        "explode": [
+          -225,
+          0,
+          95
+        ],
+        "childIds": [
+          "SEAT-R-S07/下背皮革承托裁片/01",
+          "SEAT-R-S07/腰部皮革承托裁片/01",
+          "SEAT-R-S07/上背皮革承托裁片/01",
+          "SEAT-R-S07/一體頭枕正面皮革裁片/01",
+          "SEAT-R-S07/左肩翼至腰側連續皮革裁片/01",
+          "SEAT-R-S07/右肩翼至腰側連續皮革裁片/01",
+          "SEAT-R-S07/左頭枕側襠裁片/01",
+          "SEAT-R-S07/右頭枕側襠裁片/01",
+          "SEAT-R-S07-HEAD-BACK",
+          "SEAT-R-S07/後開口折返縫份/01",
+          "SEAT-R-S07/LOWER-LISTING-TAB/01",
+          "SEAT-R-S07/後開口折返縫份/02",
+          "SEAT-R-S07/LOWER-LISTING-TAB/02",
+          "SEAT-R-S07/TOPSTITCH/01",
+          "SEAT-R-S07/TOPSTITCH/02",
+          "SEAT-R-S07/TOPSTITCH/03",
+          "SEAT-R-S07/TOPSTITCH/04",
+          "SEAT-R-S07/TOPSTITCH/05",
+          "SEAT-R-S07/TOPSTITCH/06",
+          "SEAT-R-S07/TOPSTITCH/07",
+          "SEAT-R-S07/TOPSTITCH/08",
+          "SEAT-R-S07/TOPSTITCH/09",
+          "SEAT-R-S07/TOPSTITCH/10",
+          "SEAT-R-S07/TOPSTITCH/11",
+          "SEAT-R-S07/TOPSTITCH/12",
+          "SEAT-R-S07/TOPSTITCH/13",
+          "SEAT-R-S07/TOPSTITCH/14"
+        ]
+      },
+      {
+        "id": "SEAT-R-S08",
+        "name": "座椅 乘客 座墊皮套",
+        "referencePart": "S08",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          -75,
+          0,
+          225
+        ],
+        "childIds": [
+          "SEAT-R-S08/獨立前鼻皮革裁片/01",
+          "SEAT-R-S08/中央凹曲坐面皮革裁片/01",
+          "SEAT-R-S08/左大腿側翼皮革裁片/01",
+          "SEAT-R-S08/右大腿側翼皮革裁片/01",
+          "SEAT-R-S08/坐墊下緣包覆皮革裁片/01",
+          "SEAT-R-S08/TOPSTITCH/01",
+          "SEAT-R-S08/TOPSTITCH/02",
+          "SEAT-R-S08/TOPSTITCH/03",
+          "SEAT-R-S08/TOPSTITCH/04",
+          "SEAT-R-S08/TOPSTITCH/05",
+          "SEAT-R-S08/TOPSTITCH/06"
+        ]
+      },
+      {
+        "id": "SEAT-R-S09",
+        "name": "座椅 乘客 薄背殼",
+        "referencePart": "S09",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          300,
+          0,
+          60
+        ],
+        "childIds": [
+          "SEAT-R-S09/薄壁後殼-側凹線與翻回邊/01",
+          "SEAT-R-S09/殼邊緣圓角收口/01",
+          "SEAT-R-S09/殼邊緣圓角收口/02"
+        ]
+      },
+      {
+        "id": "SEAT-R-S10",
+        "name": "座椅 乘客 側護蓋",
+        "referencePart": "S10",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          -230,
+          0
+        ],
+        "childIds": [
+          "SEAT-R-S10/成形側護蓋-調角器實際讓位孔/01",
+          "SEAT-R-S10/樞軸外緣護圈/01",
+          "SEAT-R-S10/嵌入式護蓋螺釘/01",
+          "SEAT-R-S10/嵌入式護蓋螺釘/02",
+          "SEAT-R-S10/嵌入式護蓋螺釘/03",
+          "SEAT-R-S10/成形側護蓋-調角器實際讓位孔/02",
+          "SEAT-R-S10/樞軸外緣護圈/02",
+          "SEAT-R-S10/嵌入式護蓋螺釘/04",
+          "SEAT-R-S10/嵌入式護蓋螺釘/05",
+          "SEAT-R-S10/嵌入式護蓋螺釘/06"
+        ]
+      },
+      {
+        "id": "SEAT-R-S11",
+        "name": "座椅 乘客 安全帶扣",
+        "referencePart": "S11",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          150,
+          0
+        ],
+        "childIds": [
+          "SEAT-R-S11/帶扣承載鋼帶與真安裝孔/01",
+          "SEAT-R-S11/安全帶扣殼與插入口/01",
+          "SEAT-R-S11/紅色釋放鍵/01",
+          "SEAT-R-S11/帶扣至座盆的承托軸套/01",
+          "SEAT-R-S11/帶扣安裝肩軸/01"
+        ]
+      },
+      {
+        "id": "SEAT-R-S12",
+        "name": "座椅 乘客 固定件",
+        "referencePart": "S12",
+        "reference": "S00-seat-r2.png",
+        "explode": [
+          0,
+          0,
+          -265
+        ],
+        "childIds": [
+          "SEAT-R-S12/地板固定墊圈-孔與安裝座對齊/01",
+          "SEAT-R-S12/地板螺栓光桿段/01",
+          "SEAT-R-S12/地板螺栓六角頭/01",
+          "SEAT-R-S12/地板固定墊圈-孔與安裝座對齊/02",
+          "SEAT-R-S12/地板螺栓光桿段/02",
+          "SEAT-R-S12/地板螺栓六角頭/02",
+          "SEAT-R-S12/地板固定墊圈-孔與安裝座對齊/03",
+          "SEAT-R-S12/地板螺栓光桿段/03",
+          "SEAT-R-S12/地板螺栓六角頭/03",
+          "SEAT-R-S12/地板固定墊圈-孔與安裝座對齊/04",
+          "SEAT-R-S12/地板螺栓光桿段/04",
+          "SEAT-R-S12/地板螺栓六角頭/04",
+          "SEAT-R-S12/上軌至座盆墊圈/01",
+          "SEAT-R-S12/座盆固定螺栓-滾道外側/01",
+          "SEAT-R-S12/座盆螺栓六角頭/01",
+          "SEAT-R-S12/上軌外伸座螺帽/01",
+          "SEAT-R-S12/上軌至座盆墊圈/02",
+          "SEAT-R-S12/座盆固定螺栓-滾道外側/02",
+          "SEAT-R-S12/座盆螺栓六角頭/02",
+          "SEAT-R-S12/上軌外伸座螺帽/02",
+          "SEAT-R-S12/上軌至座盆墊圈/03",
+          "SEAT-R-S12/座盆固定螺栓-滾道外側/03",
+          "SEAT-R-S12/座盆螺栓六角頭/03",
+          "SEAT-R-S12/上軌外伸座螺帽/03",
+          "SEAT-R-S12/上軌至座盆墊圈/04",
+          "SEAT-R-S12/座盆固定螺栓-滾道外側/04",
+          "SEAT-R-S12/座盆螺栓六角頭/04",
+          "SEAT-R-S12/上軌外伸座螺帽/04"
+        ]
+      }
+    ]
+  },
+  "nativeReadback": {
+    "reader": "本機 Three.js 實際建構；未啟動瀏覽器或常駐行程。",
+    "seatBounds": [
+      {
+        "id": "SEAT-L",
+        "origin": [
+          190,
+          350,
+          304
+        ],
+        "worldMin": [
+          -87.629150390625,
+          100,
+          304
+        ],
+        "worldMax": [
+          510.9962463378906,
+          600,
+          1164
+        ],
+        "localMin": [
+          -277.629150390625,
+          -250,
+          0
+        ],
+        "localMax": [
+          320.9962463378906,
+          250,
+          860
+        ]
+      },
+      {
+        "id": "SEAT-R",
+        "origin": [
+          190,
+          -350,
+          304
+        ],
+        "worldMin": [
+          -87.629150390625,
+          -600,
+          304
+        ],
+        "worldMax": [
+          510.9962463378906,
+          -100,
+          1164
+        ],
+        "localMin": [
+          -277.629150390625,
+          -250,
+          0
+        ],
+        "localMax": [
+          320.9962463378906,
+          250,
+          860
+        ]
+      }
+    ],
+    "meshChildren": 370,
+    "stitchInstances": 6218,
+    "renderedTriangles": 509800,
+    "nonfiniteAttributes": [],
+    "duplicateIds": [],
+    "missingLeatherUV": [],
+    "degenerateTriangles": [],
+    "bumpMapIdentityPreserved": true,
+    "frameHoleProbes": [
+      {
+        "name": "headrest",
+        "localYZ": [
+          0,
+          745
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "upperBack",
+        "localYZ": [
+          0,
+          600
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "lumbarLeft",
+        "localYZ": [
+          55,
+          350
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "lumbarRight",
+        "localYZ": [
+          -55,
+          350
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "outerLeft",
+        "localYZ": [
+          148,
+          350
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "outerRight",
+        "localYZ": [
+          -148,
+          350
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "shoulderLeft",
+        "localYZ": [
+          125,
+          578
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "shoulderRight",
+        "localYZ": [
+          -125,
+          578
+        ],
+        "expectedOpen": true,
+        "observedOpen": true,
+        "pass": true
+      },
+      {
+        "name": "centralWeb",
+        "localYZ": [
+          0,
+          350
+        ],
+        "expectedOpen": false,
+        "observedOpen": false,
+        "pass": true
+      }
+    ],
+    "mountHoleProbes": [
+      {
+        "localXYZ": [
+          -225,
+          -205,
+          0
+        ],
+        "open": true
+      },
+      {
+        "localXYZ": [
+          -225,
+          205,
+          0
+        ],
+        "open": true
+      },
+      {
+        "localXYZ": [
+          225,
+          -205,
+          0
+        ],
+        "open": true
+      },
+      {
+        "localXYZ": [
+          225,
+          205,
+          0
+        ],
+        "open": true
+      }
+    ]
+  },
+  "remaining": [
+    "父層整合後的實際影像與多視角外形驗收。",
+    "頭枕後裁片獨立參考仍待父層提供。",
+    "S02—S06、S08—S12 的獨立下級零件參考尚未作為本模組施工依據。",
+    "尚未完成全層級實體分件、鎖止機構、動態拆裝路徑及製造接合面驗證。"
+  ]
+}

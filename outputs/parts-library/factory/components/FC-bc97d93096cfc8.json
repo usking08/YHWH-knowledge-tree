@@ -1,0 +1,46 @@
+{
+  "id": "FC-bc97d93096cfc8",
+  "name": "Sign | GT01",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-af7d119d48fd98e33ee7.json",
+  "geometrySHA256": "af7d119d48fd98e33ee7e1b65315a656bf5a6614cbfe93b72eb02599445a2326",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1100,
+      -290,
+      0
+    ],
+    [
+      1100,
+      290,
+      0
+    ]
+  ],
+  "dimensionsMM": [
+    2200,
+    580,
+    0
+  ],
+  "materials": [
+    "e888ca8c-9ef4-4b1d-a624-3765282a1178"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-bc97d93096cfc8.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-G01"
+  ],
+  "occurrenceCount": 1
+}

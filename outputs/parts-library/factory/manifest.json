@@ -1,0 +1,11 @@
+{
+  "revision": "STOCK-R1/LAYOUT-R2",
+  "components": 457,
+  "occurrences": 7470,
+  "geometryCount": 550,
+  "allGeometryUsesActualAttributes": true,
+  "drawings": 457,
+  "maxSheetBytes": 91532,
+  "truth": "REUSABLE_CURRENT_GEOMETRY_NOT_A_COMPLETE_MANUFACTURING_BOM",
+  "qualification": false
+}

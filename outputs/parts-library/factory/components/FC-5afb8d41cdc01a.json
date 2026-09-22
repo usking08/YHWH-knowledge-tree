@@ -1,0 +1,46 @@
+{
+  "id": "FC-5afb8d41cdc01a",
+  "name": "incoming components crate",
+  "family": "STORAGE",
+  "purpose": "保存身份、承托來料並交給下游工位。",
+  "assemblyTeaching": "棧木→鋪板→箱體底側蓋→束帶及標籤；箱內物件與外箱分開記帳。",
+  "verification": "外包絡用於動線；材料壁厚、空腔與插叉方向需另查。",
+  "unresolved": "箱內內容物及綁固工法尚未具體化。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    1000,
+    850,
+    420
+  ],
+  "localBounds": [
+    [
+      -500,
+      -425,
+      -210
+    ],
+    [
+      500,
+      425,
+      210
+    ]
+  ],
+  "dimensionsMM": [
+    1000,
+    850,
+    420
+  ],
+  "materials": [
+    "Factory | parts-carton"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-5afb8d41cdc01a.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B01"
+  ],
+  "occurrenceCount": 8
+}

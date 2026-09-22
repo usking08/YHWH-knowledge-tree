@@ -1,0 +1,51 @@
+{
+  "id": "FC-01e9a37b31c92e",
+  "name": "service stop button",
+  "family": "TOOL",
+  "purpose": "轉動固定件、定位工件或施加受控夾持。",
+  "assemblyTeaching": "工具頭→傳力桿→握持面；虎鉗固定座→導向滑塊→活動鉗口→絲桿與旋柄。",
+  "verification": "扳手環孔要貫穿、起子末端要有實際刃型；虎鉗夾口對向且保留行程。",
+  "unresolved": "虎鉗牙形、工具掛板孔列、材料強度與工具配合尺寸待驗。",
+  "units": "mm",
+  "geometry": "geometry/G-5b34bce599af276c7bb1.json",
+  "geometrySHA256": "5b34bce599af276c7bb18f1354adff2eedfd51c2df0df4ad33c2d542a25c326c",
+  "scale": [
+    75,
+    100,
+    75
+  ],
+  "localBounds": [
+    [
+      -75,
+      -50,
+      -75
+    ],
+    [
+      75,
+      50,
+      75
+    ]
+  ],
+  "dimensionsMM": [
+    150,
+    100,
+    150
+  ],
+  "materials": [
+    "Factory | quarantine-red"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-01e9a37b31c92e.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S1",
+    "F-S2",
+    "F-S3",
+    "F-S4",
+    "F-S5",
+    "F-S6"
+  ],
+  "occurrenceCount": 12
+}

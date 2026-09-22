@@ -1,0 +1,46 @@
+{
+  "id": "FC-9d9081523150c1",
+  "name": "welded mesh vertical wire",
+  "family": "BOUNDARY",
+  "purpose": "標示空間邊界、提供通行或隔離位置。",
+  "assemblyTeaching": "立柱→框→網片／門扇→鉸鏈與鎖扣→地面接口。",
+  "verification": "孔洞是真空間；門扇需能旋轉且不穿鄰件；通行淨空用實際包絡檢查。",
+  "unresolved": "現有隔離門鉸鏈與實際開啟路徑未完成；不是安全設施驗收。",
+  "units": "mm",
+  "geometry": "geometry/G-97021390466d29a2372b.json",
+  "geometrySHA256": "97021390466d29a2372ba7bb8cbe60f15f504760d7bde564edee1453828f6f55",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -3,
+      -3,
+      -1185
+    ],
+    [
+      3,
+      3,
+      1185
+    ]
+  ],
+  "dimensionsMM": [
+    6,
+    6,
+    2370
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-9d9081523150c1.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B07"
+  ],
+  "occurrenceCount": 109
+}

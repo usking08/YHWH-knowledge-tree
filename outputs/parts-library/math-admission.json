@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "parts-math-admission/v1",
+  "purpose": "讓下一位 AI 依真實用途選取適用模型、施工、讀回與修正。",
+  "requiredPerPart": [
+    "identity",
+    "sourceAuthority",
+    "coordinateFrameAndUnits",
+    "physicalBoundary",
+    "purpose",
+    "interfaces",
+    "assemblyPath",
+    "applicableLawsWithPremises",
+    "inputValuesUnitsAndSource",
+    "calculation",
+    "nativeReadback",
+    "acceptanceCriterion",
+    "counterexampleOrFailureMode",
+    "revisionBinding",
+    "nextActionForEveryUnresolvedInput"
+  ],
+  "claimLayers": [
+    "reference fidelity",
+    "geometry",
+    "installation and removal",
+    "working motion and contact",
+    "material/load/fatigue",
+    "manufacturing/process"
+  ],
+  "rules": [
+    "新零件沒有功能專屬公式、適用條件與讀回，不得套用一張通用 PASS。",
+    "NEEDS_INPUT 是待取得真實資料；記錄具體取得方法並持續施工可確定的項目。",
+    "物理模型與材料數據的可信範圍一併傳遞，不稱公式為所有現實的無條件保證。",
+    "數值容差、設計間隙、製造公差和量測不確定度是不同欄位。",
+    "改形體、接面、材料或載荷即重算相依檢查；不修改先前反例以抹除失敗。"
+  ],
+  "futureFamilies": [
+    {
+      "family": "齒輪與傳動",
+      "model": "節圓/模數/齒數與速比；嚙合/背隙/接觸；齒根、齒面與潤滑",
+      "input": "真實齒形、中心距、扭矩、轉速、材料及使用週期"
+    },
+    {
+      "family": "軸承與支承",
+      "model": "內外圈配合、滾動接觸、軸向定位及壽命",
+      "input": "軸向/徑向載荷、轉速、材料/型錄、溫度與潤滑"
+    },
+    {
+      "family": "車身與面板",
+      "model": "曲面連續、厚度/間隙、接合路徑、彎曲/屈曲與載荷路徑",
+      "input": "參考曲面、板厚、支承、製程、載荷與材料"
+    },
+    {
+      "family": "線束、拉索、管路",
+      "model": "端接、最小彎曲半徑、拉程/預緊、掃掠與能量/流量關係",
+      "input": "宿主路由、端頭、材料、工作行程、流量或電氣負載"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-96fefcd8e26191",
+  "name": "Sign | 座艙與內裝  CABIN FIT",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-5fd8c07a0ec74a80ac3b.json",
+  "geometrySHA256": "5fd8c07a0ec74a80ac3b14339f9895acf487734a0d3656b32beacd58da1a9d27",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2200,
+      -280,
+      0
+    ],
+    [
+      2200,
+      280,
+      0
+    ]
+  ],
+  "dimensionsMM": [
+    4400,
+    560,
+    0
+  ],
+  "materials": [
+    "a0d2b89d-bba2-429a-ab91-d6ed8d432cb0"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-96fefcd8e26191.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B05"
+  ],
+  "occurrenceCount": 1
+}

@@ -1,0 +1,456 @@
+{
+  "schema": "GT01-motor-brush-native-readback/v1",
+  "reader": "Node + local outputs/source/three.mjs",
+  "node": "v24.17.0",
+  "threeRevision": "160",
+  "units": "mm",
+  "sourceSHA256": "7af37e6c01e82654bd5b101d0d9f3832929f6722c1459f0c311cf4e30a038c39",
+  "coordinateFrame": "motor-shaft-local; +X axis; opposing parts rotated pi about X",
+  "interfaces": {
+    "units": "mm",
+    "coordinateSpace": "motor-shaft-local",
+    "shaftAxis": [
+      1,
+      0,
+      0
+    ],
+    "shaftCentre": [
+      0,
+      0,
+      0
+    ],
+    "authority": "AUTHOR_DESIGN",
+    "brushCount": 2,
+    "springCount": 2,
+    "commutatorContactRadius": 5.2,
+    "brushContactAxialX": [
+      42.8,
+      46.2
+    ],
+    "brushRotationAboutX": [
+      0,
+      3.141592653589793
+    ],
+    "leadSeatOpenings": [
+      [
+        42.8,
+        8.1,
+        0
+      ],
+      [
+        42.8,
+        -8.1,
+        0
+      ]
+    ],
+    "leadSeatDrillAxis": [
+      1,
+      0,
+      0
+    ],
+    "leadSeatDiameter": 0.8,
+    "leadSeatDepth": 0.7
+  },
+  "edgeWeldTolerance_mm": 0.00001,
+  "components": [
+    {
+      "ref": "D05-P14g",
+      "instance": 1,
+      "material": "carbon",
+      "triangles": 786,
+      "signedVolume_mm3": 43.930683638726165,
+      "nonFiniteValues": 0,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedBodies": 1,
+      "outwardNormalMinimumDot": 0.9987946119498364,
+      "bounds_mm": {
+        "min": [
+          42.79999923706055,
+          4.947726726531982,
+          -1.600000023841858
+        ],
+        "max": [
+          46.20000076293945,
+          9.199999809265137,
+          1.600000023841858
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14h",
+      "instance": 1,
+      "material": "springSteel",
+      "triangles": 30768,
+      "signedVolume_mm3": 2.1220334241160206,
+      "nonFiniteValues": 0,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedBodies": 1,
+      "outwardNormalMinimumDot": 0.9895722114376851,
+      "bounds_mm": {
+        "min": [
+          43.2599983215332,
+          9.199999809265137,
+          -1.2400000095367432
+        ],
+        "max": [
+          45.7400016784668,
+          13.5,
+          1.2400000095367432
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14g",
+      "instance": 2,
+      "material": "carbon",
+      "triangles": 786,
+      "signedVolume_mm3": 43.93068363872619,
+      "nonFiniteValues": 0,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedBodies": 1,
+      "outwardNormalMinimumDot": 0.9987946119498364,
+      "bounds_mm": {
+        "min": [
+          42.79999923706055,
+          -9.199999809265137,
+          -1.600000023841858
+        ],
+        "max": [
+          46.20000076293945,
+          -4.947726726531982,
+          1.600000023841858
+        ]
+      },
+      "passed": true
+    },
+    {
+      "ref": "D05-P14h",
+      "instance": 2,
+      "material": "springSteel",
+      "triangles": 30768,
+      "signedVolume_mm3": 2.1220334241160175,
+      "nonFiniteValues": 0,
+      "degenerateTriangles": 0,
+      "nonManifoldEdges": 0,
+      "connectedBodies": 1,
+      "outwardNormalMinimumDot": 0.9895722114376851,
+      "bounds_mm": {
+        "min": [
+          43.2599983215332,
+          -13.5,
+          -1.2400000095367432
+        ],
+        "max": [
+          45.7400016784668,
+          -9.199999809265137,
+          1.2400000095367432
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "brushReadback": [
+    {
+      "instance": 1,
+      "blindSeat": {
+        "opening": [
+          42.8,
+          8.1,
+          0
+        ],
+        "nominalDiameter_mm": 0.8,
+        "expectedDepth_mm": 0.7,
+        "centreAxisHits": [
+          {
+            "distance_mm": 3.5,
+            "point_mm": [
+              43.5,
+              8.1,
+              0
+            ]
+          },
+          {
+            "distance_mm": 6.200000762939453,
+            "point_mm": [
+              46.20000076293945,
+              8.1,
+              0
+            ]
+          }
+        ],
+        "rimAxisHits": [
+          {
+            "distance_mm": 2.799999237060547,
+            "point_mm": [
+              42.79999923706055,
+              8.1,
+              0.41
+            ]
+          },
+          {
+            "distance_mm": 6.200000762939453,
+            "point_mm": [
+              46.20000076293945,
+              8.1,
+              0.41
+            ]
+          }
+        ],
+        "measuredDepth_mm": 0.7000007629394531,
+        "floorHasMaterialBeyond": true
+      },
+      "contactCylinder": {
+        "nominalRadius_mm": 5.2,
+        "surfaceVertexRadiusRange_mm": [
+          5.199999768283884,
+          5.200000230707923
+        ],
+        "vertexCount": 1314,
+        "radialRayReadback": [
+          {
+            "z_mm": -1.2,
+            "hit": {
+              "distance_mm": 5.059629635735093,
+              "point_mm": [
+                44.5,
+                5.059629635735093,
+                -1.2
+              ]
+            },
+            "radius_mm": 5.199985774096774,
+            "expectedY_mm": 5.059644256269407
+          },
+          {
+            "z_mm": 0,
+            "hit": {
+              "distance_mm": 5.199999809265137,
+              "point_mm": [
+                44.5,
+                5.199999809265137,
+                0
+              ]
+            },
+            "radius_mm": 5.199999809265137,
+            "expectedY_mm": 5.2
+          },
+          {
+            "z_mm": 1.2,
+            "hit": {
+              "distance_mm": 5.059629635735093,
+              "point_mm": [
+                44.5,
+                5.059629635735093,
+                1.2
+              ]
+            },
+            "radius_mm": 5.199985774096774,
+            "expectedY_mm": 5.059644256269407
+          }
+        ]
+      },
+      "springToBrushContact": {
+        "brushPlane_mm": 9.199999809265137,
+        "springPlane_mm": 9.199999809265137,
+        "planeSeparation_mm": 0,
+        "brushSupportRay": {
+          "distance_mm": 4.800000190734863,
+          "point_mm": [
+            45.6,
+            9.199999809265137,
+            0
+          ]
+        }
+      },
+      "passed": true
+    },
+    {
+      "instance": 2,
+      "blindSeat": {
+        "opening": [
+          42.8,
+          -8.1,
+          0
+        ],
+        "nominalDiameter_mm": 0.8,
+        "expectedDepth_mm": 0.7,
+        "centreAxisHits": [
+          {
+            "distance_mm": 3.5,
+            "point_mm": [
+              43.5,
+              -8.1,
+              0
+            ]
+          },
+          {
+            "distance_mm": 6.200000762939453,
+            "point_mm": [
+              46.20000076293945,
+              -8.1,
+              0
+            ]
+          }
+        ],
+        "rimAxisHits": [
+          {
+            "distance_mm": 2.799999237060547,
+            "point_mm": [
+              42.79999923706055,
+              -8.1,
+              0.41
+            ]
+          },
+          {
+            "distance_mm": 6.200000762939453,
+            "point_mm": [
+              46.20000076293945,
+              -8.1,
+              0.41
+            ]
+          }
+        ],
+        "measuredDepth_mm": 0.7000007629394531,
+        "floorHasMaterialBeyond": true
+      },
+      "contactCylinder": {
+        "nominalRadius_mm": 5.2,
+        "surfaceVertexRadiusRange_mm": [
+          5.199999768283884,
+          5.200000230707923
+        ],
+        "vertexCount": 1314,
+        "radialRayReadback": [
+          {
+            "z_mm": -1.2,
+            "hit": {
+              "distance_mm": 5.059629635735093,
+              "point_mm": [
+                44.5,
+                -5.059629635735093,
+                -1.2
+              ]
+            },
+            "radius_mm": 5.199985774096774,
+            "expectedY_mm": -5.059644256269407
+          },
+          {
+            "z_mm": 0,
+            "hit": {
+              "distance_mm": 5.199999809265137,
+              "point_mm": [
+                44.5,
+                -5.199999809265137,
+                0
+              ]
+            },
+            "radius_mm": 5.199999809265137,
+            "expectedY_mm": -5.2
+          },
+          {
+            "z_mm": 1.2,
+            "hit": {
+              "distance_mm": 5.059629635735093,
+              "point_mm": [
+                44.5,
+                -5.059629635735093,
+                1.2
+              ]
+            },
+            "radius_mm": 5.199985774096774,
+            "expectedY_mm": -5.059644256269407
+          }
+        ]
+      },
+      "springToBrushContact": {
+        "brushPlane_mm": -9.199999809265137,
+        "springPlane_mm": -9.199999809265137,
+        "planeSeparation_mm": 0,
+        "brushSupportRay": {
+          "distance_mm": 4.800000190734863,
+          "point_mm": [
+            45.6,
+            -9.199999809265137,
+            0
+          ]
+        }
+      },
+      "passed": true
+    }
+  ],
+  "springReadback": [
+    {
+      "instance": 1,
+      "measuredTurns": 5.000000000000007,
+      "centrelineLength_mm": 34.878529156686014,
+      "minimumNonlocalCentrelineSegmentDistance_mm": 0.2997133447279765,
+      "nominalWireDiameter_mm": 0.28,
+      "minimumNonlocalWireEnvelopeGap_mm": 0.01971334472797648,
+      "closestSegmentPair": [
+        0,
+        127
+      ],
+      "minimumDiscreteCurvatureRadius_mm": 1.0995923650346138,
+      "firstClosingTurnRise_mm": 0.3000000000000007,
+      "lastClosingTurnRise_mm": 0.3000000000000007,
+      "startEndCapHit": {
+        "distance_mm": 0.1,
+        "point_mm": [
+          45.6,
+          9.34,
+          0
+        ]
+      },
+      "outerEndCapHit": {
+        "distance_mm": 0.1,
+        "point_mm": [
+          45.6,
+          13.36,
+          -1.3461454173580023e-15
+        ]
+      },
+      "passed": true
+    },
+    {
+      "instance": 2,
+      "measuredTurns": 5.000000000000007,
+      "centrelineLength_mm": 34.878529156686014,
+      "minimumNonlocalCentrelineSegmentDistance_mm": 0.2997133447279765,
+      "nominalWireDiameter_mm": 0.28,
+      "minimumNonlocalWireEnvelopeGap_mm": 0.01971334472797648,
+      "closestSegmentPair": [
+        0,
+        127
+      ],
+      "minimumDiscreteCurvatureRadius_mm": 1.0995923650346138,
+      "firstClosingTurnRise_mm": 0.3000000000000007,
+      "lastClosingTurnRise_mm": 0.3000000000000007,
+      "startEndCapHit": {
+        "distance_mm": 0.09999999999999887,
+        "point_mm": [
+          45.6,
+          -9.34,
+          1.1379786002407855e-15
+        ]
+      },
+      "outerEndCapHit": {
+        "distance_mm": 0.10000000000000164,
+        "point_mm": [
+          45.6,
+          -13.36,
+          2.9837243786801082e-15
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "Geometric construction only; spring force, fatigue, electrical performance and manufacture are not certified.",
+    "Curved surfaces use finite polygonization; the nominal cylindrical contact is checked with vertex and ray readback."
+  ]
+}

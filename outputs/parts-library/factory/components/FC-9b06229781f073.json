@@ -1,0 +1,46 @@
+{
+  "id": "FC-9b06229781f073",
+  "name": "reception desk blotter",
+  "family": "FURNITURE",
+  "purpose": "讓訪客停留、閱讀與比較成果；人體接觸面需有合理曲面。",
+  "assemblyTeaching": "承重骨架→彈性層→泡棉→裁片縫線→包覆固定；座椅支腳需接到骨架。",
+  "verification": "曲率與輪廓多角度一致；織物方向隨裁片、紋理比例不能因拉伸改變。",
+  "unresolved": "目前只有外部包覆殼與腳件；內架、泡棉分層、縫線與固定件尚未完成。",
+  "units": "mm",
+  "geometry": "geometry/G-63ebbe6c4d773ffe1100.json",
+  "geometrySHA256": "63ebbe6c4d773ffe1100d1fc08f4de2cea788bf529cb4184b2569c25d3c8860a",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -225,
+      -135,
+      -12.5
+    ],
+    [
+      225,
+      135,
+      12.5
+    ]
+  ],
+  "dimensionsMM": [
+    450,
+    270,
+    25
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-9b06229781f073.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-RECEPTION-DESK"
+  ],
+  "occurrenceCount": 1
+}

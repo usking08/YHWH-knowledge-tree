@@ -1,0 +1,46 @@
+{
+  "id": "FC-a14a5c2e5a2a8d",
+  "name": "delivery door header",
+  "family": "BOUNDARY",
+  "purpose": "標示空間邊界、提供通行或隔離位置。",
+  "assemblyTeaching": "立柱→框→網片／門扇→鉸鏈與鎖扣→地面接口。",
+  "verification": "孔洞是真空間；門扇需能旋轉且不穿鄰件；通行淨空用實際包絡檢查。",
+  "unresolved": "現有隔離門鉸鏈與實際開啟路徑未完成；不是安全設施驗收。",
+  "units": "mm",
+  "geometry": "geometry/G-d236c7ffcb3d2e5f345b.json",
+  "geometrySHA256": "d236c7ffcb3d2e5f345bcf19c10b494969c7246252aad31ff982c1deb51ae92a",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -87.5,
+      -2190,
+      -65
+    ],
+    [
+      87.5,
+      2190,
+      65
+    ]
+  ],
+  "dimensionsMM": [
+    175,
+    4380,
+    130
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-a14a5c2e5a2a8d.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-004"
+  ],
+  "occurrenceCount": 2
+}

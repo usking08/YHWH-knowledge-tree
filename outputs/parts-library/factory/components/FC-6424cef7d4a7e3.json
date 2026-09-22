@@ -1,0 +1,46 @@
+{
+  "id": "FC-6424cef7d4a7e3",
+  "name": "工具掛板 · 孔列尚未開孔",
+  "family": "TOOL",
+  "purpose": "轉動固定件、定位工件或施加受控夾持。",
+  "assemblyTeaching": "工具頭→傳力桿→握持面；虎鉗固定座→導向滑塊→活動鉗口→絲桿與旋柄。",
+  "verification": "扳手環孔要貫穿、起子末端要有實際刃型；虎鉗夾口對向且保留行程。",
+  "unresolved": "虎鉗牙形、工具掛板孔列、材料強度與工具配合尺寸待驗。",
+  "units": "mm",
+  "geometry": "geometry/G-e358e095f3bcfe5860a6.json",
+  "geometrySHA256": "e358e095f3bcfe5860a65f8c02d3a6aa56f35acd48ea380272aa0fc754edf841",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1975,
+      -2.5,
+      -265
+    ],
+    [
+      1975,
+      2.5,
+      265
+    ]
+  ],
+  "dimensionsMM": [
+    3950,
+    5,
+    530
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-6424cef7d4a7e3.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-08"
+  ],
+  "occurrenceCount": 1
+}

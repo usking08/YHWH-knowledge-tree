@@ -1,0 +1,46 @@
+{
+  "id": "FC-df97f3cad3ce5d",
+  "name": "raised roof seam",
+  "family": "CLADDING",
+  "purpose": "圍護空間、把水導往外側，將面材固定在次骨架。",
+  "assemblyTeaching": "次骨架→面板→搭接與固定件→收邊→密封。剖面需看出外皮、芯層與內皮。",
+  "verification": "檢查搭接方向、孔位、穿透處及屋脊屋簷連續；斜率 Δz/水平距離決定排水方向。",
+  "unresolved": "目前多為整體面板外形；分層、固定孔與防水接口尚缺，不能稱已可施工。",
+  "units": "mm",
+  "geometry": "geometry/G-a9e4e4460f94fe3ba28a.json",
+  "geometrySHA256": "a9e4e4460f94fe3ba28a775757027d19052e3dc9f76fe3f8babfedc9ea3b7e65",
+  "scale": [
+    1,
+    0.9999999741,
+    0.9999999741
+  ],
+  "localBounds": [
+    [
+      -14,
+      -16,
+      -6020.79736328125
+    ],
+    [
+      14,
+      16,
+      6020.79736328125
+    ]
+  ],
+  "dimensionsMM": [
+    28,
+    32,
+    12041.5947265625
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-df97f3cad3ce5d.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-ROOF-01"
+  ],
+  "occurrenceCount": 104
+}

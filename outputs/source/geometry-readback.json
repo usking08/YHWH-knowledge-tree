@@ -1,0 +1,2264 @@
+{
+  "revision": "SUCCESSOR-WHEEL-R3",
+  "sourceRimSHA256": "f7bb3167d4911bfa543dd2f1a76d6cb45e808ff9d76a2146fae1539180402740",
+  "parts": [
+    {
+      "id": "W01",
+      "name": "五組雙輻輪圈 · 保留來源",
+      "system": "wheel",
+      "reference": "W01.png",
+      "provenance": "SOURCE_PRESERVED_FACE_WITH_LOCAL_BARREL_VALVE_BORE",
+      "vertices": 190111,
+      "triangles": 291866,
+      "invalid": 0,
+      "bounds": [
+        [
+          -245,
+          -245,
+          -105.5
+        ],
+        [
+          245,
+          245,
+          105.5
+        ]
+      ]
+    },
+    {
+      "id": "W02",
+      "name": "四主溝低扁平輪胎 · 新建",
+      "system": "wheel",
+      "reference": "W02-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1540429,
+      "triangles": 3075840,
+      "invalid": 0,
+      "bounds": [
+        [
+          -305,
+          -305,
+          -128.3650665283203
+        ],
+        [
+          305,
+          305,
+          128.3650665283203
+        ]
+      ]
+    },
+    {
+      "id": "B01",
+      "name": "通風煞車碟 · 光滑摩擦面",
+      "system": "brake",
+      "reference": "B01.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 68127,
+      "triangles": 30188,
+      "invalid": 0,
+      "bounds": [
+        [
+          -180,
+          -180,
+          -38
+        ],
+        [
+          180,
+          180,
+          43.29999923706055
+        ]
+      ]
+    },
+    {
+      "id": "H01",
+      "name": "輪轂法蘭與定位凸台",
+      "system": "hub",
+      "reference": "H01-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 53727,
+      "triangles": 25388,
+      "invalid": 0,
+      "bounds": [
+        [
+          -77.30004119873047,
+          -77.30004119873047,
+          -65
+        ],
+        [
+          77.30000305175781,
+          77.30004119873047,
+          57
+        ]
+      ]
+    },
+    {
+      "id": "H02",
+      "name": "雙內滾道軸承外圈",
+      "system": "bearing",
+      "reference": "H02-r4.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 49408,
+      "triangles": 97920,
+      "invalid": 0,
+      "bounds": [
+        [
+          -45,
+          -45,
+          -54
+        ],
+        [
+          45,
+          45,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "H03A",
+      "name": "半片內圈 1",
+      "system": "bearing",
+      "reference": "H03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 23353,
+      "triangles": 46080,
+      "invalid": 0,
+      "bounds": [
+        [
+          -31.5,
+          -31.5,
+          -52
+        ],
+        [
+          31.5,
+          31.5,
+          -23
+        ]
+      ]
+    },
+    {
+      "id": "H050",
+      "name": "14 穴聚合物保持架 1",
+      "system": "bearing",
+      "reference": "H05-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 9927,
+      "triangles": 17408,
+      "invalid": 0,
+      "bounds": [
+        [
+          -35.70000076293945,
+          -35.70000076293945,
+          -45.5
+        ],
+        [
+          35.70000076293945,
+          35.70000076293945,
+          -33.94428253173828
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-0",
+      "name": "鋼珠 1 / 1",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          28.199999809265137,
+          -5.800000190734863,
+          -43.80000019073486
+        ],
+        [
+          39.80000019073486,
+          5.800000190734863,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-1",
+      "name": "鋼珠 1 / 2",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          24.832941317947387,
+          8.952046939262113,
+          -43.80000019073486
+        ],
+        [
+          36.432941699417114,
+          20.552047320731837,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-2",
+      "name": "鋼珠 1 / 3",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          15.398653072462078,
+          20.78227021317815,
+          -43.80000019073486
+        ],
+        [
+          26.998653453931805,
+          32.38227059464788,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-3",
+      "name": "鋼珠 1 / 4",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          1.7657115637798277,
+          27.34754882344714,
+          -43.80000019073486
+        ],
+        [
+          13.365711945249554,
+          38.94754920491687,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-4",
+      "name": "鋼珠 1 / 5",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -13.36571194524955,
+          27.34754882344714,
+          -43.80000019073486
+        ],
+        [
+          -1.7657115637798242,
+          38.94754920491687,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-5",
+      "name": "鋼珠 1 / 6",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -26.9986534539318,
+          20.782270213178155,
+          -43.80000019073486
+        ],
+        [
+          -15.398653072462075,
+          32.38227059464788,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-6",
+      "name": "鋼珠 1 / 7",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -36.432941699417114,
+          8.952046939262116,
+          -43.80000019073486
+        ],
+        [
+          -24.832941317947384,
+          20.552047320731845,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-7",
+      "name": "鋼珠 1 / 8",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -39.80000019073486,
+          -5.800000190734859,
+          -43.80000019073486
+        ],
+        [
+          -28.199999809265137,
+          5.800000190734868,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-8",
+      "name": "鋼珠 1 / 9",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -36.432941699417114,
+          -20.552047320731837,
+          -43.80000019073486
+        ],
+        [
+          -24.832941317947387,
+          -8.95204693926211,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-9",
+      "name": "鋼珠 1 / 10",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -26.99865345393181,
+          -32.38227059464788,
+          -43.80000019073486
+        ],
+        [
+          -15.398653072462082,
+          -20.782270213178148,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-10",
+      "name": "鋼珠 1 / 11",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -13.36571194524956,
+          -38.94754920491687,
+          -43.80000019073486
+        ],
+        [
+          -1.765711563779833,
+          -27.34754882344714,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-11",
+      "name": "鋼珠 1 / 12",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          1.7657115637797904,
+          -38.947549204916875,
+          -43.80000019073486
+        ],
+        [
+          13.365711945249517,
+          -27.34754882344715,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-12",
+      "name": "鋼珠 1 / 13",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          15.398653072462071,
+          -32.38227059464788,
+          -43.80000019073486
+        ],
+        [
+          26.998653453931798,
+          -20.782270213178155,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H04-0-13",
+      "name": "鋼珠 1 / 14",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          24.832941317947395,
+          -20.552047320731816,
+          -43.80000019073486
+        ],
+        [
+          36.43294169941712,
+          -8.952046939262091,
+          -32.19999980926514
+        ]
+      ]
+    },
+    {
+      "id": "H060",
+      "name": "軸承端面密封 1",
+      "system": "bearing",
+      "reference": "H06-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -43.79999923706055,
+          -43.79999923706055,
+          -53.95000076293945
+        ],
+        [
+          43.79999923706055,
+          43.79999923706055,
+          -52.04999923706055
+        ]
+      ]
+    },
+    {
+      "id": "H03B",
+      "name": "半片內圈 2",
+      "system": "bearing",
+      "reference": "H03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 23353,
+      "triangles": 46080,
+      "invalid": 0,
+      "bounds": [
+        [
+          -31.5,
+          -31.5,
+          -23
+        ],
+        [
+          31.5,
+          31.5,
+          6
+        ]
+      ]
+    },
+    {
+      "id": "H051",
+      "name": "14 穴聚合物保持架 2",
+      "system": "bearing",
+      "reference": "H05-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 9927,
+      "triangles": 17408,
+      "invalid": 0,
+      "bounds": [
+        [
+          -35.70000076293945,
+          -35.70000076293945,
+          -15.5
+        ],
+        [
+          35.70000076293945,
+          35.70000076293945,
+          -3.944281578063965
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-0",
+      "name": "鋼珠 2 / 1",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          28.199999809265137,
+          -5.800000190734863,
+          -13.800000190734863
+        ],
+        [
+          39.80000019073486,
+          5.800000190734863,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-1",
+      "name": "鋼珠 2 / 2",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          24.832941317947387,
+          8.952046939262113,
+          -13.800000190734863
+        ],
+        [
+          36.432941699417114,
+          20.552047320731837,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-2",
+      "name": "鋼珠 2 / 3",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          15.398653072462078,
+          20.78227021317815,
+          -13.800000190734863
+        ],
+        [
+          26.998653453931805,
+          32.38227059464788,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-3",
+      "name": "鋼珠 2 / 4",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          1.7657115637798277,
+          27.34754882344714,
+          -13.800000190734863
+        ],
+        [
+          13.365711945249554,
+          38.94754920491687,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-4",
+      "name": "鋼珠 2 / 5",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -13.36571194524955,
+          27.34754882344714,
+          -13.800000190734863
+        ],
+        [
+          -1.7657115637798242,
+          38.94754920491687,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-5",
+      "name": "鋼珠 2 / 6",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -26.9986534539318,
+          20.782270213178155,
+          -13.800000190734863
+        ],
+        [
+          -15.398653072462075,
+          32.38227059464788,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-6",
+      "name": "鋼珠 2 / 7",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -36.432941699417114,
+          8.952046939262116,
+          -13.800000190734863
+        ],
+        [
+          -24.832941317947384,
+          20.552047320731845,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-7",
+      "name": "鋼珠 2 / 8",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -39.80000019073486,
+          -5.800000190734859,
+          -13.800000190734863
+        ],
+        [
+          -28.199999809265137,
+          5.800000190734868,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-8",
+      "name": "鋼珠 2 / 9",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -36.432941699417114,
+          -20.552047320731837,
+          -13.800000190734863
+        ],
+        [
+          -24.832941317947387,
+          -8.95204693926211,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-9",
+      "name": "鋼珠 2 / 10",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -26.99865345393181,
+          -32.38227059464788,
+          -13.800000190734863
+        ],
+        [
+          -15.398653072462082,
+          -20.782270213178148,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-10",
+      "name": "鋼珠 2 / 11",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          -13.36571194524956,
+          -38.94754920491687,
+          -13.800000190734863
+        ],
+        [
+          -1.765711563779833,
+          -27.34754882344714,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-11",
+      "name": "鋼珠 2 / 12",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          1.7657115637797904,
+          -38.947549204916875,
+          -13.800000190734863
+        ],
+        [
+          13.365711945249517,
+          -27.34754882344715,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-12",
+      "name": "鋼珠 2 / 13",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          15.398653072462071,
+          -32.38227059464788,
+          -13.800000190734863
+        ],
+        [
+          26.998653453931798,
+          -20.782270213178155,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H04-1-13",
+      "name": "鋼珠 2 / 14",
+      "system": "bearing",
+      "reference": "H04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 693,
+      "triangles": 1216,
+      "invalid": 0,
+      "bounds": [
+        [
+          24.832941317947395,
+          -20.552047320731816,
+          -13.800000190734863
+        ],
+        [
+          36.43294169941712,
+          -8.952046939262091,
+          -2.1999998092651367
+        ]
+      ]
+    },
+    {
+      "id": "H061",
+      "name": "軸承端面密封 2",
+      "system": "bearing",
+      "reference": "H06-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -43.79999923706055,
+          -43.79999923706055,
+          6.050000190734863
+        ],
+        [
+          43.79999923706055,
+          43.79999923706055,
+          7.949999809265137
+        ]
+      ]
+    },
+    {
+      "id": "H09-0",
+      "name": "輪轂螺柱 1",
+      "system": "hub",
+      "reference": "H09.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          -7.9999999999999964,
+          -64,
+          17
+        ],
+        [
+          8.000000000000004,
+          -48,
+          77
+        ]
+      ]
+    },
+    {
+      "id": "W03-0",
+      "name": "錐座螺帽 1",
+      "system": "wheel",
+      "reference": "W03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 3714,
+      "triangles": 2772,
+      "invalid": 0,
+      "bounds": [
+        [
+          -11.999999999999996,
+          -68,
+          55
+        ],
+        [
+          12.000000000000004,
+          -44,
+          76.80000305175781
+        ]
+      ]
+    },
+    {
+      "id": "H09-1",
+      "name": "輪轂螺柱 2",
+      "system": "hub",
+      "reference": "H09.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          45.2591649125286,
+          -25.304951684997054,
+          17
+        ],
+        [
+          61.2591649125286,
+          -9.304951684997054,
+          77
+        ]
+      ]
+    },
+    {
+      "id": "W03-1",
+      "name": "錐座螺帽 2",
+      "system": "wheel",
+      "reference": "W03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 3714,
+      "triangles": 2772,
+      "invalid": 0,
+      "bounds": [
+        [
+          41.2591649125286,
+          -29.304951684997054,
+          55
+        ],
+        [
+          65.2591649125286,
+          -5.304951684997054,
+          76.80000305175781
+        ]
+      ]
+    },
+    {
+      "id": "H09-2",
+      "name": "輪轂螺柱 3",
+      "system": "hub",
+      "reference": "H09.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          24.915974128378494,
+          37.30495168499706,
+          17
+        ],
+        [
+          40.915974128378494,
+          53.30495168499706,
+          77
+        ]
+      ]
+    },
+    {
+      "id": "W03-2",
+      "name": "錐座螺帽 3",
+      "system": "wheel",
+      "reference": "W03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 3714,
+      "triangles": 2772,
+      "invalid": 0,
+      "bounds": [
+        [
+          20.915974128378494,
+          33.30495168499706,
+          55
+        ],
+        [
+          44.915974128378494,
+          57.30495168499706,
+          76.80000305175781
+        ]
+      ]
+    },
+    {
+      "id": "H09-3",
+      "name": "輪轂螺柱 4",
+      "system": "hub",
+      "reference": "H09.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          -40.91597412837849,
+          37.30495168499706,
+          17
+        ],
+        [
+          -24.915974128378487,
+          53.30495168499706,
+          77
+        ]
+      ]
+    },
+    {
+      "id": "W03-3",
+      "name": "錐座螺帽 4",
+      "system": "wheel",
+      "reference": "W03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 3714,
+      "triangles": 2772,
+      "invalid": 0,
+      "bounds": [
+        [
+          -44.91597412837849,
+          33.30495168499706,
+          55
+        ],
+        [
+          -20.915974128378487,
+          57.30495168499706,
+          76.80000305175781
+        ]
+      ]
+    },
+    {
+      "id": "H09-4",
+      "name": "輪轂螺柱 5",
+      "system": "hub",
+      "reference": "H09.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          -61.259164912528604,
+          -25.304951684997047,
+          17
+        ],
+        [
+          -45.259164912528604,
+          -9.304951684997047,
+          77
+        ]
+      ]
+    },
+    {
+      "id": "W03-4",
+      "name": "錐座螺帽 5",
+      "system": "wheel",
+      "reference": "W03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 3714,
+      "triangles": 2772,
+      "invalid": 0,
+      "bounds": [
+        [
+          -65.2591649125286,
+          -29.304951684997047,
+          55
+        ],
+        [
+          -41.259164912528604,
+          -5.304951684997047,
+          76.80000305175781
+        ]
+      ]
+    },
+    {
+      "id": "W04",
+      "name": "中心飾蓋",
+      "system": "wheel",
+      "reference": "W04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 2123,
+      "triangles": 3840,
+      "invalid": 0,
+      "bounds": [
+        [
+          -32,
+          -32,
+          67
+        ],
+        [
+          32,
+          32,
+          78
+        ]
+      ]
+    },
+    {
+      "id": "B02",
+      "name": "外側卡鉗半體",
+      "system": "brake",
+      "reference": "B02-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 244164,
+      "triangles": 81388,
+      "invalid": 0,
+      "bounds": [
+        [
+          -85.7137680053711,
+          117.9503173828125,
+          -26
+        ],
+        [
+          85.7137680053711,
+          198.00009155273438,
+          35.501609802246094
+        ]
+      ]
+    },
+    {
+      "id": "B04-0",
+      "name": "來令片背板 1",
+      "system": "brake",
+      "reference": "B04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 14964,
+      "triangles": 4988,
+      "invalid": 0,
+      "bounds": [
+        [
+          -58.881263732910156,
+          131.10829162597656,
+          -5.849999904632568
+        ],
+        [
+          58.881263732910156,
+          176.35000610351562,
+          -1.1500000953674316
+        ]
+      ]
+    },
+    {
+      "id": "B05-0",
+      "name": "摩擦襯片 1",
+      "system": "brake",
+      "reference": "B05.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 14964,
+      "triangles": 4988,
+      "invalid": 0,
+      "bounds": [
+        [
+          -54.93408203125,
+          132.4416046142578,
+          -12.199999809265137
+        ],
+        [
+          54.93408203125,
+          174.4199981689453,
+          -5
+        ]
+      ]
+    },
+    {
+      "id": "B06-0-0",
+      "name": "杯狀活塞 1",
+      "system": "brake",
+      "reference": "B06-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -49.89999961853027,
+          128.10000038146973,
+          -1.5
+        ],
+        [
+          -10.100000381469727,
+          167.89999961853027,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "B10-0-0",
+      "name": "活塞壓力密封 1",
+      "system": "brake",
+      "reference": "B10.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -50.35000038146973,
+          127.64999961853027,
+          7
+        ],
+        [
+          -9.649999618530273,
+          168.35000038146973,
+          9.399999618530273
+        ]
+      ]
+    },
+    {
+      "id": "B11-0-0",
+      "name": "活塞防塵套 1",
+      "system": "brake",
+      "reference": "B11.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          -52,
+          126,
+          -1.2000000476837158
+        ],
+        [
+          -8,
+          170,
+          3.799999952316284
+        ]
+      ]
+    },
+    {
+      "id": "B06-0-1",
+      "name": "杯狀活塞 2",
+      "system": "brake",
+      "reference": "B06-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          10.100000381469727,
+          128.10000038146973,
+          -1.5
+        ],
+        [
+          49.89999961853027,
+          167.89999961853027,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "B10-0-1",
+      "name": "活塞壓力密封 2",
+      "system": "brake",
+      "reference": "B10.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          9.649999618530273,
+          127.64999961853027,
+          7
+        ],
+        [
+          50.35000038146973,
+          168.35000038146973,
+          9.399999618530273
+        ]
+      ]
+    },
+    {
+      "id": "B11-0-1",
+      "name": "活塞防塵套 2",
+      "system": "brake",
+      "reference": "B11.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          8,
+          126,
+          -1.2000000476837158
+        ],
+        [
+          52,
+          170,
+          3.799999952316284
+        ]
+      ]
+    },
+    {
+      "id": "B03",
+      "name": "內側卡鉗半體",
+      "system": "brake",
+      "reference": "B03-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 257988,
+      "triangles": 85996,
+      "invalid": 0,
+      "bounds": [
+        [
+          -85.7137680053711,
+          87.99922943115234,
+          -85.5016098022461
+        ],
+        [
+          85.7137680053711,
+          198.00009155273438,
+          -24
+        ]
+      ]
+    },
+    {
+      "id": "B04-1",
+      "name": "來令片背板 2",
+      "system": "brake",
+      "reference": "B04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 14964,
+      "triangles": 4988,
+      "invalid": 0,
+      "bounds": [
+        [
+          -58.881263732910156,
+          131.10829162597656,
+          -48.849998474121094
+        ],
+        [
+          58.881263732910156,
+          176.35000610351562,
+          -44.150001525878906
+        ]
+      ]
+    },
+    {
+      "id": "B05-1",
+      "name": "摩擦襯片 2",
+      "system": "brake",
+      "reference": "B05.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 14964,
+      "triangles": 4988,
+      "invalid": 0,
+      "bounds": [
+        [
+          -54.93408203125,
+          132.4416046142578,
+          -45
+        ],
+        [
+          54.93408203125,
+          174.4199981689453,
+          -37.79999923706055
+        ]
+      ]
+    },
+    {
+      "id": "B06-1-0",
+      "name": "杯狀活塞 3",
+      "system": "brake",
+      "reference": "B06-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -49.89999961853027,
+          128.10000038146973,
+          -71
+        ],
+        [
+          -10.100000381469727,
+          167.89999961853027,
+          -48.5
+        ]
+      ]
+    },
+    {
+      "id": "B10-1-0",
+      "name": "活塞壓力密封 3",
+      "system": "brake",
+      "reference": "B10.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -50.35000038146973,
+          127.64999961853027,
+          -59.400001525878906
+        ],
+        [
+          -9.649999618530273,
+          168.35000038146973,
+          -57
+        ]
+      ]
+    },
+    {
+      "id": "B11-1-0",
+      "name": "活塞防塵套 3",
+      "system": "brake",
+      "reference": "B11.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          -52,
+          126,
+          -53.79999923706055
+        ],
+        [
+          -8,
+          170,
+          -48.79999923706055
+        ]
+      ]
+    },
+    {
+      "id": "B06-1-1",
+      "name": "杯狀活塞 4",
+      "system": "brake",
+      "reference": "B06-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          10.100000381469727,
+          128.10000038146973,
+          -71
+        ],
+        [
+          49.89999961853027,
+          167.89999961853027,
+          -48.5
+        ]
+      ]
+    },
+    {
+      "id": "B10-1-1",
+      "name": "活塞壓力密封 4",
+      "system": "brake",
+      "reference": "B10.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          9.649999618530273,
+          127.64999961853027,
+          -59.400001525878906
+        ],
+        [
+          50.35000038146973,
+          168.35000038146973,
+          -57
+        ]
+      ]
+    },
+    {
+      "id": "B11-1-1",
+      "name": "活塞防塵套 4",
+      "system": "brake",
+      "reference": "B11.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          8,
+          126,
+          -53.79999923706055
+        ],
+        [
+          52,
+          170,
+          -48.79999923706055
+        ]
+      ]
+    },
+    {
+      "id": "B07-0",
+      "name": "卡鉗接合螺栓 1",
+      "system": "brake",
+      "reference": "B07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          -84,
+          156,
+          -77
+        ],
+        [
+          -68,
+          172,
+          33
+        ]
+      ]
+    },
+    {
+      "id": "B12-0",
+      "name": "來令片保持插銷 1",
+      "system": "brake",
+      "reference": "B12.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          -56,
+          170,
+          -77
+        ],
+        [
+          -48,
+          178,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "B07-1",
+      "name": "卡鉗接合螺栓 2",
+      "system": "brake",
+      "reference": "B07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          68,
+          156,
+          -77
+        ],
+        [
+          84,
+          172,
+          33
+        ]
+      ]
+    },
+    {
+      "id": "B12-1",
+      "name": "來令片保持插銷 2",
+      "system": "brake",
+      "reference": "B12.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          48,
+          170,
+          -77
+        ],
+        [
+          56,
+          178,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "B13",
+      "name": "來令片防震彈簧",
+      "system": "brake",
+      "reference": "B13.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 13812,
+      "triangles": 4604,
+      "invalid": 0,
+      "bounds": [
+        [
+          -53.39809799194336,
+          168.514404296875,
+          -25.899999618530273
+        ],
+        [
+          53.39809799194336,
+          177.74168395996094,
+          -24.100000381469727
+        ]
+      ]
+    },
+    {
+      "id": "B08",
+      "name": "放氣螺絲",
+      "system": "brake",
+      "reference": "B08.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          34.5,
+          182,
+          -69.5
+        ],
+        [
+          43.5,
+          199,
+          -60.5
+        ]
+      ]
+    },
+    {
+      "id": "B09",
+      "name": "放氣嘴防塵帽",
+      "system": "brake",
+      "reference": "B09.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          35,
+          192,
+          -69
+        ],
+        [
+          43,
+          201,
+          -60.99999999999999
+        ]
+      ]
+    },
+    {
+      "id": "V01",
+      "name": "氣嘴桿與感測器固定肩",
+      "system": "tpms",
+      "reference": "V01-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 7656,
+      "triangles": 13104,
+      "invalid": 0,
+      "bounds": [
+        [
+          -127.79422863406006,
+          -212.34609690826522,
+          46
+        ],
+        [
+          -88.20577136594014,
+          -161.7768775266122,
+          64
+        ]
+      ]
+    },
+    {
+      "id": "V02",
+      "name": "氣嘴密封膠套",
+      "system": "tpms",
+      "reference": "V02.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1544,
+      "triangles": 2688,
+      "invalid": 0,
+      "bounds": [
+        [
+          -119.42820323027561,
+          -198.85571585149867,
+          47
+        ],
+        [
+          -100.62179677046964,
+          -182.2820643553232,
+          63
+        ]
+      ]
+    },
+    {
+      "id": "V03",
+      "name": "氣嘴墊圈",
+      "system": "tpms",
+      "reference": "V03.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -114.81121593142277,
+          -190.35885927198535,
+          46.5
+        ],
+        [
+          -99.23878409167423,
+          -180.3866161281376,
+          63.5
+        ]
+      ]
+    },
+    {
+      "id": "V04",
+      "name": "氣嘴鎖緊螺帽",
+      "system": "tpms",
+      "reference": "V04.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1116,
+      "triangles": 372,
+      "invalid": 0,
+      "bounds": [
+        [
+          -113.85320326369194,
+          -188.79538741639726,
+          47.72179698944092
+        ],
+        [
+          -95.9467966290199,
+          -174.58887182572425,
+          62.27820301055908
+        ]
+      ]
+    },
+    {
+      "id": "V05",
+      "name": "氣嘴防塵帽",
+      "system": "tpms",
+      "reference": "V05.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 2632,
+      "triangles": 3328,
+      "invalid": 0,
+      "bounds": [
+        [
+          -104.43634463639016,
+          -175.18905525773584,
+          49.07201623916627
+        ],
+        [
+          -88.56365536361002,
+          -159.09675060305744,
+          60.96999979019166
+        ]
+      ]
+    },
+    {
+      "id": "V06",
+      "name": "氣門芯 · 外形與芯桿",
+      "system": "tpms",
+      "reference": "V06-exterior.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 2123,
+      "triangles": 3840,
+      "invalid": 0,
+      "bounds": [
+        [
+          -110.8186532653568,
+          -189.84353797732388,
+          52.90000009536743
+        ],
+        [
+          -96.6813467346434,
+          -169.5570045932181,
+          57.09999990463257
+        ]
+      ]
+    },
+    {
+      "id": "V07",
+      "name": "胎壓感測器下殼 · 四柱",
+      "system": "tpms",
+      "reference": "V07-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 30609,
+      "triangles": 22676,
+      "invalid": 0,
+      "bounds": [
+        [
+          -163.70493343443292,
+          -254.8452575804819,
+          47.70000076293945
+        ],
+        [
+          -96.29506656556731,
+          -195.48795238742613,
+          65.70000076293945
+        ]
+      ]
+    },
+    {
+      "id": "V08",
+      "name": "胎壓感測器上蓋",
+      "system": "tpms",
+      "reference": "V08-r2.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 9780,
+      "triangles": 3260,
+      "invalid": 0,
+      "bounds": [
+        [
+          -163.97813955738448,
+          -255.11846370343346,
+          44.39999961853027
+        ],
+        [
+          -96.02186044261575,
+          -195.21474626447457,
+          53.18000030517578
+        ]
+      ]
+    },
+    {
+      "id": "V09",
+      "name": "胎壓感測器電路板 · 四孔",
+      "system": "tpms",
+      "reference": "V09-r3.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 20172,
+      "triangles": 16716,
+      "invalid": 0,
+      "bounds": [
+        [
+          -156.94862924821058,
+          -247.7228923854344,
+          47.70000076293945
+        ],
+        [
+          -103.05137075178965,
+          -202.61031758247364,
+          51.1200008392334
+        ]
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "鈕扣電池",
+      "system": "tpms",
+      "reference": "V10.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 8673,
+      "triangles": 5384,
+      "invalid": 0,
+      "bounds": [
+        [
+          -143.6602540378445,
+          -238.8268590217984,
+          53.79999923706055
+        ],
+        [
+          -116.33974596215573,
+          -211.50635094610965,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "V11",
+      "name": "感測器固定螺絲",
+      "system": "tpms",
+      "reference": "V11.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          -126.59807621135343,
+          -216.27430013854075,
+          51.99999999999999
+        ],
+        [
+          -115.9019237886468,
+          -203.7480206969119,
+          57.99999999999999
+        ]
+      ]
+    },
+    {
+      "id": "H07",
+      "name": "輪端軸承座與安裝耳",
+      "system": "hub",
+      "reference": "H07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 66556,
+      "triangles": 33436,
+      "invalid": 0,
+      "bounds": [
+        [
+          -128.2437744140625,
+          -106.59293365478516,
+          -93
+        ],
+        [
+          126.53300476074219,
+          146.0672607421875,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "H07-bolt--51",
+      "name": "卡鉗安裝螺栓",
+      "system": "hub",
+      "reference": "H07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          -59,
+          92,
+          -99
+        ],
+        [
+          -43,
+          108,
+          -63
+        ]
+      ]
+    },
+    {
+      "id": "H07-bolt-51",
+      "name": "卡鉗安裝螺栓",
+      "system": "hub",
+      "reference": "H07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1351,
+      "triangles": 2304,
+      "invalid": 0,
+      "bounds": [
+        [
+          43,
+          92,
+          -99
+        ],
+        [
+          59,
+          108,
+          -63
+        ]
+      ]
+    },
+    {
+      "id": "H08",
+      "name": "輪轂後端防塵杯",
+      "system": "hub",
+      "reference": "H08.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 2316,
+      "triangles": 4224,
+      "invalid": 0,
+      "bounds": [
+        [
+          -45,
+          -45,
+          -104
+        ],
+        [
+          45,
+          45,
+          -88
+        ]
+      ]
+    },
+    {
+      "id": "H11",
+      "name": "內圈定位套",
+      "system": "hub",
+      "reference": "H11.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1737,
+      "triangles": 3072,
+      "invalid": 0,
+      "bounds": [
+        [
+          -31.5,
+          -31.5,
+          6
+        ],
+        [
+          31.5,
+          31.5,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "H10",
+      "name": "軸承外圈內卡簧",
+      "system": "hub",
+      "reference": "H10.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 22818,
+      "triangles": 7606,
+      "invalid": 0,
+      "bounds": [
+        [
+          -46.44868850708008,
+          -46.18765640258789,
+          -56.349998474121094
+        ],
+        [
+          46.44868850708008,
+          46.450042724609375,
+          -54.25
+        ]
+      ]
+    },
+    {
+      "id": "H12",
+      "name": "輪轂軸外卡簧",
+      "system": "hub",
+      "reference": "H12.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 22800,
+      "triangles": 7600,
+      "invalid": 0,
+      "bounds": [
+        [
+          -28.14922332763672,
+          -27.975587844848633,
+          -56.45000076293945
+        ],
+        [
+          28.14922332763672,
+          28.150041580200195,
+          -54.349998474121094
+        ]
+      ]
+    },
+    {
+      "id": "W05",
+      "name": "中心蓋固定彈環",
+      "system": "wheel",
+      "reference": "W05.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 1161,
+      "triangles": 2048,
+      "invalid": 0,
+      "bounds": [
+        [
+          -32.44520950317383,
+          -32.44990158081055,
+          67.3499984741211
+        ],
+        [
+          32.45000076293945,
+          32.44647979736328,
+          68.6500015258789
+        ]
+      ]
+    },
+    {
+      "id": "W07-0",
+      "name": "平衡塊黏合層 1",
+      "system": "wheel",
+      "reference": "W07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -176.87342577708822,
+          121.66388991030404,
+          -26
+        ],
+        [
+          -166.65695656943697,
+          134.9609654814725,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W06-0",
+      "name": "輪圈平衡塊 1",
+      "system": "wheel",
+      "reference": "W06.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -176.23251087987546,
+          119.86847348155933,
+          -26
+        ],
+        [
+          -164.25352572757134,
+          134.48218776262215,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W07-1",
+      "name": "平衡塊黏合層 2",
+      "system": "wheel",
+      "reference": "W07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -186.28358870545273,
+          106.8202085486999,
+          -26
+        ],
+        [
+          -177.11215512082944,
+          120.80442405713899,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W06-1",
+      "name": "輪圈平衡塊 2",
+      "system": "wheel",
+      "reference": "W06.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -185.60561156639713,
+          105.22768546926712,
+          -26
+        ],
+        [
+          -174.5697408733648,
+          120.3797512319491,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W07-2",
+      "name": "平衡塊黏合層 3",
+      "system": "wheel",
+      "reference": "W07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -194.44188248327097,
+          91.25867047912509,
+          -26
+        ],
+        [
+          -186.37711869380357,
+          105.83604873601608,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W06-2",
+      "name": "輪圈平衡塊 3",
+      "system": "wheel",
+      "reference": "W06.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -193.7313992668262,
+          89.87974287541556,
+          -26
+        ],
+        [
+          -183.71280665727983,
+          105.46833470488994,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W07-3",
+      "name": "平衡塊黏合層 4",
+      "system": "wheel",
+      "reference": "W07.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -201.29348147414345,
+          75.0838528657827,
+          -26
+        ],
+        [
+          -194.3895845729018,
+          90.15643049033362,
+          -4
+        ]
+      ]
+    },
+    {
+      "id": "W06-3",
+      "name": "輪圈平衡塊 4",
+      "system": "wheel",
+      "reference": "W06.png",
+      "provenance": "SOURCE_BOUND_RECONSTRUCTION",
+      "vertices": 24,
+      "triangles": 12,
+      "invalid": 0,
+      "bounds": [
+        [
+          -200.5552667931824,
+          73.92778745280826,
+          -26
+        ],
+        [
+          -191.62127954542353,
+          89.84814637729771,
+          -4
+        ]
+      ]
+    }
+  ],
+  "relations": {
+    "preservedRimSource": true,
+    "finiteGeometry": true,
+    "ballCount": 28,
+    "innerRaces": 2,
+    "pistons": 4,
+    "pressureSeals": 4,
+    "dustBoots": 4,
+    "rotorFrictionAxialGap": 10,
+    "pilotDiametralClearance": 0.09999999999999432,
+    "tireRimMeridionalSampleInside": []
+  },
+  "scope": "Construction checks only; no full 3D interference or manufacturing claim",
+  "wholeCarComplete": false
+}

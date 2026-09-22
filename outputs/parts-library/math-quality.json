@@ -1,0 +1,4241 @@
+{
+  "revision": "GT01-MATH-QA-R1",
+  "scope": "十二件現有原生零件的可重跑數學讀回；所有門檻為本計算的數值準則，未代替製造公差、材料試驗或整車放行。",
+  "bindings": {
+    "D11-P01": {
+      "objSHA256": "eedbe8ba847d47a19076a8a73eac000cb3b3c047a1c5fb79b307a99784cc2413",
+      "positionTriangleSHA256": "19e6233a442e59bb7ec6e8c2370218791dff5e736bcca0b887d23fc6a211139d"
+    },
+    "D11-P02": {
+      "objSHA256": "57a66ef26f86fd4f640821752581d2a55cfc12514c63b7afc761ccf868470437",
+      "positionTriangleSHA256": "53e1c1d8b2d10fefbdafc06e70e5f18734b2975da39d455491b285959f4ec07f"
+    },
+    "D11-P03": {
+      "objSHA256": "254af25c8dd656afaf42650f44f2cdc1f5b699a8d17f36a528b1e4dda6345d99",
+      "positionTriangleSHA256": "cc105a2f1ff2017c89520285d09c2c1025ffdcb625cab540b78c6e7655de1260"
+    },
+    "D11-P09": {
+      "objSHA256": "082325829dbe083ebc471e0ad0b8002c1fbebdbb3f28f2c6b5cf1ac52be15416",
+      "positionTriangleSHA256": "c11a07a7aa56e8e0d25cc98d8be4a58547cb564edf83b8ea92da6a1c4657f5f0"
+    },
+    "D11-P10": {
+      "objSHA256": "2df4d3664678bd5a06ca8201ae38f182e1d2e5b9e36353d65651338546df1d9c",
+      "positionTriangleSHA256": "40363d7780e33cc602d6c01b0987b9e6eb64c3bee0122122f5241dcc4feb7b8a"
+    },
+    "D11-P06": {
+      "objSHA256": "221a91224f9e5d115ad1fb0a07305118c2e181bc19869dce968274b80f54d809",
+      "positionTriangleSHA256": "e3e00619d99adbe71410822b103c806c71b5b6bdb02c758827ad47030e34d0aa"
+    },
+    "D11-P04": {
+      "objSHA256": "5f742d25b6693c57aa7f9501a1bcf33f8ce11185b40baaef3d5e914c9b387f87",
+      "positionTriangleSHA256": "bc263d32aa17092263c04b0afad0a31d546b51a8ab930073579d0e89de71c190"
+    },
+    "D11-P11a": {
+      "objSHA256": "86c95555c76184a075518a0855ff4677e0746d9552132587aab8739bafb22a28",
+      "positionTriangleSHA256": "1a7b3c7d4f8f2597627fd25543b8d87e146c7cbedfaec7ae30ece56c1b729a5d"
+    },
+    "D11-P11b": {
+      "objSHA256": "448e9e0c03009e189a675491290fa980eea2a8cd51828c88e0d8e648a39a35ff",
+      "positionTriangleSHA256": "be1fc36ca614ab114304ddaa369e73b0b0f6090e17dbc032a43125d56f8606ee"
+    },
+    "D11-P05a": {
+      "objSHA256": "64d7390d967b137aa6dff88a5283bef391c90e25e3f26810ff0fd40f7bd6a021",
+      "positionTriangleSHA256": "41864cab573cda1935831686136bcf25927b5b63de263a0423d1fa6f06d8632a"
+    },
+    "D05-P15d": {
+      "objSHA256": "b6fb4c91db1e16e34558dc228b3f263672b933a984855962976c48f77673d296",
+      "positionTriangleSHA256": "e3a2768b93dec820ef8a8352da0dd36b19058245073a1bb029d99f92fd3f0df4"
+    },
+    "D05-P15e": {
+      "objSHA256": "7a757c67fa461bf484d67568318ce35a5af960407619313feffecadb665d3238",
+      "positionTriangleSHA256": "dbb3c6803a122125fc42caf62fdb92d9492ad2eca8c3f74df2f28bd33f334c71"
+    }
+  },
+  "sourceBindings": {
+    "three.mjs": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495",
+    "THREE-LICENSE.txt": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+    "door-handle.mjs": "716add62a7256ee01c83f6062580990d33884c3e6b874de349cba4d7ac437288",
+    "door-handle-lever.mjs": "049f26fb973785583dae25b9ab473508a328663839394e19f9ca9f3b07f6b2cd",
+    "door-handle-carrier.mjs": "6658f38d0e87a8193e00c0af0c3bcaba872b10ef150f5517af03305245305498",
+    "door-handle-hardware.mjs": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0",
+    "door-handle-return.mjs": "7779e160db32e30166f585662ee0504495ec9399821493241e1ec5194600c9d5",
+    "door-handle-actuator.mjs": "7bf5cd1c52341f73c0cbd28af4be18261c675a6748563954c956f0cea0907077",
+    "door-handle-assembly-paths.mjs": "6f97c86c641a8c8d8ce8dd0e021480f2d1a7c603d820fe93298236767450fd1a",
+    "window-regulator.mjs": "d98d0d7bd0d8a7925f5e21d6311b79087470c9368c10a4aa56133055278005fe"
+  },
+  "parts": [
+    {
+      "id": "D11-P01",
+      "name": "一體把手面板、背肋與轉軸座",
+      "purpose": "把手輸入經一體轉軸座及 D 形端部帶動撥臂。",
+      "checks": [
+        {
+          "id": "fit-D11-P01-D11-P03",
+          "title": "孔軸截面：D11-P01／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.1,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": 0,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.04999999999999982,
+            "sampledMinGapMm": 0.049962934151825955,
+            "sampledMaxGapMm": 0.05000011787623304,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 512,
+              "maxAngularGapRadians": 0.01227334515308609,
+              "maxSagMm": 0.00003860009793326124
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "moment-arm",
+          "title": "撥臂力矩係數與方向",
+          "status": "PASS",
+          "formula": "M_z=r_xF_y−r_yF_x",
+          "inputs": {
+            "pivotMm": [
+              -46,
+              -10,
+              -4.55
+            ],
+            "cableEyeMm": [
+              -28,
+              -10,
+              -4.55
+            ]
+          },
+          "result": {
+            "armMm": [
+              18,
+              0,
+              0
+            ],
+            "coefficientForFyMm": 18,
+            "coefficientForFxMm": 0,
+            "interpretation": "M_z/(N·mm)=18×F_y/N；這是每單位力的比例，沒有假定實際拉力。"
+          },
+          "acceptance": "兩個作者設計孔軸相距 18 mm；載荷留作符號量。",
+          "method": "讀取零件的設計孔軸；套用叉積定義，不把 18F 用於任意方向。",
+          "meaning": "改變鋼索方向或接點，力矩係數也必須重算。",
+          "nextAction": "由實際拉索路由取得力向量，再做平衡及接觸讀回。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 6675,
+            "edges": 20025,
+            "faces": 13350,
+            "eulerCharacteristic": 0,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              0,
+              -7.5,
+              0
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 10130.906356761143,
+            "originDifferenceMm3": 7.275957614183426e-12
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P01",
+            "sourceSHA256": "049f26fb973785583dae25b9ab473508a328663839394e19f9ca9f3b07f6b2cd"
+          },
+          "result": {
+            "objSHA256": "eedbe8ba847d47a19076a8a73eac000cb3b3c047a1c5fb79b307a99784cc2413",
+            "positionTriangleSHA256": "19e6233a442e59bb7ec6e8c2370218791dff5e736bcca0b887d23fc6a211139d",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "moment",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P01/references/D11-P01-model-r2.png",
+        "viewer": "parts/D11-P01/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P02",
+      "name": "空心把手承載盒",
+      "purpose": "維持肩銷、軸套、彈簧與外把手的安置關係，提供門體固定基座。",
+      "checks": [
+        {
+          "id": "fit-D11-P02-D11-P11b",
+          "title": "孔軸截面：D11-P02／D11-P11b",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 5.7,
+            "shaftDiameterMm": 5.5,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": 16,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.0969478837142681,
+            "sampledMaxGapMm": 0.10000173860443295,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 64,
+              "maxAngularGapRadians": 0.09817533212152263,
+              "maxSagMm": 0.003432989090020522
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545061914005057,
+              "maxSagMm": 0.001472419180065604
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 1572,
+            "edges": 4740,
+            "faces": 3160,
+            "eulerCharacteristic": -8,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              0,
+              -17.5,
+              0
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 51880.86805742643,
+            "originDifferenceMm3": 3.2014213502407074e-10
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P02",
+            "sourceSHA256": "6658f38d0e87a8193e00c0af0c3bcaba872b10ef150f5517af03305245305498"
+          },
+          "result": {
+            "objSHA256": "57a66ef26f86fd4f640821752581d2a55cfc12514c63b7afc761ccf868470437",
+            "positionTriangleSHA256": "53e1c1d8b2d10fefbdafc06e70e5f18734b2975da39d455491b285959f4ec07f",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P02/references/D11-P02-model-r3.png",
+        "viewer": "parts/D11-P02/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P03",
+      "name": "帶扣槽肩銷",
+      "purpose": "貫穿支承與轉動零件並以肩頭、墊圈、扣環限制軸向位置。",
+      "checks": [
+        {
+          "id": "fit-D11-P01-D11-P03",
+          "title": "孔軸截面：D11-P01／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.1,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": 0,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.04999999999999982,
+            "sampledMinGapMm": 0.049962934151825955,
+            "sampledMaxGapMm": 0.05000011787623304,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 512,
+              "maxAngularGapRadians": 0.01227334515308609,
+              "maxSagMm": 0.00003860009793326124
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "fit-D11-P11a-D11-P03",
+          "title": "孔軸截面：D11-P11a／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": -10,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999864974836292,
+            "sampledMaxGapMm": 0.10000276014862242,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545060683881765,
+              "maxSagMm": 0.0011243924057994237
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "fit-D11-P11b-D11-P03",
+          "title": "孔軸截面：D11-P11b／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": 10,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999864974836292,
+            "sampledMaxGapMm": 0.10000276014862242,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545060683881765,
+              "maxSagMm": 0.0011243924057994237
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "fit-D11-P05a-D11-P03",
+          "title": "孔軸截面：D11-P05a／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": -4,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999865089982674,
+            "sampledMaxGapMm": 0.10000276921665763,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 384,
+              "maxAngularGapRadians": 0.01636361150077459,
+              "maxSagMm": 0.00007028865049769628
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "fit-D11-P10-D11-P03",
+          "title": "孔軸截面：D11-P10／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": -18.25,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999864974836292,
+            "sampledMaxGapMm": 0.10000276014862242,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545060683881765,
+              "maxSagMm": 0.0011243924057994237
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "pin-profile",
+          "title": "肩銷逐段圓臺積分",
+          "status": "PASS",
+          "formula": "V_frustum=πh(r1²+r1r2+r2²)/3",
+          "inputs": {
+            "profileZR_mm": [
+              [
+                -20,
+                0
+              ],
+              [
+                -20,
+                1.7
+              ],
+              [
+                -19.7,
+                2
+              ],
+              [
+                -19.2,
+                2
+              ],
+              [
+                -19.2,
+                1.6
+              ],
+              [
+                -18.5,
+                1.6
+              ],
+              [
+                -18.5,
+                2
+              ],
+              [
+                18,
+                2
+              ],
+              [
+                18,
+                3.5
+              ],
+              [
+                19.6,
+                3.5
+              ],
+              [
+                20,
+                3.1
+              ],
+              [
+                20,
+                0
+              ]
+            ],
+            "sides": 96
+          },
+          "result": {
+            "idealVolumeMm3": 549.0948943772825,
+            "polygonVolumeMm3": 548.7029536390053,
+            "meshVolumeMm3": 548.7030293130324
+          },
+          "acceptance": "完整輪廓積分差 <0.003 mm³。",
+          "method": "將軸身、扣槽、肩部、倒角分段積分，與 OBJ 封閉網格比對。",
+          "meaning": "保留每一段輪廓，避免只用 Ø4×長度替代真正肩銷。",
+          "nextAction": "逐段定位差異，重讀肩部孔口的剖面。"
+        },
+        {
+          "id": "clip-groove",
+          "title": "扣環與槽寬的軸向包容",
+          "status": "PASS",
+          "formula": "g_axial=(z槽上−z槽下)−t扣環",
+          "inputs": {
+            "grooveZmm": [
+              -19.2,
+              -18.5
+            ]
+          },
+          "result": {
+            "clipZmm": [
+              -19.18000030517578,
+              -18.530000686645508
+            ],
+            "clipThicknessMm": 0.6499996185302734,
+            "totalAxialGapMm": 0.05000038146972652
+          },
+          "acceptance": "整片扣環的 Z 包絡留在扣槽中。",
+          "method": "直接讀取扣環 OBJ 的軸向極值。",
+          "meaning": "只證明放置包容，沒有證明張開卡入、拔出力或軸向承載。",
+          "nextAction": "以真實開口、卡入位移與材料模型建立彈性插入，再查殘留變形及保持力。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 962,
+            "edges": 2880,
+            "faces": 1920,
+            "eulerCharacteristic": 2,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -46,
+              -10,
+              0
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 548.7030293130293,
+            "originDifferenceMm3": 3.069544618483633e-12
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P03",
+            "sourceSHA256": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0"
+          },
+          "result": {
+            "objSHA256": "254af25c8dd656afaf42650f44f2cdc1f5b699a8d17f36a528b1e4dda6345d99",
+            "positionTriangleSHA256": "cc105a2f1ff2017c89520285d09c2c1025ffdcb625cab540b78c6e7655de1260",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "annulus",
+        "retention",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P03/references/D11-P03-model-r2.png",
+        "viewer": "parts/D11-P03/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P09",
+      "name": "E 形軸向扣環",
+      "purpose": "在肩銷下扣槽處提供軸向保持的形狀候選。",
+      "checks": [
+        {
+          "id": "clip-groove",
+          "title": "扣環與槽寬的軸向包容",
+          "status": "PASS",
+          "formula": "g_axial=(z槽上−z槽下)−t扣環",
+          "inputs": {
+            "grooveZmm": [
+              -19.2,
+              -18.5
+            ]
+          },
+          "result": {
+            "clipZmm": [
+              -19.18000030517578,
+              -18.530000686645508
+            ],
+            "clipThicknessMm": 0.6499996185302734,
+            "totalAxialGapMm": 0.05000038146972652
+          },
+          "acceptance": "整片扣環的 Z 包絡留在扣槽中。",
+          "method": "直接讀取扣環 OBJ 的軸向極值。",
+          "meaning": "只證明放置包容，沒有證明張開卡入、拔出力或軸向承載。",
+          "nextAction": "以真實開口、卡入位移與材料模型建立彈性插入，再查殘留變形及保持力。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "卡入張開量 (mm)",
+              "材料彈塑性曲線 (MPa)",
+              "保持載荷 (N)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 162,
+            "edges": 480,
+            "faces": 320,
+            "eulerCharacteristic": 2,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -46,
+              -9.560760974884033,
+              -18.855000495910645
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 19.14719880605719,
+            "originDifferenceMm3": 3.588240815588506e-13
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P09",
+            "sourceSHA256": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0"
+          },
+          "result": {
+            "objSHA256": "082325829dbe083ebc471e0ad0b8002c1fbebdbb3f28f2c6b5cf1ac52be15416",
+            "positionTriangleSHA256": "c11a07a7aa56e8e0d25cc98d8be4a58547cb564edf83b8ea92da6a1c4657f5f0",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "retention",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "卡入張開量 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料彈塑性曲線 (MPa)",
+          "quantities": [
+            {
+              "quantity": "stress",
+              "unit": "MPa"
+            },
+            {
+              "quantity": "strain",
+              "unit": "1"
+            }
+          ],
+          "unit": "MPa；1",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "保持載荷 (N)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            }
+          ],
+          "unit": "N",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P09/references/D11-P09-model-r1.png",
+        "viewer": "parts/D11-P09/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P10",
+      "name": "下止推墊圈",
+      "purpose": "在下盒壁與扣環之間提供止推承壓面。",
+      "checks": [
+        {
+          "id": "fit-D11-P10-D11-P03",
+          "title": "孔軸截面：D11-P10／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": -18.25,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999864974836292,
+            "sampledMaxGapMm": 0.10000276014862242,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545060683881765,
+              "maxSagMm": 0.0011243924057994237
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "annulus",
+          "title": "環形截面與網格近似量",
+          "status": "PASS",
+          "formula": "V_circle=π(Ro²−Ri²)L；V_polygon=(n/2)sin(2π/n)(Ro²−Ri²)L",
+          "inputs": {
+            "outerRadiusMm": 3.5,
+            "innerRadiusMm": 2.1,
+            "lengthMm": 0.5
+          },
+          "result": {
+            "observedSides": 96,
+            "idealVolumeMm3": 12.315043202071989,
+            "polygonVolumeMm3": 12.306252795943717,
+            "meshVolumeMm3": 12.306253454216897,
+            "numericalErrorMm3": 6.582731799653629e-7,
+            "polygonDeficitPercent": 0.071379417709172
+          },
+          "acceptance": "讀回實際分段數且網格積分與多邊形公式差 <0.002 mm³。",
+          "method": "由端面頂點讀取分段數；比對解析多邊形體積與全部網格積分。",
+          "meaning": "圓形解析體積和有限面網格有可計算差異，不把兩者當完全相同。",
+          "nextAction": "核對半徑、長度、缺面及分段數；精度不足則增加原生曲面細分。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 384,
+            "edges": 1152,
+            "faces": 768,
+            "eulerCharacteristic": 0,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -46,
+              -10,
+              -18.25
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 12.306253454216879,
+            "originDifferenceMm3": 1.7763568394002505e-14
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P10",
+            "sourceSHA256": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0"
+          },
+          "result": {
+            "objSHA256": "2df4d3664678bd5a06ca8201ae38f182e1d2e5b9e36353d65651338546df1d9c",
+            "positionTriangleSHA256": "40363d7780e33cc602d6c01b0987b9e6eb64c3bee0122122f5241dcc4feb7b8a",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "annulus",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P10/references/D11-P10-model-r1.png",
+        "viewer": "parts/D11-P10/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P06",
+      "name": "周界密封墊",
+      "purpose": "位於盒體法蘭和未完成的門皮接面之間，預留密封接合。",
+      "checks": [
+        {
+          "id": "gasket-thickness",
+          "title": "密封墊原始厚度",
+          "status": "PASS",
+          "formula": "ε_c=(t₀−t)/t₀",
+          "inputs": {
+            "freeThicknessMm": 1
+          },
+          "result": {
+            "readbackFreeThicknessMm": 1.000000000000001,
+            "installedThicknessMm": null,
+            "compressionStrain": null
+          },
+          "acceptance": "原生自由厚度為 1 mm；裝入壓縮量不得由自由形體推定。",
+          "method": "由 OBJ 全部頂點的 Y 範圍讀取。",
+          "meaning": "外觀材質不能代替橡膠壓縮曲線與實際槽隙。",
+          "nextAction": "建立門皮/座面與壓縮後厚度，再以材料曲線求面壓並檢查擠出。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "壓縮後槽隙 (mm)",
+              "材料壓縮曲線 (MPa)",
+              "溫度/老化條件"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 920,
+            "edges": 2772,
+            "faces": 1848,
+            "eulerCharacteristic": -4,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              0,
+              -0.49999999999999944,
+              0
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 2021.8615061630544,
+            "originDifferenceMm3": 9.094947017729282e-13
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P06",
+            "sourceSHA256": "34ff94129df4c8c3815473d7171b0c6351ee60f1471a1479f7ecd74c520a9ab0"
+          },
+          "result": {
+            "objSHA256": "221a91224f9e5d115ad1fb0a07305118c2e181bc19869dce968274b80f54d809",
+            "positionTriangleSHA256": "e3e00619d99adbe71410822b103c806c71b5b6bdb02c758827ad47030e34d0aa",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "seal",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "壓縮後槽隙 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料壓縮曲線 (MPa)",
+          "quantities": [
+            {
+              "quantity": "stress",
+              "unit": "MPa"
+            },
+            {
+              "quantity": "strain",
+              "unit": "1"
+            }
+          ],
+          "unit": "MPa；1",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "溫度/老化條件",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P06/references/D11-P06-model-r1.png",
+        "viewer": "parts/D11-P06/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P04",
+      "name": "雙切向腳回位扭簧",
+      "purpose": "以固定腳接盒體、移動腳接撥臂，提供回位結構候選。",
+      "checks": [
+        {
+          "id": "spring-length",
+          "title": "螺旋弧長與變形保長讀回",
+          "status": "PASS",
+          "formula": "L=√[(2πRN)²+H²]；折線長=Σ|p(i+1)−p(i)|",
+          "inputs": {
+            "meanRadiusMm": 3.6,
+            "turns": 6.5,
+            "heightMm": 5.1,
+            "legLengthEachMm": 13,
+            "coilSegments": 624
+          },
+          "result": {
+            "idealCoilLengthMm": 147.11496301682556,
+            "meshConstructionCoilLengthMm": 147.08873790600092,
+            "polylineTotalWithLegsMm": 173.08873790600092,
+            "poses": [
+              {
+                "angleDegrees": 0,
+                "lengthMm": 147.08873790600092,
+                "radialAdjustmentMm": 0,
+                "errorMm": 0
+              },
+              {
+                "angleDegrees": 10,
+                "lengthMm": 147.0887379060196,
+                "radialAdjustmentMm": -0.030628143076683045,
+                "errorMm": 1.8673063095775433e-11
+              },
+              {
+                "angleDegrees": 20,
+                "lengthMm": 147.08873790599387,
+                "radialAdjustmentMm": -0.06099825942692405,
+                "errorMm": -7.048583938740194e-12
+              },
+              {
+                "angleDegrees": 30,
+                "lengthMm": 147.08873790602823,
+                "radialAdjustmentMm": -0.09111357767869777,
+                "errorMm": 2.731326276261825e-11
+              }
+            ],
+            "axialPitchMinusWireMm": 0.08461538461538465
+          },
+          "acceptance": "四個原生變形狀態的折線長差 <10⁻⁷ mm；休止弧長近似誤差 <0.03 mm。",
+          "method": "呼叫目前原生彈簧工法，讀回同一模型的中心線；解析螺旋弧長獨立對照。",
+          "meaning": "只驗幾何保長。軸向節距減線徑不是最近三維圈間距；保長不是回復力模型。",
+          "nextAction": "弧長錯則修中心線；剛度與預壓由材料/試驗補入，不能用縮半徑動畫假裝已算受力。"
+        },
+        {
+          "id": "spring-force",
+          "title": "回位力矩與疲勞",
+          "status": "NEEDS_INPUT",
+          "formula": "M=kθ+M₀；U=½kθ²（線性區）",
+          "inputs": {
+            "testedShapeAnglesDeg": [
+              0,
+              10,
+              20,
+              30
+            ]
+          },
+          "result": {
+            "missingInputs": [
+              "k (N·mm/rad)",
+              "預壓 M₀ (N·mm)",
+              "材料 E、屈服、疲勞資料及端部拘束"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "扭簧線材主要受彎曲；不可套用直桿受扭的 GJ/L 當本件剛度。",
+          "nextAction": "指定材料與工作力矩/循環，建立含端腳的彎曲模型，量測力矩–角度曲線及永久變形。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 15770,
+            "edges": 47304,
+            "faces": 31536,
+            "eulerCharacteristic": 2,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -45.999961853027344,
+              -14.5250084400177,
+              -10.150988101959229
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 65.8240854914388,
+            "originDifferenceMm3": 5.684341886080801e-13
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P04",
+            "sourceSHA256": "7779e160db32e30166f585662ee0504495ec9399821493241e1ec5194600c9d5"
+          },
+          "result": {
+            "objSHA256": "5f742d25b6693c57aa7f9501a1bcf33f8ce11185b40baaef3d5e914c9b387f87",
+            "positionTriangleSHA256": "bc263d32aa17092263c04b0afad0a31d546b51a8ab930073579d0e89de71c190",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "helix",
+        "elastic",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P04/references/D11-P04-model-r1.png",
+        "viewer": "parts/D11-P04/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P11a",
+      "name": "下軸套與彈簧導套",
+      "purpose": "在下盒壁與撥臂底板之間提供肩銷支承及彈簧導向。",
+      "checks": [
+        {
+          "id": "fit-D11-P11a-D11-P03",
+          "title": "孔軸截面：D11-P11a／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": -10,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999864974836292,
+            "sampledMaxGapMm": 0.10000276014862242,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545060683881765,
+              "maxSagMm": 0.0011243924057994237
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "annulus",
+          "title": "環形截面與網格近似量",
+          "status": "PASS",
+          "formula": "V_circle=π(Ro²−Ri²)L；V_polygon=(n/2)sin(2π/n)(Ro²−Ri²)L",
+          "inputs": {
+            "outerRadiusMm": 2.75,
+            "innerRadiusMm": 2.1,
+            "lengthMm": 8.5
+          },
+          "result": {
+            "observedSides": 96,
+            "idealVolumeMm3": 84.18290214375548,
+            "polygonVolumeMm3": 84.1228128783946,
+            "meshVolumeMm3": 84.1227676075307,
+            "numericalErrorMm3": 0.00004527086389316537,
+            "polygonDeficitPercent": 0.0713794177091609
+          },
+          "acceptance": "讀回實際分段數且網格積分與多邊形公式差 <0.002 mm³。",
+          "method": "由端面頂點讀取分段數；比對解析多邊形體積與全部網格積分。",
+          "meaning": "圓形解析體積和有限面網格有可計算差異，不把兩者當完全相同。",
+          "nextAction": "核對半徑、長度、缺面及分段數；精度不足則增加原生曲面細分。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 384,
+            "edges": 1152,
+            "faces": 768,
+            "eulerCharacteristic": 0,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -46,
+              -10,
+              -10.25
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 84.12276760753036,
+            "originDifferenceMm3": 3.410605131648481e-13
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P11a",
+            "sourceSHA256": "7779e160db32e30166f585662ee0504495ec9399821493241e1ec5194600c9d5"
+          },
+          "result": {
+            "objSHA256": "86c95555c76184a075518a0855ff4677e0746d9552132587aab8739bafb22a28",
+            "positionTriangleSHA256": "1a7b3c7d4f8f2597627fd25543b8d87e146c7cbedfaec7ae30ece56c1b729a5d",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "annulus",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P11a/references/D11-P11a-model-r1.png",
+        "viewer": "parts/D11-P11a/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P11b",
+      "name": "由上方裝入的上軸套",
+      "purpose": "從上方穿過盒孔，隔開把手軸座與上壁並支承肩銷。",
+      "checks": [
+        {
+          "id": "fit-D11-P11b-D11-P03",
+          "title": "孔軸截面：D11-P11b／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": 10,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999864974836292,
+            "sampledMaxGapMm": 0.10000276014862242,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545060683881765,
+              "maxSagMm": 0.0011243924057994237
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "fit-D11-P02-D11-P11b",
+          "title": "孔軸截面：D11-P02／D11-P11b",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 5.7,
+            "shaftDiameterMm": 5.5,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": 16,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.0969478837142681,
+            "sampledMaxGapMm": 0.10000173860443295,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 64,
+              "maxAngularGapRadians": 0.09817533212152263,
+              "maxSagMm": 0.003432989090020522
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545061914005057,
+              "maxSagMm": 0.001472419180065604
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "annulus",
+          "title": "環形截面與網格近似量",
+          "status": "PASS",
+          "formula": "V_circle=π(Ro²−Ri²)L；V_polygon=(n/2)sin(2π/n)(Ro²−Ri²)L",
+          "inputs": {
+            "outerRadiusMm": 2.75,
+            "innerRadiusMm": 2.1,
+            "lengthMm": 11
+          },
+          "result": {
+            "observedSides": 96,
+            "idealVolumeMm3": 108.94257924486004,
+            "polygonVolumeMm3": 108.86481666615772,
+            "meshVolumeMm3": 108.86475808033316,
+            "numericalErrorMm3": 0.00005858582456141903,
+            "polygonDeficitPercent": 0.0713794177091609
+          },
+          "acceptance": "讀回實際分段數且網格積分與多邊形公式差 <0.002 mm³。",
+          "method": "由端面頂點讀取分段數；比對解析多邊形體積與全部網格積分。",
+          "meaning": "圓形解析體積和有限面網格有可計算差異，不把兩者當完全相同。",
+          "nextAction": "核對半徑、長度、缺面及分段數；精度不足則增加原生曲面細分。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 384,
+            "edges": 1152,
+            "faces": 768,
+            "eulerCharacteristic": 0,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -46,
+              -10,
+              12.5
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 108.8647580803338,
+            "originDifferenceMm3": 6.394884621840902e-13
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P11b",
+            "sourceSHA256": "7779e160db32e30166f585662ee0504495ec9399821493241e1ec5194600c9d5"
+          },
+          "result": {
+            "objSHA256": "448e9e0c03009e189a675491290fa980eea2a8cd51828c88e0d8e648a39a35ff",
+            "positionTriangleSHA256": "be1fc36ca614ab114304ddaa369e73b0b0f6090e17dbc032a43125d56f8606ee",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "annulus",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P11b/references/D11-P11b-model-r2.png",
+        "viewer": "parts/D11-P11b/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D11-P05a",
+      "name": "D 形凹座拉索撥臂",
+      "purpose": "接收把手的旋轉，預留拉索端頭連接並與回位彈簧接觸。",
+      "checks": [
+        {
+          "id": "fit-D11-P05a-D11-P03",
+          "title": "孔軸截面：D11-P05a／D11-P03",
+          "status": "PASS",
+          "formula": "c=(D−d)/2；弦高界 s=R[1−cos(Δα_max/2)]",
+          "inputs": {
+            "holeDiameterMm": 4.2,
+            "shaftDiameterMm": 4,
+            "axis": [
+              -46,
+              -10
+            ],
+            "zMm": -4,
+            "nominalEccentricityMm": 0
+          },
+          "result": {
+            "nominalRadialGapMm": 0.10000000000000009,
+            "sampledMinGapMm": 0.09999865089982674,
+            "sampledMaxGapMm": 0.10000276921665763,
+            "rays": 48,
+            "holePolygon": {
+              "vertices": 384,
+              "maxAngularGapRadians": 0.01636361150077459,
+              "maxSagMm": 0.00007028865049769628
+            },
+            "shaftPolygon": {
+              "vertices": 96,
+              "maxAngularGapRadians": 0.06545136184239375,
+              "maxSagMm": 0.0010708746137388925
+            },
+            "coordinateNumericalAllowanceMm": 0.00001
+          },
+          "acceptance": "本截面 48 個射線間隙皆 >0；c−s孔−ε ≤ 間隙 ≤ c+s軸+ε；ε=10⁻⁵ mm 為座標數值容差。",
+          "method": "從兩件真實三角面求交；由圓周頂點最大夾角推導弦高誤差界，中空軸套取第二交點作外徑。",
+          "meaning": "此截面能相配；多邊形近似誤差由幾何推導。完整倒角、全路徑、公差及偏心仍各有條件。",
+          "nextAction": "若為負間隙先修共同輪廓；超過弦高界則查軸心、形狀與讀回。不能以名義直徑覆蓋倒角干涉。"
+        },
+        {
+          "id": "moment-arm",
+          "title": "撥臂力矩係數與方向",
+          "status": "PASS",
+          "formula": "M_z=r_xF_y−r_yF_x",
+          "inputs": {
+            "pivotMm": [
+              -46,
+              -10,
+              -4.55
+            ],
+            "cableEyeMm": [
+              -28,
+              -10,
+              -4.55
+            ]
+          },
+          "result": {
+            "armMm": [
+              18,
+              0,
+              0
+            ],
+            "coefficientForFyMm": 18,
+            "coefficientForFxMm": 0,
+            "interpretation": "M_z/(N·mm)=18×F_y/N；這是每單位力的比例，沒有假定實際拉力。"
+          },
+          "acceptance": "兩個作者設計孔軸相距 18 mm；載荷留作符號量。",
+          "method": "讀取零件的設計孔軸；套用叉積定義，不把 18F 用於任意方向。",
+          "meaning": "改變鋼索方向或接點，力矩係數也必須重算。",
+          "nextAction": "由實際拉索路由取得力向量，再做平衡及接觸讀回。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 3890,
+            "edges": 11670,
+            "faces": 7780,
+            "eulerCharacteristic": 0,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              -38.30000019073486,
+              -13.5,
+              -5.249999761581421
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 600.7101093667468,
+            "originDifferenceMm3": 4.433786671143025e-12
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D11-P05a",
+            "sourceSHA256": "7bf5cd1c52341f73c0cbd28af4be18261c675a6748563954c956f0cea0907077"
+          },
+          "result": {
+            "objSHA256": "64d7390d967b137aa6dff88a5283bef391c90e25e3f26810ff0fd40f7bd6a021",
+            "positionTriangleSHA256": "41864cab573cda1935831686136bcf25927b5b63de263a0423d1fa6f06d8632a",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0,
+            "translationMm": [
+              0,
+              0,
+              0
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D11 assembly local",
+              "units": "mm",
+              "handedness": "right",
+              "X": "沿把手長度",
+              "Y": "向車外",
+              "Z": "向上",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "pivotAxis": {
+                "origin": [
+                  -46,
+                  -10,
+                  0
+                ],
+                "direction": [
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "transformApplied": "none; original native geometry coordinates"
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "fit",
+        "moment",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D11-P05a/references/D11-P05a-model-r1.png",
+        "viewer": "parts/D11-P05a/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D05-P15d",
+      "name": "M5×0.8 內六角夾緊螺栓",
+      "purpose": "穿過玻璃夾具的固定體與壓板，與 M5 螺帽形成夾緊組合。",
+      "checks": [
+        {
+          "id": "screw-phase",
+          "title": "螺距、轉角與螺旋相位",
+          "status": "PASS",
+          "formula": "phase=y/p+α/(2π)；Δy=−pΔα/(2π)",
+          "inputs": {
+            "pitchMm": 0.8,
+            "axis": [
+              0,
+              0.876215908676647,
+              0.48191874977215593
+            ],
+            "handednessScope": "本件原生來源的 y/α 慣例；不泛化其他螺紋。"
+          },
+          "result": {
+            "samples": [
+              {
+                "degrees": 0,
+                "advanceMm": 0,
+                "radialSurfaceMm": 2.011300696480331,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": 0
+              },
+              {
+                "degrees": 30,
+                "advanceMm": -0.06666666666666667,
+                "radialSurfaceMm": 2.009253788782583,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": -0.0020469076977480682
+              },
+              {
+                "degrees": 60,
+                "advanceMm": -0.13333333333333333,
+                "radialSurfaceMm": 2.0092557493000784,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": -0.00204494718025261
+              },
+              {
+                "degrees": 90,
+                "advanceMm": -0.2,
+                "radialSurfaceMm": 2.0112993857571966,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": -0.000001310723134473335
+              },
+              {
+                "degrees": 180,
+                "advanceMm": -0.4,
+                "radialSurfaceMm": 2.011300732514851,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": 3.603451981248895e-8
+              },
+              {
+                "degrees": 270,
+                "advanceMm": -0.6,
+                "radialSurfaceMm": 2.0112991289195974,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": -0.0000015675607336618214
+              },
+              {
+                "degrees": 360,
+                "advanceMm": -0.8,
+                "radialSurfaceMm": 2.011300554212368,
+                "baseRadiusMm": 2.011300696480331,
+                "phaseErrorMm": -1.4226796318794754e-7
+              }
+            ]
+          },
+          "acceptance": "七個相位等價位置的實體射線半徑差 <0.025 mm（網格讀回門檻）。",
+          "method": "移動射線座標沿目前實際傾斜軸，交於 OBJ 三角面；無替換圓柱。",
+          "meaning": "90° 對應 −0.2 mm；反轉符號會造成螺紋錯相。相位通過不代表牙側承載通過。",
+          "nextAction": "修正座標、旋轉方向、螺距及起牙相位，再檢查完整旋入與工具空間。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 25730,
+            "edges": 77184,
+            "faces": 51456,
+            "eulerCharacteristic": 2,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              0,
+              -42.24430274963379,
+              64.18409729003906
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 557.3990744449487,
+            "originDifferenceMm3": 2.2737367544323206e-13
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D05-P15d",
+            "sourceSHA256": "d98d0d7bd0d8a7925f5e21d6311b79087470c9368c10a4aa56133055278005fe"
+          },
+          "result": {
+            "objSHA256": "b6fb4c91db1e16e34558dc228b3f263672b933a984855962976c48f77673d296",
+            "positionTriangleSHA256": "e3a2768b93dec820ef8a8352da0dd36b19058245073a1bb029d99f92fd3f0df4",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0.5028432109278609,
+            "translationMm": [
+              0,
+              -45,
+              69
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 0,
+            "placementFrame": {
+              "name": "D05 upper clamp native surface frame",
+              "units": "mm",
+              "handedness": "right",
+              "X": "夾具寬度；單一形狀原型中心 X=0",
+              "Y": "原生夾具局部 Y",
+              "Z": "原生夾具局部 Z",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "threadAxis": {
+                "origin": [
+                  0,
+                  -50.87064658813354,
+                  58.923517050218564
+                ],
+                "direction": [
+                  0,
+                  0.876215908676647,
+                  0.48191874977215593
+                ]
+              },
+              "sourceAxisBeforeFollowGlass": [
+                0,
+                1,
+                0
+              ],
+              "sourceToCurrent": "rotate about X by atan(0.55), then the source followGlass translation; primitive axis in source interfaces is pre-transform",
+              "transformApplied": "none; original completed makeGT01GlassClamps surfaces preserved",
+              "instancePlacement": {
+                "frame": "D05 clamp upper geometry after followGlass; component.x is a separate placement",
+                "prototypeX": 0,
+                "selectedInstanceX": -24,
+                "duplicateInstanceX": [
+                  -24,
+                  24
+                ]
+              }
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "screw",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D05-P15d/references/D05-P15d-model-r1.png",
+        "viewer": "parts/D05-P15d/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    },
+    {
+      "id": "D05-P15e",
+      "name": "M5×0.8 六角螺帽",
+      "purpose": "抵住玻璃夾具固定體背面，與 M5 螺栓配合提供夾緊反力；目前需工具扶持六角外形。",
+      "checks": [
+        {
+          "id": "screw-phase",
+          "title": "螺距、轉角與螺旋相位",
+          "status": "PASS",
+          "formula": "phase=y/p+α/(2π)；Δy=−pΔα/(2π)",
+          "inputs": {
+            "pitchMm": 0.8,
+            "axis": [
+              0,
+              0.876215908676647,
+              0.48191874977215593
+            ],
+            "handednessScope": "本件原生來源的 y/α 慣例；不泛化其他螺紋。"
+          },
+          "result": {
+            "samples": [
+              {
+                "degrees": 0,
+                "advanceMm": 0,
+                "radialSurfaceMm": 2.121300805301337,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": 0
+              },
+              {
+                "degrees": 30,
+                "advanceMm": -0.06666666666666667,
+                "radialSurfaceMm": 2.1192579669953813,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": -0.002042838305955641
+              },
+              {
+                "degrees": 60,
+                "advanceMm": -0.13333333333333333,
+                "radialSurfaceMm": 2.1192541696459934,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": -0.002046635655343465
+              },
+              {
+                "degrees": 90,
+                "advanceMm": -0.2,
+                "radialSurfaceMm": 2.1212985972891345,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": -0.000002208012202409293
+              },
+              {
+                "degrees": 180,
+                "advanceMm": -0.4,
+                "radialSurfaceMm": 2.1213009354853694,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": 1.301840324430259e-7
+              },
+              {
+                "degrees": 270,
+                "advanceMm": -0.6,
+                "radialSurfaceMm": 2.1212995496907467,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": -0.000001255610590167322
+              },
+              {
+                "degrees": 360,
+                "advanceMm": -0.8,
+                "radialSurfaceMm": 2.1213007071809207,
+                "baseRadiusMm": 2.121300805301337,
+                "phaseErrorMm": -9.812041623646905e-8
+              }
+            ]
+          },
+          "acceptance": "七個相位等價位置的實體射線半徑差 <0.025 mm（網格讀回門檻）。",
+          "method": "移動射線座標沿目前實際傾斜軸，交於 OBJ 三角面；無替換圓柱。",
+          "meaning": "90° 對應 −0.2 mm；反轉符號會造成螺紋錯相。相位通過不代表牙側承載通過。",
+          "nextAction": "修正座標、旋轉方向、螺距及起牙相位，再檢查完整旋入與工具空間。"
+        },
+        {
+          "id": "load-release",
+          "title": "材料、公差與承載判定",
+          "status": "NEEDS_INPUT",
+          "formula": "ΣF=0、ΣM=0；σ_avg=F/A；τ_avg=V/A（適用截面）",
+          "inputs": {
+            "materialGrade": "未指定"
+          },
+          "result": {
+            "missingInputs": [
+              "載荷大小/方向/循環 (N, N·mm)",
+              "材料牌號、強度與製程",
+              "公差極限及偏心 (mm)"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "平均應力只是初步模型；孔口、槽、螺紋、接觸邊緣需另查應力集中與失效模式。",
+          "nextAction": "先固定工況與材料，建立受力路徑及許用值，再以計算/量測驗證。禁止由顏色或正體積推得承載合格。"
+        },
+        {
+          "id": "tolerance-release",
+          "title": "極限公差與實際裝入",
+          "status": "NEEDS_INPUT",
+          "formula": "c_min=(D_min−d_max)/2−e；包含倒角、全路徑與工具掃掠",
+          "inputs": {
+            "sampledNominalGeometry": true
+          },
+          "result": {
+            "missingInputs": [
+              "各接面上下限",
+              "相對軸線偏心/傾斜",
+              "完整安裝及工具路徑"
+            ]
+          },
+          "acceptance": "真實輸入齊全、模型前提成立並取得對應讀回，才可判定。",
+          "method": "目前資料庫欄位與物理模型前提核對；沒有代填材料或載荷。",
+          "meaning": "名義截面和離散路徑讀回各自有效，不能合併推成所有狀態無干涉。",
+          "nextAction": "由宿主極限尺寸展開最壞情況，再查整個裝入/拆出過程及保持件釋放。"
+        },
+        {
+          "id": "closed-boundary",
+          "title": "封閉、有向與頂點鄰域",
+          "status": "PASS",
+          "formula": "每條邊恰有兩個反向面；每個頂點的 link 是一個環。",
+          "inputs": {
+            "weldGridMm": 0.00001
+          },
+          "result": {
+            "vertices": 4967,
+            "edges": 14901,
+            "faces": 9934,
+            "eulerCharacteristic": 0,
+            "badEdgeIncidence": 0,
+            "badOrientedEdges": 0,
+            "badVertexLinks": 0,
+            "weldGridMm": 0.00001,
+            "selfIntersectionExamined": false
+          },
+          "acceptance": "邊、面方向、頂點鄰域異常均為 0；一個連通體。",
+          "method": "逐一讀取 OBJ 的全部三角面與頂點鄰接。",
+          "meaning": "排除破口、反面和只在單點相接的假實體；不宣稱已檢查所有自交。",
+          "nextAction": "回到原生幾何修補相鄰面；不可只刪除失敗報告。"
+        },
+        {
+          "id": "volume-origin",
+          "title": "體積積分與基準點不變性",
+          "status": "PASS",
+          "formula": "V = Σ (a−o)·[(b−o)×(c−o)] / 6",
+          "inputs": {
+            "originA": [
+              0,
+              0,
+              0
+            ],
+            "originB": [
+              0,
+              -51.483999252319336,
+              58.5861759185791
+            ],
+            "unit": "mm"
+          },
+          "result": {
+            "signedVolumeMm3": 145.87521041484374,
+            "originDifferenceMm3": 2.1032064978498966e-12
+          },
+          "acceptance": "正的代數體積；兩個基準點之差 ≤ max(10⁻⁷ mm³, |V|×10⁻⁸)。",
+          "method": "兩次獨立基準的逐三角面積分。",
+          "meaning": "成立於封閉有向邊界；自交未全驗時，只稱代數體積。數值門檻不是加工公差。",
+          "nextAction": "核對面方向、漏面、座標尺度與浮點誤差。"
+        },
+        {
+          "id": "identity-units",
+          "title": "讀回綁定同一零件與單位",
+          "status": "PASS",
+          "formula": "原生→OBJ 的三角位置身分相同；全程長度單位 mm。",
+          "inputs": {
+            "id": "D05-P15e",
+            "sourceSHA256": "d98d0d7bd0d8a7925f5e21d6311b79087470c9368c10a4aa56133055278005fe"
+          },
+          "result": {
+            "objSHA256": "7a757c67fa461bf484d67568318ce35a5af960407619313feffecadb665d3238",
+            "positionTriangleSHA256": "dbb3c6803a122125fc42caf62fdb92d9492ad2eca8c3f74df2f28bd33f334c71",
+            "units": "mm",
+            "frameUnits": "mm"
+          },
+          "acceptance": "目前 OBJ 與逐件宣告的內容一致；所有原生來源亦與 source-bindings.json 相符。",
+          "method": "實際讀取檔案、全部位置與來源位元組；不以檔名相同作判定。",
+          "meaning": "公式結果必須綁定被檢查的那個修訂，單位不能漂移。",
+          "nextAction": "來源改變後重建/重驗全部相依消費端；不可沿用舊報告。"
+        },
+        {
+          "id": "rigid-frame",
+          "title": "座標旋轉不改變零件尺寸",
+          "status": "PASS",
+          "formula": "x′=Rx+t；RᵀR=I、det R=+1 ⇒ |x′−y′|=|x−y|",
+          "inputs": {
+            "angleRadians": 0.5028432109278609,
+            "translationMm": [
+              0,
+              -45,
+              69
+            ]
+          },
+          "result": {
+            "sampledDistanceErrorMm": 4.912736883966318e-15,
+            "placementFrame": {
+              "name": "D05 upper clamp native surface frame",
+              "units": "mm",
+              "handedness": "right",
+              "X": "夾具寬度；單一形狀原型中心 X=0",
+              "Y": "原生夾具局部 Y",
+              "Z": "原生夾具局部 Z",
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "threadAxis": {
+                "origin": [
+                  0,
+                  -50.87064658813354,
+                  58.923517050218564
+                ],
+                "direction": [
+                  0,
+                  0.876215908676647,
+                  0.48191874977215593
+                ]
+              },
+              "sourceAxisBeforeFollowGlass": [
+                0,
+                1,
+                0
+              ],
+              "sourceToCurrent": "rotate about X by atan(0.55), then the source followGlass translation; primitive axis in source interfaces is pre-transform",
+              "transformApplied": "none; original completed makeGT01GlassClamps surfaces preserved",
+              "instancePlacement": {
+                "frame": "D05 clamp upper geometry after followGlass; component.x is a separate placement",
+                "prototypeX": 0,
+                "selectedInstanceX": -24,
+                "duplicateInstanceX": [
+                  -24,
+                  24
+                ]
+              }
+            }
+          },
+          "acceptance": "來源所用右手旋轉；已讀兩個實際 OBJ 點的距離誤差 <10⁻¹⁰ mm。",
+          "method": "以來源框架的正交旋轉恆等式與原生點對做算術讀回；沒有替所有安裝姿態背書。",
+          "meaning": "匯入保持 mm 與右手座標；展示位移不改寫接面。",
+          "nextAction": "修正單位、鏡射或非均勻縮放；再檢查完整接面與安裝路徑。"
+        }
+      ],
+      "lawIds": [
+        "screw",
+        "load",
+        "boundary",
+        "volume",
+        "rigid",
+        "units"
+      ],
+      "openInputs": [
+        {
+          "name": "載荷大小/方向/循環 (N, N·mm)",
+          "quantities": [
+            {
+              "quantity": "force",
+              "unit": "N"
+            },
+            {
+              "quantity": "moment",
+              "unit": "N·mm"
+            },
+            {
+              "quantity": "direction",
+              "unit": "1（單位方向向量）"
+            },
+            {
+              "quantity": "cycles",
+              "unit": "1（次數）"
+            }
+          ],
+          "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "材料牌號、強度與製程",
+          "quantities": [],
+          "unit": "依具體資料欄位與來源指定",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        },
+        {
+          "name": "公差極限及偏心 (mm)",
+          "quantities": [
+            {
+              "quantity": "length",
+              "unit": "mm"
+            }
+          ],
+          "unit": "mm",
+          "reason": "現有原生形體和外觀資料不含此實測輸入。",
+          "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+        }
+      ],
+      "visual": {
+        "image": "parts/D05-P15e/references/D05-P15e-model-r1.png",
+        "viewer": "parts/D05-P15e/view.html",
+        "caption": "同一原生零件的形狀讀回；點圖可旋轉近看。"
+      }
+    }
+  ],
+  "summary": {
+    "parts": 12,
+    "checks": 96,
+    "pass": 72,
+    "fail": 0,
+    "needsInput": 24
+  },
+  "counterexamples": [
+    {
+      "id": "missing-face",
+      "caught": true
+    },
+    {
+      "id": "reversed-face",
+      "caught": true
+    },
+    {
+      "id": "two-solids-touching-at-one-vertex",
+      "caught": true
+    },
+    {
+      "id": "interference",
+      "caught": true
+    },
+    {
+      "id": "eccentricity-consumes-clearance",
+      "caught": true
+    },
+    {
+      "id": "wrong-thread-sign",
+      "caught": true
+    },
+    {
+      "id": "reference-closed-tetrahedron",
+      "caught": true
+    }
+  ],
+  "units": {
+    "length": "mm",
+    "angle": "rad（介面度數先轉換）",
+    "force": "N",
+    "stress": "MPa = N/mm²",
+    "torque": "N·mm"
+  },
+  "sources": [
+    {
+      "id": "nist-si",
+      "title": "NIST · SI 單位與導出單位",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+      "scope": "單位定義；不提供 GT01 的尺寸或材料認證。"
+    },
+    {
+      "id": "divergence",
+      "title": "OpenStax · 散度定理",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/6-8-the-divergence-theorem",
+      "scope": "體積積分的數學基礎；三角面離散式由本專案推導。"
+    },
+    {
+      "id": "arc",
+      "title": "OpenStax · 空間曲線弧長",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/3-3-arc-length-and-curvature",
+      "scope": "弧長積分與螺旋推導；GT01 線徑、圈數及端腳仍為作者設計。"
+    },
+    {
+      "id": "torque",
+      "title": "MIT OpenCourseWare · 力矩與轉動",
+      "url": "https://www.ocw.mit.edu/courses/8-01l-physics-i-classical-mechanics-fall-2005/478b22ecde599466413770ed68da0fcb_lec27.pdf",
+      "scope": "力矩的叉積、力臂與平衡；不指定 GT01 載荷。"
+    },
+    {
+      "id": "elasticity",
+      "title": "OpenStax · 應力、應變與彈性模數",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus",
+      "scope": "平均應力、應變與線性彈性的條件；不取用表列泛稱材料值充當本件材料證明。"
+    }
+  ],
+  "laws": [
+    {
+      "id": "units",
+      "title": "量綱與單位先對齊",
+      "kind": "單位定義與量綱規則",
+      "premises": [
+        "同一計算式使用一致長度單位。",
+        "角度輸入度數時，先轉換為弧度。"
+      ],
+      "formula": "θ_rad=θ_deg×π/180；1 N/mm²=1 MPa；1000 N·mm=1 N·m",
+      "variables": [
+        {
+          "symbol": "θ",
+          "meaning": "角度",
+          "unit": "rad"
+        },
+        {
+          "symbol": "F",
+          "meaning": "力",
+          "unit": "N"
+        },
+        {
+          "symbol": "A",
+          "meaning": "截面積",
+          "unit": "mm²"
+        }
+      ],
+      "application": "全部零件及其接面資料；避免把 mm 誤當 m 或把角度直接餵入弧度函式。",
+      "procedure": [
+        "先寫每個符號的物理量與單位。",
+        "依量綱檢查加減項是否相同、輸出是否符合用途。",
+        "在讀入/匯出邊界轉換一次，內部維持一致。"
+      ],
+      "failureAction": "找出第一次尺度或角度轉換錯誤，重建相依形體及讀回。",
+      "limitations": [
+        "單位正確不代表輸入數值是真實量測。"
+      ],
+      "sourceIds": [
+        "nist-si"
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "封閉三角網格的鄰接條件",
+      "kind": "離散拓撲判準",
+      "premises": [
+        "共用幾何點採相同座標與焊接尺度。",
+        "面不得退化；每個頂點鄰域須形成單一環。"
+      ],
+      "formula": "每邊面數=2；沿邊方向和=0；每個 vertex link 為單環。",
+      "variables": [
+        {
+          "symbol": "ε",
+          "meaning": "座標焊接格距",
+          "unit": "mm"
+        },
+        {
+          "symbol": "V,E,F",
+          "meaning": "頂點、邊、面數",
+          "unit": "個"
+        }
+      ],
+      "application": "辨認破口、翻面與只在單點黏住的兩個殼。",
+      "procedure": [
+        "讀全部三角面，建立頂點、邊與鄰面關係。",
+        "逐邊核對兩個反向面；逐頂點核對 link 連通且度數為二。",
+        "另查非有限值、退化面、連通體及自交，不以某一項代替其他項。"
+      ],
+      "failureAction": "修原生面與公共邊；保留失敗零件、座標及前後剖面。",
+      "limitations": [
+        "拓撲封閉仍可能在空間自交；此版沒有全部三角面自交證明。",
+        "本版不以 Euler 特徵數直接推定實體孔數。"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "volume",
+      "title": "散度定理導出三角面體積",
+      "kind": "數學定理與離散積分",
+      "premises": [
+        "積分域是有界實體；邊界封閉、外向且無自交。",
+        "若無自交尚未證明，只稱代數體積。"
+      ],
+      "formula": "取 F(x)=x/3，∇·F=1；V=∮F·n dS=Σ a·(b×c)/6",
+      "variables": [
+        {
+          "symbol": "a,b,c",
+          "meaning": "同向三角面的三個頂點",
+          "unit": "mm"
+        },
+        {
+          "symbol": "V",
+          "meaning": "代數體積",
+          "unit": "mm³"
+        }
+      ],
+      "application": "讀回零件的整體邊界及方向；與軸套、墊圈、肩銷的獨立解析式比對。",
+      "procedure": [
+        "由全部真實三角面積分。",
+        "更換基準點重算，檢查封閉面應具有的平移不變性。",
+        "簡單截面另用獨立公式交叉檢查；複雜形體仍須剖面與自交檢查。"
+      ],
+      "failureAction": "核對漏面、方向、輪廓與尺度；不要把取絕對值當修補。",
+      "limitations": [
+        "體積為正不代表形狀符合參考圖、能裝入或能承載。"
+      ],
+      "sourceIds": [
+        "divergence"
+      ]
+    },
+    {
+      "id": "rigid",
+      "title": "剛體變換保持長度與角度",
+      "kind": "線性代數恆等式",
+      "premises": [
+        "RᵀR=I，且 det R=+1。",
+        "同一物件不混入縮放、鏡射或展示爆炸位移。"
+      ],
+      "formula": "|R(x−y)|²=(x−y)ᵀRᵀR(x−y)=|x−y|²",
+      "variables": [
+        {
+          "symbol": "R",
+          "meaning": "右手旋轉矩陣",
+          "unit": "無量綱"
+        },
+        {
+          "symbol": "t",
+          "meaning": "平移",
+          "unit": "mm"
+        }
+      ],
+      "application": "把本機零件放入總成，共用孔軸與接面基準。",
+      "procedure": [
+        "綁定局部座標、單位及父總成。",
+        "先求配合框架變換，再檢查對應接面。",
+        "展示拆開與實際裝入使用不同狀態，回裝讀回原位。"
+      ],
+      "failureAction": "修正框架或單位；不得用非均勻縮放掩蓋接面不合。",
+      "limitations": [
+        "兩件各自剛性並不保證它們相互無碰撞。"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "fit",
+      "title": "孔軸配合、偏心與弦高誤差",
+      "kind": "幾何推導與最壞界限",
+      "premises": [
+        "圓孔與圓軸的局部截面；名義式假設同軸。",
+        "直徑、半徑和偏心不能混用；全輪廓與路徑另查。"
+      ],
+      "formula": "c=(D−d)/2；c_min=(D_min−d_max)/2−e；s=R[1−cos(Δα/2)]",
+      "variables": [
+        {
+          "symbol": "D,d",
+          "meaning": "孔、軸直徑",
+          "unit": "mm"
+        },
+        {
+          "symbol": "e",
+          "meaning": "相對偏心",
+          "unit": "mm"
+        },
+        {
+          "symbol": "s",
+          "meaning": "圓弧與弦的最大徑向差",
+          "unit": "mm"
+        }
+      ],
+      "application": "肩銷穿過軸套/面板，或上軸套由盒體上方裝入。",
+      "procedure": [
+        "先由共同軸心取得兩件截面。",
+        "讀真實射線交點，求最小間隙。",
+        "由圓周頂點夾角推導多邊形誤差界，不先猜統一門檻。",
+        "加入尺寸上下限、偏心/傾斜及倒角後，再檢查完整裝入過程。"
+      ],
+      "failureAction": "干涉要修幾何或工序；數值誤差界要由形體推導，不能為過關任意放寬。",
+      "limitations": [
+        "48 個射線只代表已取樣截面；不構成連續路徑或製造互換性證明。"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "annulus",
+      "title": "環形截面與肩銷分段積分",
+      "kind": "平面幾何與積分推導",
+      "premises": [
+        "環形截面須同軸且截面不隨長度改變。",
+        "肩銷則分成各段圓柱/圓臺，不略過扣槽和倒角。"
+      ],
+      "formula": "V_ring=π(Ro²−Ri²)L；V_frustum=πh(r₁²+r₁r₂+r₂²)/3",
+      "variables": [
+        {
+          "symbol": "Ro,Ri",
+          "meaning": "外、內半徑",
+          "unit": "mm"
+        },
+        {
+          "symbol": "L,h",
+          "meaning": "軸向長度",
+          "unit": "mm"
+        }
+      ],
+      "application": "下/上軸套、止推墊圈及完整帶槽肩銷。",
+      "procedure": [
+        "讀實際網格圓周分段數 n。",
+        "有限 n 邊形的圓面積改用 (n/2)R²sin(2π/n)。",
+        "比對解析、有限分段與全部網格積分三者的差異。"
+      ],
+      "failureAction": "差異超出預期則逐段查輪廓、分段數、截面與封口。",
+      "limitations": [
+        "解析圓與內接多邊形不完全相同；近似差不得偽裝成加工精度。"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "helix",
+      "title": "螺旋弧長及折線收斂",
+      "kind": "弧長定理",
+      "premises": [
+        "標準式的半徑 R、總圈數 N、軸向高度 H 固定。",
+        "曲線為分段光滑，端腳分段另加。"
+      ],
+      "formula": "L=∫|r′(u)|du=√[(2πRN)²+H²]；L折線=Σ|pᵢ₊₁−pᵢ|",
+      "variables": [
+        {
+          "symbol": "R",
+          "meaning": "線材中心線半徑",
+          "unit": "mm"
+        },
+        {
+          "symbol": "N",
+          "meaning": "總圈數",
+          "unit": "圈"
+        },
+        {
+          "symbol": "H",
+          "meaning": "整段螺旋的軸向高度",
+          "unit": "mm"
+        }
+      ],
+      "application": "P04 的 6.5 圈、R3.6、總高5.1及兩段13 mm切向腳。",
+      "procedure": [
+        "積分求理想中心線長度。",
+        "從同一原生生成器讀回624段折線長，說明近似差。",
+        "檢查工作轉角的保長結果，另驗線材間隙、接觸與受力。"
+      ],
+      "failureAction": "中心線錯則修幾何；保長通過後仍不能省略材料力學。",
+      "limitations": [
+        "保長沒有決定剛度、回復力、屈服或疲勞。"
+      ],
+      "sourceIds": [
+        "arc"
+      ]
+    },
+    {
+      "id": "elastic",
+      "title": "彈性回復力要有材料與拘束",
+      "kind": "有條件物理模型",
+      "premises": [
+        "指定材料、溫度、變形範圍、端部固定與預壓。",
+        "只有在線性工作區，才用固定剛度 k。"
+      ],
+      "formula": "M=kθ+M₀；未預壓的線性儲能 U=½kθ²",
+      "variables": [
+        {
+          "symbol": "k",
+          "meaning": "轉動剛度",
+          "unit": "N·mm/rad"
+        },
+        {
+          "symbol": "M₀",
+          "meaning": "預壓力矩",
+          "unit": "N·mm"
+        },
+        {
+          "symbol": "θ",
+          "meaning": "相對工作轉角",
+          "unit": "rad"
+        }
+      ],
+      "application": "回位扭簧與保持件的真實彈性工作。",
+      "procedure": [
+        "取得本件材料曲線與所需工作力矩/循環。",
+        "建立線材、端腳與接點拘束；扭簧線材受彎，不能直接套直桿扭轉剛度。",
+        "以力矩–角度試驗或相符的力學解驗證模型，查永久變形與疲勞。"
+      ],
+      "failureAction": "調整材料、線徑、圈數、端腳與預壓，重算接觸及壽命。",
+      "limitations": [
+        "材料未選定時輸出 NEEDS_INPUT，不能以外觀金屬顏色選彈性模數。"
+      ],
+      "sourceIds": [
+        "elasticity"
+      ]
+    },
+    {
+      "id": "screw",
+      "title": "螺紋的轉角與前進相位",
+      "kind": "螺旋運動的幾何推導",
+      "premises": [
+        "先確認旋向、軸方向、導程與頭數。",
+        "本件為作者來源的單線 p=0.8 mm，相位定義為 y/p+α/2π。"
+      ],
+      "formula": "保持相位 ⇒ Δy/p+Δα/(2π)=0 ⇒ Δy=−pΔα/(2π)",
+      "variables": [
+        {
+          "symbol": "p",
+          "meaning": "此單線螺紋的導程/螺距",
+          "unit": "mm/rev"
+        },
+        {
+          "symbol": "α",
+          "meaning": "來源定義的角座標",
+          "unit": "rad"
+        }
+      ],
+      "application": "M5×0.8 螺栓與螺帽，沿傾斜的玻璃夾具軸旋入。",
+      "procedure": [
+        "讀原生軸與牙面，避免把全域 Y 當實際螺紋軸。",
+        "代入90°應得到−0.2 mm；用真實牙面射線檢查等相位點。",
+        "查完整旋入、牙側間隙、嚙合長度及工具通路。"
+      ],
+      "failureAction": "修正旋向、相位、導程或座標；不同標準螺紋須重新定義。",
+      "limitations": [
+        "多線螺紋導程不等於螺距；本式的負號由本來源慣例決定。",
+        "幾何相位不能決定鎖緊扭矩、摩擦或預緊力。"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "moment",
+      "title": "力矩與實際力的作用線",
+      "kind": "力矩定義與靜力平衡",
+      "premises": [
+        "指定取矩點、力的方向與作用點。",
+        "靜止/準靜態時才以ΣF=0、ΣM=0求平衡；動態另加慣性。"
+      ],
+      "formula": "M=r×F；M_z=r_xF_y−r_yF_x",
+      "variables": [
+        {
+          "symbol": "r",
+          "meaning": "由樞軸到施力點的向量",
+          "unit": "mm"
+        },
+        {
+          "symbol": "F",
+          "meaning": "施力向量",
+          "unit": "N"
+        },
+        {
+          "symbol": "M",
+          "meaning": "力矩",
+          "unit": "N·mm"
+        }
+      ],
+      "application": "把手→D型接合→撥臂→拉索，以及彈簧與承載盒的反力。",
+      "procedure": [
+        "從真實孔軸/接點取得 r。",
+        "由拉索路由取得 F 方向，再做叉積。",
+        "畫出完整受力路徑，包含支承與止擋反力，不把動畫聯動當接觸。"
+      ],
+      "failureAction": "改變接點、力向量或支承後重新求平衡，查接面是否真能傳力。",
+      "limitations": [
+        "18 mm 是本件兩軸距，不是任意方向都能用的有效力臂。"
+      ],
+      "sourceIds": [
+        "torque"
+      ]
+    },
+    {
+      "id": "seal",
+      "title": "密封墊壓縮與接觸面壓",
+      "kind": "應變定義與材料本構",
+      "premises": [
+        "要有自由厚度、壓縮後槽隙與拘束條件。",
+        "橡膠可能非線性且受溫度、老化、時間影響。"
+      ],
+      "formula": "ε_c=(t₀−t)/t₀；p=f(ε_c,T,時間,拘束)",
+      "variables": [
+        {
+          "symbol": "t₀,t",
+          "meaning": "自由及裝入後厚度",
+          "unit": "mm"
+        },
+        {
+          "symbol": "ε_c",
+          "meaning": "壓縮應變",
+          "unit": "無量綱"
+        },
+        {
+          "symbol": "p",
+          "meaning": "接觸面壓",
+          "unit": "MPa"
+        }
+      ],
+      "application": "P06周界密封墊與尚待建立的門皮/座面。",
+      "procedure": [
+        "先讀自由厚度1 mm。",
+        "由真正裝入後座面距離取得 t，不用展示位移充當壓縮。",
+        "用選定材料曲線求面壓，檢查局部間隙、擠出與接觸連續性。"
+      ],
+      "failureAction": "修槽隙、座面、材料與壓縮量，再檢查整圈接觸。",
+      "limitations": [
+        "一般線性 Eε 不能自動套用受拘束橡膠墊。"
+      ],
+      "sourceIds": [
+        "elasticity"
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "扣槽包容與保持力分開求證",
+      "kind": "幾何不等式與接觸力學",
+      "premises": [
+        "扣環的完整厚度留在扣槽軸向範圍內。",
+        "真實卡入仍需開口、張開量、材料與路徑。"
+      ],
+      "formula": "z槽下 ≤ z環下；z環上 ≤ z槽上；g=(z槽上−z槽下)−t環",
+      "variables": [
+        {
+          "symbol": "z",
+          "meaning": "沿肩銷軸的座標",
+          "unit": "mm"
+        },
+        {
+          "symbol": "g",
+          "meaning": "總軸向間隙",
+          "unit": "mm"
+        }
+      ],
+      "application": "P09 E型扣環進入 P03 的0.7 mm寬槽，保持P10。",
+      "procedure": [
+        "讀全部扣環頂點的Z極值。",
+        "先確認放置包容，再建張開、插入、回彈及拆卸工具路徑。",
+        "檢查肩部重疊、保持載荷與殘留變形。"
+      ],
+      "failureAction": "修槽、開口與卡入工序；不得直接讓剛體穿過軸身。",
+      "limitations": [
+        "放在槽內的終態不證明它可以實際卡進去。"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "load",
+      "title": "承載、材料與失效模式",
+      "kind": "物理模型與工程判定",
+      "premises": [
+        "工況、材料、製程、公差與邊界條件有可追溯輸入。",
+        "載荷路徑連續；明確區分拉壓、剪切、彎曲、接觸與疲勞。"
+      ],
+      "formula": "σ_avg=F_normal/A；τ_avg=F_shear/A；安全係數=許用值/需求值（同失效模式）",
+      "variables": [
+        {
+          "symbol": "F",
+          "meaning": "指定工況的截面內力",
+          "unit": "N"
+        },
+        {
+          "symbol": "A",
+          "meaning": "相應有效承載面積",
+          "unit": "mm²"
+        },
+        {
+          "symbol": "σ,τ",
+          "meaning": "平均正/剪應力",
+          "unit": "MPa"
+        }
+      ],
+      "application": "全部零件的實際工作能力，特別是孔口、扣槽、螺紋、薄壁與接觸邊。",
+      "procedure": [
+        "先畫施力、傳力、支承和反力，不憑零件顏色分配材料。",
+        "計算名義應力，再依形狀處理集中、接觸、失穩與疲勞。",
+        "把真實材料許用值與所需可靠度帶入；用相符試驗/模型驗證。"
+      ],
+      "failureAction": "修改截面、材料、接合或工況後重跑受影響的幾何與承載檢查。",
+      "limitations": [
+        "平均應力不是孔邊最大應力；靜態強度通過不自動涵蓋疲勞。",
+        "無材料/載荷時，計算保留符號與待取得輸入，沒有承載通過判定。"
+      ],
+      "sourceIds": [
+        "elasticity",
+        "torque"
+      ]
+    }
+  ]
+}

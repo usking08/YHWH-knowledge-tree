@@ -1,0 +1,46 @@
+{
+  "id": "FC-491b6acb0aff4d",
+  "name": "rack perforated upright",
+  "family": "DRAWER",
+  "purpose": "把物件有序承托，並提供可取用的開口。",
+  "assemblyTeaching": "櫃背／側／底→固定軌→抽屜底側後前板→活動軌→前板與把手；抽屜沿單一導向軸滑入。",
+  "verification": "空腔可見；行程向量與軌道平行。檢查插入全路徑、止擋、承載接觸與鄰抽干涉。",
+  "unresolved": "新工作臺已有分離薄板與滑軌；倉儲料盒等仍有實心簡化，滾珠與止擋未建。",
+  "units": "mm",
+  "geometry": "geometry/G-a9a0b1c5021456b844d0.json",
+  "geometrySHA256": "a9a0b1c5021456b844d076f0cb1ecb936b03c5795673c66264038dfe75a01098",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -32.5,
+      -32.5,
+      -1450
+    ],
+    [
+      32.5,
+      32.5,
+      1450
+    ]
+  ],
+  "dimensionsMM": [
+    65,
+    65,
+    2900
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-491b6acb0aff4d.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B03"
+  ],
+  "occurrenceCount": 28
+}

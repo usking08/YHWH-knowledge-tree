@@ -1,0 +1,53 @@
+{
+  "id": "FC-3fdef60db3e60e",
+  "name": "I section — web and flanges",
+  "family": "FRAME",
+  "purpose": "把上部作用經樑、柱、連接件傳到基座。",
+  "assemblyTeaching": "I 形截面由翼板與腹板構成；先立柱、接斜樑、加腋與斜撐，再設次構件。",
+  "verification": "核對截面、對接面、螺栓孔軸及荷重路徑；ΣF=0、ΣM=0 只是平衡前提，仍須材料與邊界條件。",
+  "unresolved": "現有部分固定件僅外形；尚無結構設計驗算或建築放行。",
+  "units": "mm",
+  "geometry": "geometry/G-14dd0439e07dcd9f3b39.json",
+  "geometrySHA256": "14dd0439e07dcd9f3b39020963ec3d6f24535fa886f9d46c7fdf472bc186c37c",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -105,
+      -215,
+      0
+    ],
+    [
+      105,
+      215,
+      11770.6591796875
+    ]
+  ],
+  "dimensionsMM": [
+    210,
+    430,
+    11770.6591796875
+  ],
+  "materials": [
+    "Factory | charcoal-painted-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-3fdef60db3e60e.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-PF-01",
+    "F-PF-02",
+    "F-PF-03",
+    "F-PF-04",
+    "F-PF-05",
+    "F-PF-06",
+    "F-PF-07",
+    "F-PF-08"
+  ],
+  "occurrenceCount": 16
+}

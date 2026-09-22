@@ -1,0 +1,23 @@
+{
+  "schema": "gt01.reference-study/v1",
+  "subject": "D05-P15c",
+  "truth": "AUTHOR_DESIGN",
+  "sourceReference": "references/D05-P15c-r2.png",
+  "generatedReference": "references/D05-P15c-r3.png",
+  "prompt": "Correct ONLY panel 3 in this technical sheet; preserve all other five panels pixel-for-pixel as closely as possible. This rubber liner has exactly TEN horizontal ribs at evenly spaced 3 mm pitch over its 30 mm height. Panel 3 SIDE VIEW currently incorrectly shows only about four ribs. Replace that side-view silhouette with one 30 mm-tall thin black sheet, base thickness 1.2 mm, and EXACTLY TEN small convex bumps projecting 0.35 mm from its right face, uniformly spaced along almost the whole height; leave 1.5 mm to each end. The rear locating nib is on the opposite LEFT face near the lower edge, projects 0.8 mm; it must not appear on the ribbed right face. The two rear nibs overlap in side projection so show one in this view. Draw the profile tall and clear enough to count all ten bumps. Keep remaining FRONT and ISOMETRIC ten ribs unchanged, back view two nibs unchanged and free/seated comparison unchanged. Change title revision from R2 to R3. Do not add extra parts.",
+  "review": {
+    "corrected": "Side view now contains ten ribs and rear nib on the opposite face.",
+    "adoptedPanels": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "panelsStillUnderReview": [
+      3
+    ],
+    "warning": "Panel 3 shows the 0.35 and 0.8 dimensions vertically; projection depth must be horizontal. Silhouette may be inspected but these dimension leaders are rejected."
+  },
+  "nativeContactStudy": "references/D05-P15-contact-r1.png"
+}

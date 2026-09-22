@@ -1,0 +1,46 @@
+{
+  "id": "FC-c6305f18e8f103",
+  "name": "extractor motor lid",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-5b34bce599af276c7bb1.json",
+  "geometrySHA256": "5b34bce599af276c7bb18f1354adff2eedfd51c2df0df4ad33c2d542a25c326c",
+  "scale": [
+    280,
+    60,
+    280
+  ],
+  "localBounds": [
+    [
+      -280,
+      -30,
+      -280
+    ],
+    [
+      280,
+      30,
+      280
+    ]
+  ],
+  "dimensionsMM": [
+    560,
+    60,
+    560
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-c6305f18e8f103.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S5"
+  ],
+  "occurrenceCount": 1
+}

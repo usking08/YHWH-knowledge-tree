@@ -1,0 +1,46 @@
+{
+  "id": "FC-9874674f43b407",
+  "name": "slab movement joint",
+  "family": "FLOOR",
+  "purpose": "提供定位基準、承托設備與分隔物流。",
+  "assemblyTeaching": "基层與面層分開定義；依基準放線，再配置接縫、設備基座和動線標記。",
+  "verification": "水平面方程 n·(p−p0)=0；確認物件支承底面與地坪無浮空或埋入；伸縮縫不以顏色代替凹槽驗證。",
+  "unresolved": "鋼筋、基底、排水坡與地耐力未建；此場景不是土建施工圖。",
+  "units": "mm",
+  "geometry": "geometry/G-79fc360bce82d16ff452.json",
+  "geometrySHA256": "79fc360bce82d16ff452cea1b968614255a1590583c05d32aa2bb39989944c34",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2.5,
+      -12000,
+      -0.5
+    ],
+    [
+      2.5,
+      12000,
+      0.5
+    ]
+  ],
+  "dimensionsMM": [
+    5,
+    24000,
+    1
+  ],
+  "materials": [
+    "Factory | galvanized-steel"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-9874674f43b407.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-001"
+  ],
+  "occurrenceCount": 7
+}

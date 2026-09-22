@@ -1,0 +1,46 @@
+{
+  "id": "FC-371d61115f0240",
+  "name": "inspection tunnel luminous strip",
+  "family": "LIGHT",
+  "purpose": "照明讓形狀、表面缺陷與作業區可辨識。",
+  "assemblyTeaching": "固定座→懸吊→殼體→光源板→擴散罩；線材沿橋架回到供電接口。",
+  "verification": "反射環境擷取範圍要含燈；本場景 mm 尺度使用 far=50000。檢查直射、反射和遮擋分別有效。",
+  "unresolved": "發光材質不等於真實照度；驅動電源、配線及照度計算未建。",
+  "units": "mm",
+  "geometry": "geometry/G-35f2a793e65f536ba6f8.json",
+  "geometrySHA256": "35f2a793e65f536ba6f823969ec99f11970d60d522c2d245411270420ab9b8f4",
+  "scale": [
+    32,
+    71.99999998,
+    1237.94184
+  ],
+  "localBounds": [
+    [
+      -16,
+      -36,
+      -618.970947265625
+    ],
+    [
+      16,
+      36,
+      618.970947265625
+    ]
+  ],
+  "dimensionsMM": [
+    32,
+    72,
+    1237.94189453125
+  ],
+  "materials": [
+    "Factory | linear-led-diffuser"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-371d61115f0240.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S6"
+  ],
+  "occurrenceCount": 12
+}

@@ -1,0 +1,46 @@
+{
+  "id": "FC-2b5cadfa9ea364",
+  "name": "parts identification label",
+  "family": "PAPER",
+  "purpose": "把身份、用途、順序及結果交給下一位操作者。",
+  "assemblyTeaching": "紙張基材→印刷面→支架／夾具；圖上零件編號必須能找到實物及原生資料。",
+  "verification": "A0 841×1189、A4 210×297、A7 105×74 mm；本模型紙厚0.12 mm。近看字能讀、版次能追。",
+  "unresolved": "螢幕和紙張不是同一材料；列印色彩與紙張實測光學未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-6f9987a1c5ec090cbd3d.json",
+  "geometrySHA256": "6f9987a1c5ec090cbd3d45e297a095a286c1466d5d7cdb3015d7c319aa7c598f",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -150,
+      -4,
+      -32.5
+    ],
+    [
+      150,
+      4,
+      32.5
+    ]
+  ],
+  "dimensionsMM": [
+    300,
+    8,
+    65
+  ],
+  "materials": [
+    "Factory | warm-white-powdercoat"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-2b5cadfa9ea364.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B03"
+  ],
+  "occurrenceCount": 140
+}

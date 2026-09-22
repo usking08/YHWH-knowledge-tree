@@ -1,0 +1,524 @@
+{
+  "schemaVersion": "GT01-part/v1",
+  "id": "D11-P01",
+  "name": "一體把手面板、背肋與轉軸座",
+  "revision": "D11-FIRST-ARTICLE-R3",
+  "authority": "AUTHOR_DESIGN",
+  "units": "mm",
+  "classification": {
+    "assembly": [
+      "GT01 車輛",
+      "D11 車門外把手",
+      "把手首件機構",
+      "D11-P01"
+    ],
+    "functionFamily": [
+      "傳力",
+      "手動輸入件"
+    ]
+  },
+  "physicalBoundary": {
+    "description": "一件獨立物理零件的全部原生表面；不把左右安置重複計為種類。",
+    "surfaceLabels": [
+      "一體面板、背肋與轉軸座"
+    ],
+    "nativeSurfaceCount": 1,
+    "prototypeCount": 1,
+    "solidCountObserved": 1
+  },
+  "coordinateFrame": {
+    "name": "D11 assembly local",
+    "units": "mm",
+    "handedness": "right",
+    "X": "沿把手長度",
+    "Y": "向車外",
+    "Z": "向上",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivotAxis": {
+      "origin": [
+        -46,
+        -10,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ]
+    },
+    "transformApplied": "none; original native geometry coordinates"
+  },
+  "dimensions": [
+    {
+      "name": "面板長／高／厚",
+      "value": [
+        138,
+        22,
+        3
+      ],
+      "unit": "mm",
+      "source": "interfaces + source"
+    },
+    {
+      "name": "轉軸孔徑",
+      "value": 4.1,
+      "unit": "mm",
+      "source": "interfaces.pivot"
+    },
+    {
+      "name": "轉軸座外徑",
+      "value": 10,
+      "unit": "mm",
+      "source": "interfaces.pivot"
+    },
+    {
+      "name": "D 平面 Y",
+      "value": -14,
+      "unit": "mm",
+      "source": "source actuatorKey"
+    },
+    {
+      "name": "D 端部 Z",
+      "value": [
+        -3,
+        -2
+      ],
+      "unit": "mm",
+      "source": "source actuatorKey"
+    },
+    {
+      "name": "實際原生外包絡",
+      "value": {
+        "min": [
+          -69,
+          -15,
+          -11
+        ],
+        "max": [
+          69,
+          0,
+          11
+        ],
+        "size": [
+          138,
+          15,
+          22
+        ]
+      },
+      "unit": "mm",
+      "source": "cold native + OBJ readback"
+    }
+  ],
+  "holeAxes": [
+    {
+      "kind": "through_bore",
+      "origin": [
+        -46,
+        -10,
+        0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "diameter": 4.1
+    }
+  ],
+  "features": [
+    "細長 capsule 面板與連續背肋",
+    "沿 Z 的真實轉軸孔",
+    "單一平邊 D 形傳力端"
+  ],
+  "purpose": "把手輸入經一體轉軸座及 D 形端部帶動撥臂。",
+  "usableScenarios": [
+    "同軸外把手的面板與支承設計參考"
+  ],
+  "limitations": [
+    "面板與門板曲率、開口、止擋尚未配合；不可直接裝到任意車門。"
+  ],
+  "material": {
+    "displayColorLinearRGB": [
+      0.009134058699157796,
+      0.04970656597728775,
+      0.02955683443236377
+    ],
+    "displayShader": "MeshPhysicalMaterial",
+    "grade": "未指定",
+    "authority": "AUTHOR_DESIGN appearance only",
+    "nextAction": "依實際載荷、環境及製程選定材料與公差後再驗證。"
+  },
+  "interfaces": {
+    "source": {
+      "referenceFrontAxis": [
+        0,
+        1,
+        0
+      ],
+      "referenceUpAxis": [
+        0,
+        0,
+        1
+      ],
+      "units": "mm",
+      "coordinateFrame": {
+        "X": "length",
+        "Y": "outboard",
+        "Z": "up"
+      },
+      "pivot": {
+        "position": [
+          -46,
+          -10,
+          0
+        ],
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "boreDiameter": 4.1,
+        "bossOuterDiameter": 10,
+        "bossAxialZ": [
+          -3,
+          7
+        ],
+        "boreAxialZ": [
+          -3,
+          7
+        ],
+        "through": true,
+        "extraYBore": false,
+        "actuatorKey": {
+          "type": "single D flat",
+          "flatY": -14,
+          "axialZ": [
+            -3,
+            -2
+          ]
+        }
+      },
+      "panel": {
+        "length": 138,
+        "height": 22,
+        "endRadius": 11,
+        "outerFaceY": 0,
+        "backFaceY": -3,
+        "edgeFilletRadius": 0.6,
+        "envelope": {
+          "min": [
+            -69,
+            -3,
+            -11
+          ],
+          "max": [
+            69,
+            0,
+            11
+          ]
+        }
+      },
+      "rib": {
+        "axialZ": [
+          -2,
+          2
+        ],
+        "neckAxialX": [
+          -51,
+          -41
+        ],
+        "neckY": [
+          -10,
+          -3
+        ],
+        "rootFaceY": -3,
+        "rootAxialX": [
+          -51,
+          20
+        ],
+        "taperStart": [
+          -41,
+          -8
+        ],
+        "taperEnd": [
+          20,
+          -3
+        ],
+        "continuousWithPanelAndBoss": true
+      },
+      "outerEnvelope": {
+        "min": [
+          -69,
+          -15,
+          -11
+        ],
+        "max": [
+          69,
+          0,
+          11
+        ]
+      },
+      "designAuthority": "AUTHOR_DESIGN",
+      "references": [
+        "D11-P01-r1.png",
+        "D11-handle-r1.png"
+      ],
+      "referenceAuthority": "generated shape candidates, not measurements",
+      "materialBoundary": {
+        "materialProvidedByParent": true,
+        "formIntent": "single continuous cast or moulded lever with applied green finish",
+        "materialGrade": "UNSPECIFIED",
+        "manufacturingValidated": false
+      },
+      "assemblyOrAestheticAcceptance": "NOT_CLAIMED"
+    },
+    "sourceFile": "../../native/source/door-handle-lever.mjs",
+    "sourceFrameWarning": null
+  },
+  "mates": [
+    {
+      "part": "D11-P03",
+      "contact": "Ø4 肩銷穿過 Ø4.1 孔",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P05a",
+      "contact": "單平邊 D 端嵌入 R5.1 凹座；平邊間隙約 0.1",
+      "inLibrary": true
+    },
+    {
+      "part": "D11-P11b",
+      "contact": "軸座頂面 Z7 接觸上軸套底端",
+      "inLibrary": true
+    }
+  ],
+  "installation": {
+    "scope": "R3 ten-step unique source implementation; sampled rigid paths",
+    "order": 5,
+    "id": "D11-P01",
+    "name": "05 嵌入把手 D 形接面",
+    "note": "把手先抬高 1.2 從前方送入，再下降進入 D 形凹座。",
+    "path": "front-then-down",
+    "distance": 28,
+    "lift": 1.2,
+    "implementation": "../../native/source/door-handle-assembly-paths.mjs",
+    "assemblyComplete": false
+  },
+  "status": {
+    "geometry": "NATIVE_AUTHORED_SHAPE",
+    "exportPreserved": true,
+    "singleClosedSolid": true,
+    "assemblyComplete": false,
+    "manufacturingCertified": false
+  },
+  "inspection": [
+    {
+      "method": "重新讀取 OBJ 和 geometry.json 的全部三角面及法線，與原生輸出逐位雜湊比較",
+      "criterion": "面數、各 surface、位置及法線全部相符",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    },
+    {
+      "method": "以 0.00001 mm 座標併點統計連通與有向邊、計算有向體積",
+      "criterion": "一連通、每邊兩面反向、無零面積或非有限座標、正體積",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "evidence/native-readback.json",
+      "scope": "本次原生及冷讀輸出"
+    },
+    {
+      "file": "../../evidence/door-handle-parent-readback-r3.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-coupling-readback-r2.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-assembly-paths-r1.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    },
+    {
+      "file": "../../evidence/door-handle-quality-cases.json",
+      "scope": "R3 局部零件／取樣接合／裝入及退修案例；不能外推為完整總成"
+    }
+  ],
+  "references": [
+    {
+      "file": "references/D11-P01-model-r2.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "同一份模型的正面 +Y、背面 -Y、頂面 +Z、底面 -Z、端面 +X 與斜視；以原生尺寸和孔軸為準。",
+      "revisionReason": "R2 面板圖供形體及 Z 軸孔閱讀；局部 D 平邊以現行原生接合資料及接合剖面為準。",
+      "sha256": "78bffc3173a96eca7ae26edfb7281fce1447e6cfad78f1916361a350b2b294a3"
+    }
+  ],
+  "qualityCases": [
+    {
+      "id": "D11-Q01",
+      "title": "軸套在終點能放好，途中卻穿過面板",
+      "data": "../../evidence/door-handle-quality-cases.json",
+      "image": "../../references/D11-Q01-comparison-r1.png"
+    }
+  ],
+  "outstandingWork": [
+    {
+      "id": "D11-P01-W1",
+      "status": "NOT_DONE",
+      "action": "依車門曲面建立開口與安裝座，讀回把手整段行程及止擋間隙。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。"
+    }
+  ],
+  "files": {
+    "metadata": "part.json",
+    "humanGuide": "PART.md",
+    "obj": "part.obj",
+    "mtl": "part.mtl",
+    "threeGeometry": "geometry.json",
+    "nativeEntry": "../../native/geometry-core.mjs",
+    "nativeSource": "../../native/source/door-handle-lever.mjs"
+  },
+  "nativeMetrics": {
+    "triangles": 13350,
+    "verticesAfterPositionWeld": 6675,
+    "weldToleranceMm": 0.00001,
+    "surfaceCount": 1,
+    "connectedComponents": 1,
+    "openEdges": 0,
+    "nonManifoldEdges": 0,
+    "inconsistentOrientationEdges": 0,
+    "zeroAreaTriangles": 0,
+    "nonFiniteCoordinates": 0,
+    "signedVolumeMm3": 10130.906356761136,
+    "boundsMm": {
+      "min": [
+        -69,
+        -15,
+        -11
+      ],
+      "max": [
+        69,
+        0,
+        11
+      ],
+      "size": [
+        138,
+        15,
+        22
+      ]
+    },
+    "positionTriangleSHA256": "19e6233a442e59bb7ec6e8c2370218791dff5e736bcca0b887d23fc6a211139d",
+    "normalTriangleSHA256": "8e77bd9a5a5b91111243a10aced065357b1dd2c8a85970943144522f80dc45f1"
+  },
+  "hashes": {
+    "sourceSHA256": "049f26fb973785583dae25b9ab473508a328663839394e19f9ca9f3b07f6b2cd",
+    "positionTriangleSHA256": "19e6233a442e59bb7ec6e8c2370218791dff5e736bcca0b887d23fc6a211139d",
+    "normalTriangleSHA256": "8e77bd9a5a5b91111243a10aced065357b1dd2c8a85970943144522f80dc45f1",
+    "objSHA256": "eedbe8ba847d47a19076a8a73eac000cb3b3c047a1c5fb79b307a99784cc2413",
+    "geometryJSONSHA256": "a04066635908dfac9cb2c4b8ccd04227861a59ac4b62816485de9cb75bbb7a4a"
+  },
+  "mathematicalQuality": {
+    "revision": "GT01-MATH-QA-R1",
+    "lawIds": [
+      "boundary",
+      "volume",
+      "rigid",
+      "units",
+      "fit",
+      "moment",
+      "load"
+    ],
+    "calculation": "../../math-quality.json",
+    "nativeReadback": "../../evidence/math-native-readback.json",
+    "teaching": "../../math-quality.html#D11-P01",
+    "runner": "../../native/math-quality.mjs",
+    "admission": "../../math-admission.json",
+    "checks": [
+      {
+        "id": "closed-boundary",
+        "status": "PASS"
+      },
+      {
+        "id": "volume-origin",
+        "status": "PASS"
+      },
+      {
+        "id": "identity-units",
+        "status": "PASS"
+      },
+      {
+        "id": "rigid-frame",
+        "status": "PASS"
+      },
+      {
+        "id": "fit-D11-P01-D11-P03",
+        "status": "PASS"
+      },
+      {
+        "id": "moment-arm",
+        "status": "PASS"
+      },
+      {
+        "id": "load-release",
+        "status": "NEEDS_INPUT"
+      },
+      {
+        "id": "tolerance-release",
+        "status": "NEEDS_INPUT"
+      }
+    ],
+    "openInputs": [
+      {
+        "name": "載荷大小/方向/循環 (N, N·mm)",
+        "quantities": [
+          {
+            "quantity": "force",
+            "unit": "N"
+          },
+          {
+            "quantity": "moment",
+            "unit": "N·mm"
+          },
+          {
+            "quantity": "direction",
+            "unit": "1（單位方向向量）"
+          },
+          {
+            "quantity": "cycles",
+            "unit": "1（次數）"
+          }
+        ],
+        "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "材料牌號、強度與製程",
+        "quantities": [],
+        "unit": "依具體資料欄位與來源指定",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "公差極限及偏心 (mm)",
+        "quantities": [
+          {
+            "quantity": "length",
+            "unit": "mm"
+          }
+        ],
+        "unit": "mm",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      }
+    ],
+    "manufacturingReleased": false
+  }
+}

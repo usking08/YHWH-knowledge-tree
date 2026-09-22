@@ -1,0 +1,46 @@
+{
+  "id": "FC-f36a9b9ee7dab0",
+  "name": "body fixture platform",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-72c0149e03ed8d15a4e9.json",
+  "geometrySHA256": "72c0149e03ed8d15a4e9410a49c9c560e536cbd576b3f0309bc4465e1bdff464",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -1050,
+      -800,
+      -80
+    ],
+    [
+      1050,
+      800,
+      80
+    ]
+  ],
+  "dimensionsMM": [
+    2100,
+    1600,
+    160
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-f36a9b9ee7dab0.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-S3"
+  ],
+  "occurrenceCount": 1
+}

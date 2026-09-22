@@ -1,0 +1,54 @@
+{
+  "id": "FC-1590775713d021",
+  "name": "虎鉗固定座",
+  "family": "FASTENER",
+  "purpose": "把界面夾緊、限制分離或提供可調位置。",
+  "assemblyTeaching": "先核對孔徑、螺距、螺紋種類與工具空間；墊圈接觸支承面，再旋入及受控預緊。",
+  "verification": "間隙 c=(D孔−D軸)/2；長孔方向與活動軸一致。檢查頭下接觸、牙合長度與邊距。",
+  "unresolved": "廠房五金多仍是外觀候選，未具備牙形、扭矩或承載資格；不能套用已完成的 M5 零件結論。",
+  "units": "mm",
+  "geometry": "geometry/G-4b6e355d3fe2e83208ad.json",
+  "geometrySHA256": "4b6e355d3fe2e83208ad5cbaa9fe9e4645c1fb26ecb56fea7d929c2f8551bb10",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -115.4000015258789,
+      -135.39999389648438,
+      -28
+    ],
+    [
+      115.4000015258789,
+      135.39999389648438,
+      27.999998092651367
+    ]
+  ],
+  "dimensionsMM": [
+    230.8000030517578,
+    270.79998779296875,
+    55.99999809265137
+  ],
+  "materials": [
+    "Factory | equipment-bluegreen"
+  ],
+  "reference": "../../materials/generated/GT01-Workbench-Assembly-R2.png",
+  "referenceAuthority": "AI_GENERATED_ASSEMBLY_REFERENCE_NOT_INDEPENDENT_PART_PROOF",
+  "drawing": "drawings/FC-1590775713d021.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-BENCH-01",
+    "F-BENCH-02",
+    "F-BENCH-03",
+    "F-BENCH-04",
+    "F-BENCH-05",
+    "F-BENCH-06",
+    "F-BENCH-07",
+    "F-BENCH-08",
+    "F-BENCH-09"
+  ],
+  "occurrenceCount": 9
+}

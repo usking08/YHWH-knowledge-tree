@@ -1,0 +1,47 @@
+{
+  "scope": "Generated references rejected before adoption; native readback replacements are not independent source metrology",
+  "jobs": [
+    {
+      "id": "D04-glass-r1",
+      "images": [
+        ".\\outputs\\quality\\glass-clamps-r2\\D04-front.png",
+        ".\\outputs\\quality\\glass-clamps-r2\\D04-iso.png",
+        ".\\outputs\\quality\\glass-clamps-r2\\D04-side.png"
+      ],
+      "prompt": "Create GT01 D04 / FULL DOOR GLASS / R1, an unusually clear premium six-panel individual-part technical reference sheet on white. The supplied three images are actual native geometry of ONE continuous 4.5mm-thick side window pane, authoritative silhouette. Preserve asymmetric gently curved long top, long rising front edge, near vertical curved rear edge, long straight concealed bottom edge; don't design a generic rectangle or windshield. Upper visible outline must remain exact. Fine pale green transparent glass with crisp polished edge, black technical leaders. Panels 1 outer/front complete silhouette; 2 inner/rear same object mirrored properly; 3 side PROFILE showing its gentle compound bend into planar lower grip area; 4 isometric whole pane; 5 enlarged real solid glass thickness4.5section; 6 lower edge close-up showing two contact areas56x30, spaced900mm centre-to-centre ALONG bottom region as dashed patches ONLY, not holes/not added tabs. Bottom actual pane width1060mm and grip points±450aroundbottomcentre if labeling needed. There are NO HOLES in glass. No clamp hardware in this individual-part sheet. Native render snapshots includeUI labelsignorethem. No fictitious numeric curvature radius. Footer PRESERVED VISIBLE OUTLINE / AUTHORED CONCEALED LOWER APRON / SHAPE REFERENCE, NOT OEM DATA."
+    },
+    {
+      "id": "D05-P15-assembly-r1",
+      "images": [
+        ".\\outputs\\quality\\glass-clamps-r2\\clamp-interface-side.png",
+        ".\\outputs\\quality\\glass-clamps-r2\\clamp-exploded.png",
+        ".\\outputs\\references\\D05-P15c-r1.png",
+        ".\\outputs\\references\\D05-P15f-r1.png"
+      ],
+      "prompt": "Create a very legible high-end white engineering illustration reference board GT01 D05-P15 / ONE GLASS CLAMP UNIT / ASSEMBLY R1. Use attached actual native assembly and exploded mesh shapes as geometric constraints; remainingimagesexplainrubberpadandM8fasteneridentity. Show ONE clamp station ONLY, no complete car, no fakeCAD certification. Precisely11physicalpieces inONEclamp: a fixed integral aluminum S-offset open-frame carrier1; b movable rectangular pressureplate1; c two identical56x30x1.2 rubber grip pads with10ribseach; d two M5socket-head screws; e twoM5hexnuts; f oneM8socket-head attachment screw; g oneOD22ID8.5washer; h one56x7.4x1.5lowerglasssupportstrip. Ghosted 4.5mmglassandcreamplasticcarriage are mating components, not added clamp parts. Three LARGE panels rather than dense tiny drawings: LEFT full exploded 3/4 diagram carefully numbered a,b,c(x2),d(x2),e(x2),f,g,h with dottedcoaxiallines; TOP RIGHT fully assembledclamp around glassbottomwithcarriagerear; BOTTOM RIGHT truthful local glass-edge section. Upper stack order alongclampaxis is FIXEDJAW / INNERrubberpad / GLASS4.5 / OUTERrubberpad / MOVABLEpressureplate. TwoM5screws pass through holesBELOWglass loweredge, heads onmovableplateouterface, nuts againstfixedjawbackface. Never pierce glass. Lowerconnection: fixedcarrierrearspigot fitsplasticcarriagecentre17bore; M8screwcomesfromcarriageRAILside, passeswasher8.5boretheninto fixedcarrierBLINDM8femalehole. Glass bottomrests on independenth rubberstrip atopnarrow fixedcarrierledge. Keepcarriercentralwindow open. Do not add nuts toM8blindjoint. Clear spaced drawing, satin silver and darkrubber, paleblueglass, legibleBOMfooter withquantitiesexactly11. Footer AUTHOR ASSEMBLY DESIGN / STATIC FIT REFERENCE / MOTION AND INSERTION PATHS NOT YET VALIDATED."
+    }
+  ],
+  "failures": [
+    {
+      "file": "references/D04-glass-r1.png",
+      "status": "REJECTED",
+      "reason": "Transparent/black background and obsolete lower-apron geometry",
+      "replacement": "references/D04-glass-r2.png",
+      "replacementEvidenceType": "model_readback"
+    },
+    {
+      "file": "references/D05-P15-assembly-r1.png",
+      "status": "REJECTED",
+      "reason": "Duplicated second carrier frame in movable plate, extra holes, inconsistent fixed carrier",
+      "replacement": "references/D05-P15-assembly-r3.png",
+      "replacementEvidenceType": "model_readback"
+    },
+    {
+      "file": "references/D05-P15a-r2.png",
+      "status": "PARTIAL_REJECTED_SUPERSEDED",
+      "reason": "Offset shown as thickness, wrong blind-hole section, bottom support lip shown at top",
+      "replacement": "references/D05-P15a-r3.png",
+      "replacementEvidenceType": "model_readback"
+    }
+  ]
+}

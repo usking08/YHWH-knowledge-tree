@@ -1,0 +1,46 @@
+{
+  "id": "FC-646d1d1be2291c",
+  "name": "metrology side glazing",
+  "family": "GLASS",
+  "purpose": "以透明圍護分隔空間，讓活動與成果可見。",
+  "assemblyTeaching": "框定位→承托墊塊→玻璃→壓條與密封；玻璃與金屬需有指定接觸層。",
+  "verification": "幾何厚度等於光學 thickness，物件 scale=1；F0=((n1−n2)/(n1+n2))²。看正視、斜視及邊緣。",
+  "unresolved": "框內墊塊、密封細節與夾層結構未全部建立；安全性能未驗。",
+  "units": "mm",
+  "geometry": "geometry/G-7b2ac7e86c77e9097f7d.json",
+  "geometrySHA256": "7b2ac7e86c77e9097f7dadb60e3734a83fba35eb59ee210643fbd5412c04b070",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -45,
+      -3000,
+      -1550
+    ],
+    [
+      45,
+      3000,
+      1550
+    ]
+  ],
+  "dimensionsMM": [
+    90,
+    6000,
+    3100
+  ],
+  "materials": [
+    "Factory | clear-architectural-glass | 90 mm"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-646d1d1be2291c.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B06"
+  ],
+  "occurrenceCount": 2
+}

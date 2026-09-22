@@ -1,0 +1,53 @@
+{
+  "id": "FC-9fcabb3ccec94e",
+  "name": "caster tyre",
+  "family": "MOBILITY",
+  "purpose": "在物流與作業間支承、移動或定位物件。",
+  "assemblyTeaching": "機座→軸承／轉軸→移動構件→接觸墊→工件；固定與活動關係需分開。",
+  "verification": "輪軸同軸、接地面相切；靜力平衡及運動自由度不能由擺放圖片推定。",
+  "unresolved": "多數設備僅外觀配置，內部軸承、驅動、鎖止及負載尚缺。",
+  "units": "mm",
+  "geometry": "geometry/G-5b34bce599af276c7bb1.json",
+  "geometrySHA256": "5b34bce599af276c7bb18f1354adff2eedfd51c2df0df4ad33c2d542a25c326c",
+  "scale": [
+    70,
+    48,
+    70
+  ],
+  "localBounds": [
+    [
+      -70,
+      -24,
+      -70
+    ],
+    [
+      70,
+      24,
+      70
+    ]
+  ],
+  "dimensionsMM": [
+    140,
+    48,
+    140
+  ],
+  "materials": [
+    "Factory | rubber-and-gaskets"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-9fcabb3ccec94e.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-TROLLEY-01",
+    "F-TROLLEY-02",
+    "F-TROLLEY-03",
+    "F-TROLLEY-04",
+    "F-S4",
+    "F-TROLLEY-05",
+    "F-TROLLEY-06",
+    "F-TROLLEY-07"
+  ],
+  "occurrenceCount": 32
+}

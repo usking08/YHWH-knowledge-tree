@@ -1,0 +1,128 @@
+{
+  "status": "INCOMPLETE_ASSEMBLIES",
+  "items": [
+    {
+      "id": "D11-P01-W1",
+      "status": "NOT_DONE",
+      "action": "依車門曲面建立開口與安裝座，讀回把手整段行程及止擋間隙。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P01"
+    },
+    {
+      "id": "D11-P02-W1",
+      "status": "NOT_DONE",
+      "action": "建立門體固定螺絲與螺母座、拉索外管端座和行程止擋，再檢查安裝路徑。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P02"
+    },
+    {
+      "id": "D11-P03-W1",
+      "status": "NOT_DONE",
+      "action": "選定材料及公差並檢查支承面壓與銷軸剪切；對扣環開合與裝入做實體路徑驗證。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P03"
+    },
+    {
+      "id": "D11-P09-W1",
+      "status": "NOT_DONE",
+      "action": "選定彈簧材料與熱處理，再建立張開、越過軸身、回彈入槽的連續路徑及應變判定。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P09"
+    },
+    {
+      "id": "D11-P10-W1",
+      "status": "NOT_DONE",
+      "action": "根據軸向力與接觸材料選材，檢查面壓、磨耗與裝配軸向遊隙。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P10"
+    },
+    {
+      "id": "D11-P06-W1",
+      "status": "NOT_DONE",
+      "action": "建立門皮接面與壓緊緊固件；選定密封材料，量測壓縮分布並驗漏。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P06"
+    },
+    {
+      "id": "D11-P04-W1",
+      "status": "NOT_DONE",
+      "action": "指定線材、熱處理與預壓角，求解工作扭矩、應力及疲勞；驗證兩腳在全行程內維持接觸。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P04"
+    },
+    {
+      "id": "D11-P11a-W1",
+      "status": "NOT_DONE",
+      "action": "依轉動次數選定軸套材料及公差，驗證面壓、磨耗及軸向夾持遊隙。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P11a"
+    },
+    {
+      "id": "D11-P11b-W1",
+      "status": "NOT_DONE",
+      "action": "對上方實際工具空間做連續裝入碰撞檢查，指定材料及尺寸公差並驗證磨耗。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P11b"
+    },
+    {
+      "id": "D11-P05a-W1",
+      "status": "NOT_DONE",
+      "action": "建立匹配端頭、鋼索、外管和保持件，檢查端頭裝入、工作轉角、拉程及防脫。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D11-P05a"
+    },
+    {
+      "id": "D05-P15d-W1",
+      "status": "NOT_DONE",
+      "action": "依玻璃夾具實際厚度確認咬合長度與工具空間；指定牙型公差、材料等級、扭矩並驗證玻璃面壓。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D05-P15d"
+    },
+    {
+      "id": "D05-P15e-W1",
+      "status": "NOT_DONE",
+      "action": "建立含實際公差的咬合模型，檢查扶持工具空間、牙面接觸與扭矩；若新增防轉扣座，須先施工再驗裝入與止轉；選定材料及防鬆方案。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。",
+      "part": "D05-P15e"
+    }
+  ],
+  "pendingCategories": [
+    {
+      "id": "pending-bearing",
+      "functionFamily": [
+        "支承",
+        "滾動軸承"
+      ],
+      "available": 0,
+      "nextAction": "先選定宿主軸徑、外殼孔、軸向定位及載荷，再施工分離內外圈、滾動體、保持架與間隙並讀回。"
+    },
+    {
+      "id": "pending-cable",
+      "functionFamily": [
+        "傳力",
+        "拉索與端頭"
+      ],
+      "available": 0,
+      "nextAction": "依 P05a 開槽眼與 P02 出口建立端頭、鋼索、外管及保持件，檢查裝入、防脫及工作拉程。"
+    },
+    {
+      "id": "pending-door-fixing",
+      "functionFamily": [
+        "緊固",
+        "門體安裝緊固件"
+      ],
+      "available": 0,
+      "nextAction": "建立門皮、螺母座及匹配法蘭孔的固定螺栓；選定材料、扭矩並驗證座面。"
+    },
+    {
+      "id": "pending-stop",
+      "functionFamily": [
+        "支承",
+        "行程止擋"
+      ],
+      "available": 0,
+      "nextAction": "依把手工作轉角建立盒體止擋和接觸面，驗證極限位置及回位接觸。"
+    }
+  ],
+  "completionRule": "完成具體施工後更新原生來源、圖面及同修訂證據；只改文字或新增空白種類不計完成。"
+}

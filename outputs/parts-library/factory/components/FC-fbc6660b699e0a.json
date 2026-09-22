@@ -1,0 +1,46 @@
+{
+  "id": "FC-fbc6660b699e0a",
+  "name": "booth observation window",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-11b14e4e622c91a885bc.json",
+  "geometrySHA256": "11b14e4e622c91a885bc8cac1ad376725656b27e2f8219d935caa4fa97ed15ac",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -330,
+      -11,
+      -740
+    ],
+    [
+      330,
+      11,
+      740
+    ]
+  ],
+  "dimensionsMM": [
+    660,
+    22,
+    1480
+  ],
+  "materials": [
+    "Factory | booth-laminated-glass | 22 mm"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-fbc6660b699e0a.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B02"
+  ],
+  "occurrenceCount": 5
+}

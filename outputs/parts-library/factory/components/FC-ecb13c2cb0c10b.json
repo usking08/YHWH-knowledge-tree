@@ -1,0 +1,46 @@
+{
+  "id": "FC-ecb13c2cb0c10b",
+  "name": "Factory | quarantine-red",
+  "family": "GENERIC",
+  "purpose": "依所屬總成的用途承接局部形狀；此分類不表示完成。",
+  "assemblyTeaching": "先補獨立多視圖、接口和材料層，再定義裝入方向與相依件。",
+  "verification": "核對用途、形體、孔洞、接觸與可逆拆裝；未辨明的功能不能猜作已完成。",
+  "unresolved": "目前只能讀到模型中的外觀與位置，需要逐件補齊構造。",
+  "units": "mm",
+  "geometry": "geometry/G-ae760168c144c2dd16ed.json",
+  "geometrySHA256": "ae760168c144c2dd16edeea4e2153b1f8ef147b6e05a95c0408a391ec2e288fc",
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "localBounds": [
+    [
+      -2750,
+      -50,
+      -2.5
+    ],
+    [
+      2750,
+      50,
+      2.5
+    ]
+  ],
+  "dimensionsMM": [
+    5500,
+    100,
+    5
+  ],
+  "materials": [
+    "Factory | quarantine-red"
+  ],
+  "reference": "../../references/GT01-factory-r1.png",
+  "referenceAuthority": "GENERAL_SCENE_ONLY_INDEPENDENT_PART_REFERENCE_MISSING",
+  "drawing": "drawings/FC-ecb13c2cb0c10b.svg",
+  "drawingAuthority": "CURRENT_GEOMETRY_DERIVED_NOT_INDEPENDENT_PROOF",
+  "status": "PROVISIONAL_NOT_QUALIFIED",
+  "sourceObjects": [
+    "F-B07"
+  ],
+  "occurrenceCount": 2
+}

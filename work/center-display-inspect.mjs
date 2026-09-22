@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';import crypto from 'node:crypto';import * as T from '../outputs/source/three.mjs';import {buildGT01CenterDisplay} from '../outputs/source/center-display.mjs';
+const a=buildGT01CenterDisplay(T),{root,parts,definition}=a;root.updateMatrixWorld(true);const bad=[],missing=[],ids=new Set();let triangles=0;
+for(const p of parts){ids.add(p.userData.id);for(const key of ['id','referencePart','subPart','system','reference','purpose','receiving','orientation','authorDimensions','physicalBoundary','material','shapeSource'])if(!p.userData[key])missing.push([p.name,key]);for(const v of p.geometry.attributes.position.array)if(!Number.isFinite(v))bad.push(p.name);triangles+=(p.geometry.index?.count||p.geometry.attributes.position.count)/3;await fs.access(new URL('../outputs/'+p.userData.reference,import.meta.url));}
+const box=new T.Box3().setFromObject(root),ray=new T.Raycaster();for(const p of parts)p.material.side=T.DoubleSide;
+function hits(u,v,subset=parts,front=20,dir=-1){ray.set(new T.Vector3(-292+front,-42+u,735+v),new T.Vector3(dir,0,0));ray.far=40;return ray.intersectObjects(subset,false).map(h=>({id:h.object.userData.id,name:h.object.name,w:h.point.x+292}));}
+const surface=sub=>parts.filter(p=>p.userData.subPart===sub);
+const openings=[2,3,15,20].map(n=>({sub:n,hits:hits(0,0,surface('I05-B-P'+String(n).padStart(2,'0')))}));
+const rearPorts=[-13,15].map(u=>({u,hits:hits(u,-39,surface('I05-B-P14'),-7,1)}));
+const trayNotch=hits(0,-49,surface('I05-B-P13'));
+const trayShoulder=hits(135,0,surface('I05-B-P14')).filter(h=>h.w<0);
+const sealContact={seal:hits(141.4,0,surface('I05-B-P15')),retainer:hits(141.4,0,surface('I05-B-P20')),rear:hits(141.4,0,surface('I05-B-P14'))};
+const layerOrder=hits(0,0).filter(h=>!h.name.includes('微稜鏡')&&!h.name.includes('散射')).map(h=>({name:h.name,w:h.w}));
+const bounds={min:box.min.toArray(),max:box.max.toArray()},envelope=definition.envelope;
+const checks={finite:!bad.length,metadata:!missing.length,uniqueIds:ids.size===parts.length,envelope:bounds.min.every((v,i)=>v>=envelope.min[i]-.0001)&&bounds.max.every((v,i)=>v<=envelope.max[i]+.0001),realOpenRings:openings.every(o=>o.hits.length===0),realRearPorts:rearPorts.every(o=>o.hits.length===0),trayNotch:trayNotch.length===0,traySupport:trayShoulder.some(h=>Math.abs(h.w+.9)<.0001)};
+const report={revision:definition.revision,sourceSHA256:crypto.createHash('sha256').update(await fs.readFile(new URL('../outputs/source/center-display.mjs',import.meta.url))).digest('hex'),checks,checksPass:Object.values(checks).every(Boolean),meshes:parts.length,triangles,referenceFamilies:definition.referenceFamilies,bounds,bad,missing,openings,rearPorts,trayNotch,trayShoulder,sealContact,layerOrder,definition,parts:parts.map(p=>({name:p.name,...p.userData}))};await fs.writeFile(new URL('../outputs/quality/center-display-native-'+definition.revision.toLowerCase().replace('i05-b-','')+'.json',import.meta.url),JSON.stringify(report,null,2));console.log(JSON.stringify({checks:report.checks,bounds,meshes:parts.length,triangles}));if(!report.checksPass)process.exitCode=1;

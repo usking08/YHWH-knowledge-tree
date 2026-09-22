@@ -1,0 +1,409 @@
+{
+  "schemaVersion": "GT01-part/v1",
+  "id": "D05-P15e",
+  "name": "M5×0.8 六角螺帽",
+  "revision": "SOURCE_SHA256_BOUND",
+  "authority": "AUTHOR_DESIGN",
+  "units": "mm",
+  "classification": {
+    "assembly": [
+      "GT01 車輛",
+      "D05 車窗升降器",
+      "D05-P15 玻璃夾具",
+      "D05-P15e"
+    ],
+    "functionFamily": [
+      "緊固",
+      "螺紋緊固",
+      "螺帽"
+    ]
+  },
+  "physicalBoundary": {
+    "description": "一件獨立物理零件的全部原生表面；不把左右安置重複計為種類。",
+    "surfaceLabels": [
+      "六角外形、倒角與貫通螺紋"
+    ],
+    "nativeSurfaceCount": 1,
+    "prototypeCount": 1,
+    "solidCountObserved": 1
+  },
+  "coordinateFrame": {
+    "name": "D05 upper clamp native surface frame",
+    "units": "mm",
+    "handedness": "right",
+    "X": "夾具寬度；單一形狀原型中心 X=0",
+    "Y": "原生夾具局部 Y",
+    "Z": "原生夾具局部 Z",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "threadAxis": {
+      "origin": [
+        0,
+        -50.87064658813354,
+        58.923517050218564
+      ],
+      "direction": [
+        0,
+        0.876215908676647,
+        0.48191874977215593
+      ]
+    },
+    "sourceAxisBeforeFollowGlass": [
+      0,
+      1,
+      0
+    ],
+    "sourceToCurrent": "rotate about X by atan(0.55), then the source followGlass translation; primitive axis in source interfaces is pre-transform",
+    "transformApplied": "none; original completed makeGT01GlassClamps surfaces preserved",
+    "instancePlacement": {
+      "frame": "D05 clamp upper geometry after followGlass; component.x is a separate placement",
+      "prototypeX": 0,
+      "selectedInstanceX": -24,
+      "duplicateInstanceX": [
+        -24,
+        24
+      ]
+    }
+  },
+  "dimensions": [
+    {
+      "name": "公稱螺紋",
+      "value": "M5×0.8",
+      "unit": "designation",
+      "source": "source nut"
+    },
+    {
+      "name": "對邊",
+      "value": 8,
+      "unit": "mm",
+      "source": "interfaces.acrossFlats"
+    },
+    {
+      "name": "厚度",
+      "value": 4,
+      "unit": "mm",
+      "source": "source y=-2.7..1.3"
+    },
+    {
+      "name": "內牙徑向作者留量",
+      "value": 0.11,
+      "unit": "mm",
+      "source": "source threadRadius clearance"
+    },
+    {
+      "name": "實際原生外包絡",
+      "value": {
+        "min": [
+          -4,
+          -55.35102462768555,
+          53.74394226074219
+        ],
+        "max": [
+          4,
+          -47.616973876953125,
+          63.428409576416016
+        ],
+        "size": [
+          8,
+          7.734050750732422,
+          9.684467315673828
+        ]
+      },
+      "unit": "mm",
+      "source": "cold native + OBJ readback"
+    }
+  ],
+  "holeAxes": [
+    {
+      "kind": "threaded_through_bore",
+      "thread": "M5×0.8",
+      "axis": "derived actual oblique axis in coordinateFrame"
+    }
+  ],
+  "features": [
+    "六角外形與上下倒角",
+    "中央真通孔與連續內螺旋牙面"
+  ],
+  "purpose": "抵住玻璃夾具固定體背面，與 M5 螺栓配合提供夾緊反力；目前需工具扶持六角外形。",
+  "usableScenarios": [
+    "M5 內牙與六角工具扶持面的幾何參考"
+  ],
+  "limitations": [
+    "內牙作者徑向留量 0.11 不是標準公差等級；未驗證扭矩、脫牙及防鬆。"
+  ],
+  "material": {
+    "displayColorLinearRGB": [
+      0.6,
+      0.63,
+      0.65
+    ],
+    "displayShader": "MeshStandardMaterial",
+    "grade": "未指定",
+    "authority": "AUTHOR_DESIGN appearance only",
+    "nextAction": "依實際載荷、環境及製程選定材料與公差後再驗證。"
+  },
+  "interfaces": {
+    "source": {
+      "thread": "M5x0.8",
+      "shaftY": [
+        -2.7,
+        1.3
+      ],
+      "boltZ": 63,
+      "acrossFlats": 8
+    },
+    "sourceFile": "../../native/source/window-regulator.mjs",
+    "sourceFrameWarning": "M5 source axis [0,1,0] is before followGlass; use coordinateFrame.threadAxis for the exported shape."
+  },
+  "mates": [
+    {
+      "part": "D05-P15d",
+      "contact": "M5×0.8 外螺紋",
+      "inLibrary": true
+    },
+    {
+      "part": "D05-P15a",
+      "contact": "固定夾體背面承壓面：來源存在，本庫未收錄；尚無防轉扣座",
+      "inLibrary": false
+    }
+  ],
+  "installation": {
+    "scope": "夾具原生安置參考；本庫只有螺栓／螺帽兩形狀，完整夾具裝入未驗。",
+    "order": 1,
+    "direction": "先將螺帽孔對準固定夾體通孔，沿實際孔軸安置於背面；尚無防轉扣座，旋緊時需用工具扶持六角外形。",
+    "axis": [
+      0,
+      0.876215908676647,
+      0.48191874977215593
+    ],
+    "implementation": "../../native/source/window-regulator.mjs",
+    "assemblyComplete": false
+  },
+  "status": {
+    "geometry": "NATIVE_AUTHORED_SHAPE",
+    "exportPreserved": true,
+    "singleClosedSolid": true,
+    "assemblyComplete": false,
+    "manufacturingCertified": false
+  },
+  "inspection": [
+    {
+      "method": "重新讀取 OBJ 和 geometry.json 的全部三角面及法線，與原生輸出逐位雜湊比較",
+      "criterion": "面數、各 surface、位置及法線全部相符",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    },
+    {
+      "method": "以 0.00001 mm 座標併點統計連通與有向邊、計算有向體積",
+      "criterion": "一連通、每邊兩面反向、無零面積或非有限座標、正體積",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    },
+    {
+      "method": "對冷讀 OBJ 做不同角度的徑向射線及 0.8 mm 週期比較，並檢查軸心孔／內六角盲座",
+      "criterion": "同一軸向位置半徑隨角度變化；移動一螺距重複。螺帽軸心全通，螺栓工具座有底。",
+      "verdict": "PASS",
+      "evidence": "evidence/native-readback.json"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "evidence/native-readback.json",
+      "scope": "本次原生及冷讀輸出"
+    },
+    {
+      "file": "../../evidence/glass-clamp-selected-readback.json",
+      "scope": "既有 M5 夾具讀回及視圖節錄"
+    },
+    {
+      "file": "../../evidence/fastener-library-forms-r2.json",
+      "scope": "同原生形體的十二個視窗；圖片呈現已逆變換回 Y 軸，匯出本體維持原生斜軸"
+    }
+  ],
+  "references": [
+    {
+      "file": "references/D05-P15e-model-r1.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "同一原生形體逆變換回 Y 軸呈現的六視圖：斜視、+Y 工具接合／孔口、-Y 端面、+Z 軸向輪廓、螺紋局部、+X 輪廓。原生法線保留；匯出 OBJ 本體仍維持 followGlass 之後的斜軸，詳 coordinateFrame。",
+      "revisionReason": "此圖是局部形體證據，不是承載、密封或完整總成通過。",
+      "sha256": "21bc59cafa4b7a0db83f51ef93c93a8048b8c0bde8c0fd79e893849c9c20be1a"
+    },
+    {
+      "file": "references/D05-P15e-front.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "既有零件讀者 front 視圖；由原生座標與真孔讀回判定尺寸。",
+      "sha256": "642832b58440a43170c9c587515b90d4d1058934563f1e1a39c78442c6edcac8"
+    },
+    {
+      "file": "references/D05-P15e-rear.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "既有零件讀者 rear 視圖；由原生座標與真孔讀回判定尺寸。",
+      "sha256": "cbecd4c990020ea8c66ac77ab162036dc985c96ce1da4ab0114fa32f223a79d4"
+    },
+    {
+      "file": "references/D05-P15e-side.png",
+      "authority": "NATIVE_MODEL_VIEW",
+      "use": "既有零件讀者 side 視圖；由原生座標與真孔讀回判定尺寸。",
+      "sha256": "6215ce919e5e833e3d3a64f875d4b5ee46e2cd9a9f064e0a96b97f46d68e4bf5"
+    },
+    {
+      "file": "references/D05-P15e-r1.png",
+      "authority": "GENERATED_SHAPE_CANDIDATE",
+      "use": "外形／剖面意圖參考；圖中尺寸不是量測或製造認證。",
+      "revisionReason": "未逐點量測生成圖；尺寸及接合以原生來源為準。",
+      "sha256": "02692431004334bf17a7ac6cf610f73755e944b484f057aac9f20cfe466008c0"
+    }
+  ],
+  "qualityCases": [],
+  "outstandingWork": [
+    {
+      "id": "D05-P15e-W1",
+      "status": "NOT_DONE",
+      "action": "建立含實際公差的咬合模型，檢查扶持工具空間、牙面接觸與扭矩；若新增防轉扣座，須先施工再驗裝入與止轉；選定材料及防鬆方案。",
+      "completionEvidence": "新增同修訂原生模型及針對此項的幾何／物理讀回；如涉及材料，需另附材料與試驗條件。"
+    }
+  ],
+  "files": {
+    "metadata": "part.json",
+    "humanGuide": "PART.md",
+    "obj": "part.obj",
+    "mtl": "part.mtl",
+    "threeGeometry": "geometry.json",
+    "nativeEntry": "../../native/geometry-core.mjs",
+    "nativeSource": "../../native/source/window-regulator.mjs"
+  },
+  "nativeMetrics": {
+    "triangles": 9934,
+    "verticesAfterPositionWeld": 4967,
+    "weldToleranceMm": 0.00001,
+    "surfaceCount": 1,
+    "connectedComponents": 1,
+    "openEdges": 0,
+    "nonManifoldEdges": 0,
+    "inconsistentOrientationEdges": 0,
+    "zeroAreaTriangles": 0,
+    "nonFiniteCoordinates": 0,
+    "signedVolumeMm3": 145.87521041484163,
+    "boundsMm": {
+      "min": [
+        -4,
+        -55.35102462768555,
+        53.74394226074219
+      ],
+      "max": [
+        4,
+        -47.616973876953125,
+        63.428409576416016
+      ],
+      "size": [
+        8,
+        7.734050750732422,
+        9.684467315673828
+      ]
+    },
+    "positionTriangleSHA256": "dbb3c6803a122125fc42caf62fdb92d9492ad2eca8c3f74df2f28bd33f334c71",
+    "normalTriangleSHA256": "3220f53cfab6db7d471e681acf25df8a2165849e2f850d7f89f822aa98cc470a"
+  },
+  "hashes": {
+    "sourceSHA256": "d98d0d7bd0d8a7925f5e21d6311b79087470c9368c10a4aa56133055278005fe",
+    "positionTriangleSHA256": "dbb3c6803a122125fc42caf62fdb92d9492ad2eca8c3f74df2f28bd33f334c71",
+    "normalTriangleSHA256": "3220f53cfab6db7d471e681acf25df8a2165849e2f850d7f89f822aa98cc470a",
+    "objSHA256": "7a757c67fa461bf484d67568318ce35a5af960407619313feffecadb665d3238",
+    "geometryJSONSHA256": "d9cbfc6ce8ecfc7e7522b539e31f894a8928f7b18967ebd8ee0d302595c4fa09"
+  },
+  "mathematicalQuality": {
+    "revision": "GT01-MATH-QA-R1",
+    "lawIds": [
+      "boundary",
+      "volume",
+      "rigid",
+      "units",
+      "screw",
+      "load"
+    ],
+    "calculation": "../../math-quality.json",
+    "nativeReadback": "../../evidence/math-native-readback.json",
+    "teaching": "../../math-quality.html#D05-P15e",
+    "runner": "../../native/math-quality.mjs",
+    "admission": "../../math-admission.json",
+    "checks": [
+      {
+        "id": "closed-boundary",
+        "status": "PASS"
+      },
+      {
+        "id": "volume-origin",
+        "status": "PASS"
+      },
+      {
+        "id": "identity-units",
+        "status": "PASS"
+      },
+      {
+        "id": "rigid-frame",
+        "status": "PASS"
+      },
+      {
+        "id": "screw-phase",
+        "status": "PASS"
+      },
+      {
+        "id": "load-release",
+        "status": "NEEDS_INPUT"
+      },
+      {
+        "id": "tolerance-release",
+        "status": "NEEDS_INPUT"
+      }
+    ],
+    "openInputs": [
+      {
+        "name": "載荷大小/方向/循環 (N, N·mm)",
+        "quantities": [
+          {
+            "quantity": "force",
+            "unit": "N"
+          },
+          {
+            "quantity": "moment",
+            "unit": "N·mm"
+          },
+          {
+            "quantity": "direction",
+            "unit": "1（單位方向向量）"
+          },
+          {
+            "quantity": "cycles",
+            "unit": "1（次數）"
+          }
+        ],
+        "unit": "N；N·mm；1（單位方向向量）；1（次數）",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "材料牌號、強度與製程",
+        "quantities": [],
+        "unit": "依具體資料欄位與來源指定",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      },
+      {
+        "name": "公差極限及偏心 (mm)",
+        "quantities": [
+          {
+            "quantity": "length",
+            "unit": "mm"
+          }
+        ],
+        "unit": "mm",
+        "reason": "現有原生形體和外觀資料不含此實測輸入。",
+        "nextAction": "在接面與使用條件確定後取得可追溯資料，填入並重算對應載荷/配合模型。"
+      }
+    ],
+    "manufacturingReleased": false
+  }
+}
