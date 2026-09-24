@@ -1,0 +1,148 @@
+name: Munoz motion source study
+on:
+  push:
+    branches: ['study/munoz-motion-2103167579959251281']
+    paths: ['.github/workflows/munoz-motion-source.yml']
+permissions:
+  contents: read
+concurrency:
+  group: munoz-motion-source-study
+  cancel-in-progress: false
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Prepare decoding tools
+        run: |
+          python -m pip install --quiet numpy opencv-python-headless yt-dlp
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+      - name: Acquire the exact public source and decode every frame
+        shell: python
+        run: |
+          import csv, hashlib, json, os, pathlib, subprocess, time, urllib.request
+          import concurrent.futures
+          import cv2
+          import numpy as np
+          root = pathlib.Path('motion-evidence')
+          root.mkdir(exist_ok=True)
+          identity = '2103167579959251281'
+          endpoints = [
+              'https://api.fxtwitter.com/MunozArthur1/status/' + identity,
+              'https://api.vxtwitter.com/MunozArthur1/status/' + identity,
+              'https://cdn.syndication.twimg.com/tweet-result?id=' + identity + '&lang=en&token=1'
+          ]
+          def get(url):
+              try:
+                  req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0', 'Accept': '*/*'})
+                  with urllib.request.urlopen(req, timeout=25) as response:
+                      raw = response.read()
+                      try: data = json.loads(raw)
+                      except Exception: data = raw[:1500].decode('utf-8', 'replace')
+                      return {'url': url, 'status': response.status, 'data': data}
+              except Exception as error:
+                  return {'url': url, 'status': 0, 'error': str(error)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              evidence = list(pool.map(get, endpoints))
+          (root/'resolver.json').write_text(json.dumps(evidence, indent=2, ensure_ascii=False))
+          print('RESOLVER_EVIDENCE', json.dumps(evidence, ensure_ascii=False), flush=True)
+          candidates = []
+          source_post = None
+          def videos(value):
+              if isinstance(value, str):
+                  from urllib.parse import urlparse
+                  u = urlparse(value)
+                  if u.scheme == 'https' and u.hostname == 'video.twimg.com' and u.path.endswith('.mp4'):
+                      candidates.append(value)
+              elif isinstance(value, list):
+                  for item in value: videos(item)
+              elif isinstance(value, dict):
+                  for item in value.values(): videos(item)
+          for response in evidence:
+              data = response.get('data')
+              if not isinstance(data, dict): continue
+              tweet = data.get('tweet', data)
+              actual_id = str(tweet.get('id', tweet.get('id_str', tweet.get('tweetID', ''))))
+              if actual_id == identity:
+                  source_post = tweet
+                  for field in ('media', 'media_extended', 'mediaDetails', 'video'):
+                      videos(tweet.get(field))
+          source = root/'source.mp4'
+          if candidates:
+              import re
+              def area(url):
+                  m = re.search(r'/(\d+)x(\d+)/', url)
+                  return int(m[1])*int(m[2]) if m else 0
+              candidates = sorted(set(candidates), key=area, reverse=True)
+              req = urllib.request.Request(candidates[0], headers={'User-Agent':'Mozilla/5.0'})
+              with urllib.request.urlopen(req, timeout=90) as response, source.open('wb') as output:
+                  total = 0
+                  while True:
+                      chunk = response.read(1024*1024)
+                      if not chunk: break
+                      total += len(chunk)
+                      if total > 300*1024*1024: raise RuntimeError('Source exceeds 300MB bound')
+                      output.write(chunk)
+          else:
+              result = subprocess.run(['python','-m','yt_dlp','--no-playlist','--socket-timeout','25','--retries','1','--max-filesize','300M','--write-info-json','-f','best[ext=mp4]/best','-o',str(root/'source.%(ext)s'),'https://x.com/MunozArthur1/status/'+identity], capture_output=True, text=True)
+              (root/'yt-dlp-log.txt').write_text(result.stdout+'\n'+result.stderr)
+              print(result.stdout, result.stderr, flush=True)
+          if not source.exists():
+              raise RuntimeError('Exact original MP4 was not obtained; no reconstruction is permitted')
+          receipt = {'id':identity,'source_url':candidates[0] if candidates else 'yt-dlp exact status extractor','bytes':source.stat().st_size,'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'source_post':source_post,'semantic_analysis_complete':False,'reconstruction_complete':False}
+          (root/'receipt.json').write_text(json.dumps(receipt, indent=2, ensure_ascii=False))
+          print('SOURCE_RECEIPT', json.dumps(receipt, ensure_ascii=False), flush=True)
+          probe = subprocess.run(['ffprobe','-v','error','-show_format','-show_streams','-of','json',str(source)],capture_output=True,text=True,check=True)
+          metadata = json.loads(probe.stdout)
+          (root/'metadata.json').write_text(probe.stdout)
+          print('VIDEO_METADATA',probe.stdout,flush=True)
+          times = subprocess.run(['ffprobe','-v','error','-select_streams','v:0','-show_frames','-show_entries','frame=best_effort_timestamp_time,pkt_duration_time,key_frame','-of','json',str(source)],capture_output=True,text=True,check=True)
+          (root/'frame_timestamps.json').write_text(times.stdout)
+          timestamps = json.loads(times.stdout)['frames']
+          (root/'frames').mkdir(exist_ok=True)
+          (root/'keyframes').mkdir(exist_ok=True)
+          capture = cv2.VideoCapture(str(source))
+          index=0
+          previous=None
+          with (root/'frame_metrics.csv').open('w',newline='') as output:
+              writer=csv.writer(output)
+              writer.writerow(['frame_index','pts_seconds','mean_luma','delta_luma_mae','flow_mean_px','flow_max_px','semantic_status'])
+              while True:
+                  ok, frame=capture.read()
+                  if not ok: break
+                  small=cv2.resize(frame,(192,108))
+                  gray=cv2.cvtColor(small,cv2.COLOR_BGR2GRAY)
+                  delta=0 if previous is None else float(np.abs(gray.astype(np.int16)-previous).mean())
+                  flow=np.zeros((108,192,2),np.float32) if previous is None else cv2.calcOpticalFlowFarneback(previous,gray,None,0.5,2,15,2,5,1.1,0)
+                  magnitude=np.linalg.norm(flow,axis=2)
+                  pts=timestamps[index].get('best_effort_timestamp_time','') if index<len(timestamps) else ''
+                  writer.writerow([index,pts,float(gray.mean()),delta,float(magnitude.mean()),float(magnitude.max()),'UNANNOTATED'])
+                  h,w=frame.shape[:2]
+                  preview=cv2.resize(frame,(min(960,w),round(h*min(960,w)/w)))
+                  cv2.imwrite(str(root/'frames'/f'{index:06d}.jpg'),preview,[cv2.IMWRITE_JPEG_QUALITY,78])
+                  if index%30==0:
+                      cv2.imwrite(str(root/'keyframes'/f'{index:06d}.png'),frame)
+                  previous=gray
+                  index+=1
+          capture.release()
+          receipt['decoded_frames']=index
+          receipt['timestamp_entries']=len(timestamps)
+          receipt['every_frame_decoded']=index==len(timestamps)
+          (root/'receipt.json').write_text(json.dumps(receipt,indent=2,ensure_ascii=False))
+          print('DECODE_RECEIPT',json.dumps({k:v for k,v in receipt.items() if k!='source_post'},ensure_ascii=False),flush=True)
+          if index != len(timestamps): raise RuntimeError('Frame count discrepancy; not a complete decode')
+      - name: Acquire pinned renderer source
+        if: always()
+        run: |
+          mkdir -p motion-evidence/vendor
+          cd motion-evidence/vendor
+          npm pack three@0.180.0 --silent
+      - name: Preserve original source and every decoded frame
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: munoz-motion-2103167579959251281
+          path: motion-evidence/
+          retention-days: 1
+          compression-level: 1
+          if-no-files-found: error
