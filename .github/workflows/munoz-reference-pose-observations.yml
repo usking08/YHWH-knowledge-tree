@@ -11,76 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Install observation tools
-        run: python -m pip install -q mediapipe opencv-python-headless numpy
-      - name: Measure source poses with rotation-aware candidates
+      - name: Prepare native and Python observation dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libegl1 libgles2
+          python -m pip install -q mediapipe opencv-python-headless numpy pyyaml
+      - name: Run the reviewed source-observation implementation
         env:
           GH_TOKEN: ${{ github.token }}
         shell: python
         run: |
-          from pathlib import Path
-          import urllib.request,hashlib,json,cv2,numpy as np,time,os,zipfile,io
-          import mediapipe as mp
-          from mediapipe.tasks import python
-          from mediapipe.tasks.python import vision
-          out=Path('observations');out.mkdir(exist_ok=True)
-          url='https://video.twimg.com/amplify_video/2103148012113444864/vid/avc1/1280x720/C3Sp51AzDnz3XQPR.mp4?tag=14'
-          acquisition=[]
-          try:
-              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'*/*'})
-              with urllib.request.urlopen(req,timeout=40) as r:(out/'source.mp4').write_bytes(r.read())
-              acquisition.append('direct public media')
-          except Exception as e:
-              acquisition.append(str(e))
-              api='https://api.github.com/repos/usking08/YHWH-knowledge-tree/actions/artifacts/10836297889/zip'
-              req=urllib.request.Request(api,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'motion-reference-study'})
-              with urllib.request.urlopen(req,timeout=60) as r:data=r.read()
-              z=zipfile.ZipFile(io.BytesIO(data));(out/'source.mp4').write_bytes(z.read('source.mp4'))
-              acquisition.append('existing exact source artifact')
-          (out/'acquisition.json').write_text(json.dumps(acquisition))
-          actual=hashlib.sha256((out/'source.mp4').read_bytes()).hexdigest()
-          assert actual=='0c6f375595b4c75a73efafb5b670b00db29d826e8d948ac7c150740acbc9b5d5'
-          urllib.request.urlretrieve('https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task',str(out/'pose.task'))
-          options=vision.PoseLandmarkerOptions(base_options=python.BaseOptions(model_asset_path=str(out/'pose.task')),running_mode=vision.RunningMode.IMAGE,min_pose_detection_confidence=.22,min_pose_presence_confidence=.22,num_poses=1)
-          lm=vision.PoseLandmarker.create_from_options(options)
-          cap=cv2.VideoCapture(str(out/'source.mp4'));records=[];f=0;found=0
-          bones=[(11,12),(11,13),(13,15),(12,14),(14,16),(11,23),(12,24),(23,24),(23,25),(25,27),(24,26),(26,28)]
-          while True:
-              ok,im=cap.read()
-              if not ok:break
-              if f%3:
-                  f+=1;continue
-              crop=im[65:650,200:1120]
-              scale=640/max(crop.shape[:2]);res=cv2.resize(crop,None,fx=scale,fy=scale)
-              canvas=np.full((768,768,3),156,np.uint8)
-              ox=(768-res.shape[1])//2;oy=(768-res.shape[0])//2;canvas[oy:oy+res.shape[0],ox:ox+res.shape[1]]=res
-              candidates=[]
-              for angle in [0,90,180,270]:
-                  matrix=cv2.getRotationMatrix2D((384,384),angle,1);inv=cv2.invertAffineTransform(matrix)
-                  rotated=cv2.warpAffine(canvas,matrix,(768,768),borderValue=(156,156,156))
-                  result=lm.detect(mp.Image(image_format=mp.ImageFormat.SRGB,data=cv2.cvtColor(rotated,cv2.COLOR_BGR2RGB)))
-                  if not result.pose_landmarks:continue
-                  ls=result.pose_landmarks[0];p=np.array([[l.x*768,l.y*768,1] for l in ls]);points=p@inv.T
-                  points[:,0]=(points[:,0]-ox)/scale+200;points[:,1]=(points[:,1]-oy)/scale+65
-                  visibility=[float(l.visibility) for l in ls]
-                  score=float(np.mean([visibility[i] for i in [11,12,13,14,15,16,23,24,25,26,27,28]]))
-                  candidates.append({'rotation':angle,'score':score,'xy':points.tolist(),'visibility':visibility,'world':[[l.x,l.y,l.z] for l in result.pose_world_landmarks[0]]})
-              candidates.sort(key=lambda v:v['score'],reverse=True)
-              records.append({'frame':f,'candidates':candidates[:2]})
-              if candidates:
-                  found+=1
-                  if f%60==0:
-                      vis=im.copy();ls=np.array(candidates[0]['xy']).round().astype(int)
-                      for a,b in bones:cv2.line(vis,ls[a],ls[b],(30,230,30),2)
-                      for i in [0,11,12,13,14,15,16,23,24,25,26,27,28]:cv2.circle(vis,ls[i],4,(0,0,255),-1)
-                      cv2.imwrite(str(out/f'candidate-{f:04}.jpg'),vis)
-              if f%180==0:print('OBSERVED',f,'nonempty',found,flush=True)
-              f+=1
-          lm.close();cap.release()
-          (out/'candidates.json').write_text(json.dumps({'source_sha256':actual,'frame_count':f,'sample_stride':3,'coordinate_system':'original 1280x720 pixels','status':'ML candidates; not approved original skeleton','records':records}))
-          (out/'summary.json').write_text(json.dumps({'frames':f,'samples':len(records),'nonempty':found,'mediapipe_version':mp.__version__}))
-          (out/'source.mp4').unlink();(out/'pose.task').unlink()
-          print('DONE',len(records),found,flush=True)
+          import urllib.request, yaml
+          url='https://raw.githubusercontent.com/usking08/YHWH-knowledge-tree/c6581b3bf3c69c8479feb9b4897b0dbb7da817c7/.github/workflows/munoz-reference-pose-observations.yml'
+          with urllib.request.urlopen(url, timeout=30) as response:
+              workflow=yaml.safe_load(response.read())
+          script=workflow['jobs']['observe']['steps'][1]['run']
+          exec(compile(script, 'reviewed_reference_observation.py', 'exec'))
       - name: Preserve candidate observations
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
