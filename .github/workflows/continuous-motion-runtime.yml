@@ -1,0 +1,87 @@
+name: Continuous motion published runtime
+on:
+  push:
+    branches: ['study/munoz-motion-2103167579959251281']
+    paths: ['.github/workflows/continuous-motion-runtime.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Prepare browser driver
+        run: |
+          python -m pip install -q playwright
+          command -v google-chrome || python -m playwright install --with-deps chromium
+      - name: Exercise the actual published motion
+        shell: python
+        run: |
+          from playwright.sync_api import sync_playwright
+          from pathlib import Path
+          import json, os, shutil, traceback, urllib.request
+          out=Path('runtime-evidence');out.mkdir(exist_ok=True)
+          url='https://munoz-motion-reconstruction-h645jj.v2.appdeploy.ai/'
+          result={'url':url,'errors':[],'checks':{},'poses':[]}
+          env=os.environ.copy();env.pop('DISPLAY',None)
+          with sync_playwright() as p:
+              browser=p.chromium.launch(executable_path=shutil.which('google-chrome'),headless=True,env=env,args=['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist'])
+              page=browser.new_page(viewport={'width':1100,'height':740})
+              page.on('pageerror',lambda e:result['errors'].append(str(e)))
+              try:
+                  response=page.goto(url,wait_until='networkidle',timeout=60000)
+                  result['http_status']=response.status
+                  page.wait_for_function('window.motionStudy?.ready',timeout=60000)
+                  result['version']=page.evaluate('motionStudy.version')
+                  result['renderer']=page.evaluate('motionStudy.renderer')
+                  assert result['version']=='4.0.0-continuous'
+                  page.evaluate('motionStudy.setPlaying(false)')
+                  for seconds in [1.36,5.27,12.50,19.36,25.64,28.91,33.61]:
+                      page.evaluate('(s)=>motionStudy.setAbsolute(s)',seconds)
+                      result['poses'].append(page.evaluate('motionStudy.metrics()'))
+                  page.screenshot(path=str(out/'published-motion.png'))
+                  for frame,expected in [(655,'frost'),(1337,'plague')]:
+                      page.evaluate('(f)=>motionStudy.setAbsolute(f/60)',frame)
+                      page.click('#next')
+                      actual=page.evaluate('motionStudy.metrics().kind')
+                      result['checks']['next_'+str(frame)]=actual
+                      assert actual==expected
+                  page.select_option('#speed','0.25')
+                  for time,expected in [(10.90,'frost'),(22.27,'plague'),(35.15,'barbarian')]:
+                      page.evaluate('(t)=>motionStudy.setAbsolute(t)',time)
+                      page.evaluate('motionStudy.setPlaying(true)')
+                      page.wait_for_function('(k)=>motionStudy.metrics().kind===k',arg=expected,timeout=12000)
+                      page.evaluate('motionStudy.setPlaying(false)')
+                      result['checks']['playing_boundary_'+str(time)]=page.evaluate('motionStudy.metrics().kind')
+                  page.evaluate('motionStudy.setAbsolute(0)');page.click('#prev')
+                  result['checks']['lower_bound']=page.evaluate('motionStudy.metrics().absoluteTime')
+                  assert result['checks']['lower_bound']==0
+                  page.evaluate('motionStudy.setAbsolute(2110/60)');page.click('#next')
+                  result['checks']['upper_bound']=page.evaluate('motionStudy.metrics().absoluteTime')
+                  assert abs(result['checks']['upper_bound']-2110/60)<1e-8
+                  page.click('#fx');page.click('#view');page.mouse.move(540,340);page.mouse.down();page.mouse.move(640,365,steps=5);page.mouse.up();page.click('#reset')
+                  page.set_viewport_size({'width':390,'height':844});page.click('[data-kind="frost"]');page.click('#next')
+                  result['checks']['mobile_overflow']=page.evaluate('document.documentElement.scrollWidth>innerWidth')
+                  assert not result['checks']['mobile_overflow']
+                  page.screenshot(path=str(out/'published-mobile.png'))
+                  result['checks']['final_gl_error']=page.evaluate('motionStudy.metrics().glError')
+                  assert result['checks']['final_gl_error']==0
+                  assert not result['errors']
+                  result['passed']=True
+              except Exception as e:
+                  result['failure']=str(e);result['traceback']=traceback.format_exc();result['body_text']=page.locator('body').inner_text()
+                  page.screenshot(path=str(out/'failure.png'))
+                  raise
+              finally:
+                  (out/'runtime.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+                  (out/'published.html').write_text(page.content())
+                  print('PUBLIC_RUNTIME_RESULT',json.dumps(result,ensure_ascii=False),flush=True)
+                  browser.close()
+      - name: Preserve published runtime evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: continuous-motion-runtime
+          path: runtime-evidence/
+          retention-days: 1
+          if-no-files-found: error
