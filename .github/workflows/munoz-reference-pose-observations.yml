@@ -5,6 +5,7 @@ on:
     paths: ['.github/workflows/munoz-reference-pose-observations.yml']
 permissions:
   contents: read
+  actions: read
 jobs:
   observe:
     runs-on: ubuntu-latest
@@ -13,16 +14,30 @@ jobs:
       - name: Install observation tools
         run: python -m pip install -q mediapipe opencv-python-headless numpy
       - name: Measure source poses with rotation-aware candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: python
         run: |
           from pathlib import Path
-          import urllib.request,hashlib,json,cv2,numpy as np,time
+          import urllib.request,hashlib,json,cv2,numpy as np,time,os,zipfile,io
           import mediapipe as mp
           from mediapipe.tasks import python
           from mediapipe.tasks.python import vision
           out=Path('observations');out.mkdir(exist_ok=True)
           url='https://video.twimg.com/amplify_video/2103148012113444864/vid/avc1/1280x720/C3Sp51AzDnz3XQPR.mp4?tag=14'
-          urllib.request.urlretrieve(url,str(out/'source.mp4'))
+          acquisition=[]
+          try:
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'*/*'})
+              with urllib.request.urlopen(req,timeout=40) as r:(out/'source.mp4').write_bytes(r.read())
+              acquisition.append('direct public media')
+          except Exception as e:
+              acquisition.append(str(e))
+              api='https://api.github.com/repos/usking08/YHWH-knowledge-tree/actions/artifacts/10836297889/zip'
+              req=urllib.request.Request(api,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'motion-reference-study'})
+              with urllib.request.urlopen(req,timeout=60) as r:data=r.read()
+              z=zipfile.ZipFile(io.BytesIO(data));(out/'source.mp4').write_bytes(z.read('source.mp4'))
+              acquisition.append('existing exact source artifact')
+          (out/'acquisition.json').write_text(json.dumps(acquisition))
           actual=hashlib.sha256((out/'source.mp4').read_bytes()).hexdigest()
           assert actual=='0c6f375595b4c75a73efafb5b670b00db29d826e8d948ac7c150740acbc9b5d5'
           urllib.request.urlretrieve('https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task',str(out/'pose.task'))
@@ -35,16 +50,13 @@ jobs:
               if not ok:break
               if f%3:
                   f+=1;continue
-              h,w=im.shape[:2]
-              # Actor stays near the centre; include the complete figure and weapon.
               crop=im[65:650,200:1120]
               scale=640/max(crop.shape[:2]);res=cv2.resize(crop,None,fx=scale,fy=scale)
               canvas=np.full((768,768,3),156,np.uint8)
               ox=(768-res.shape[1])//2;oy=(768-res.shape[0])//2;canvas[oy:oy+res.shape[0],ox:ox+res.shape[1]]=res
               candidates=[]
               for angle in [0,90,180,270]:
-                  matrix=cv2.getRotationMatrix2D((384,384),angle,1)
-                  inv=cv2.invertAffineTransform(matrix)
+                  matrix=cv2.getRotationMatrix2D((384,384),angle,1);inv=cv2.invertAffineTransform(matrix)
                   rotated=cv2.warpAffine(canvas,matrix,(768,768),borderValue=(156,156,156))
                   result=lm.detect(mp.Image(image_format=mp.ImageFormat.SRGB,data=cv2.cvtColor(rotated,cv2.COLOR_BGR2RGB)))
                   if not result.pose_landmarks:continue
